@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -9,12 +8,11 @@
 	<meta name="generator" content="Jekyll v3.8.6">
 	<title>SOFTBALL: SOLidification, Flow, and Thermodynamics in Binary ALLoys</title>
 
-	<link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/carousel/">
-
+	
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
+	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -121,30 +119,22 @@
 				<div class="card" style="width: 100%;">
 					<div class="card-body">
 
-						<p class="card-text about-card">
-							<!--<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
-							<!-- <table>
-								<tr>
-									<td class="about-title"><span class="badge badge-primary">Science</span></td>
-									<td>SOFTBALL solves for <b>flow</b> and <b>phase change</b> in <b>mushy layers</b>, 
-										solving continuous equations for conservation of heat, solute, mass, and momentum <a href="#parkinson2019">(Parkinson et. al, 2020)</a>.</td>
-									</tr>
-									<tr>
-										<td class="about-title"><span class="badge badge-primary">Technical</span></td>
-										<td>A <b>parallel</b> C++ and Fortran code, with <b>Adaptive Mesh Refinement</b>
-											facilitated by the Chombo library for <b>fast</b> efficient simulations.</td>
-										</tr>
-									</table> -->
-
+						
+							
 								<div class="about-row">
 
 									<div class="about-title"><span class="badge badge-primary">Science</span></div>
 									<div class="about-content">SOFTBALL solves for <b>flow</b> and <b>phase change</b> in <b>mushy layers</b>, 
 										solving continuous equations for conservation of heat, solute, mass, and momentum <a href="#parkinson2019">(Parkinson et. al, 2020)</a>.</td>
 									</div>
-
-
 								</div>
+
+								<div class="about-row">
+									<div class="about-title"><span class="badge badge-primary">Technical</span></div>
+									<div class="about-content">A <b>parallel</b> C++ and Fortran code, with <b>Adaptive Mesh Refinement</b>
+											facilitated by the Chombo library for <b>fast</b> efficient simulations.</td>
+										</div>
+									</div>
 
 
 
@@ -157,10 +147,13 @@
 							<h3 class="card-title"><a class="anchor" id="examples"></a>Examples</h3>
 
 							<div class="card-deck">
+
 								<div class="card">
+									<div class="card-media">
 									<img src="media/img/3DSmaller.png" width="300" >
+								</div>
 									<div class="card-body">
-									<h5 class="card-title">Sea ice formation in 2-D and 3-D</h5>
+									<h5 class="card-title">Sea ice formation in 3-D</h5>
 									<p class="card-text">Uniform mesh simulation of sea ice (blue) growing from a cold atmosphere into the underlying ocean (yellow). 
 
 									3-D simulations provide further insights into the pattern formation in the horizontal plane.</p>
@@ -168,9 +161,11 @@
 								</div>
 							
 								<div class="card">
+									<div class="card-media">
 									<video width="300" controls autoplay loop muted>
 										<source src="media/video/fig9Small.mp4" type="video/mp4">
 										</video>
+									</div>
 										<div class="card-body">
 											<h5 class="card-title">Binary alloy solidification with AMR</h5>
 											<p class="card-text">Solidification of a binary alloy from above with flow in the liquid phase described by a Darcy-Brinkman equation. 
@@ -179,9 +174,11 @@
 										</div>
 								</div>
 								<div class="card">
+									<div class="card-media">
 									<video width="300" id="fixedChill" class="align-self-center" id="fixedChill" controls autoplay loop muted>
 										<source src="media/video/fixedChillSmall.mp4" type="video/mp4">
 										</video>
+									</div>
 										<div class="card-body">
 											<h5 class="card-title">Darcy flow in a Hele-Shaw cell</h5>
 											<p class="card-text">Flow in a narrow Hele-Shaw cell, as often used in experiments, is quasi-2-dimensional and well described by just Darcy's law which is less computationally expensive than the full Darcy-Brinkman equation.</p>
@@ -193,7 +190,7 @@
 							
 
 
-								<div class="card" style="width: 100%; margin-top:3rem;">
+								<div class="card" style="width: 100%;">
 									<div class="card-body">
 										<h3 class="card-title"><a class="anchor" id="contribute"></a>Contribute</h3>
 										<p class="card-text about-card">
@@ -260,21 +257,21 @@ $ git push</code></pre>
 
 							<footer class="text-muted">
 								<div class="container">
-   <!-- <p class="float-right">
-      <a href="#">Back to top</a>
-  </p>-->
-  <p><b>Funding</b></p>
-  <p><a href="https://nerc.ukri.org/" target="_blank"><img src="media/img/funding/nerc-logo.svg" alt="NERC" class="funding"></a>
-  	<a href="http://www.ox.ac.uk/" target="_blank"><img src="media/img/funding/Oxford.svg" alt="Oxford" class="funding"></a>
-  	<a href="https://www.lbl.gov/" target="_blank"><img src="media/img/funding/Berkeley_Lab_Logo_Small.svg" alt="Berkeley Lab" class="funding"></a>
-  	<a href="https://royalsociety.org/" target="_blank"><img src="media/img/funding/royalSocietyLogo2.png" alt="The Royal Society" class="funding"></a>
-  </p>
-  <br>
-  <p><b>References</b></p>
-  <p><a class="anchor" id="parkinson2019"></a> J. Parkinson, D. Martin, A. Wells and R.F. Katz. (2019). Modelling binary alloy solidification with Adaptive Mesh Refinement. 
-  	J. Comp. Phys. doi:<a href="http://dx.doi.org/10.1016/j.jcpx.2019.100043"  target="_blank">10.1016/j.jcpx.2019.100043.</p>
-  	</div>
-  </footer>
+  
+							  <p><b>Funding</b></p>
+							  <p>
+							  	<a href="https://nerc.ukri.org/" target="_blank"><img src="media/img/funding/nerc-logo.svg" alt="NERC" class="funding"></a>
+							  	<a href="http://www.ox.ac.uk/" target="_blank"><img src="media/img/funding/Oxford.svg" alt="Oxford" class="funding"></a>
+							  	<a href="https://www.lbl.gov/" target="_blank"><img src="media/img/funding/Berkeley_Lab_Logo_Small.svg" alt="Berkeley Lab" class="funding"></a>
+							  	<a href="https://royalsociety.org/" target="_blank"><img src="media/img/funding/royalSocietyLogo2.png" alt="The Royal Society" class="funding"></a>
+							  </p>
+							  <br>
+							  <p><b>References</b></p>
+							  <p><a class="anchor" id="parkinson2019"></a> J. Parkinson, D. Martin, A. Wells and R.F. Katz. (2019). Modelling binary alloy solidification with Adaptive Mesh Refinement. 
+							  	J. Comp. Phys. doi:<a href="http://dx.doi.org/10.1016/j.jcpx.2019.100043"  target="_blank">10.1016/j.jcpx.2019.100043.</p>
+							 </div>
+
+						</footer>	
 
 
 
@@ -286,3 +283,5 @@ $ git push</code></pre>
        })
 
    </script> 
+</body>
+</html>

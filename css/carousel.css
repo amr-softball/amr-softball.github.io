@@ -63,9 +63,20 @@ footer p {
 }
 
 .about-title {
-  width:8rem;
+  width:10rem;
   font-size:175%;
 }
+
+
+
+
+.about-title, .about-content {
+  display:table-cell;
+  vertical-align: middle;
+  padding:0.5rem;
+}
+
+
 
 
 img.funding {
@@ -98,6 +109,7 @@ img.example {
 
 .card {
   margin-bottom:2rem;
+  padding:1rem;
 }
 
 .inline-logo {
@@ -105,6 +117,24 @@ img.example {
   margin-bottom:0.4rem;
 }
 
+.card-media {
+  height:16rem;
+}
+
+.card-media img, video {
+  position: relative;
+  top: 50%;
+  
+  left:50%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+.card-deck .card {
+  min-width:310px;
+  margin:1rem;
+}
 
 .media-row {
   width:100%;
@@ -126,5 +156,10 @@ img.example {
     margin-left:0px;
 
   }
+
+  .about-title, .about-content {
+  display:inline-block;
+}
+
 
 }
