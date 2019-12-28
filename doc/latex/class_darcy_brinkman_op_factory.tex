@@ -1,0 +1,87 @@
+\hypertarget{class_darcy_brinkman_op_factory}{}\section{Darcy\+Brinkman\+Op\+Factory Class Reference}
+\label{class_darcy_brinkman_op_factory}\index{Darcy\+Brinkman\+Op\+Factory@{Darcy\+Brinkman\+Op\+Factory}}
+
+
+Factory to create \hyperlink{class_darcy_brinkman_op}{Darcy\+Brinkman\+Op}.  
+
+
+
+
+{\ttfamily \#include $<$Darcy\+Brinkman\+Op.\+H$>$}
+
+Inheritance diagram for Darcy\+Brinkman\+Op\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.736156cm]{class_darcy_brinkman_op_factory}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_darcy_brinkman_op_factory_a33cfe1c1920f58a73f46b7dc5b9b0f3b}\label{class_darcy_brinkman_op_factory_a33cfe1c1920f58a73f46b7dc5b9b0f3b}} 
+\hyperlink{class_darcy_brinkman_op_factory_a33cfe1c1920f58a73f46b7dc5b9b0f3b}{Darcy\+Brinkman\+Op\+Factory} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_darcy_brinkman_op_factory_adffcc15076241ed69d214197b2c21433}{define} (const \textbf{ Problem\+Domain} \&a\+\_\+coarse\+Domain, const \textbf{ Vector}$<$ \textbf{ Disjoint\+Box\+Layout} $>$ \&a\+\_\+grids, const \textbf{ Vector}$<$ int $>$ \&a\+\_\+ref\+Ratios, const \textbf{ Real} \&a\+\_\+coarsedx, \textbf{ B\+C\+Holder} a\+\_\+bc, const \textbf{ Real} \&a\+\_\+alpha, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+a\+Coef, const \textbf{ Real} \&a\+\_\+beta, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&a\+\_\+b\+Coef, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+c\+Coef)
+\begin{DoxyCompactList}\small\item\em define method \end{DoxyCompactList}\item 
+void \hyperlink{class_darcy_brinkman_op_factory_a128c500e2c129aa3bc6ba7e20bf23cf1}{define} (const \textbf{ Problem\+Domain} \&a\+\_\+coarse\+Domain, const \textbf{ Vector}$<$ \textbf{ Disjoint\+Box\+Layout} $>$ \&a\+\_\+grids, const \textbf{ Vector}$<$ int $>$ \&a\+\_\+ref\+Ratios, const \textbf{ Real} \&a\+\_\+coarsedx, \textbf{ B\+C\+Holder} a\+\_\+bc, const \textbf{ Int\+Vect} \&a\+\_\+ghost\+Vect)
+\item 
+\mbox{\Hypertarget{class_darcy_brinkman_op_factory_a6b5e609db52c2363aa015eb0b811d98d}\label{class_darcy_brinkman_op_factory_a6b5e609db52c2363aa015eb0b811d98d}} 
+virtual \textbf{ M\+G\+Level\+Op}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $\ast$ \hyperlink{class_darcy_brinkman_op_factory_a6b5e609db52c2363aa015eb0b811d98d}{M\+Gnew\+Op} (const \textbf{ Problem\+Domain} \&a\+\_\+\+Fineindex\+Space, int a\+\_\+depth, bool a\+\_\+homo\+Only=true)
+\begin{DoxyCompactList}\small\item\em make new \textbf{ M\+G\+Level\+Op} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_darcy_brinkman_op_factory_a82a0943e3ec0acaa1954c1f4c3e3bfa7}\label{class_darcy_brinkman_op_factory_a82a0943e3ec0acaa1954c1f4c3e3bfa7}} 
+virtual \textbf{ A\+M\+R\+Level\+Op}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $\ast$ \hyperlink{class_darcy_brinkman_op_factory_a82a0943e3ec0acaa1954c1f4c3e3bfa7}{A\+M\+Rnew\+Op} (const \textbf{ Problem\+Domain} \&a\+\_\+index\+Space)
+\begin{DoxyCompactList}\small\item\em make new \textbf{ A\+M\+R\+Level\+Op} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_darcy_brinkman_op_factory_a20448a6f040bdac22873bea2b20b2699}\label{class_darcy_brinkman_op_factory_a20448a6f040bdac22873bea2b20b2699}} 
+virtual int \hyperlink{class_darcy_brinkman_op_factory_a20448a6f040bdac22873bea2b20b2699}{ref\+To\+Finer} (const \textbf{ Problem\+Domain} \&a\+\_\+domain) const
+\begin{DoxyCompactList}\small\item\em ref ratio to next finer level \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_darcy_brinkman_op_factory_a02ce1a05ae4fba39abdc0c37ebd8afd8}\label{class_darcy_brinkman_op_factory_a02ce1a05ae4fba39abdc0c37ebd8afd8}} 
+int \hyperlink{class_darcy_brinkman_op_factory_a02ce1a05ae4fba39abdc0c37ebd8afd8}{m\+\_\+coefficient\+\_\+average\+\_\+type}
+\begin{DoxyCompactList}\small\item\em coefficient averaging method \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Factory to create \hyperlink{class_darcy_brinkman_op}{Darcy\+Brinkman\+Op}. 
+
+Factory to create Darcy\+Brinkman\+Ops 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_darcy_brinkman_op_factory_adffcc15076241ed69d214197b2c21433}\label{class_darcy_brinkman_op_factory_adffcc15076241ed69d214197b2c21433}} 
+\index{Darcy\+Brinkman\+Op\+Factory@{Darcy\+Brinkman\+Op\+Factory}!define@{define}}
+\index{define@{define}!Darcy\+Brinkman\+Op\+Factory@{Darcy\+Brinkman\+Op\+Factory}}
+\subsubsection{\texorpdfstring{define()}{define()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Darcy\+Brinkman\+Op\+Factory\+::define (\begin{DoxyParamCaption}\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+coarse\+Domain,  }\item[{const \textbf{ Vector}$<$ \textbf{ Disjoint\+Box\+Layout} $>$ \&}]{a\+\_\+grids,  }\item[{const \textbf{ Vector}$<$ int $>$ \&}]{a\+\_\+ref\+Ratios,  }\item[{const \textbf{ Real} \&}]{a\+\_\+coarsedx,  }\item[{\textbf{ B\+C\+Holder}}]{a\+\_\+bc,  }\item[{const \textbf{ Real} \&}]{a\+\_\+alpha,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&}]{a\+\_\+a\+Coef,  }\item[{const \textbf{ Real} \&}]{a\+\_\+beta,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&}]{a\+\_\+b\+Coef,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&}]{a\+\_\+c\+Coef }\end{DoxyParamCaption})}
+
+
+
+define method 
+
+a\+\_\+coarse\+Domain is the domain at the coarsest level. a\+\_\+grids is the \textbf{ A\+MR} hierarchy. a\+\_\+ref\+Ratios are the refinement ratios between levels. The ratio lives with the coarser level so a\+\_\+ref\+Ratios\mbox{[}ilev\mbox{]} is the ratio between ilev and ilev+1 a\+\_\+coarse\+Dx is the grid spacing at the coarsest level. a\+\_\+bc holds the boundary conditions. a\+\_\+alpha is the identity constant coefficient a\+\_\+beta is the laplacian constant coefficient. a\+\_\+a\+Coef is the identity spatially varying coefficient a\+\_\+b\+Coef is the laplacian spatially varying coefficient. \mbox{\Hypertarget{class_darcy_brinkman_op_factory_a128c500e2c129aa3bc6ba7e20bf23cf1}\label{class_darcy_brinkman_op_factory_a128c500e2c129aa3bc6ba7e20bf23cf1}} 
+\index{Darcy\+Brinkman\+Op\+Factory@{Darcy\+Brinkman\+Op\+Factory}!define@{define}}
+\index{define@{define}!Darcy\+Brinkman\+Op\+Factory@{Darcy\+Brinkman\+Op\+Factory}}
+\subsubsection{\texorpdfstring{define()}{define()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Darcy\+Brinkman\+Op\+Factory\+::define (\begin{DoxyParamCaption}\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+coarse\+Domain,  }\item[{const \textbf{ Vector}$<$ \textbf{ Disjoint\+Box\+Layout} $>$ \&}]{a\+\_\+grids,  }\item[{const \textbf{ Vector}$<$ int $>$ \&}]{a\+\_\+ref\+Ratios,  }\item[{const \textbf{ Real} \&}]{a\+\_\+coarsedx,  }\item[{\textbf{ B\+C\+Holder}}]{a\+\_\+bc,  }\item[{const \textbf{ Int\+Vect} \&}]{a\+\_\+ghost\+Vect }\end{DoxyParamCaption})}
+
+Defines a factory for \hyperlink{class_darcy_brinkman_op}{Darcy\+Brinkman\+Op} which allows the operators to allocate their own coefficient data. $\alpha$ and $\beta$ coefficients are initialized to 1. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+coarse\+Domain} & The domain at the coarsest level. \\
+\hline
+{\em a\+\_\+grids} & The disjoint box layouts for the various refinement levels. \\
+\hline
+{\em a\+\_\+ref\+Ratios} & The refinement ratios between levels. \\
+\hline
+{\em a\+\_\+coarsedx} & The grid spacing at the coarsest level. \\
+\hline
+{\em a\+\_\+bc} & The boundary condition imposed on the solution. \\
+\hline
+{\em a\+\_\+ghost\+Vect} & The ghost stencil to use in the created coefficient data. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src/Darcy\+Brinkman\+Op.\+H\item 
+/home/parkinsonjl/mushy-\/layer/src/Darcy\+Brinkman\+Op.\+cpp\end{DoxyCompactItemize}

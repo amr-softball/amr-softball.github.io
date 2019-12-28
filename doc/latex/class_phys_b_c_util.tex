@@ -1,0 +1,464 @@
+\hypertarget{class_phys_b_c_util}{}\section{Phys\+B\+C\+Util Class Reference}
+\label{class_phys_b_c_util}\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+
+
+Big class to encapsulate physical boundary conditions.  
+
+
+
+
+{\ttfamily \#include $<$Phys\+B\+C\+Util.\+H$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_phys_b_c_util_a1aaacd3006840779878dc6287355a358}{Vel\+B\+C\+Type} \{ \newline
+{\bfseries bogus\+BC} = -\/1, 
+{\bfseries Solid\+Wall}, 
+{\bfseries Inflow}, 
+{\bfseries Outflow}, 
+\newline
+{\bfseries Outflow\+Normal}, 
+{\bfseries Vel\+Inflow\+Outflow}, 
+{\bfseries no\+Shear}, 
+{\bfseries Symmetry}, 
+\newline
+{\bfseries Vel\+Inflow\+Plume}, 
+{\bfseries Outflow\+Pressure\+Grad}, 
+{\bfseries Pressure\+Head}, 
+{\bfseries N\+U\+M\+\_\+\+P\+H\+Y\+S\+\_\+\+B\+C\+\_\+\+T\+Y\+P\+ES}
+ \}\begin{DoxyCompactList}\small\item\em Different types of velocity boundary conditions. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97a}{scalar\+B\+C\+Type} \{ \newline
+\hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa3c458c6b8958fb7d8f8f575725a0e91c}{Dirichlet}, 
+\hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aae1ec2629a88cd0c687f102296e995d6b}{Neumann}, 
+\hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aae85fc8bb407faa51331a6602f82577b7}{Inflow\+Outflow}, 
+\hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa3f9f8b4486f10b1ae3cef04b812d882f}{Only\+Inflow}, 
+\newline
+\hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aac2ad2d100c936a132b4926e2bc78d9ee}{Robin}, 
+\hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aaee840c89caeb958ad0ba78c66646d323}{Variable\+Flux}, 
+\hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa8753c4fd6fcfae4d3af72ecf1ceb6afb}{Fixed\+Temperature}, 
+\hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aaedb5400f6f9f4fca5b2e76554b46ad00}{Temperature\+Flux}, 
+\newline
+\hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa7f2dc59ed32fa174db287db133d4bf90}{Temperature\+Flux\+Radiation}, 
+\hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa55808703af58fdb3753923ee6a5ecd0d}{Mixed\+B\+C\+Temperature\+Salinity}
+ \}\begin{DoxyCompactList}\small\item\em Different options for scalar boundary conditions. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_phys_b_c_util_a08574a3a8d645947c3914ef6eb56694f}{Phys\+B\+C\+Util} (\hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params} a\+\_\+params, \textbf{ Real} a\+\_\+dx)
+\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a72d9bf4bce50e114c4a0723bc82c9c3f}\label{class_phys_b_c_util_a72d9bf4bce50e114c4a0723bc82c9c3f}} 
+virtual \hyperlink{class_phys_b_c_util}{Phys\+B\+C\+Util} $\ast$ \hyperlink{class_phys_b_c_util_a72d9bf4bce50e114c4a0723bc82c9c3f}{new\+Phys\+B\+C\+Util} () const
+\begin{DoxyCompactList}\small\item\em \char`\"{}virtual\char`\"{} constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a3b445cfa185191667669389fba825757}\label{class_phys_b_c_util_a3b445cfa185191667669389fba825757}} 
+virtual \textbf{ Tuple}$<$ \textbf{ B\+C\+Holder}, \textbf{ Space\+Dim} $>$ \hyperlink{class_phys_b_c_util_a3b445cfa185191667669389fba825757}{tracing\+Vel\+Func\+BC} () const
+\begin{DoxyCompactList}\small\item\em Returns velocity BC for tracing (inviscid) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a6229b609a93ec65debb885c418cfba61}\label{class_phys_b_c_util_a6229b609a93ec65debb885c418cfba61}} 
+virtual \textbf{ Tuple}$<$ \textbf{ B\+C\+Holder}, \textbf{ Space\+Dim} $>$ \hyperlink{class_phys_b_c_util_a6229b609a93ec65debb885c418cfba61}{advection\+Vel\+Func\+BC} (bool a\+\_\+is\+Viscous) const
+\begin{DoxyCompactList}\small\item\em Returns edge-\/centered vel BC for edge-\/ctrd vel (single component) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_acdf9562603ca1a20777ddefdb9f7848c}\label{class_phys_b_c_util_acdf9562603ca1a20777ddefdb9f7848c}} 
+virtual \textbf{ Tuple}$<$ \textbf{ B\+C\+Holder}, \textbf{ Space\+Dim} $>$ \hyperlink{class_phys_b_c_util_acdf9562603ca1a20777ddefdb9f7848c}{flux\+Extrap\+BC} () const
+\begin{DoxyCompactList}\small\item\em Currently unused. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a33c3a4bf7388455545a5ec5ce14f1748}\label{class_phys_b_c_util_a33c3a4bf7388455545a5ec5ce14f1748}} 
+virtual \textbf{ Tuple}$<$ \textbf{ B\+C\+Holder}, \textbf{ Space\+Dim} $>$ \hyperlink{class_phys_b_c_util_a33c3a4bf7388455545a5ec5ce14f1748}{u\+Star\+Func\+BC} (bool a\+\_\+is\+Viscous=false) const
+\begin{DoxyCompactList}\small\item\em BC holder for $ \mathbf{u}^* $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_ad84eb5aadb6e8a2c4787771362ff652f}\label{class_phys_b_c_util_ad84eb5aadb6e8a2c4787771362ff652f}} 
+virtual \textbf{ Tuple}$<$ \textbf{ B\+C\+Holder}, \textbf{ Space\+Dim} $>$ \hyperlink{class_phys_b_c_util_ad84eb5aadb6e8a2c4787771362ff652f}{edge\+Vel\+Func\+BC} (bool a\+\_\+is\+Viscous=false, \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$velocity\+B\+C\+Vals=N\+U\+LL) const
+\begin{DoxyCompactList}\small\item\em BC holder for $ \mathbf{u} $ (edge centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_ac2e74bc92a09f6975e924ebe8de9c776}\label{class_phys_b_c_util_ac2e74bc92a09f6975e924ebe8de9c776}} 
+virtual \textbf{ Tuple}$<$ \textbf{ B\+C\+Holder}, \textbf{ Space\+Dim} $>$ \hyperlink{class_phys_b_c_util_ac2e74bc92a09f6975e924ebe8de9c776}{porosity\+Face\+BC} () const
+\begin{DoxyCompactList}\small\item\em BC holder for porosity $ \chi $, (edge centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a0b7ada710021d11b2957b938d49680f9}\label{class_phys_b_c_util_a0b7ada710021d11b2957b938d49680f9}} 
+virtual \textbf{ Tuple}$<$ \textbf{ B\+C\+Holder}, \textbf{ Space\+Dim} $>$ \hyperlink{class_phys_b_c_util_a0b7ada710021d11b2957b938d49680f9}{permeability\+Face\+BC} () const
+\begin{DoxyCompactList}\small\item\em B\+Cs for permeability $ \Pi $ (edge centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a111f6b2f38e223c429ecf11c8ee57891}\label{class_phys_b_c_util_a111f6b2f38e223c429ecf11c8ee57891}} 
+virtual \textbf{ Tuple}$<$ \textbf{ B\+C\+Holder}, \textbf{ Space\+Dim} $>$ \hyperlink{class_phys_b_c_util_a111f6b2f38e223c429ecf11c8ee57891}{vel\+Extrap\+BC} (\textbf{ Interval} ghost\+Interval=\textbf{ Interval}(0, 0)) const
+\begin{DoxyCompactList}\small\item\em BC holder for velocity $ \mathbf{u} $ -\/ extrapolation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a2e01aaaeff61fc14e7b15bade1d77303}\label{class_phys_b_c_util_a2e01aaaeff61fc14e7b15bade1d77303}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a2e01aaaeff61fc14e7b15bade1d77303}{viscous\+Reflux\+BC} (int a\+\_\+dir, bool a\+\_\+is\+Viscous=false) const
+\begin{DoxyCompactList}\small\item\em Returns single-\/component BC for viscous refluxing solves. \end{DoxyCompactList}\item 
+virtual \textbf{ Phys\+I\+BC} $\ast$ \hyperlink{class_phys_b_c_util_a9837cec809ca2c0e61a631736fd97de8}{advection\+Vel\+I\+BC} () const
+\item 
+\mbox{\Hypertarget{class_phys_b_c_util_afbc82bf7d509c99722005bbb202bd71e}\label{class_phys_b_c_util_afbc82bf7d509c99722005bbb202bd71e}} 
+bool \hyperlink{class_phys_b_c_util_afbc82bf7d509c99722005bbb202bd71e}{is\+Defined} ()
+\begin{DoxyCompactList}\small\item\em Is object defined? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a35dc4c0a9f1f3a7515c924d2de3dcaf7}\label{class_phys_b_c_util_a35dc4c0a9f1f3a7515c924d2de3dcaf7}} 
+void \hyperlink{class_phys_b_c_util_a35dc4c0a9f1f3a7515c924d2de3dcaf7}{Dx} (const \textbf{ Real} a\+\_\+dx)
+\begin{DoxyCompactList}\small\item\em Sets the cell spacing $ \Delta x $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_aea31c120a55a405ee18ed078bcc4d8d7}\label{class_phys_b_c_util_aea31c120a55a405ee18ed078bcc4d8d7}} 
+void \hyperlink{class_phys_b_c_util_aea31c120a55a405ee18ed078bcc4d8d7}{convert\+B\+C\+Type} (const int a\+\_\+implicit\+BC, const \textbf{ Real} a\+\_\+implicit\+Val, int \&a\+\_\+explicit\+BC, \textbf{ Real} \&a\+\_\+explicit\+Val) const
+\begin{DoxyCompactList}\small\item\em Convert to \hyperlink{class_advect_i_b_c}{Advect\+I\+BC} B\+Cs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a4b2f350f7ed6b6d8dfa36c3b14fb4c83}\label{class_phys_b_c_util_a4b2f350f7ed6b6d8dfa36c3b14fb4c83}} 
+int \hyperlink{class_phys_b_c_util_a4b2f350f7ed6b6d8dfa36c3b14fb4c83}{convert\+B\+C\+Type} (const int a\+\_\+implicit\+BC) const
+\begin{DoxyCompactList}\small\item\em Handy to have a function of this form, too. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a51eb3a218fa0e589a5108516f7cb4713}\label{class_phys_b_c_util_a51eb3a218fa0e589a5108516f7cb4713}} 
+\textbf{ Real} \hyperlink{class_phys_b_c_util_a51eb3a218fa0e589a5108516f7cb4713}{Dx} () const
+\begin{DoxyCompactList}\small\item\em Returns cell spacing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_ab0e771887c439318b0501b9f67a1b8c2}\label{class_phys_b_c_util_ab0e771887c439318b0501b9f67a1b8c2}} 
+void \hyperlink{class_phys_b_c_util_ab0e771887c439318b0501b9f67a1b8c2}{Time} (const \textbf{ Real} a\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Sets time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a0caf25dc5c31d42a6f41734c5d9feaff}\label{class_phys_b_c_util_a0caf25dc5c31d42a6f41734c5d9feaff}} 
+void \hyperlink{class_phys_b_c_util_a0caf25dc5c31d42a6f41734c5d9feaff}{update\+Time\+Dependent\+B\+Cs} ()
+\begin{DoxyCompactList}\small\item\em Update time dependent B\+Cs (e.\+g. after changing the time) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a7b438a6bea59424a11f52958a5d17d9e}\label{class_phys_b_c_util_a7b438a6bea59424a11f52958a5d17d9e}} 
+\textbf{ Real} \hyperlink{class_phys_b_c_util_a7b438a6bea59424a11f52958a5d17d9e}{Time} () const
+\begin{DoxyCompactList}\small\item\em Returns current time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_aacb13faac8c92afafe5ddc7d667e6181}\label{class_phys_b_c_util_aacb13faac8c92afafe5ddc7d667e6181}} 
+void \hyperlink{class_phys_b_c_util_aacb13faac8c92afafe5ddc7d667e6181}{set\+Adv\+Vel} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$a\+\_\+adv\+Vel)
+\begin{DoxyCompactList}\small\item\em Set pointer to advection velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_ae121a247bdd5732a82af904ac77257e8}\label{class_phys_b_c_util_ae121a247bdd5732a82af904ac77257e8}} 
+\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$ \hyperlink{class_phys_b_c_util_ae121a247bdd5732a82af904ac77257e8}{get\+Adv\+Vel} ()
+\begin{DoxyCompactList}\small\item\em Get pointer to advection velocity. \end{DoxyCompactList}\item 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a314c920cf3e0b78c8814d7e3bc020be6}{Level\+Pressure\+Func\+BC} () const
+\begin{DoxyCompactList}\small\item\em BC holder for pressure $ P $. \end{DoxyCompactList}\item 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a111040058c4df423daa036b8555e2bf1}{grad\+E\+Sync\+Func\+BC} () const
+\begin{DoxyCompactList}\small\item\em BC holder for synchronisation correction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a1dfad0e6bccd8d1f2b82bc55d26c1ce3}\label{class_phys_b_c_util_a1dfad0e6bccd8d1f2b82bc55d26c1ce3}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a1dfad0e6bccd8d1f2b82bc55d26c1ce3}{grad\+Pi\+Func\+BC} () const
+\begin{DoxyCompactList}\small\item\em BC holder for $ \nabla \Pi $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_af93ccd3841ed1ed876949f5fb70191df}\label{class_phys_b_c_util_af93ccd3841ed1ed876949f5fb70191df}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_af93ccd3841ed1ed876949f5fb70191df}{extrap\+Func\+BC} () const
+\begin{DoxyCompactList}\small\item\em Extrap B\+Cs on all domain boundaries. \end{DoxyCompactList}\item 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_ae13f736d6b1f4bd5a306b226d7303bb3}{Freestream\+Corr\+Func\+BC} () const
+\begin{DoxyCompactList}\small\item\em BC holder for freestream correction. \end{DoxyCompactList}\item 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_af775d916ab409a2231492fbb1492a94b}{Sync\+Proj\+Func\+BC} () const
+\begin{DoxyCompactList}\small\item\em BC holder for synchronisation projection. \end{DoxyCompactList}\item 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a33fc70ca77f08936d46fa64610174d5b}{grad\+Mac\+Pressure\+Func\+BC} () const
+\begin{DoxyCompactList}\small\item\em BC holder for $ \nabla P $ in the M\+AC projection. \end{DoxyCompactList}\item 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_ac70d7c8b4b144cccbe0fe9d6715c5b86}{grad\+E\+Lambda\+Func\+BC} () const
+\begin{DoxyCompactList}\small\item\em BC holder for freestream preservation correction $ \nabla e_\lambda $. \end{DoxyCompactList}\item 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a68ef94f8d4002dabc19e7a24a671943e}{vel\+Func\+BC} (int a\+\_\+dir, bool a\+\_\+viscous, \textbf{ Interval} interval=\textbf{ Interval}(0, 0)) const
+\begin{DoxyCompactList}\small\item\em returns single-\/component BC for viscous solves \end{DoxyCompactList}\item 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a8dd3f2fd42f64e02bdaba7ca01952c5b}{extrapolation\+Func\+BC} (int a\+\_\+order=0) const
+\begin{DoxyCompactList}\small\item\em returns single-\/component BC \end{DoxyCompactList}\item 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_ac29460ba7448a486030ba90ee246cc4f}{Basic\+Grad\+Pressure\+Func\+BC} () const
+\begin{DoxyCompactList}\small\item\em BC holder for $ \nabla P $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_ab67dfa920f00a906e0ee254fd23755f0}\label{class_phys_b_c_util_ab67dfa920f00a906e0ee254fd23755f0}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_ab67dfa920f00a906e0ee254fd23755f0}{stream\+Function\+BC} () const
+\begin{DoxyCompactList}\small\item\em B\+Cs for streamfunction. \end{DoxyCompactList}\item 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_ad0cfd2f6a56078706972627cf6acd642}{Basic\+Pressure\+Func\+BC} (bool a\+\_\+is\+Homogeneous) const
+\begin{DoxyCompactList}\small\item\em BC holder for pressure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a0b105308df553508432c655f987e8a55}\label{class_phys_b_c_util_a0b105308df553508432c655f987e8a55}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a0b105308df553508432c655f987e8a55}{Theta\+L\+Func\+BC} (bool a\+\_\+homogeneous=false, \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$a\+\_\+adv\+Vel=N\+U\+LL) const
+\begin{DoxyCompactList}\small\item\em BC holder for liquid concentration, $ \Theta_l $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a5c3af371d310e96f6065f26b5d4472d5}\label{class_phys_b_c_util_a5c3af371d310e96f6065f26b5d4472d5}} 
+virtual \textbf{ B\+C\+Holder} {\bfseries Tracer\+BC} (bool a\+\_\+homogeneous=false, \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$a\+\_\+adv\+Vel=N\+U\+LL, \textbf{ Real} a\+\_\+boundary\+Val=1.\+0) const
+\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a3bd937de73e4f1c1f354bb56bb6be05e}\label{class_phys_b_c_util_a3bd937de73e4f1c1f354bb56bb6be05e}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a3bd937de73e4f1c1f354bb56bb6be05e}{Basictheta\+Func\+BC} (bool a\+\_\+homogeneous=false, \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$a\+\_\+adv\+Vel=N\+U\+LL) const
+\begin{DoxyCompactList}\small\item\em BC holder for temperature, $ \theta $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a1cd0685d8dd435f2b4dc4144bffbb58a}\label{class_phys_b_c_util_a1cd0685d8dd435f2b4dc4144bffbb58a}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a1cd0685d8dd435f2b4dc4144bffbb58a}{Basic\+Porosity\+Func\+BC} (bool a\+\_\+homogeneous=false) const
+\begin{DoxyCompactList}\small\item\em BC holder for porosity, $ \chi $ (cell centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_aa1d2160b38d8766327ad37d9200e733f}\label{class_phys_b_c_util_aa1d2160b38d8766327ad37d9200e733f}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_aa1d2160b38d8766327ad37d9200e733f}{Basic\+Porosity\+Face\+Func\+BC} (int a\+\_\+comp, bool a\+\_\+homogeneous=false) const
+\begin{DoxyCompactList}\small\item\em BC holder for porosity, $ \chi $ (edge centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_aa62c80d941738f11eb7d2374eb6f95cd}\label{class_phys_b_c_util_aa62c80d941738f11eb7d2374eb6f95cd}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_aa62c80d941738f11eb7d2374eb6f95cd}{Basic\+Permeability\+Func\+BC} (bool a\+\_\+homogeneous=false) const
+\begin{DoxyCompactList}\small\item\em BC holder for permeability, $ \Pi $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a4a1811075fb4db677b759007eedfea1f}\label{class_phys_b_c_util_a4a1811075fb4db677b759007eedfea1f}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a4a1811075fb4db677b759007eedfea1f}{Basic\+Permeability\+Face\+Func\+BC} (int a\+\_\+comp, bool a\+\_\+homogeneous=false) const
+\begin{DoxyCompactList}\small\item\em BC holder for permeability, $ \Pi $ (edge centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a2738b6b86dd806cbef3555c63c16654f}\label{class_phys_b_c_util_a2738b6b86dd806cbef3555c63c16654f}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a2738b6b86dd806cbef3555c63c16654f}{Basic\+Enthalpy\+Func\+BC} (bool a\+\_\+homogeneous=false, \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$a\+\_\+adv\+Vel=N\+U\+LL) const
+\begin{DoxyCompactList}\small\item\em BC holder for enthalpy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a18c7c929e037f3502664c8187a1773be}\label{class_phys_b_c_util_a18c7c929e037f3502664c8187a1773be}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a18c7c929e037f3502664c8187a1773be}{Basic\+Liquidus\+BC} (bool a\+\_\+homogeneous=false, \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$a\+\_\+adv\+Vel=N\+U\+LL) const
+\begin{DoxyCompactList}\small\item\em Boundary conditions for calculating the liquidus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a6053b911815dee529e0c03b9a1890ac6}\label{class_phys_b_c_util_a6053b911815dee529e0c03b9a1890ac6}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a6053b911815dee529e0c03b9a1890ac6}{Basic\+Eutectic\+BC} (bool a\+\_\+homogeneous=false, \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$a\+\_\+adv\+Vel=N\+U\+LL) const
+\begin{DoxyCompactList}\small\item\em Boundary conditions for calculating the eutectic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a40e62cc352e404c143fd521693351cfe}\label{class_phys_b_c_util_a40e62cc352e404c143fd521693351cfe}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a40e62cc352e404c143fd521693351cfe}{Basic\+Solidus\+BC} (bool a\+\_\+homogeneous=false, \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$a\+\_\+adv\+Vel=N\+U\+LL) const
+\begin{DoxyCompactList}\small\item\em Boundary conditions for calculating the solidus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_aa43f9e82b9b11975d7667ce08cfff8ba}\label{class_phys_b_c_util_aa43f9e82b9b11975d7667ce08cfff8ba}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_aa43f9e82b9b11975d7667ce08cfff8ba}{Basic\+Scalar\+Func\+BC} (\textbf{ Real} a\+\_\+top\+Val, \textbf{ Real} a\+\_\+bottom\+Val, \textbf{ Real} a\+\_\+plume\+Val, bool a\+\_\+homogeneous=false) const
+\begin{DoxyCompactList}\small\item\em BC holder for some generic scalar. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a2aafcf84be5e2bf056d0b1f3cc519738}\label{class_phys_b_c_util_a2aafcf84be5e2bf056d0b1f3cc519738}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a2aafcf84be5e2bf056d0b1f3cc519738}{Theta\+Func\+BC} (bool a\+\_\+homogeneous=false, \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$a\+\_\+adv\+Vel=N\+U\+LL) const
+\begin{DoxyCompactList}\small\item\em BC holder for bulk concentration $ \Theta $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a1aee7049a6681ba83c9cd6e3265ad6ac}\label{class_phys_b_c_util_a1aee7049a6681ba83c9cd6e3265ad6ac}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a1aee7049a6681ba83c9cd6e3265ad6ac}{lambda\+BC} (bool a\+\_\+homogeneous=false, bool a\+\_\+scale\+With\+Porosity=false) const
+\begin{DoxyCompactList}\small\item\em BC holder for $ \lambda $ (for finding freestream preservation errors) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a088fc328784b3b6641800608f0ee93cb}\label{class_phys_b_c_util_a088fc328784b3b6641800608f0ee93cb}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a088fc328784b3b6641800608f0ee93cb}{no\+Flux\+BC} () const
+\begin{DoxyCompactList}\small\item\em B\+Cs for no flux boundaries. \end{DoxyCompactList}\item 
+virtual \textbf{ Phys\+I\+BC} $\ast$ \hyperlink{class_phys_b_c_util_ac7b43cdc70f0f9362da054108813be9a}{scalar\+Trace\+I\+BC} (\textbf{ Real\+Vect} bc\+Val\+Lo, \textbf{ Real\+Vect} bc\+Val\+Hi, \textbf{ Int\+Vect} bc\+Type\+Lo, \textbf{ Int\+Vect} bc\+Type\+Hi, \textbf{ Real} a\+\_\+bc\+Plume\+Val=0.\+0, \textbf{ Vector}$<$ \textbf{ Real} $>$ a\+\_\+plume\+Bounds=\textbf{ Vector}$<$ \textbf{ Real} $>$(0)) const
+\begin{DoxyCompactList}\small\item\em Initial and Boundary Conditions for advecting scalars. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a757d098a45d192eb056f20c39a8bf0b4}\label{class_phys_b_c_util_a757d098a45d192eb056f20c39a8bf0b4}} 
+virtual \textbf{ Phys\+I\+BC} $\ast$ \hyperlink{class_phys_b_c_util_a757d098a45d192eb056f20c39a8bf0b4}{scalar\+Trace\+H\+C\+\_\+\+I\+BC} () const
+\begin{DoxyCompactList}\small\item\em For multi component enthalpy-\/salinity solve. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_aec2445f00529a64f933a8f94857510b1}\label{class_phys_b_c_util_aec2445f00529a64f933a8f94857510b1}} 
+virtual \textbf{ Phys\+I\+BC} $\ast$ \hyperlink{class_phys_b_c_util_aec2445f00529a64f933a8f94857510b1}{scalar\+Trace\+H\+\_\+\+I\+BC} () const
+\begin{DoxyCompactList}\small\item\em Boundary conditions for Enthalpy during advection solves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a5c909f1431b5b8546a64b4a179af3136}\label{class_phys_b_c_util_a5c909f1431b5b8546a64b4a179af3136}} 
+virtual \textbf{ Phys\+I\+BC} $\ast$ \hyperlink{class_phys_b_c_util_a5c909f1431b5b8546a64b4a179af3136}{scalar\+Trace\+C\+\_\+\+I\+BC} () const
+\begin{DoxyCompactList}\small\item\em Boundary conditions for Bulk Concentration during advection solves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_aac4a0e01f79105a8d8a8a1ee6af582d7}\label{class_phys_b_c_util_aac4a0e01f79105a8d8a8a1ee6af582d7}} 
+virtual \textbf{ Phys\+I\+BC} $\ast$ \hyperlink{class_phys_b_c_util_aac4a0e01f79105a8d8a8a1ee6af582d7}{scalar\+Trace\+\_\+\+I\+BC} (\textbf{ Vector}$<$ int $>$ a\+\_\+bc\+Type\+Hi, \textbf{ Vector}$<$ int $>$ a\+\_\+bc\+Type\+Lo, \textbf{ Real\+Vect} a\+\_\+bc\+Val\+Hi, \textbf{ Real\+Vect} a\+\_\+bc\+Val\+Lo, \textbf{ Real} a\+\_\+plume\+Inflow) const
+\begin{DoxyCompactList}\small\item\em Generic boundary conditions for Bulk Concentration during advection solves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a3af9f8b837c0e396c93e81aa8443ddfc}\label{class_phys_b_c_util_a3af9f8b837c0e396c93e81aa8443ddfc}} 
+void \hyperlink{class_phys_b_c_util_a3af9f8b837c0e396c93e81aa8443ddfc}{apply\+Frame\+Advection\+BC} (\textbf{ Int\+Vect} \&bc\+Type\+Hi, \textbf{ Int\+Vect} \&bc\+Type\+Lo) const
+\begin{DoxyCompactList}\small\item\em Apply frame advection B\+Cs if appropriate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_ac4b38170b19495eff390d5f0614728c3}\label{class_phys_b_c_util_ac4b38170b19495eff390d5f0614728c3}} 
+virtual \textbf{ Phys\+I\+BC} $\ast$ \hyperlink{class_phys_b_c_util_ac4b38170b19495eff390d5f0614728c3}{scalar\+Trace\+T\+Sl\+\_\+\+I\+BC} () const
+\begin{DoxyCompactList}\small\item\em For multi component enthalpy-\/salinity solve. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a8d082782f7b8d40e0c1e43578724cd6a}\label{class_phys_b_c_util_a8d082782f7b8d40e0c1e43578724cd6a}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a8d082782f7b8d40e0c1e43578724cd6a}{temperature\+Liquid\+Salinity\+BC} (bool a\+\_\+homogeneous=false) const
+\begin{DoxyCompactList}\small\item\em BC for object with two components\+: temperature and liquid salinity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_ab9d3de31c276bbd83ff3f95c4dc38163}\label{class_phys_b_c_util_ab9d3de31c276bbd83ff3f95c4dc38163}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_ab9d3de31c276bbd83ff3f95c4dc38163}{enthalpy\+Salinity\+BC} (bool a\+\_\+homogeneous=false) const
+\begin{DoxyCompactList}\small\item\em BC for object with two components\+: enthalpy and bulk salinity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a69363c5fe9ce806ac3fe76abe24137a2}\label{class_phys_b_c_util_a69363c5fe9ce806ac3fe76abe24137a2}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a69363c5fe9ce806ac3fe76abe24137a2}{extrap\+Vel\+Func\+BC} (int a\+\_\+comp, \textbf{ Interval} ghost\+Interval=\textbf{ Interval}(0, 0)) const
+\begin{DoxyCompactList}\small\item\em Apply extrapolation B\+Cs to velocity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a1007b24a131e788c97781df04ae9037e}\label{class_phys_b_c_util_a1007b24a131e788c97781df04ae9037e}} 
+\hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params} \hyperlink{class_phys_b_c_util_a1007b24a131e788c97781df04ae9037e}{m\+\_\+params}
+\begin{DoxyCompactList}\small\item\em Physical parameters for the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a9c5eb718c29d7e1ac16253ccbf365dd2}\label{class_phys_b_c_util_a9c5eb718c29d7e1ac16253ccbf365dd2}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a9c5eb718c29d7e1ac16253ccbf365dd2}{basic\+E\+C\+Vel\+Func\+BC} (bool a\+\_\+is\+Homogeneous, bool a\+\_\+is\+Viscous, int a\+\_\+comp, const \textbf{ Interval} \&a\+\_\+interval, \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$a\+\_\+velocity\+B\+C\+Vals=N\+U\+LL) const
+\begin{DoxyCompactList}\small\item\em \textbf{ B\+C\+Holder} for edge centred velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a696dca9e5f67f8d3f1556b0b034bfbaf}\label{class_phys_b_c_util_a696dca9e5f67f8d3f1556b0b034bfbaf}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a696dca9e5f67f8d3f1556b0b034bfbaf}{basic\+C\+C\+Vel\+Func\+BC} (bool a\+\_\+is\+Homogeneous, bool a\+\_\+is\+Viscous, int a\+\_\+vel\+Component, const \textbf{ Interval} \&a\+\_\+interval) const
+\begin{DoxyCompactList}\small\item\em returns a \textbf{ B\+C\+Holder} for cell-\/centered velocity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a0da6bf78ee652955fa50aa3d5f439fa4}\label{class_phys_b_c_util_a0da6bf78ee652955fa50aa3d5f439fa4}} 
+virtual \textbf{ B\+C\+Holder} \hyperlink{class_phys_b_c_util_a0da6bf78ee652955fa50aa3d5f439fa4}{extrap\+Vel\+Func\+Interior} (bool a\+\_\+is\+Homogeneous, int a\+\_\+comp, const \textbf{ Interval} \&a\+\_\+interval, int n\+\_\+ghost) const
+\begin{DoxyCompactList}\small\item\em Apply extrapolation B\+Cs to velocity (interior ghost cells) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a5abe105b9a924f6401b78ab6a5b4b1ab}\label{class_phys_b_c_util_a5abe105b9a924f6401b78ab6a5b4b1ab}} 
+virtual void \hyperlink{class_phys_b_c_util_a5abe105b9a924f6401b78ab6a5b4b1ab}{set\+B\+Cs} ()
+\begin{DoxyCompactList}\small\item\em interact with \textbf{ Parm\+Parse} to set physical BC types \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a4c1aae9e1f5a676c93e0cd3bd7100f0b}\label{class_phys_b_c_util_a4c1aae9e1f5a676c93e0cd3bd7100f0b}} 
+\textbf{ Tuple}$<$ int, \textbf{ Space\+Dim} $>$ \hyperlink{class_phys_b_c_util_a4c1aae9e1f5a676c93e0cd3bd7100f0b}{m\+\_\+lo\+BC}
+\begin{DoxyCompactList}\small\item\em contains the enumerated values for the lo-\/end BC \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_phys_b_c_util_a3469ac43534392033eb7d99c2398947b}\label{class_phys_b_c_util_a3469ac43534392033eb7d99c2398947b}} 
+\textbf{ Tuple}$<$ int, \textbf{ Space\+Dim} $>$ \hyperlink{class_phys_b_c_util_a3469ac43534392033eb7d99c2398947b}{m\+\_\+hi\+BC}
+\begin{DoxyCompactList}\small\item\em contains the enumerated values for the hi-\/end BC \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Big class to encapsulate physical boundary conditions. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97a}\label{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97a}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!scalar\+B\+C\+Type@{scalar\+B\+C\+Type}}
+\index{scalar\+B\+C\+Type@{scalar\+B\+C\+Type}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{scalar\+B\+C\+Type}{scalarBCType}}
+{\footnotesize\ttfamily enum \hyperlink{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97a}{Phys\+B\+C\+Util\+::scalar\+B\+C\+Type}}
+
+
+
+Different options for scalar boundary conditions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dirichlet@{Dirichlet}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Dirichlet@{Dirichlet}}}\mbox{\Hypertarget{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa3c458c6b8958fb7d8f8f575725a0e91c}\label{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa3c458c6b8958fb7d8f8f575725a0e91c}} 
+Dirichlet&Fix value at boundary. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Neumann@{Neumann}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Neumann@{Neumann}}}\mbox{\Hypertarget{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aae1ec2629a88cd0c687f102296e995d6b}\label{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aae1ec2629a88cd0c687f102296e995d6b}} 
+Neumann&Fix gradient at boundary. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Inflow\+Outflow@{Inflow\+Outflow}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Inflow\+Outflow@{Inflow\+Outflow}}}\mbox{\Hypertarget{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aae85fc8bb407faa51331a6602f82577b7}\label{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aae85fc8bb407faa51331a6602f82577b7}} 
+Inflow\+Outflow&Separate conditions for inflow and outflow regions. Where there\textquotesingle{}s inflow -\/ dirichlet, where there\textquotesingle{}s outflow -\/ zero normal gradient \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Only\+Inflow@{Only\+Inflow}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Only\+Inflow@{Only\+Inflow}}}\mbox{\Hypertarget{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa3f9f8b4486f10b1ae3cef04b812d882f}\label{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa3f9f8b4486f10b1ae3cef04b812d882f}} 
+Only\+Inflow&Allow inflow but no outflow. For e.\+g. a plume forced into the domain. Enforce dirichlet B\+Cs everywhere, but with a different value for inflow vs outflow regions \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Robin@{Robin}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Robin@{Robin}}}\mbox{\Hypertarget{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aac2ad2d100c936a132b4926e2bc78d9ee}\label{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aac2ad2d100c936a132b4926e2bc78d9ee}} 
+Robin&Robin. Not implemented yet \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Variable\+Flux@{Variable\+Flux}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Variable\+Flux@{Variable\+Flux}}}\mbox{\Hypertarget{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aaee840c89caeb958ad0ba78c66646d323}\label{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aaee840c89caeb958ad0ba78c66646d323}} 
+Variable\+Flux&Variable flux. Flux which varies along the boundary \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fixed\+Temperature@{Fixed\+Temperature}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Fixed\+Temperature@{Fixed\+Temperature}}}\mbox{\Hypertarget{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa8753c4fd6fcfae4d3af72ecf1ceb6afb}\label{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa8753c4fd6fcfae4d3af72ecf1ceb6afb}} 
+Fixed\+Temperature&Fixed temperature. This is a special case for the heat equation, where we apply B\+Cs to enthalpy and need to compute the boundary from the interior porosity and specified temperature \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Temperature\+Flux@{Temperature\+Flux}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Temperature\+Flux@{Temperature\+Flux}}}\mbox{\Hypertarget{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aaedb5400f6f9f4fca5b2e76554b46ad00}\label{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aaedb5400f6f9f4fca5b2e76554b46ad00}} 
+Temperature\+Flux&Temperature Flux. B\+Cs for enthalpy. Assume bulk concentration $ C_g $ in the ghost cell is equal to it\textquotesingle{}s value in the interior of the domain (i.\+e. assume a no normal flux condition) then iteratively estimate the enthalpy $ H_g $ such that $ \frac{T_g(H_g,C_g) - T_{interior} }{\Delta x}= F $, in order to satisfy the temperature flux condition. Finally, set the enthalpy ghost value to $ H_g $.
+
+$ a \frac{dT}{dz} - F_0 - b(T - T_{ref}) $
+
+Only do this for $z>0.75$, otherwise, no flux. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Temperature\+Flux\+Radiation@{Temperature\+Flux\+Radiation}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Temperature\+Flux\+Radiation@{Temperature\+Flux\+Radiation}}}\mbox{\Hypertarget{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa7f2dc59ed32fa174db287db133d4bf90}\label{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa7f2dc59ed32fa174db287db133d4bf90}} 
+Temperature\+Flux\+Radiation&Temperature flux + radiation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mixed\+B\+C\+Temperature\+Salinity@{Mixed\+B\+C\+Temperature\+Salinity}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Mixed\+B\+C\+Temperature\+Salinity@{Mixed\+B\+C\+Temperature\+Salinity}}}\mbox{\Hypertarget{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa55808703af58fdb3753923ee6a5ecd0d}\label{class_phys_b_c_util_a1beb9821cf9e783e3742b82b7070c97aa55808703af58fdb3753923ee6a5ecd0d}} 
+Mixed\+B\+C\+Temperature\+Salinity&Mixed BC for temperature/salinity. B\+Cs to apply to temperature $ \theta $ and liquid salinity $ \Theta_l $ fields
+
+$ a \frac{d \theta}{dz} - F_0 - b(\theta - \theta_{ref}) = 0 $
+
+The temperature ghost values are given by
+
+$ \theta_g = \left( \frac{a}{\Delta x} - \frac{b}{2} \right)^{-1} \left[ \theta_i \left( \frac{a}{\Delta x} + \frac{b}{2} \right) + F_0 - b \theta_r \right] $
+
+where $ \theta_i $ is the value on the interior side of the boundary.
+
+The liquid salinity is given by $(\Theta_l)_g = - \theta_g$ if $0 < \chi < 1$, and $ (\Theta_l)_g = (\Theta_l)_i $ otherwise. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_phys_b_c_util_a1aaacd3006840779878dc6287355a358}\label{class_phys_b_c_util_a1aaacd3006840779878dc6287355a358}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Vel\+B\+C\+Type@{Vel\+B\+C\+Type}}
+\index{Vel\+B\+C\+Type@{Vel\+B\+C\+Type}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{Vel\+B\+C\+Type}{VelBCType}}
+{\footnotesize\ttfamily enum \hyperlink{class_phys_b_c_util_a1aaacd3006840779878dc6287355a358}{Phys\+B\+C\+Util\+::\+Vel\+B\+C\+Type}}
+
+
+
+Different types of velocity boundary conditions. 
+
+Solid\+Wall -\/ no normal flow, no transverse flow is viscous Inflow -\/ Outflow -\/ Outflow\+Normal -\/ normal component has zero gradient at boundary, transverse component = 0 Vel\+Inflow\+Outflow -\/ no\+Shear -\/ Symmetry -\/ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_phys_b_c_util_a08574a3a8d645947c3914ef6eb56694f}\label{class_phys_b_c_util_a08574a3a8d645947c3914ef6eb56694f}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{Phys\+B\+C\+Util()}{PhysBCUtil()}}
+{\footnotesize\ttfamily Phys\+B\+C\+Util\+::\+Phys\+B\+C\+Util (\begin{DoxyParamCaption}\item[{\hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params}}]{a\+\_\+params,  }\item[{\textbf{ Real}}]{a\+\_\+dx }\end{DoxyParamCaption})}
+
+this will access the \textbf{ Parm\+Parse} database using the phys\+BC prefix and use it to define the physical BC types (hi and lo) in each direction. The BC type \char`\"{}custom\char`\"{} will imply that the BC is a somewhat nonstandard one, but that the derived class will know what to do with it. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_phys_b_c_util_a9837cec809ca2c0e61a631736fd97de8}\label{class_phys_b_c_util_a9837cec809ca2c0e61a631736fd97de8}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!advection\+Vel\+I\+BC@{advection\+Vel\+I\+BC}}
+\index{advection\+Vel\+I\+BC@{advection\+Vel\+I\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{advection\+Vel\+I\+B\+C()}{advectionVelIBC()}}
+{\footnotesize\ttfamily \textbf{ Phys\+I\+BC} $\ast$ Phys\+B\+C\+Util\+::advection\+Vel\+I\+BC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns a BC object compatible with A\+M\+R\+Godunov advection infrastructure. For use in the \textbf{ Patch\+Godunov} stuff. \mbox{\Hypertarget{class_phys_b_c_util_ac29460ba7448a486030ba90ee246cc4f}\label{class_phys_b_c_util_ac29460ba7448a486030ba90ee246cc4f}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Basic\+Grad\+Pressure\+Func\+BC@{Basic\+Grad\+Pressure\+Func\+BC}}
+\index{Basic\+Grad\+Pressure\+Func\+BC@{Basic\+Grad\+Pressure\+Func\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{Basic\+Grad\+Pressure\+Func\+B\+C()}{BasicGradPressureFuncBC()}}
+{\footnotesize\ttfamily \textbf{ B\+C\+Holder} Phys\+B\+C\+Util\+::\+Basic\+Grad\+Pressure\+Func\+BC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+BC holder for $ \nabla P $. 
+
+Extrapolation B\+Cs on all boundaries \mbox{\Hypertarget{class_phys_b_c_util_ad0cfd2f6a56078706972627cf6acd642}\label{class_phys_b_c_util_ad0cfd2f6a56078706972627cf6acd642}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Basic\+Pressure\+Func\+BC@{Basic\+Pressure\+Func\+BC}}
+\index{Basic\+Pressure\+Func\+BC@{Basic\+Pressure\+Func\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{Basic\+Pressure\+Func\+B\+C()}{BasicPressureFuncBC()}}
+{\footnotesize\ttfamily \textbf{ B\+C\+Holder} Phys\+B\+C\+Util\+::\+Basic\+Pressure\+Func\+BC (\begin{DoxyParamCaption}\item[{bool}]{a\+\_\+is\+Homogeneous }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+BC holder for pressure. 
+
+For subcycled code. \mbox{\Hypertarget{class_phys_b_c_util_a8dd3f2fd42f64e02bdaba7ca01952c5b}\label{class_phys_b_c_util_a8dd3f2fd42f64e02bdaba7ca01952c5b}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!extrapolation\+Func\+BC@{extrapolation\+Func\+BC}}
+\index{extrapolation\+Func\+BC@{extrapolation\+Func\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{extrapolation\+Func\+B\+C()}{extrapolationFuncBC()}}
+{\footnotesize\ttfamily \textbf{ B\+C\+Holder} Phys\+B\+C\+Util\+::extrapolation\+Func\+BC (\begin{DoxyParamCaption}\item[{int}]{a\+\_\+order = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns single-\/component BC 
+
+Be very careful with this function -\/ it fills CF ghost cells.
+
+Applies B\+Cs to component in the \textbf{ Interval(a\+\_\+dir, a\+\_\+dir)}returns multi-\/component BC for applying to fields which have been calculated Not for use when computing fields -\/ use \hyperlink{class_phys_b_c_util_a68ef94f8d4002dabc19e7a24a671943e}{vel\+Func\+B\+C()} for solves. 0th order extrapolation, also fills interior ghost cells \mbox{\Hypertarget{class_phys_b_c_util_ae13f736d6b1f4bd5a306b226d7303bb3}\label{class_phys_b_c_util_ae13f736d6b1f4bd5a306b226d7303bb3}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Freestream\+Corr\+Func\+BC@{Freestream\+Corr\+Func\+BC}}
+\index{Freestream\+Corr\+Func\+BC@{Freestream\+Corr\+Func\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{Freestream\+Corr\+Func\+B\+C()}{FreestreamCorrFuncBC()}}
+{\footnotesize\ttfamily \textbf{ B\+C\+Holder} Phys\+B\+C\+Util\+::\+Freestream\+Corr\+Func\+BC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+BC holder for freestream correction. 
+
+No normal gradient, $ \mathbf{n} \cdot \nabla \phi = 0 $ \mbox{\Hypertarget{class_phys_b_c_util_ac70d7c8b4b144cccbe0fe9d6715c5b86}\label{class_phys_b_c_util_ac70d7c8b4b144cccbe0fe9d6715c5b86}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!grad\+E\+Lambda\+Func\+BC@{grad\+E\+Lambda\+Func\+BC}}
+\index{grad\+E\+Lambda\+Func\+BC@{grad\+E\+Lambda\+Func\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{grad\+E\+Lambda\+Func\+B\+C()}{gradELambdaFuncBC()}}
+{\footnotesize\ttfamily \textbf{ B\+C\+Holder} Phys\+B\+C\+Util\+::grad\+E\+Lambda\+Func\+BC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+BC holder for freestream preservation correction $ \nabla e_\lambda $. 
+
+Same as for $ \nabla P $ in general \mbox{\Hypertarget{class_phys_b_c_util_a111040058c4df423daa036b8555e2bf1}\label{class_phys_b_c_util_a111040058c4df423daa036b8555e2bf1}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!grad\+E\+Sync\+Func\+BC@{grad\+E\+Sync\+Func\+BC}}
+\index{grad\+E\+Sync\+Func\+BC@{grad\+E\+Sync\+Func\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{grad\+E\+Sync\+Func\+B\+C()}{gradESyncFuncBC()}}
+{\footnotesize\ttfamily \textbf{ B\+C\+Holder} Phys\+B\+C\+Util\+::grad\+E\+Sync\+Func\+BC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+BC holder for synchronisation correction. 
+
+Just use same BC as $ \nabla P $ \mbox{\Hypertarget{class_phys_b_c_util_a33fc70ca77f08936d46fa64610174d5b}\label{class_phys_b_c_util_a33fc70ca77f08936d46fa64610174d5b}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!grad\+Mac\+Pressure\+Func\+BC@{grad\+Mac\+Pressure\+Func\+BC}}
+\index{grad\+Mac\+Pressure\+Func\+BC@{grad\+Mac\+Pressure\+Func\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{grad\+Mac\+Pressure\+Func\+B\+C()}{gradMacPressureFuncBC()}}
+{\footnotesize\ttfamily \textbf{ B\+C\+Holder} Phys\+B\+C\+Util\+::grad\+Mac\+Pressure\+Func\+BC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+BC holder for $ \nabla P $ in the M\+AC projection. 
+
+Same as for $ \nabla P $ in general \mbox{\Hypertarget{class_phys_b_c_util_a314c920cf3e0b78c8814d7e3bc020be6}\label{class_phys_b_c_util_a314c920cf3e0b78c8814d7e3bc020be6}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Level\+Pressure\+Func\+BC@{Level\+Pressure\+Func\+BC}}
+\index{Level\+Pressure\+Func\+BC@{Level\+Pressure\+Func\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{Level\+Pressure\+Func\+B\+C()}{LevelPressureFuncBC()}}
+{\footnotesize\ttfamily \textbf{ B\+C\+Holder} Phys\+B\+C\+Util\+::\+Level\+Pressure\+Func\+BC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+BC holder for pressure $ P $. 
+
+For subcycled code. \mbox{\Hypertarget{class_phys_b_c_util_ac7b43cdc70f0f9362da054108813be9a}\label{class_phys_b_c_util_ac7b43cdc70f0f9362da054108813be9a}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!scalar\+Trace\+I\+BC@{scalar\+Trace\+I\+BC}}
+\index{scalar\+Trace\+I\+BC@{scalar\+Trace\+I\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{scalar\+Trace\+I\+B\+C()}{scalarTraceIBC()}}
+{\footnotesize\ttfamily \textbf{ Phys\+I\+BC} $\ast$ Phys\+B\+C\+Util\+::scalar\+Trace\+I\+BC (\begin{DoxyParamCaption}\item[{\textbf{ Real\+Vect}}]{bc\+Val\+Lo,  }\item[{\textbf{ Real\+Vect}}]{bc\+Val\+Hi,  }\item[{\textbf{ Int\+Vect}}]{bc\+Type\+Lo,  }\item[{\textbf{ Int\+Vect}}]{bc\+Type\+Hi,  }\item[{\textbf{ Real}}]{a\+\_\+bc\+Plume\+Val = {\ttfamily 0.0},  }\item[{\textbf{ Vector}$<$ \textbf{ Real} $>$}]{a\+\_\+plume\+Bounds = {\ttfamily \textbf{ Vector}$<$\textbf{ Real}$>$(0)} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initial and Boundary Conditions for advecting scalars. 
+
+this is a BC object used in the \textbf{ Patch\+Godunov} stuff \mbox{\Hypertarget{class_phys_b_c_util_af775d916ab409a2231492fbb1492a94b}\label{class_phys_b_c_util_af775d916ab409a2231492fbb1492a94b}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!Sync\+Proj\+Func\+BC@{Sync\+Proj\+Func\+BC}}
+\index{Sync\+Proj\+Func\+BC@{Sync\+Proj\+Func\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{Sync\+Proj\+Func\+B\+C()}{SyncProjFuncBC()}}
+{\footnotesize\ttfamily \textbf{ B\+C\+Holder} Phys\+B\+C\+Util\+::\+Sync\+Proj\+Func\+BC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+BC holder for synchronisation projection. 
+
+Same B\+Cs as for pressure \mbox{\Hypertarget{class_phys_b_c_util_a68ef94f8d4002dabc19e7a24a671943e}\label{class_phys_b_c_util_a68ef94f8d4002dabc19e7a24a671943e}} 
+\index{Phys\+B\+C\+Util@{Phys\+B\+C\+Util}!vel\+Func\+BC@{vel\+Func\+BC}}
+\index{vel\+Func\+BC@{vel\+Func\+BC}!Phys\+B\+C\+Util@{Phys\+B\+C\+Util}}
+\subsubsection{\texorpdfstring{vel\+Func\+B\+C()}{velFuncBC()}}
+{\footnotesize\ttfamily \textbf{ B\+C\+Holder} Phys\+B\+C\+Util\+::vel\+Func\+BC (\begin{DoxyParamCaption}\item[{int}]{a\+\_\+dir,  }\item[{bool}]{a\+\_\+viscous,  }\item[{\textbf{ Interval}}]{interval = {\ttfamily \textbf{ Interval}(0,0)} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns single-\/component BC for viscous solves 
+
+Applies B\+Cs to the component in the \textbf{ Interval(0,0)} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/\+B\+Cutil/Phys\+B\+C\+Util.\+H\item 
+/home/parkinsonjl/mushy-\/layer/\+B\+Cutil/Phys\+B\+C\+Util.\+cpp\end{DoxyCompactItemize}

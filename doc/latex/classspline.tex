@@ -1,0 +1,40 @@
+\hypertarget{classspline}{}\section{spline Class Reference}
+\label{classspline}\index{spline@{spline}}
+
+
+Class for handling spline interpolation.  
+
+
+
+
+{\ttfamily \#include $<$Chombo\+Spline.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classspline_a4e92a172f86289ee7171a07f1bdbf562}\label{classspline_a4e92a172f86289ee7171a07f1bdbf562}} 
+enum \hyperlink{classspline_a4e92a172f86289ee7171a07f1bdbf562}{bd\+\_\+type} \{ {\bfseries first\+\_\+deriv} = 1, 
+{\bfseries second\+\_\+deriv} = 2
+ \}\begin{DoxyCompactList}\small\item\em boundary types \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classspline_a8faa0e24c31c45b976606e1376e2eff2}\label{classspline_a8faa0e24c31c45b976606e1376e2eff2}} 
+void \hyperlink{classspline_a8faa0e24c31c45b976606e1376e2eff2}{set\+\_\+boundary} (\hyperlink{classspline_a4e92a172f86289ee7171a07f1bdbf562}{bd\+\_\+type} left, \textbf{ Real} left\+\_\+value, \hyperlink{classspline_a4e92a172f86289ee7171a07f1bdbf562}{bd\+\_\+type} right, \textbf{ Real} right\+\_\+value, bool force\+\_\+linear\+\_\+extrapolation=false)
+\begin{DoxyCompactList}\small\item\em optional, but if called it has to come be before \hyperlink{classspline_abfb0f9a39a5c59e72aa59e0f1ce8cc6d}{set\+\_\+points()} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classspline_abfb0f9a39a5c59e72aa59e0f1ce8cc6d}\label{classspline_abfb0f9a39a5c59e72aa59e0f1ce8cc6d}} 
+void \hyperlink{classspline_abfb0f9a39a5c59e72aa59e0f1ce8cc6d}{set\+\_\+points} (const std\+::vector$<$ \textbf{ Real} $>$ \&x, const std\+::vector$<$ \textbf{ Real} $>$ \&y, bool cubic\+\_\+spline=true)
+\begin{DoxyCompactList}\small\item\em set the points to interpolate on \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classspline_a57aed09321ec0baaef9474ff6e1a9745}\label{classspline_a57aed09321ec0baaef9474ff6e1a9745}} 
+\textbf{ Real} \hyperlink{classspline_a57aed09321ec0baaef9474ff6e1a9745}{operator()} (\textbf{ Real} x) const
+\begin{DoxyCompactList}\small\item\em Perform operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for handling spline interpolation. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src/Chombo\+Spline.\+h\item 
+/home/parkinsonjl/mushy-\/layer/src/Chombo\+Spline.\+cpp\end{DoxyCompactItemize}

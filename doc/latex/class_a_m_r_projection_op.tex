@@ -1,0 +1,54 @@
+\hypertarget{class_a_m_r_projection_op}{}\section{A\+M\+R\+Projection\+Op Class Reference}
+\label{class_a_m_r_projection_op}\index{A\+M\+R\+Projection\+Op@{A\+M\+R\+Projection\+Op}}
+
+
+Operator for doing projector with a variable coefficient.  
+
+
+
+
+{\ttfamily \#include $<$A\+M\+R\+Projection\+Op.\+h$>$}
+
+Inheritance diagram for A\+M\+R\+Projection\+Op\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.274854cm]{class_a_m_r_projection_op}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_a_m_r_projection_op_a9a015d1c2ac019517518e88aefecb6fa}{prolong\+Increment} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi\+This\+Level, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+correct\+Coarse)
+\begin{DoxyCompactList}\small\item\em Prolong operation for multigrid. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_projection_op_a29437ba4ff7458327bf131d1a9c4ae79}\label{class_a_m_r_projection_op_a29437ba4ff7458327bf131d1a9c4ae79}} 
+virtual void \hyperlink{class_a_m_r_projection_op_a29437ba4ff7458327bf131d1a9c4ae79}{reset\+Lambda} ()
+\begin{DoxyCompactList}\small\item\em Reset the relaxation coefficient. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Operator for doing projector with a variable coefficient. 
+
+This is essentially the same as \textbf{ V\+C\+A\+M\+R\+Poisson\+Op2}, but allows us to make changes if we want. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_m_r_projection_op_a9a015d1c2ac019517518e88aefecb6fa}\label{class_a_m_r_projection_op_a9a015d1c2ac019517518e88aefecb6fa}} 
+\index{A\+M\+R\+Projection\+Op@{A\+M\+R\+Projection\+Op}!prolong\+Increment@{prolong\+Increment}}
+\index{prolong\+Increment@{prolong\+Increment}!A\+M\+R\+Projection\+Op@{A\+M\+R\+Projection\+Op}}
+\subsubsection{\texorpdfstring{prolong\+Increment()}{prolongIncrement()}}
+{\footnotesize\ttfamily void A\+M\+R\+Projection\+Op\+::prolong\+Increment (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi\+This\+Level,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+correct\+Coarse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prolong operation for multigrid. 
+
+Transfer data from a coarse grid to a fine grid, doing interpolation as required 
+
+Reimplemented from \textbf{ A\+M\+R\+Poisson\+Op}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src/A\+M\+R\+Projection\+Op.\+h\item 
+/home/parkinsonjl/mushy-\/layer/src/A\+M\+R\+Projection\+Op.\+cpp\end{DoxyCompactItemize}

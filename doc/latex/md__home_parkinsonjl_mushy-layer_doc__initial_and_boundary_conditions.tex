@@ -1,0 +1,273 @@
+This document describes how to implement the initial conditions and boundary conditions.
+
+The python script in {\ttfamily /plotting/boundary\+Conditions\+Figure.py} is designed to create a visualisation of the boundary conditions specified in an inputs file, which you may find useful.
+
+\subsection*{Initial conditions}
+
+There are two options for setting the initial data in a simulation.
+
+\subsubsection*{Restart file}
+
+Firstly, you may specify a previous data file from which the simulation will restart, via the input option {\ttfamily main.\+restart\+\_\+file}, e.\+g.
+
+
+\begin{DoxyCode}
+main.restart\_file = /full/path/to/chk99999.2d.hdf5
+\end{DoxyCode}
+
+
+Note that the restart file must be a checkpoint file (as opposed to a plot file), and must have the same data structure as your simulation (i.\+e. the same number of potential levels of refinement).
+
+\subsubsection*{Specify in code}
+
+The second option is to declare the initial conditions analytically within the code. This is all controlled by the function {\ttfamily \hyperlink{class_a_m_r_level_mushy_layer_adae77fea47630fd1e3c2dea1c59e4c3a}{A\+M\+R\+Level\+Mushy\+Layer\+::initial\+Data()}}, which can be found in {\ttfamily /src\+Subcycle/\+A\+M\+R\+Level\+Mushy\+Layer\+Init.cpp}. For some types of problems (declared by {\ttfamily parameters.\+problem\+\_\+type}) there are specific initial conditions defined. For the standard problem type, {\ttfamily parameters.\+problem\+\_\+type=0} corresponding to mushy layer simulations, the initial data is defined in {\ttfamily \hyperlink{class_a_m_r_level_mushy_layer_a601849adc5f5b5fc9e9999b568020922}{A\+M\+R\+Level\+Mushy\+Layer\+::initial\+Data\+Mushy\+Layer()}} where there are lots of possible variations but typically we just set the enthalpy and bulk concentration to their boundary values on the bottom boundary (i.\+e. the vertical direction, lower face). This is designed for simulations where ice is grown from a cold upper boundary, and hence the bottom boundary corresponds to the warm ocean.
+
+You may overwrite the default initial conditions using the {\ttfamily main.\+init\+Data} input option. Currently there are just two options\+:
+
+{\ttfamily main.\+init\+Data=0}\+: default, set H and C to their values at the bottom boundary (within {\ttfamily \hyperlink{class_a_m_r_level_mushy_layer_ac1ca84bc06a3c5bc314994cc24d4bca7}{A\+M\+R\+Level\+Mushy\+Layer\+::initial\+Data\+Default()}}) {\ttfamily main.\+init\+Data=1}\+: create a porous mushy hole in the center of the domain, for one of the benchmark problems (within {\ttfamily \hyperlink{class_a_m_r_level_mushy_layer_a6a97be276431431a0d0338476f837f5c}{A\+M\+R\+Level\+Mushy\+Layer\+::initial\+Data\+Porous\+Hole()}})
+
+Here is an example of how you would add a new initial condition that establishes a linear enthalpy gradient and constant bulk concentration across the domain\+:
+
+
+\begin{DoxyEnumerate}
+\item Create a new initial data function {\ttfamily A\+M\+R\+Level\+Mushy\+Layer\+::initial\+Data\+Linear\+Gradient()}, e.\+g.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}
+\{c++\}
+void AMRLevelMushyLayer::initialDataLinearGradient()
+\{
+
+  // Iterate over the different boxes on this level of refinement
+  DataIterator dit = m\_grids.dataIterator();
+  for (dit.reset(); dit.ok(); ++dit)
+  \{
+    // Iterate over the cells within each box
+    BoxIterator bit((*m\_scalarNew[0])[dit].box());
+    for (bit.reset(); bit.ok(); ++bit)
+    \{
+      // This is the location of the grid cell in indexing space
+      IntVect iv = bit();
+
+      // Get the location of this grid cell in x-y space
+      RealVect loc;
+      getLocation(iv, loc, m\_dx);
+
+      // Set the enthalpy = stefan number - 0.1*z, where z is the vertical co-ordinate
+      // note that loc[1] is the vertical co-ordinate
+      (*m\_scalarNew[ScalarVars::m\_enthalpy])[dit](iv) = m\_parameters.stefan - 0.1*loc[1];
+
+      // Set the bulk concentration
+      (*m\_scalarNew[ScalarVars::m\_bulkConcentration])[dit](iv) = -1.0;
+    \}
+  \}
+
+
+\}
+\end{DoxyCode}
+
+
+
+\begin{DoxyEnumerate}
+\item Also add this function to the header file {\ttfamily \hyperlink{_a_m_r_level_mushy_layer_8_h_source}{A\+M\+R\+Level\+Mushy\+Layer.\+h}}, i.\+e. 
+\begin{DoxyCode}
+\{c++\}
+/// Mushy layer with a porous hole in the middle
+  void initialDataDefault();
+
+  /// New function
+  void initialDataLinearGradient();
+\end{DoxyCode}
+
+\item Add the new function to the list of possible options in {\ttfamily A\+M\+R\+Level\+Mushy\+Layer\+Init.\+cpp},
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}
+\{c++\}
+switch(m\_opt.customInitData)
+    \{
+      case 1:
+        initialDataPorousHole();
+        break;
+      case 2:   // if main.initData = 2, use this function:
+         initialDataLinearGradient();
+         break; 
+      default:
+        initialDataDefault();
+    \}
+\end{DoxyCode}
+
+
+\subsection*{Boundary conditions}
+
+Boundary conditions are defined in two ways. Firstly we define the type of boundary condition to apply to each side, then we define the value to use (where needed) at each side. For scalars, the simple options are\+:
+
+0. Dirichlet
+\begin{DoxyEnumerate}
+\item Neumann
+\item Inflow/outflow
+\end{DoxyEnumerate}
+
+For velocity, there are lots of options, some of the most important being
+
+0. Solid wall
+\begin{DoxyEnumerate}
+\item Inflow/outflow -\/ pressure = 0, velocity determined by the projection
+\item Inflow/outflow with purely normal flow enforced (a bit dodgy)
+\item Reflection
+\item Pressure head
+\end{DoxyEnumerate}
+
+See B\+C\+Util/\+Phys\+B\+C\+Util.\+h for a full list of possible options.
+
+We set boundary conditions on the \textquotesingle{}high\textquotesingle{} side of the domain in each dimension, then the \textquotesingle{}low\textquotesingle{} side of the domain in each dimension e.\+g.
+
+{\ttfamily bc.\+scalar\+Hi=1 0} scalar B\+Cs are neumann on the right boundary, dirichlet on the top
+
+{\ttfamily bc.\+scalar\+Lo=1 2} scalar B\+Cs are neumann on the left boundary, inflow/outflow at the bottom
+
+{\ttfamily bc.\+vel\+Hi=6 0}
+
+{\ttfamily bc.\+vel\+Lo=6 2}
+
+We must now specify the values of the various thermodynamic fields on each boundary. In older versions of the code, the only way to do this was to specify the enthalpy and bulk salinity, e.\+g.
+
+
+\begin{DoxyCode}
+bc.bulkConcentrationHiVal=-1 -1
+bc.bulkConcentrationLoVal=-1 -1
+bc.enthalpyHiVal=0 0.9
+bc.enthalpyLoVal=0.0 6.03
+\end{DoxyCode}
+
+
+From which the temperature, porosity, liquid salinity and solid salinity are computed using the phase diagram.
+
+However, this is not always particularly convenient as it doesn\textquotesingle{}t give precise control over the temperature at a boundary. If you instead want to fix other fields, this can be done directly e.\+g.
+
+
+\begin{DoxyCode}
+bc.temperatureHi = 0 1
+bc.temperatureHiVal = 0.5 0.0
+\end{DoxyCode}
+
+
+would set the temperature at the top boundary to be 0.\+5. Other relevant thermodynamic variables can similarly be controlled e.\+g.
+
+
+\begin{DoxyCode}
+bc.porosityLo
+bc.liquidConcentrationLo
+permeabilityLo
+\end{DoxyCode}
+
+
+\subsubsection*{Mixed temperature BC}
+
+A notable extra boundary condition available is designed to enforce the following condition\+:
+
+
+\begin{DoxyCode}
+a \(\backslash\)frac\{d \(\backslash\)theta\}\{dz\} - F - b(\(\backslash\)theta - \(\backslash\)theta\_\{ref\}) = 0
+\end{DoxyCode}
+
+
+where {\ttfamily \textbackslash{}theta} is the dimensionless temperature. The correct implementation of this BC can be confirmed using the test problem in {\ttfamily /test/diffusive\+Growth/}.
+
+To use this BC, first set the temperature to use BC type {\ttfamily 9} on the appropriate face(s). E.\+g. to use this BC on the top face,
+
+
+\begin{DoxyCode}
+bc.temperatureHi=1 9   # use no flux in x direction, and the mixed BC above in the vertical direction
+\end{DoxyCode}
+
+
+Then define the values of a, b, F, \{ref\} via\+:
+
+
+\begin{DoxyCode}
+bc.TRefHi=0 -0.8  # \(\backslash\)theta\_\{ref\}
+bc.aHi=0 0.5  # a
+bc.bHi=0 -1.0 # b
+bc.temperatureHiVal=0 -1.0 # F
+\end{DoxyCode}
+
+
+Note that we have also defined values for these variables in the x-\/direction, but these are irrelevant and not used.
+
+\subsubsection*{Time dependent B\+Cs}
+
+Time dependent B\+Cs are possible. At the moment the only option implemented is a sinusoidally varying temperature. An example of this can be found in {\ttfamily /examples/sinusoialcooling/} like
+
+
+\begin{DoxyCode}
+bc.timeDependent=1
+bc.temperatureHi=1 0
+bc.temperatureHiVal=0 -999 # last value here shouldn't matter as we do time dependent bcs
+main.plot\_prefix=Sinusoidal
+
+bc.sinusoidal\_temperature\_bc\_timescale = 0.2
+bc.sinusoidal\_temperature\_bc\_amplitude = 0.2
+bc.sinusoidal\_temperature\_bc\_av = -0.8
+bc.sinusoidal\_temperature\_bc\_phase\_diff = 0.0
+\end{DoxyCode}
+
+
+These B\+Cs are implemented in the function {\ttfamily \hyperlink{class_phys_b_c_util_a0caf25dc5c31d42a6f41734c5d9feaff}{Phys\+B\+C\+Util\+::update\+Time\+Dependent\+B\+Cs()}}, where should serve as a model for adding your own other time dependent B\+Cs.
+
+\subsubsection*{3D}
+
+In 3D, you must specify three values as there are three dimensions. The vertical dimension becomes the final item in the list, i.\+e.
+
+
+\begin{DoxyCode}
+bc.temperatureHi = 0.0 0.0 -1.0  # x, y, and z values
+\end{DoxyCode}
+
+
+\subsubsection*{Allowed text keywords}
+
+The latest version of the code will let you define BC types using text rather than numbers, which can make the inputs file read a little easier. This is handled by the function {\ttfamily \hyperlink{class_mushy_layer_params_a497dc7bd7c29819bd697d255af8de3d6}{Mushy\+Layer\+Params\+::parse\+B\+Cs()}}. Currently supported options are\+:
+
+Scalars\+:
+\begin{DoxyItemize}
+\item \textquotesingle{}noflux\textquotesingle{}
+\item \textquotesingle{}fixed\textquotesingle{}
+\item \textquotesingle{}open\textquotesingle{}
+\item \textquotesingle{}inflow\textquotesingle{}
+\item \textquotesingle{}mixed\textquotesingle{}
+\end{DoxyItemize}
+
+Velocity\+:
+\begin{DoxyItemize}
+\item \textquotesingle{}solidwall\textquotesingle{} or \textquotesingle{}noflow\textquotesingle{}
+\item \textquotesingle{}inflow\textquotesingle{}
+\item \textquotesingle{}outflow\textquotesingle{} or \textquotesingle{}open\textquotesingle{}
+\item \textquotesingle{}outflownormal\textquotesingle{}
+\item \textquotesingle{}inflowoutflow\textquotesingle{}
+\item \textquotesingle{}noshear\textquotesingle{}
+\item \textquotesingle{}symmetry\textquotesingle{}
+\item \textquotesingle{}pressure\+Head\textquotesingle{}
+\end{DoxyItemize}
+
+Example usage\+:
+
+
+\begin{DoxyCode}
+bc.scalarHi = noflux fixed
+bc.velLo = symmetry open
+\end{DoxyCode}
+
+
+which is equivalent to
+
+
+\begin{DoxyCode}
+bc.scalarHi = 1 0
+bc.velLo = 6 2
+\end{DoxyCode}
+
+
+Note that in one particular line, you must use either all integers or all text to define the B\+Cs. 

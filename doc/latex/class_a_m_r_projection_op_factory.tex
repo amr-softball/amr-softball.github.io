@@ -1,0 +1,85 @@
+\hypertarget{class_a_m_r_projection_op_factory}{}\section{A\+M\+R\+Projection\+Op\+Factory Class Reference}
+\label{class_a_m_r_projection_op_factory}\index{A\+M\+R\+Projection\+Op\+Factory@{A\+M\+R\+Projection\+Op\+Factory}}
+
+
+Factory for creating \hyperlink{class_a_m_r_projection_op}{A\+M\+R\+Projection\+Op}\textquotesingle{}s.  
+
+
+
+
+{\ttfamily \#include $<$A\+M\+R\+Projection\+Op.\+h$>$}
+
+Inheritance diagram for A\+M\+R\+Projection\+Op\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.736156cm]{class_a_m_r_projection_op_factory}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_a_m_r_projection_op_factory_a826d78ce1993a87c0a5e69268494ae12}{define} (const \textbf{ Problem\+Domain} \&a\+\_\+coarse\+Domain, const \textbf{ Vector}$<$ \textbf{ Disjoint\+Box\+Layout} $>$ \&a\+\_\+grids, const \textbf{ Vector}$<$ int $>$ \&a\+\_\+ref\+Ratios, const \textbf{ Real} \&a\+\_\+coarsedx, \textbf{ B\+C\+Holder} a\+\_\+bc, const \textbf{ Real} \&a\+\_\+alpha, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+a\+Coef, const \textbf{ Real} \&a\+\_\+beta, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&a\+\_\+b\+Coef, int a\+\_\+averaging\+\_\+type=\textbf{ Coarse\+Average\+::arithmetic})
+\item 
+void \hyperlink{class_a_m_r_projection_op_factory_afb2b5b8c9667efa30cf9b90b6c0f455b}{define} (const \textbf{ Problem\+Domain} \&a\+\_\+coarse\+Domain, const \textbf{ Vector}$<$ \textbf{ Disjoint\+Box\+Layout} $>$ \&a\+\_\+grids, const \textbf{ Vector}$<$ int $>$ \&a\+\_\+ref\+Ratios, const \textbf{ Real} \&a\+\_\+coarsedx, \textbf{ B\+C\+Holder} a\+\_\+bc, const \textbf{ Int\+Vect} \&a\+\_\+ghost\+Vect, int a\+\_\+averaging\+\_\+type=\textbf{ Coarse\+Average\+::arithmetic})
+\item 
+\mbox{\Hypertarget{class_a_m_r_projection_op_factory_a4b2ce37d6d05f13f96f45357eb5a99ac}\label{class_a_m_r_projection_op_factory_a4b2ce37d6d05f13f96f45357eb5a99ac}} 
+virtual \textbf{ M\+G\+Level\+Op}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $\ast$ \hyperlink{class_a_m_r_projection_op_factory_a4b2ce37d6d05f13f96f45357eb5a99ac}{M\+Gnew\+Op} (const \textbf{ Problem\+Domain} \&a\+\_\+\+Fineindex\+Space, int a\+\_\+depth, bool a\+\_\+homo\+Only=true)
+\begin{DoxyCompactList}\small\item\em Make a new multigrid operator for a given domain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_projection_op_factory_a2662bc309724ed6ddc5372af5eda4247}\label{class_a_m_r_projection_op_factory_a2662bc309724ed6ddc5372af5eda4247}} 
+virtual \textbf{ A\+M\+R\+Level\+Op}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $\ast$ \hyperlink{class_a_m_r_projection_op_factory_a2662bc309724ed6ddc5372af5eda4247}{A\+M\+Rnew\+Op} (const \textbf{ Problem\+Domain} \&a\+\_\+index\+Space)
+\begin{DoxyCompactList}\small\item\em Make a new \textbf{ A\+MR} multirid operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_projection_op_factory_a09ad311fa562078ed94956e2e294924c}\label{class_a_m_r_projection_op_factory_a09ad311fa562078ed94956e2e294924c}} 
+virtual int \hyperlink{class_a_m_r_projection_op_factory_a09ad311fa562078ed94956e2e294924c}{ref\+To\+Finer} (const \textbf{ Problem\+Domain} \&a\+\_\+domain) const
+\begin{DoxyCompactList}\small\item\em Returns the refinement ratio to the next finer level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_m_r_projection_op_factory_ae1f06f5aecde3e3c1d157abd59fe8d44}\label{class_a_m_r_projection_op_factory_ae1f06f5aecde3e3c1d157abd59fe8d44}} 
+int \hyperlink{class_a_m_r_projection_op_factory_ae1f06f5aecde3e3c1d157abd59fe8d44}{m\+\_\+coefficient\+\_\+average\+\_\+type}
+\begin{DoxyCompactList}\small\item\em How to do coefficient averaging (arithmetic, harmonic, etc. ) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_projection_op_factory_a3171ba31fdb78862e5222a094989d15b}\label{class_a_m_r_projection_op_factory_a3171ba31fdb78862e5222a094989d15b}} 
+int \hyperlink{class_a_m_r_projection_op_factory_a3171ba31fdb78862e5222a094989d15b}{m\+\_\+relax\+Mode}
+\begin{DoxyCompactList}\small\item\em How to do relaxation (gauss-\/seidel, jacobi, etc.) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Factory for creating \hyperlink{class_a_m_r_projection_op}{A\+M\+R\+Projection\+Op}\textquotesingle{}s. 
+
+Would have liked to base this off \textbf{ V\+C\+A\+M\+R\+Poisson\+Op2\+Factory}, but that\textquotesingle{}s all private so we have to do it ourselves 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_m_r_projection_op_factory_a826d78ce1993a87c0a5e69268494ae12}\label{class_a_m_r_projection_op_factory_a826d78ce1993a87c0a5e69268494ae12}} 
+\index{A\+M\+R\+Projection\+Op\+Factory@{A\+M\+R\+Projection\+Op\+Factory}!define@{define}}
+\index{define@{define}!A\+M\+R\+Projection\+Op\+Factory@{A\+M\+R\+Projection\+Op\+Factory}}
+\subsubsection{\texorpdfstring{define()}{define()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void A\+M\+R\+Projection\+Op\+Factory\+::define (\begin{DoxyParamCaption}\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+coarse\+Domain,  }\item[{const \textbf{ Vector}$<$ \textbf{ Disjoint\+Box\+Layout} $>$ \&}]{a\+\_\+grids,  }\item[{const \textbf{ Vector}$<$ int $>$ \&}]{a\+\_\+ref\+Ratios,  }\item[{const \textbf{ Real} \&}]{a\+\_\+coarsedx,  }\item[{\textbf{ B\+C\+Holder}}]{a\+\_\+bc,  }\item[{const \textbf{ Real} \&}]{a\+\_\+alpha,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&}]{a\+\_\+a\+Coef,  }\item[{const \textbf{ Real} \&}]{a\+\_\+beta,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&}]{a\+\_\+b\+Coef,  }\item[{int}]{a\+\_\+averaging\+\_\+type = {\ttfamily \textbf{ Coarse\+Average\+::arithmetic}} }\end{DoxyParamCaption})}
+
+a\+\_\+coarse\+Domain is the domain at the coarsest level. a\+\_\+grids is the \textbf{ A\+MR} hierarchy. a\+\_\+ref\+Ratios are the refinement ratios between levels. The ratio lives with the coarser level so a\+\_\+ref\+Ratios\mbox{[}ilev\mbox{]} is the ratio between ilev and ilev+1 a\+\_\+coarse\+Dx is the grid spacing at the coarsest level. a\+\_\+bc holds the boundary conditions. a\+\_\+alpha is the identity constant coefficient a\+\_\+beta is the laplacian constant coefficient. a\+\_\+a\+Coef is the identity spatially varying coefficient a\+\_\+b\+Coef is the laplacian spatially varying coefficient a\+\_\+averaging\+\_\+type is the method to use for averaging cell to face centred variables \mbox{\Hypertarget{class_a_m_r_projection_op_factory_afb2b5b8c9667efa30cf9b90b6c0f455b}\label{class_a_m_r_projection_op_factory_afb2b5b8c9667efa30cf9b90b6c0f455b}} 
+\index{A\+M\+R\+Projection\+Op\+Factory@{A\+M\+R\+Projection\+Op\+Factory}!define@{define}}
+\index{define@{define}!A\+M\+R\+Projection\+Op\+Factory@{A\+M\+R\+Projection\+Op\+Factory}}
+\subsubsection{\texorpdfstring{define()}{define()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void A\+M\+R\+Projection\+Op\+Factory\+::define (\begin{DoxyParamCaption}\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+coarse\+Domain,  }\item[{const \textbf{ Vector}$<$ \textbf{ Disjoint\+Box\+Layout} $>$ \&}]{a\+\_\+grids,  }\item[{const \textbf{ Vector}$<$ int $>$ \&}]{a\+\_\+ref\+Ratios,  }\item[{const \textbf{ Real} \&}]{a\+\_\+coarsedx,  }\item[{\textbf{ B\+C\+Holder}}]{a\+\_\+bc,  }\item[{const \textbf{ Int\+Vect} \&}]{a\+\_\+ghost\+Vect,  }\item[{int}]{a\+\_\+averaging\+\_\+type = {\ttfamily \textbf{ Coarse\+Average\+::arithmetic}} }\end{DoxyParamCaption})}
+
+Defines a factory for \textbf{ V\+C\+A\+M\+R\+Poisson\+Op2} which allows the operators to allocate their own coefficient data. $\alpha$ and $\beta$ coefficients are initialized to 1. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+coarse\+Domain} & The domain at the coarsest level. \\
+\hline
+{\em a\+\_\+grids} & The disjoint box layouts for the various refinement levels. \\
+\hline
+{\em a\+\_\+ref\+Ratios} & The refinement ratios between levels. \\
+\hline
+{\em a\+\_\+coarsedx} & The grid spacing at the coarsest level. \\
+\hline
+{\em a\+\_\+bc} & The boundary condition imposed on the solution. \\
+\hline
+{\em a\+\_\+ghost\+Vect} & The ghost stencil to use in the created coefficient data. \\
+\hline
+{\em a\+\_\+averaging\+\_\+type} & The method to use for averaging cell to face centred variables \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src/A\+M\+R\+Projection\+Op.\+h\item 
+/home/parkinsonjl/mushy-\/layer/src/A\+M\+R\+Projection\+Op.\+cpp\end{DoxyCompactItemize}

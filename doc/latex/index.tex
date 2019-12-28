@@ -1,0 +1,229 @@
+\section*{Introduction}
+
+This is code to simulate flow in a reactive porous media, a \char`\"{}mushy layer\char`\"{}, within a square box.
+
+In this readme we first present some instructions on downloading and installing the code, then describe how to recreate the test problems and figures found in the scientific \href{#}{\tt paper} (currently unpublished, email \mbox{[}\href{mailto:james.parkinson@physics.ox.ac.uk}{\tt james.\+parkinson@physics.\+ox.\+ac.\+uk}\mbox{]} for a copy) written about this method. The paper is a good reference for more information on the physics of this model.
+
+If you have any issues, please contact \mbox{[}\href{mailto:james.parkinson@physics.ox.ac.uk}{\tt james.\+parkinson@physics.\+ox.\+ac.\+uk}\mbox{]}.
+
+\section*{Prerequisites}
+
+\subsection*{Required}
+
+
+\begin{DoxyItemize}
+\item \href{https://commons.lbl.gov/display/chombo/Chombo+-+Software+for+Adaptive+Solutions+of+Partial+Differential+Equations}{\tt Chombo} installation (\href{https://anag-repo.lbl.gov/chombo-3.2/access.html}{\tt how to download Chombo}). You will need to configure Chombo with H\+D\+F5 support in order to write out data files. This code requires Chombo version 3.\+2, patch 6 or above. Earlier versions of Chombo do not include the {\ttfamily A\+M\+R\+F\+A\+S\+Multigrid} functionality, required for solving nonlinear elliptic equations.
+\end{DoxyItemize}
+
+\subsection*{Optional}
+
+
+\begin{DoxyItemize}
+\item git. For downloading and updating code.
+\item python. For setting up the test problems.
+\item M\+A\+T\+L\+AB. For analysis of the test problems.
+\item doxygen. For generating documentation.
+\item slurm. The code for running the test problems will create a set of batch scripts and try to submit these to the slurm queuing system. If you do not have slurm installed, you\textquotesingle{}ll need to run the batch scripts manually.
+\item \href{http://www.nersc.gov/users/data-analytics/data-visualization/visit-2/}{\tt visit}. Visualisation software for Chombo \textbf{ A\+MR} files.
+\end{DoxyItemize}
+
+\section*{Accessing the code}
+
+Cloning the repository from Git\+Hub is straightforward\+:
+
+
+\begin{DoxyCode}
+$ git clone https://github.com/jrgparkinson/mushy-layer.git mushy-layer
+\end{DoxyCode}
+
+
+To fetch and merge any changes to the library, use {\ttfamily git pull}.
+
+\section*{Installation}
+
+To compile the code, you must first have a working Chombo installation (see the Chombo\+Installation\+Guide.\+md file in the docs folder). Define the path to your chombo library folder in the G\+N\+U\+Makefile ({\ttfamily /exec\+Subcyle/\+G\+N\+U\+Makefile}) then you should be able to compile by
+
+
+\begin{DoxyCode}
+$ cd ~/mushy-layer/execSubcycle/
+$ make all
+\end{DoxyCode}
+
+
+You should also add an environment variable {\ttfamily M\+U\+S\+H\+Y\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+D\+IR} which points to {\ttfamily /path/to/mushy-\/layer/} for some of the python scripts to work. E.\+g.
+
+
+\begin{DoxyCode}
+export MUSHY\_LAYER\_DIR=/path/to/mushy-layer/
+\end{DoxyCode}
+
+
+\section*{Running}
+
+The executable in {\ttfamily /exec\+Subcycle/} requires inputs in order to run. These can either be supplied at the command line or, more sensibly, by specifying the location of a file which contains a list of inputs, e.\+g.
+
+
+\begin{DoxyCode}
+$ cd execSubcycle
+$ ./mushyLayer2d.Linux.64.mpiCC.gfortran.OPT.MPI.ex inputs
+\end{DoxyCode}
+
+
+where inputs is a file in {\ttfamily /exec\+Subcycle/}.
+
+For more details on how to setup your inputs file for the problem you\textquotesingle{}re interested in, see {\ttfamily /docs/\+Running\+The\+Mushy\+Layer\+Code.md/}.
+
+There are example problems, with input files, in the {\ttfamily /examples/} directory.
+
+For running in parallel (with 2 processors in this example), run the code like
+
+
+\begin{DoxyCode}
+$ cd execSubcycle
+$ mpirun -np 2 ./mushyLayer2d.Linux.64.mpiCC.gfortran.OPT.MPI.ex inputs
+\end{DoxyCode}
+
+
+\section*{Documentation}
+
+Documentation can be generated using \href{http://www.doxygen.nl/}{\tt Doyxgen} if it is installed. A default configuration file can be found in the {\ttfamily /docs/} directory, which can be run via\+:
+
+
+\begin{DoxyCode}
+$ cd /docs/
+$ doxygen
+\end{DoxyCode}
+
+
+You can also find a reasonably up to date version of the documentation online at \mbox{[}\href{https://jrgparkinson.github.io/mushy-layer/doc/html/index.html}{\tt https\+://jrgparkinson.\+github.\+io/mushy-\/layer/doc/html/index.\+html}\mbox{]}, if you do not want to compile it yourself. The Classes section is particularly useful.
+
+\section*{Extra utilities}
+
+This repository contains various other pieces of code for running simulations.
+
+{\ttfamily /setup\+New\+Run/} takes a checkpoint file and creates a new file with the same data on a domain with a different width, which is useful for computing optimal states. {\ttfamily /post\+Process/} loads checkpoint files and computes various diagnostics that were not run during the simulations. {\ttfamily /\+Visit\+Patch/} describes a small patch for the V\+I\+S\+IT software to allow you to open checkpoint files as well as plot files. {\ttfamily /params/} contains input files for different types of simulations. They may not all work, sorry. {\ttfamily /grids/} contains gridfiles which can be loaded via {\ttfamily main.\+gridfile=/path/to/gridfile} in an inputs file, and sets a fixed variable mesh (i.\+e. not adaptive) for simulations. {\ttfamily /mk/} contains some custom Makefile options for compiling on some of the machines in A\+O\+PP at the University of Oxford.
+
+The code in {\ttfamily /setup\+New\+Run/} and {\ttfamily /post\+Process/} needs to be compiled like the code in {\ttfamily /exec\+Subcycle/}. First update the {\ttfamily G\+N\+U\+Makefile} files in each subdirectory, then run {\ttfamily make all} as before.
+
+\section*{Source code}
+
+The source code is spread across a number of directories, which are briefly summarised here.
+
+{\ttfamily /\+B\+Cutil/} contains code for implementing boundary conditions. {\ttfamily /util/} contains code for various non-\/mushy layer specific operations, e.\+g. computing gradients, divergences etc. {\ttfamily /src/} contains mushy layer code {\ttfamily /src\+Subcycle/} contains mushy layer code for the subcycled algorithm {\ttfamily /exec\+Subcyle/} contains the driver code the subcycled application {\ttfamily /src\+Non\+Subcycle/} contains mushy layer code for the non-\/subcycled algorithm (currently broken) {\ttfamily /exec\+Non\+Subcycle/} contains the driver code for the non-\/subcycle application (currently broken)
+
+\subsection*{Methods paper}
+
+We have written a paper describing the physics of this model. A draft can be found in the {\ttfamily /docs/} directory. In this paper, we demonstrate the accuracy and convergence properties of our code. Everything you need to run these tests yourself should be found in the {\ttfamily /tests/} directory, as described below.
+
+\section*{Testing}
+
+{\ttfamily /test/} contains python scripts for running various test problems, which demonstrate the accuracy and efficiency of the code. You can run all the problems via the script {\ttfamily run\+Methods\+Paper\+Tests.\+py}. For more information, see the R\+E\+A\+D\+ME located in the {\ttfamily /test/} directory.
+
+You must ensure that the {\ttfamily /test/} directory is in your {\ttfamily P\+Y\+T\+H\+O\+N\+P\+A\+TH}, i.\+e. place the following in your $\sim$/.bashrc or similar
+
+
+\begin{DoxyCode}
+EXPORT PYTHONPATH=PYTHONPATH:/path/to/mushy-layer/test
+\end{DoxyCode}
+
+
+The analysis is performed by matlab scripts located in {\ttfamily /matlab/$\ast$}, which must be added to your matlab path to be executed\+:
+
+
+\begin{DoxyCode}
+addpath(genpath('/path/to/matlab/'))
+\end{DoxyCode}
+
+
+Note that running all the tests will take some time unless you have lots of processors available (i.\+e. multiple days) and will take up a reasonable amount of disk space ($\sim$50\+GB).
+
+\section*{Figures}
+
+Having run the test problems, some of the figures found in the paper will have been created automatically in the subdirectory for each tests problem (e.\+g. {\ttfamily /path/to/test\+\_\+output/\+Fixed\+Porous\+Hole-\/1proc/\+Fig6\+Error-\/x\+Darcy\+\_\+velocity-\/\+L2.eps}). The python script located at {\ttfamily mushy-\/layer/test/make\+Figures.\+py} should then make the remaining figures for you, mainly by calling various matlab scripts.
+
+\subsection*{The mushy layer code}
+
+In this section we briefly describe how the code works with the Chombo library so solve equations on a hierarchy of adaptive meshes. If you are planning on making changes to the code, or want to see which bits solve which equations, this might be a useful starting point. If you are going to look at the code regularly, you are highly recommended to use an Integrated Development Environment (I\+DE) -\/ e.\+g. \href{https://www.eclipse.org/downloads/packages/release/2018-12/r/eclipse-ide-cc-developers}{\tt Eclipse}. Brief setup instructions for Eclipse can be found below.
+
+The mushy layer code starts in {\ttfamily exec\+Subcycle/mushy\+Layer.\+cpp}. The function {\ttfamily mushy\+Layer(...)} calls various other methods from {\ttfamily src/\+Mushy\+Layer\+Utils.\+cpp} and {\ttfamily src\+Subcycle/\+Mushy\+Layer\+Subcycle\+Utils.\+cpp} to a) Create the problem domain b) Create a \textquotesingle{}Mushy Layer Factory\textquotesingle{} object which tells Chombo how to make a new Mushy Layer object for handling integration of the governing equations on one level of refinement c) Create an {\ttfamily \textbf{ A\+MR}} object which handles solving the equations over a hierarchy of levels.
+
+The code then tells the \textbf{ A\+MR} object to run until a certain time or number of steps. The \textbf{ A\+MR} object is the heart of Chombo. It continually evolves the solution, periodically calling into functions from the Mushy Layer code to do things, e.\+g.
+
+
+\begin{DoxyItemize}
+\item Initialisation -\/ most of the Mushy layer specific stuff is contained in {\ttfamily src\+Subcycle/\+A\+M\+R\+Level\+Mushy\+Layer\+Init.\+cpp}.
+\item Advancing the solution -\/ this is done {\ttfamily src\+Subcycle/\+A\+M\+R\+Level\+Mushy\+Layer.\+cpp} in the {\ttfamily advance(...)} function (which subsequently calls lots of other mushy layer functions).
+\item Finding the current maximum allowed timestep -\/ implemented in {\ttfamily src\+Subcycle/\+A\+M\+R\+Level\+Mushy\+Layer.\+cpp \+:\+: compute\+Dt()}.
+\item Regridding, if necessary -\/ see {\ttfamily src\+Subcycle/\+A\+M\+R\+Level\+Mushy\+Layer\+Regrid.\+cpp \+:\+: regrid(..)}.
+\item Post timestep synchronisation -\/ mainly contained in {\ttfamily src\+Subcycle/\+A\+M\+R\+Level\+Mushy\+Layer\+Sync.\+cpp \+:\+: post\+Timestep(..)}
+\end{DoxyItemize}
+
+Within the {\ttfamily advance(..)} method, the key pieces are\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily compute\+Advection\+Velocities(..)} -\/ computes face centered velocities for doing advection with.
+\item {\ttfamily exit\+Status = multi\+Comp\+Advect\+Diffuse(\+H\+C\+\_\+old, H\+C\+\_\+new, src\+Multi\+Comp, do\+F\+R\+Updates, do\+Advective\+Src);} -\/ updates enthalpy and salinity fields.
+\item {\ttfamily compute\+C\+Cvelocity(advection\+Source\+Term, m\+\_\+time-\/m\+\_\+dt, m\+\_\+dt, do\+F\+Rupdates, do\+Projection, compute\+\_\+u\+DelU);} -\/ compute new cell centred velocity.
+\end{DoxyItemize}
+
+\section*{Notes on adding new code}
+
+For those new to this code/\+Chombo, here are some tips\+:
+
+
+\begin{DoxyItemize}
+\item An \hyperlink{class_a_m_r_level_mushy_layer}{A\+M\+R\+Level\+Mushy\+Layer} object exists on a particular level of refinement. You can access the coarser and finer levels via {\ttfamily get\+Coarser\+Level()}, {\ttfamily get\+Finer\+Level()}.
+\item During a timestep, {\ttfamily m\+\_\+time} is the new time (\$t$^\wedge$\{n+1\} = t$^\wedge$n +  t\$).
+\item Scalar and vector fields are stored in arrays {\ttfamily m\+\_\+scalar\+New}, {\ttfamily m\+\_\+vector\+New}, indexed by the field name, i.\+e. enthalpy on a level of refinement is {\ttfamily m\+\_\+scalar\+New\mbox{[}Scalar\+Vars\+::m\+\_\+enthalpy\mbox{]}}
+\item When using scalar and vector fields, you can ensure all the boundary conditions and ghost cells are filled by calling {\ttfamily fill\+Scalars(..)}, e.\+g. {\ttfamily fill\+Scalars($\ast$m\+\_\+scalar\+New\mbox{[}\+Scalar\+Vars\+::m\+\_\+enthalpy\mbox{]}, m\+\_\+time, Scalar\+Vars\+::m\+\_\+enthalpy);}
+\end{DoxyItemize}
+
+\section*{Eclipse + Chombo + Mushy Layer}
+
+\href{https://www.eclipse.org/downloads/packages/release/2018-12/r/eclipse-ide-cc-developers}{\tt Eclipse} is an Integrated Development Environment (I\+DE). In short, it is a powerful code editor (syntax highlighting, advanced find/replace) which also understands the structure of a program. For codes like this one which are spread over multiple files in multiple folders, and use external libraries, it is invaluable. Useful features include\+:
+
+
+\begin{DoxyItemize}
+\item Find where a variable or function is defined (right click on variable/function -\/$>$ Open Declaration)
+\item Finding all usages of a variable or function (right click -\/$>$ References -\/$>$ workspace)
+\item Debugging. Insert breakpoints via the top menu\+: Run -\/$>$ Toggle Breakpoint.
+\end{DoxyItemize}
+
+In short, it\textquotesingle{}s a bit like M\+A\+T\+L\+AB (but for C++).
+
+Setting up Eclipse with the Mushy Layer is not difficult, but also requires quite a few steps (should take 30 mins, but took me many hours to work them all out from scratch). The following steps should do the job. We assume that you are already able to compile and run the Mushy Layer code.
+
+
+\begin{DoxyEnumerate}
+\item Create a new project for the Chombo code. Go File-\/$>$New-\/$>$Makefile project with existing code. Click Browse and navigate to your /chombo/lib directory then hit ok. Give the project a suitable name and choose the Linux G\+CC toolchain.
+\item We now need to tell eclipse how to build the Chombo code. Eclipse may not inherit your environmental variables, so you\textquotesingle{}ll need to define these explicitly. To do this, right click on your project in the project window (usually on the left of the screen), choose Properties, and then navigate to C/\+C++ Build-\/$>$Environment. Add {\ttfamily L\+D\+\_\+\+L\+I\+B\+R\+A\+R\+Y\+\_\+\+P\+A\+TH = /usr/local/hdf5-\/1.8.\+21p-\/v18/lib\+:} The first should point to your hdf5 installation.
+\item Create a new project for your mushy layer code . As before, go File-\/$>$New-\/$>$Makefile project with existing code. Set the code location to {\ttfamily /path/to/mushy-\/layer}, and choose a sensible name (we went for \textquotesingle{}Mushy\+Layer\textquotesingle{}). Again choose the Linux G\+CC toolchain.
+\item Set Chombo as a dependency of mushy layer. Open the project properties for the Mushy Layer project (right click in the project window-\/$>$properties). Choose \textquotesingle{}Project references\textquotesingle{} on the left and select your Chombo project.
+\item Setup build profile for mushy layer. Go to C/\+C++ build-\/$>$Environment Variables and check that the same environment variables you set for the Chombo project are also here. Now go to C/\+C++ build and, under the Builder settings tab, set the build directory to {\ttfamily \$\{workspace\+\_\+loc\+:/\+Mushy\+Layer\}/exec\+Subcycle/}. When you use this build profile, you will create an executable using the default options in your Make.\+defs.\+local file.
+\item Create a debugging build profile. Also on the C/\+C++ build page, at the top hit \textquotesingle{}Manage Configurations\textquotesingle{} then \textquotesingle{}New\textquotesingle{}. Set the name to something like \textquotesingle{}Mushy Layer Debug\textquotesingle{}, and copy settings from the default configuration. Then select the debug configuration on the C/\+C++ build page, untick \textquotesingle{}Use default build command\textquotesingle{} and enter {\ttfamily make D\+E\+B\+UG=T\+R\+UE O\+PT=F\+A\+L\+SE}. When you use this build profile, you will force the compiler to use the D\+E\+B\+UG flags and not use the O\+PT flags. This creates and executable suitable for debugging with.
+\item Check everything works so far. Build the project using both the configurations we\textquotesingle{}ve created via Project-\/$>$Build all. Use Project-\/$>$Build Configurations-\/\+Set active to change between build configurations.
+\item Create a debug configuration. Now Eclipse knows how to build your project, but you haven\textquotesingle{}t explicitly told it where the executable file is located, or what options it should be run with. From the top menu, go Run-\/$>$Debug configurations. Click the little \textquotesingle{}New Debug configuration\textquotesingle{} icon (top left), give it a name, and for C/\+C++ application navigate to the D\+E\+B\+UG version of your compiled codes e.\+g. {\ttfamily mushy\+Layer2d.\+Linux.\+64.\+mpi\+C\+C.\+gfortran.\+D\+E\+B\+U\+G.\+M\+P\+I.\+ex}. For Build configuration, choose the debug configuration you just created. Now go to the Arguments tab and enter the name of the inputs file you\textquotesingle{}ll want to use for your debugging (you\textquotesingle{}ll probably find you change this a lot). Make sure the Working Directory at the bottom is set to {\ttfamily \$\{workspace\+\_\+loc\+:Mushy\+Layer\}/exec\+Subcycle}. Now go to the Environment tab and set {\ttfamily C\+H\+\_\+\+T\+I\+M\+ER=1} -\/ this makes sure chombo produces timing output from simulations, which can be useful. {\ttfamily V\+I\+S\+I\+T\+H\+O\+ME=/path/to/visit2.12.\+0/src} -\/ this allows Eclipse to find your installation of Visit (if you\textquotesingle{}ve installed Visit) so it can be used for debugging. (your visit installation is likely in a different place) {\ttfamily L\+D\+\_\+\+L\+I\+B\+R\+A\+R\+Y\+\_\+\+P\+A\+TH=/usr/local/hdf5-\/1.8.\+21p-\/v18/lib\+:} -\/ make sure Eclipse can find H\+D\+F5. (your hdf5 installation is likely in a different place) Finally, go to the Debugger tab and uncheck \textquotesingle{}Stop on startup at\+: main\textquotesingle{} as otherwise this will drive you crazy.
+\end{DoxyEnumerate}
+
+You should now be all set up for debugging. Here is an example. Open up {\ttfamily src\+Subcycle/\+A\+M\+R\+Level\+Mushy\+Layer.\+cpp}, find the {\ttfamily advance(...)} method (the outline panel on the right hand side is useful for this) and find the code 
+\begin{DoxyCode}
+if (solvingFullDarcyBrinkman())
+  \{
+    // This fills all the ghost cells of advectionSourceTerm
+    computeAdvectionVelSourceTerm(advectionSourceTerm);
+
+    //    Real vel\_centering = 0.5;
+    //    ppMain.query("adv\_vel\_centering", vel\_centering);
+    computeAdvectionVelocities(advectionSourceTerm, m\_adv\_vel\_centering);
+  \}
+\end{DoxyCode}
+ Insert a breakpoint on the {\ttfamily if...} line (Run-\/$>$Toggle breakpoint) and then go Run-\/$>$Debug. The code should run until this line then stop. Let\textquotesingle{}s have a look at the source term for the advection velocity solve. In the console at the bottom of the window, enter {\ttfamily call view\+Level(\&advection\+Source\+Term)} and an instance of Visit should open showing you the source term field on this level of refinement. Now step through the lines (F6) until you get past this {\ttfamily if/else} clause, by which point you will have calculated the advection velocity. We can look at this by entering {\ttfamily call view\+Flux\+Level(\&m\+\_\+adv\+Vel)} Other useful options available for viewing data include
+
+
+\begin{DoxyItemize}
+\item {\ttfamily view\+F\+A\+B(\&fab)} for F\+Array\+Boxes (\textbf{ Level\+Data}\textquotesingle{}s are composed of F\+Array\+Boxes). If you have a \textbf{ Flux\+Box} {\ttfamily fluxbox} instead, you can look at each component in turn with {\ttfamily view\+F\+A\+B(\&fluxbox\mbox{[}0\mbox{]})}, {\ttfamily view\+F\+A\+B(\&fluxbox\mbox{[}1\mbox{]})} etc.
+\item {\ttfamily p m\+\_\+time} return the value of any variable (you can also hover over a variable in the editor window).
+\end{DoxyItemize}
+
+There are probably more, and these are documented in the Chombo\+Design.\+pdf document. 

@@ -1,0 +1,79 @@
+\section*{Introduction}
+
+This directory contains python scripts for running various test problems which demonstrate the accuracy of the code.
+
+\section*{Setup}
+
+These tests require the code in {\ttfamily mushy-\/layer/exec\+Subcycle/} and {\ttfamily mushy-\/layer/setup\+New\+Run/} to be built.
+
+Before running the test problems, you must first specify a directory to save the output to. This is done by the {\ttfamily get\+\_\+base\+\_\+output\+\_\+dir()} function in {\ttfamily mushy\+Layer\+Run\+Utils.\+py}. You should also add the directory ({\ttfamily /path/to/mushy-\/layer/test/}) to your P\+Y\+T\+H\+O\+N\+P\+A\+TH.
+
+Some of the error calculation is done using the Chombo compare utility located in {\ttfamily /path/to/chombo/lib/util/chombo\+Compare}. Make sure you have compiled this program, and make sure you have defined the environmental variable {\ttfamily C\+H\+O\+M\+B\+O\+\_\+\+H\+O\+ME=/path/to/chombo/}.
+
+Analysis of the output is done via matlab scripts located in {\ttfamily /mushy-\/layer/matlab/}. You should add this directory to your matlab path via your {\ttfamily startup.\+m} file in order to run the analysis, e.\+g. 
+\begin{DoxyCode}
+addpath(genpath(['~/mushy-layer/matlab/']))
+\end{DoxyCode}
+
+
+The python scripts assume that the slurm job queuing system is accessible. If it is not, you will have to run the batch files which it creates manually. Alternatively, open up the {\ttfamily test/\+Batch\+Job.\+py} file and edit the {\ttfamily Batch\+Job.\+write\+\_\+slurm\+\_\+file(...)} and {\ttfamily Batch\+Job.\+run\+\_\+task(...)} methods so that they work with your setup.
+
+\section*{Running the problems}
+
+There are five test problems, which can each be run individually by 
+\begin{DoxyCode}
+$ python filename.py [options]
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item test\+Diffusive\+Solidification.\+py
+\item test\+Uniform\+Porous\+Convection.\+py
+\item test\+Fixed\+Porous\+Hole.\+py
+\item test\+Porous\+Mushy\+Hole.\+py
+\item test\+Fixed\+Chill\+Hele\+Shaw.\+py
+\end{DoxyItemize}
+
+See the individual files for the options available.
+
+Alternatively you may run all five test problems via
+
+
+\begin{DoxyCode}
+$ python runMethodPaperTests.py
+\end{DoxyCode}
+
+
+There are a lot of individual simulations that need to be run. It is highly recommended that you do this on a machine with lots of cores available so that you can the simulations on different cores in parallel, in which case most jobs should finish in a few hours. The Nusselt number tests with large Rayleigh number on high resolution grids require longer ($>$ 1 day).
+
+The python scripts will create the relevant folders to hold the output, setup the parameter input files, submit jobs to run the simulations to the slurm queueing system, and also submit a job to run the relevant analysis code once all the jobs have finished. The output from analysis can be found in the sbatch.\+out file, so a typical directory structure might end up looking like
+
+
+\begin{DoxyCode}
+/baseOutputDir (specified by the user)
+  /NoFlow
+    runAnalysis.sh
+    sbatch.out - output from the analysis
+    Various folders containing different simulations, each containing:
+      run.sh
+      pout.0
+      time.table.0
+      pltfiles.hdf5
+      chkfile.hdf5
+  /FixedPorousHole
+    ... same as above
+\end{DoxyCode}
+
+
+\section*{Figures and analysis}
+
+Having run the test problems, most of the figures should already be created, usually in the same directory as the data for each test problem resides in. You can (re)generate the figures used in the Methods paper using 
+\begin{DoxyCode}
+$ python makeFigures.py
+\end{DoxyCode}
+ Use the matlab script {\ttfamily compile\+Nu\+V2(base\+\_\+dir)} to compile all the nusselt numbers, e.\+g. 
+\begin{DoxyCode}
+>>compileNuV2('/path/to/TestDir/ConvectionDB-CFL0.1')
+\end{DoxyCode}
+ 

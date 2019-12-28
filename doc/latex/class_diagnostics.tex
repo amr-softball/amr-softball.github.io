@@ -1,0 +1,70 @@
+\hypertarget{class_diagnostics}{}\section{Diagnostics Class Reference}
+\label{class_diagnostics}\index{Diagnostics@{Diagnostics}}
+
+
+Class to contain diagnostics.  
+
+
+
+
+{\ttfamily \#include $<$Diagnostics.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_diagnostics_a24c4f22a9628a083b82a194089cfdd19}\label{class_diagnostics_a24c4f22a9628a083b82a194089cfdd19}} 
+\hyperlink{class_diagnostics_a24c4f22a9628a083b82a194089cfdd19}{Diagnostics} ()
+\begin{DoxyCompactList}\small\item\em Default constructore. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_a33a91e98836bc1c3bf022c09a97b5e51}\label{class_diagnostics_a33a91e98836bc1c3bf022c09a97b5e51}} 
+void \hyperlink{class_diagnostics_a33a91e98836bc1c3bf022c09a97b5e51}{define} (\textbf{ Real} a\+\_\+moving\+Average\+Timescale, int a\+\_\+verbosity, \textbf{ Real} a\+\_\+conv\+Crit)
+\begin{DoxyCompactList}\small\item\em Define object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_ad05cd98138d8ef3a0c1284412fbddd6b}\label{class_diagnostics_ad05cd98138d8ef3a0c1284412fbddd6b}} 
+virtual \hyperlink{class_diagnostics_ad05cd98138d8ef3a0c1284412fbddd6b}{$\sim$\+Diagnostics} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_a7a9d74a6ac4efbe40052bca9545a99b5}\label{class_diagnostics_a7a9d74a6ac4efbe40052bca9545a99b5}} 
+void \hyperlink{class_diagnostics_a7a9d74a6ac4efbe40052bca9545a99b5}{add\+Diagnostic} (Diagnostic\+Names a\+\_\+diagnostic, \textbf{ Real} a\+\_\+time, \textbf{ Real} value)
+\begin{DoxyCompactList}\small\item\em Add a diagnostic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_a0850970e8da4c5a49ab6f910394c2f70}\label{class_diagnostics_a0850970e8da4c5a49ab6f910394c2f70}} 
+\textbf{ Real} \hyperlink{class_diagnostics_a0850970e8da4c5a49ab6f910394c2f70}{get\+Diagnostic} (Diagnostic\+Names a\+\_\+diagnostic, \textbf{ Real} a\+\_\+time, int timestep\+Offset=0)
+\begin{DoxyCompactList}\small\item\em Get the value of a diagnostic, $ \alpha $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_a84efdaf23bbbfd669e8687d472dd2e96}\label{class_diagnostics_a84efdaf23bbbfd669e8687d472dd2e96}} 
+\textbf{ Real} \hyperlink{class_diagnostics_a84efdaf23bbbfd669e8687d472dd2e96}{get\+Moving\+Average} (Diagnostic\+Names a\+\_\+diagnostic, \textbf{ Real} a\+\_\+end\+Time, \textbf{ Real} a\+\_\+time\+Span)
+\begin{DoxyCompactList}\small\item\em Get the moving average of a diagnostic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_af58ac3b481dd163c6d6951e93bbc3af1}\label{class_diagnostics_af58ac3b481dd163c6d6951e93bbc3af1}} 
+\textbf{ Real} \hyperlink{class_diagnostics_af58ac3b481dd163c6d6951e93bbc3af1}{get\+Rate\+Of\+Change} (Diagnostic\+Names a\+\_\+diagnostic, \textbf{ Real} a\+\_\+end\+Time, \textbf{ Real} a\+\_\+dt)
+\begin{DoxyCompactList}\small\item\em Get $ \frac{d \alpha}{d t} $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_af961972446faba22b43276eeafcadfaf}\label{class_diagnostics_af961972446faba22b43276eeafcadfaf}} 
+\textbf{ Real} \hyperlink{class_diagnostics_af961972446faba22b43276eeafcadfaf}{get\+Second\+Rate\+Of\+Change} (Diagnostic\+Names a\+\_\+diagnostic, \textbf{ Real} a\+\_\+end\+Time, \textbf{ Real} a\+\_\+dt)
+\begin{DoxyCompactList}\small\item\em Calculate $ \frac{d^2 \alpha}{dt^2} $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_a327e985849ad79673bfabbe10cada05b}\label{class_diagnostics_a327e985849ad79673bfabbe10cada05b}} 
+bool \hyperlink{class_diagnostics_a327e985849ad79673bfabbe10cada05b}{moving\+Average\+Has\+Converged} (Diagnostic\+Names a\+\_\+diagnostic, \textbf{ Real} m\+\_\+time, \textbf{ Real} a\+\_\+dt)
+\begin{DoxyCompactList}\small\item\em Determine if the moving average has reached steady state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_a2868f16188ebe067533afd6c0a27ff6a}\label{class_diagnostics_a2868f16188ebe067533afd6c0a27ff6a}} 
+void \hyperlink{class_diagnostics_a2868f16188ebe067533afd6c0a27ff6a}{print\+Header} ()
+\begin{DoxyCompactList}\small\item\em Print header of all diagnostic names. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_a69849023434b32047f39b51e0630f568}\label{class_diagnostics_a69849023434b32047f39b51e0630f568}} 
+void \hyperlink{class_diagnostics_a69849023434b32047f39b51e0630f568}{print\+Header} (std\+::ofstream \&a\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Print header to specified file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_acd87da429ff720d80cbb2e82431fadb7}\label{class_diagnostics_acd87da429ff720d80cbb2e82431fadb7}} 
+void \hyperlink{class_diagnostics_acd87da429ff720d80cbb2e82431fadb7}{print\+Diagnostics} (\textbf{ Real} a\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Print diagnostics at specified time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_a510534ea0fa2b5e49f9f0aec1d7f8693}\label{class_diagnostics_a510534ea0fa2b5e49f9f0aec1d7f8693}} 
+void \hyperlink{class_diagnostics_a510534ea0fa2b5e49f9f0aec1d7f8693}{print\+Diagnostics} (\textbf{ Real} a\+\_\+time, std\+::ofstream \&a\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Print diagnostics at given time to a certain file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_a353154c0cde50ea837d2039fa677beff}\label{class_diagnostics_a353154c0cde50ea837d2039fa677beff}} 
+bool \hyperlink{class_diagnostics_a353154c0cde50ea837d2039fa677beff}{diagnostic\+Is\+Included} (const Diagnostic\+Names a\+\_\+diag)
+\begin{DoxyCompactList}\small\item\em Returns whether or not the specified diagnostic is one that\textquotesingle{}s in one list of diagnostics to print. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnostics_a9155bd661687675e51a2b8a1cd8e61cf}\label{class_diagnostics_a9155bd661687675e51a2b8a1cd8e61cf}} 
+void \hyperlink{class_diagnostics_a9155bd661687675e51a2b8a1cd8e61cf}{set\+Print\+Diags} (\textbf{ Vector}$<$ Diagnostic\+Names $>$ a\+\_\+diags\+To\+Print)
+\begin{DoxyCompactList}\small\item\em Specify which diagnostics we should print out. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to contain diagnostics. 
+
+This class manages various diagnostics that we want to track during simulations 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src/Diagnostics.\+h\item 
+/home/parkinsonjl/mushy-\/layer/src/Diagnostics.\+cpp\end{DoxyCompactItemize}

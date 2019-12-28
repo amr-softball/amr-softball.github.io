@@ -1,0 +1,40 @@
+This directory contains regression tests. The idea is to run a simulation and check that the output hasn\textquotesingle{}t changed (hasn\textquotesingle{}t \textquotesingle{}regressed\textquotesingle{}). Assuming the original output was correct, the program still works.
+
+We compare either the text output (e.\+g {\ttfamily pout.\+0} or {\ttfamily diagnostics.\+csv}) and/or the data output ({\ttfamily .hdf5} files). Each subdirectory contains a test, which at a bare minimum consist of the following files\+:
+
+
+\begin{DoxyEnumerate}
+\item {\ttfamily inputs}\+: the input parameters for the simulation
+\item {\ttfamily regression.\+json}\+: the options for running the test (number of dimensions, processors etc.). See an existing file for a template.
+\item At least one \textquotesingle{}expected\textquotesingle{} file e.\+g. {\ttfamily pout.\+0.\+expected} or {\ttfamily plt000010.\+2d.\+hdf5.\+expected} which will be compared with the computed output files (less the {\ttfamily .expected} suffix) to check for any deviations.
+\end{DoxyEnumerate}
+
+\section*{Prerequisites}
+
+
+\begin{DoxyEnumerate}
+\item Compile the mushy layer program. Needs to be done separately in 2D and 3D for the relevant tests to work.
+\item Compile the Chombo Compare utility (at {\ttfamily \$\+C\+H\+O\+M\+B\+O\+\_\+\+H\+O\+ME/lib/utils/\+Chombo\+Compare}) for comparing hdf5 files, and ensure the {\ttfamily C\+H\+O\+M\+B\+O\+\_\+\+H\+O\+ME} environmental variable is set.
+\end{DoxyEnumerate}
+
+\section*{Usage}
+
+Run all the tests using the python file {\ttfamily run\+\_\+regression\+\_\+tests.\+py} e.\+g.
+
+
+\begin{DoxyCode}
+~/mushy-layer/test/regression$ python run\_regression\_tests.py
+\end{DoxyCode}
+
+
+Check the output to the terminal, which will report which tests fail and which succeed, along with further information on test failures.
+
+\section*{Modify a test}
+
+If you wish to update the expected results of a test (e.\+g. you have changed the code and the test now \textquotesingle{}fails\textquotesingle{} when it shouldn\textquotesingle{}t) then just replace the existing {\ttfamily $\ast$.expected} files with new ones you have generated.
+
+\section*{Create a new test}
+
+To add a new test, make a new subdirectory in this present directory with the an {\ttfamily inputs} file, {\ttfamily regression.\+json} file (see an existing example for a template) and the {\ttfamily $\ast$.expected} files you wish to test against. The test will be run automatically by the python script (it searches this directory for all subdirectories).
+
+Please try and ensure that you keep the test runtime to a manageable length ($\sim$10 seconds). The idea is that it is possible to run all the tests in a few minutes, to encourage users to do so regularly following changes to the code (and especially before committing code). 

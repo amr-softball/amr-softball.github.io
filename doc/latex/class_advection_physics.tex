@@ -1,0 +1,364 @@
+\hypertarget{class_advection_physics}{}\section{Advection\+Physics Class Reference}
+\label{class_advection_physics}\index{Advection\+Physics@{Advection\+Physics}}
+
+
+An Godunov\+Physics-\/derived class for simple advection-\/diffusion problems.  
+
+
+
+
+{\ttfamily \#include $<$Advection\+Physics.\+H$>$}
+
+Inheritance diagram for Advection\+Physics\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_advection_physics}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_advection_physics_ac392278448ed29a685f9562f709a5b4b}\label{class_advection_physics_ac392278448ed29a685f9562f709a5b4b}} 
+\hyperlink{class_advection_physics_ac392278448ed29a685f9562f709a5b4b}{Advection\+Physics} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_a90f848be0b676fed24227e782aec2eb6}\label{class_advection_physics_a90f848be0b676fed24227e782aec2eb6}} 
+\hyperlink{class_advection_physics_a90f848be0b676fed24227e782aec2eb6}{$\sim$\+Advection\+Physics} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_ad50a0a57026615c8d7fd14d8e523f463}\label{class_advection_physics_ad50a0a57026615c8d7fd14d8e523f463}} 
+virtual void \hyperlink{class_advection_physics_ad50a0a57026615c8d7fd14d8e523f463}{set\+N\+Comp} (int a\+\_\+n\+Comp)
+\begin{DoxyCompactList}\small\item\em Set the number of components. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_a4305b9cac37f64a32c3db11a28068944}\label{class_advection_physics_a4305b9cac37f64a32c3db11a28068944}} 
+virtual \textbf{ Real} \hyperlink{class_advection_physics_a4305b9cac37f64a32c3db11a28068944}{get\+Max\+Wave\+Speed} (const \textbf{ F\+Array\+Box} \&a\+\_\+U, const \textbf{ Box} \&a\+\_\+box)
+\begin{DoxyCompactList}\small\item\em Compute the maximum wave speed. \end{DoxyCompactList}\item 
+virtual \textbf{ Godunov\+Physics} $\ast$ \hyperlink{class_advection_physics_aa5be4c1a0a10aa2bbbe87fc6b032f2b4}{new\+\_\+godunov\+Physics} () const
+\begin{DoxyCompactList}\small\item\em Factory method -\/ this object is its own factory. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_advection_physics_ab139a3b1201a76e97e918381c5b3ff98}{num\+Conserved} ()
+\begin{DoxyCompactList}\small\item\em Number of conserved variables. \end{DoxyCompactList}\item 
+virtual \textbf{ Vector}$<$ string $>$ \hyperlink{class_advection_physics_a992f0d9ca9515de44b82981c14a2fb31}{state\+Names} ()
+\begin{DoxyCompactList}\small\item\em Names of the conserved variables. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_advection_physics_ab59b268a446dbe2912e000c11870ab2f}{num\+Fluxes} ()
+\begin{DoxyCompactList}\small\item\em Number of flux variables. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_advection_physics_a469e6262703804372173e378c37b735f}{get\+Flux} (\textbf{ F\+Array\+Box} \&a\+\_\+flux, const \textbf{ F\+Array\+Box} \&a\+\_\+\+W\+Half, const int \&a\+\_\+dir, const \textbf{ Box} \&a\+\_\+box)
+\begin{DoxyCompactList}\small\item\em compute fluxes from primitive values on a face ( adv\+Vel$\ast$w\+Half) \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_advection_physics_a92b160c02d12974644e65dce3b7945b9}{is\+Defined} () const
+\begin{DoxyCompactList}\small\item\em Is the object completely defined. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_advection_physics_ad00c2d52ec684668ff5cd1da9eed42bf}{num\+Primitives} ()
+\begin{DoxyCompactList}\small\item\em Number of primitve variables. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_advection_physics_a63895f9dd1173d14684c0681653c8d36}{char\+Analysis} (\textbf{ F\+Array\+Box} \&a\+\_\+dW, const \textbf{ F\+Array\+Box} \&a\+\_\+W, const int \&a\+\_\+dir, const \textbf{ Box} \&a\+\_\+box)
+\begin{DoxyCompactList}\small\item\em Transform a\+\_\+dW from primitive to characteristic variables. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_advection_physics_a8b1269b718057fe2a5d0bc8bdd183d0b}{char\+Synthesis} (\textbf{ F\+Array\+Box} \&a\+\_\+dW, const \textbf{ F\+Array\+Box} \&a\+\_\+W, const int \&a\+\_\+dir, const \textbf{ Box} \&a\+\_\+box)
+\begin{DoxyCompactList}\small\item\em Transform a\+\_\+dW from characteristic to primitive variables. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_advection_physics_ac3c19f3db60ae92b995ff3d0cdc3f8dc}{char\+Values} (\textbf{ F\+Array\+Box} \&a\+\_\+lambda, const \textbf{ F\+Array\+Box} \&a\+\_\+W, const int \&a\+\_\+dir, const \textbf{ Box} \&a\+\_\+box)
+\begin{DoxyCompactList}\small\item\em Compute the characteristic values (eigenvalues) \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_advection_physics_a4fdd807a85bd6a9d1542a4d1745a4bf7}{increment\+Source} (\textbf{ F\+Array\+Box} \&a\+\_\+S, const \textbf{ F\+Array\+Box} \&a\+\_\+W, const \textbf{ Box} \&a\+\_\+box)
+\begin{DoxyCompactList}\small\item\em Add to (increment) the source terms given the current state. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_advection_physics_aae156d1179d03c93022e39c9a378c120}{riemann} (\textbf{ F\+Array\+Box} \&a\+\_\+\+W\+Gdnv, const \textbf{ F\+Array\+Box} \&a\+\_\+\+W\+Left, const \textbf{ F\+Array\+Box} \&a\+\_\+\+W\+Right, const \textbf{ F\+Array\+Box} \&a\+\_\+W, const \textbf{ Real} \&a\+\_\+time, const int \&a\+\_\+dir, const \textbf{ Box} \&a\+\_\+box)
+\begin{DoxyCompactList}\small\item\em Compute the solution to the Riemann problem. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_advection_physics_adcff7bb0c3cf117a51836754921ea75a}{post\+Normal\+Pred} (\textbf{ F\+Array\+Box} \&a\+\_\+d\+W\+Minus, \textbf{ F\+Array\+Box} \&a\+\_\+d\+W\+Plus, const \textbf{ F\+Array\+Box} \&a\+\_\+W, const \textbf{ Real} \&a\+\_\+dt, const \textbf{ Real} \&a\+\_\+dx, const int \&a\+\_\+dir, const \textbf{ Box} \&a\+\_\+box)
+\begin{DoxyCompactList}\small\item\em Post-\/normal predictor calculation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_ac5eff7a0d16d0cece194ccae1959d33d}\label{class_advection_physics_ac5eff7a0d16d0cece194ccae1959d33d}} 
+virtual void \hyperlink{class_advection_physics_ac5eff7a0d16d0cece194ccae1959d33d}{quasilinear\+Update} (\textbf{ F\+Array\+Box} \&a\+\_\+\+Ad\+Wdx, const \textbf{ F\+Array\+Box} \&a\+\_\+\+W\+Half, const \textbf{ F\+Array\+Box} \&a\+\_\+W, const \textbf{ Real} \&a\+\_\+scale, const int \&a\+\_\+dir, const \textbf{ Box} \&a\+\_\+box)
+\begin{DoxyCompactList}\small\item\em Compute the quasilinear update A$\ast$d\+W/dx. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_a54c4977c33114766868740fd21429d5f}\label{class_advection_physics_a54c4977c33114766868740fd21429d5f}} 
+virtual void \hyperlink{class_advection_physics_a54c4977c33114766868740fd21429d5f}{cons\+To\+Prim} (\textbf{ F\+Array\+Box} \&a\+\_\+W, const \textbf{ F\+Array\+Box} \&a\+\_\+U, const \textbf{ Box} \&a\+\_\+box)
+\begin{DoxyCompactList}\small\item\em Compute primitive variables from conserved variables. \end{DoxyCompactList}\item 
+virtual \textbf{ Interval} \hyperlink{class_advection_physics_a245ebc2c16520c7f50cc25efc1eb5a0d}{velocity\+Interval} ()
+\begin{DoxyCompactList}\small\item\em \textbf{ Interval} within the primitive variables corresponding to the velocities. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_advection_physics_a7b88645af918e8ae6ad2ec21eb49734f}{pressure\+Index} ()
+\begin{DoxyCompactList}\small\item\em Component index within the primitive variables of the pressure. \end{DoxyCompactList}\item 
+virtual \textbf{ Real} \hyperlink{class_advection_physics_ae562469a45e542ceb2195ab8f3689db2}{small\+Pressure} ()
+\begin{DoxyCompactList}\small\item\em Used to limit the absolute value of a \char`\"{}pressure\char`\"{} difference. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_advection_physics_a2d6f7e55296e5701bb52eeea7610b1e5}{bulk\+Modulus\+Index} ()
+\begin{DoxyCompactList}\small\item\em Component index within the primitive variables of the bulk modulus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_a3b6ea2376219a1ff7993a5109c77dcec}\label{class_advection_physics_a3b6ea2376219a1ff7993a5109c77dcec}} 
+void \hyperlink{class_advection_physics_a3b6ea2376219a1ff7993a5109c77dcec}{set\+Adv\+Vel\+Ptr} (\textbf{ Flux\+Box} $\ast$a\+\_\+adv\+Vel\+Ptr)
+\begin{DoxyCompactList}\small\item\em Set face-\/centered advection velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_ad499a64afa8af4bd84abdfd21963b2dd}\label{class_advection_physics_ad499a64afa8af4bd84abdfd21963b2dd}} 
+void \hyperlink{class_advection_physics_ad499a64afa8af4bd84abdfd21963b2dd}{set\+Inflow\+Outflow\+Vel\+Ptr} (\textbf{ Flux\+Box} $\ast$a\+\_\+vel\+Ptr)
+\begin{DoxyCompactList}\small\item\em Pass advection velocity to B\+Cs to determine if we have inflow or outflow at boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_a08a8e307ee93ceac5bdc0c225a5f2aef}\label{class_advection_physics_a08a8e307ee93ceac5bdc0c225a5f2aef}} 
+const \textbf{ Flux\+Box} $\ast$ \hyperlink{class_advection_physics_a08a8e307ee93ceac5bdc0c225a5f2aef}{advection\+Vel\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em Get face-\/centered advection velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_af2735891315496f683f06d508c30f80c}\label{class_advection_physics_af2735891315496f683f06d508c30f80c}} 
+void \hyperlink{class_advection_physics_af2735891315496f683f06d508c30f80c}{set\+Cell\+Vel\+Ptr} (\textbf{ F\+Array\+Box} $\ast$a\+\_\+cell\+Vel\+Ptr)
+\begin{DoxyCompactList}\small\item\em Set cell-\/centered advection velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_a7762aff59f9da418daa808d602599516}\label{class_advection_physics_a7762aff59f9da418daa808d602599516}} 
+const \textbf{ F\+Array\+Box} $\ast$ \hyperlink{class_advection_physics_a7762aff59f9da418daa808d602599516}{cell\+Vel\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em Get cell-\/centered advection velocity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_advection_physics_a2190804e60d76f635a4038cd73181f36}\label{class_advection_physics_a2190804e60d76f635a4038cd73181f36}} 
+\textbf{ Flux\+Box} $\ast$ \hyperlink{class_advection_physics_a2190804e60d76f635a4038cd73181f36}{m\+\_\+adv\+Vel\+Ptr}
+\begin{DoxyCompactList}\small\item\em face-\/centered advection velocity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_aba4173a2c90618f66566560d07de35d4}\label{class_advection_physics_aba4173a2c90618f66566560d07de35d4}} 
+\textbf{ F\+Array\+Box} $\ast$ \hyperlink{class_advection_physics_aba4173a2c90618f66566560d07de35d4}{m\+\_\+cell\+Vel\+Ptr}
+\begin{DoxyCompactList}\small\item\em cell-\/centered advection velocity (centered at old time) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_a10c269a32c67b6651665ca09f9005af7}\label{class_advection_physics_a10c269a32c67b6651665ca09f9005af7}} 
+bool \hyperlink{class_advection_physics_a10c269a32c67b6651665ca09f9005af7}{m\+\_\+n\+Comp\+Defined}
+\begin{DoxyCompactList}\small\item\em Have the numbers below been defined. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_ac71f679ddec1513ac5f600840592a63b}\label{class_advection_physics_ac71f679ddec1513ac5f600840592a63b}} 
+int \hyperlink{class_advection_physics_ac71f679ddec1513ac5f600840592a63b}{m\+\_\+num\+Cons}
+\begin{DoxyCompactList}\small\item\em number of conserved variables \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_aba83ecb3c338828921f17cba7faa2dc6}\label{class_advection_physics_aba83ecb3c338828921f17cba7faa2dc6}} 
+int \hyperlink{class_advection_physics_aba83ecb3c338828921f17cba7faa2dc6}{m\+\_\+num\+Prim}
+\begin{DoxyCompactList}\small\item\em number of primitive variables \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advection_physics_a4b511a54b271cfb434500fbf9ce3fc88}\label{class_advection_physics_a4b511a54b271cfb434500fbf9ce3fc88}} 
+int \hyperlink{class_advection_physics_a4b511a54b271cfb434500fbf9ce3fc88}{m\+\_\+num\+Flux}
+\begin{DoxyCompactList}\small\item\em number of fluxes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An Godunov\+Physics-\/derived class for simple advection-\/diffusion problems. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_advection_physics_a2d6f7e55296e5701bb52eeea7610b1e5}\label{class_advection_physics_a2d6f7e55296e5701bb52eeea7610b1e5}} 
+\index{Advection\+Physics@{Advection\+Physics}!bulk\+Modulus\+Index@{bulk\+Modulus\+Index}}
+\index{bulk\+Modulus\+Index@{bulk\+Modulus\+Index}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{bulk\+Modulus\+Index()}{bulkModulusIndex()}}
+{\footnotesize\ttfamily int Advection\+Physics\+::bulk\+Modulus\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Component index within the primitive variables of the bulk modulus. 
+
+Return the component index withn the primitive variables for the bulk modulus. Used for slope flattening (slope computation) used as a normalization to measure shock strength. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_a63895f9dd1173d14684c0681653c8d36}\label{class_advection_physics_a63895f9dd1173d14684c0681653c8d36}} 
+\index{Advection\+Physics@{Advection\+Physics}!char\+Analysis@{char\+Analysis}}
+\index{char\+Analysis@{char\+Analysis}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{char\+Analysis()}{charAnalysis()}}
+{\footnotesize\ttfamily void Advection\+Physics\+::char\+Analysis (\begin{DoxyParamCaption}\item[{\textbf{ F\+Array\+Box} \&}]{a\+\_\+dW,  }\item[{const \textbf{ F\+Array\+Box} \&}]{a\+\_\+W,  }\item[{const int \&}]{a\+\_\+dir,  }\item[{const \textbf{ Box} \&}]{a\+\_\+box }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transform a\+\_\+dW from primitive to characteristic variables. 
+
+On input, a\+\_\+dW contains the increments of the primitive variables. On output, it contains the increments in the characteristic variables.
+
+I\+M\+P\+O\+R\+T\+A\+NT N\+O\+TE\+: It is assumed that the characteristic analysis puts the smallest eigenvalue first, the largest eigenvalue last, and orders the characteristic variables accordingly. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_a8b1269b718057fe2a5d0bc8bdd183d0b}\label{class_advection_physics_a8b1269b718057fe2a5d0bc8bdd183d0b}} 
+\index{Advection\+Physics@{Advection\+Physics}!char\+Synthesis@{char\+Synthesis}}
+\index{char\+Synthesis@{char\+Synthesis}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{char\+Synthesis()}{charSynthesis()}}
+{\footnotesize\ttfamily void Advection\+Physics\+::char\+Synthesis (\begin{DoxyParamCaption}\item[{\textbf{ F\+Array\+Box} \&}]{a\+\_\+dW,  }\item[{const \textbf{ F\+Array\+Box} \&}]{a\+\_\+W,  }\item[{const int \&}]{a\+\_\+dir,  }\item[{const \textbf{ Box} \&}]{a\+\_\+box }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transform a\+\_\+dW from characteristic to primitive variables. 
+
+On input, a\+\_\+dW contains the increments of the characteristic variables. On output, it contains the increments in the primitive variables.
+
+I\+M\+P\+O\+R\+T\+A\+NT N\+O\+TE\+: It is assumed that the characteristic analysis puts the smallest eigenvalue first, the largest eigenvalue last, and orders the characteristic variables accordingly. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_ac3c19f3db60ae92b995ff3d0cdc3f8dc}\label{class_advection_physics_ac3c19f3db60ae92b995ff3d0cdc3f8dc}} 
+\index{Advection\+Physics@{Advection\+Physics}!char\+Values@{char\+Values}}
+\index{char\+Values@{char\+Values}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{char\+Values()}{charValues()}}
+{\footnotesize\ttfamily void Advection\+Physics\+::char\+Values (\begin{DoxyParamCaption}\item[{\textbf{ F\+Array\+Box} \&}]{a\+\_\+lambda,  }\item[{const \textbf{ F\+Array\+Box} \&}]{a\+\_\+W,  }\item[{const int \&}]{a\+\_\+dir,  }\item[{const \textbf{ Box} \&}]{a\+\_\+box }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Compute the characteristic values (eigenvalues) 
+
+Compute the characteristic values (eigenvalues).
+
+I\+M\+P\+O\+R\+T\+A\+NT N\+O\+TE\+: It is assumed that the characteristic analysis puts the smallest eigenvalue first, the largest eigenvalue last, and orders the characteristic variables accordingly. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_a469e6262703804372173e378c37b735f}\label{class_advection_physics_a469e6262703804372173e378c37b735f}} 
+\index{Advection\+Physics@{Advection\+Physics}!get\+Flux@{get\+Flux}}
+\index{get\+Flux@{get\+Flux}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{get\+Flux()}{getFlux()}}
+{\footnotesize\ttfamily void Advection\+Physics\+::get\+Flux (\begin{DoxyParamCaption}\item[{\textbf{ F\+Array\+Box} \&}]{a\+\_\+flux,  }\item[{const \textbf{ F\+Array\+Box} \&}]{a\+\_\+\+W\+Half,  }\item[{const int \&}]{a\+\_\+dir,  }\item[{const \textbf{ Box} \&}]{a\+\_\+box }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+compute fluxes from primitive values on a face ( adv\+Vel$\ast$w\+Half) 
+
+Fluxes are computed as adv\+Vel$\ast$w\+Half 
+
+Reimplemented from \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_a4fdd807a85bd6a9d1542a4d1745a4bf7}\label{class_advection_physics_a4fdd807a85bd6a9d1542a4d1745a4bf7}} 
+\index{Advection\+Physics@{Advection\+Physics}!increment\+Source@{increment\+Source}}
+\index{increment\+Source@{increment\+Source}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{increment\+Source()}{incrementSource()}}
+{\footnotesize\ttfamily void Advection\+Physics\+::increment\+Source (\begin{DoxyParamCaption}\item[{\textbf{ F\+Array\+Box} \&}]{a\+\_\+S,  }\item[{const \textbf{ F\+Array\+Box} \&}]{a\+\_\+W,  }\item[{const \textbf{ Box} \&}]{a\+\_\+box }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add to (increment) the source terms given the current state. 
+
+On input, a\+\_\+S contains the current source terms. On output, a\+\_\+S has had any additional source terms (based on the current state, a\+\_\+W) added to it. This should all be done on the region defined by a\+\_\+box. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_a92b160c02d12974644e65dce3b7945b9}\label{class_advection_physics_a92b160c02d12974644e65dce3b7945b9}} 
+\index{Advection\+Physics@{Advection\+Physics}!is\+Defined@{is\+Defined}}
+\index{is\+Defined@{is\+Defined}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{is\+Defined()}{isDefined()}}
+{\footnotesize\ttfamily bool Advection\+Physics\+::is\+Defined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Is the object completely defined. 
+
+Return true if the object is completely defined. 
+
+Reimplemented from \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_aa5be4c1a0a10aa2bbbe87fc6b032f2b4}\label{class_advection_physics_aa5be4c1a0a10aa2bbbe87fc6b032f2b4}} 
+\index{Advection\+Physics@{Advection\+Physics}!new\+\_\+godunov\+Physics@{new\+\_\+godunov\+Physics}}
+\index{new\+\_\+godunov\+Physics@{new\+\_\+godunov\+Physics}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{new\+\_\+godunov\+Physics()}{new\_godunovPhysics()}}
+{\footnotesize\ttfamily \textbf{ Godunov\+Physics} $\ast$ Advection\+Physics\+::new\+\_\+godunov\+Physics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Factory method -\/ this object is its own factory. 
+
+Return a pointer to new \hyperlink{class_advection_physics}{Advection\+Physics} object with the same definition as this object. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_ab139a3b1201a76e97e918381c5b3ff98}\label{class_advection_physics_ab139a3b1201a76e97e918381c5b3ff98}} 
+\index{Advection\+Physics@{Advection\+Physics}!num\+Conserved@{num\+Conserved}}
+\index{num\+Conserved@{num\+Conserved}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{num\+Conserved()}{numConserved()}}
+{\footnotesize\ttfamily int Advection\+Physics\+::num\+Conserved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Number of conserved variables. 
+
+Return the number of conserved variables. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_ab59b268a446dbe2912e000c11870ab2f}\label{class_advection_physics_ab59b268a446dbe2912e000c11870ab2f}} 
+\index{Advection\+Physics@{Advection\+Physics}!num\+Fluxes@{num\+Fluxes}}
+\index{num\+Fluxes@{num\+Fluxes}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{num\+Fluxes()}{numFluxes()}}
+{\footnotesize\ttfamily int Advection\+Physics\+::num\+Fluxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Number of flux variables. 
+
+Return the number of flux variables. This can be greater than the number of conserved variables if addition fluxes/face-\/centered quantities are computed. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_ad00c2d52ec684668ff5cd1da9eed42bf}\label{class_advection_physics_ad00c2d52ec684668ff5cd1da9eed42bf}} 
+\index{Advection\+Physics@{Advection\+Physics}!num\+Primitives@{num\+Primitives}}
+\index{num\+Primitives@{num\+Primitives}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{num\+Primitives()}{numPrimitives()}}
+{\footnotesize\ttfamily int Advection\+Physics\+::num\+Primitives (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Number of primitve variables. 
+
+Return the number of primitive variables. This may be greater than the number of conserved variables if derived/redundant quantities are also stored for convenience. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_adcff7bb0c3cf117a51836754921ea75a}\label{class_advection_physics_adcff7bb0c3cf117a51836754921ea75a}} 
+\index{Advection\+Physics@{Advection\+Physics}!post\+Normal\+Pred@{post\+Normal\+Pred}}
+\index{post\+Normal\+Pred@{post\+Normal\+Pred}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{post\+Normal\+Pred()}{postNormalPred()}}
+{\footnotesize\ttfamily void Advection\+Physics\+::post\+Normal\+Pred (\begin{DoxyParamCaption}\item[{\textbf{ F\+Array\+Box} \&}]{a\+\_\+d\+W\+Minus,  }\item[{\textbf{ F\+Array\+Box} \&}]{a\+\_\+d\+W\+Plus,  }\item[{const \textbf{ F\+Array\+Box} \&}]{a\+\_\+W,  }\item[{const \textbf{ Real} \&}]{a\+\_\+dt,  }\item[{const \textbf{ Real} \&}]{a\+\_\+dx,  }\item[{const int \&}]{a\+\_\+dir,  }\item[{const \textbf{ Box} \&}]{a\+\_\+box }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Post-\/normal predictor calculation. 
+
+Add increment to normal predictor, e.\+g. to account for source terms due to spatially-\/varying coefficients, to bound primitive variable ranges. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_a7b88645af918e8ae6ad2ec21eb49734f}\label{class_advection_physics_a7b88645af918e8ae6ad2ec21eb49734f}} 
+\index{Advection\+Physics@{Advection\+Physics}!pressure\+Index@{pressure\+Index}}
+\index{pressure\+Index@{pressure\+Index}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{pressure\+Index()}{pressureIndex()}}
+{\footnotesize\ttfamily int Advection\+Physics\+::pressure\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Component index within the primitive variables of the pressure. 
+
+Return the component index withn the primitive variables for the pressure. Used for slope flattening (slope computation). 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_aae156d1179d03c93022e39c9a378c120}\label{class_advection_physics_aae156d1179d03c93022e39c9a378c120}} 
+\index{Advection\+Physics@{Advection\+Physics}!riemann@{riemann}}
+\index{riemann@{riemann}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{riemann()}{riemann()}}
+{\footnotesize\ttfamily void Advection\+Physics\+::riemann (\begin{DoxyParamCaption}\item[{\textbf{ F\+Array\+Box} \&}]{a\+\_\+\+W\+Gdnv,  }\item[{const \textbf{ F\+Array\+Box} \&}]{a\+\_\+\+W\+Left,  }\item[{const \textbf{ F\+Array\+Box} \&}]{a\+\_\+\+W\+Right,  }\item[{const \textbf{ F\+Array\+Box} \&}]{a\+\_\+W,  }\item[{const \textbf{ Real} \&}]{a\+\_\+time,  }\item[{const int \&}]{a\+\_\+dir,  }\item[{const \textbf{ Box} \&}]{a\+\_\+box }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Compute the solution to the Riemann problem. 
+
+Given input left and right states in a direction, a\+\_\+dir, compute a Riemann problem and generate fluxes at the faces within a\+\_\+box. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_ae562469a45e542ceb2195ab8f3689db2}\label{class_advection_physics_ae562469a45e542ceb2195ab8f3689db2}} 
+\index{Advection\+Physics@{Advection\+Physics}!small\+Pressure@{small\+Pressure}}
+\index{small\+Pressure@{small\+Pressure}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{small\+Pressure()}{smallPressure()}}
+{\footnotesize\ttfamily \textbf{ Real} Advection\+Physics\+::small\+Pressure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Used to limit the absolute value of a \char`\"{}pressure\char`\"{} difference. 
+
+Return a value that is used by slope flattening to limit (away from zero) the absolute value of a slope in the \hyperlink{class_advection_physics_a7b88645af918e8ae6ad2ec21eb49734f}{pressure\+Index()} component (slope computation). 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_a992f0d9ca9515de44b82981c14a2fb31}\label{class_advection_physics_a992f0d9ca9515de44b82981c14a2fb31}} 
+\index{Advection\+Physics@{Advection\+Physics}!state\+Names@{state\+Names}}
+\index{state\+Names@{state\+Names}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{state\+Names()}{stateNames()}}
+{\footnotesize\ttfamily \textbf{ Vector}$<$ string $>$ Advection\+Physics\+::state\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Names of the conserved variables. 
+
+Return the names of the conserved variables. 
+
+Implements \textbf{ Godunov\+Physics}.
+
+\mbox{\Hypertarget{class_advection_physics_a245ebc2c16520c7f50cc25efc1eb5a0d}\label{class_advection_physics_a245ebc2c16520c7f50cc25efc1eb5a0d}} 
+\index{Advection\+Physics@{Advection\+Physics}!velocity\+Interval@{velocity\+Interval}}
+\index{velocity\+Interval@{velocity\+Interval}!Advection\+Physics@{Advection\+Physics}}
+\subsubsection{\texorpdfstring{velocity\+Interval()}{velocityInterval()}}
+{\footnotesize\ttfamily \textbf{ Interval} Advection\+Physics\+::velocity\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\textbf{ Interval} within the primitive variables corresponding to the velocities. 
+
+Return the interval of component indices within the primitive variable of the velocities. Used for slope flattening (slope computation) and computing the divergence of the velocity (artificial viscosity). 
+
+Implements \textbf{ Godunov\+Physics}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src\+Subcycle/Advection\+Physics.\+H\item 
+/home/parkinsonjl/mushy-\/layer/src\+Subcycle/Advection\+Physics.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+\hypertarget{class_nonlinear_b_c_solver}{}\section{Nonlinear\+B\+C\+Solver Class Reference}
+\label{class_nonlinear_b_c_solver}\index{Nonlinear\+B\+C\+Solver@{Nonlinear\+B\+C\+Solver}}
+
+
+Base class for solving for nonlinear ghost cell values.  
+
+
+
+
+{\ttfamily \#include $<$Nonlinear\+B\+C.\+H$>$}
+
+Inheritance diagram for Nonlinear\+B\+C\+Solver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_nonlinear_b_c_solver}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_nonlinear_b_c_solver_a1021520079adc1f89ef622a09f10e7c8}\label{class_nonlinear_b_c_solver_a1021520079adc1f89ef622a09f10e7c8}} 
+virtual \hyperlink{class_nonlinear_b_c_solver_a1021520079adc1f89ef622a09f10e7c8}{$\sim$\+Nonlinear\+B\+C\+Solver} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nonlinear_b_c_solver_ad9a4188a7df6af0a6b49aab9281fb621}\label{class_nonlinear_b_c_solver_ad9a4188a7df6af0a6b49aab9281fb621}} 
+\hyperlink{class_nonlinear_b_c_solver_ad9a4188a7df6af0a6b49aab9281fb621}{Nonlinear\+B\+C\+Solver} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_nonlinear_b_c_solver_ab389410dc6d20d2ede859d8c2cd7c0b1}\label{class_nonlinear_b_c_solver_ab389410dc6d20d2ede859d8c2cd7c0b1}} 
+{\bfseries Nonlinear\+B\+C\+Solver} (\hyperlink{class_nonlinear_temperature_b_c}{Nonlinear\+Temperature\+BC} $\ast$a\+\_\+bc, const int a\+\_\+max\+\_\+iter, const \textbf{ Real} a\+\_\+max\+\_\+residual, const \textbf{ Real} a\+\_\+relax\+\_\+coeff=0.\+5)
+\item 
+\mbox{\Hypertarget{class_nonlinear_b_c_solver_a57e02843eaace5a1cda2955ee633a930}\label{class_nonlinear_b_c_solver_a57e02843eaace5a1cda2955ee633a930}} 
+virtual void \hyperlink{class_nonlinear_b_c_solver_a57e02843eaace5a1cda2955ee633a930}{solve} (\textbf{ Real} \&a\+\_\+ghost\+\_\+enthalpy, const \textbf{ Real} a\+\_\+interior\+\_\+temperature, const \textbf{ Real} a\+\_\+ghost\+\_\+bulk\+\_\+conc)
+\begin{DoxyCompactList}\small\item\em Method for solving the system -\/ must be implemented by inherited classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_nonlinear_b_c_solver_a33f98b75923c002e3a050f3bd625b8f0}\label{class_nonlinear_b_c_solver_a33f98b75923c002e3a050f3bd625b8f0}} 
+\hyperlink{class_nonlinear_temperature_b_c}{Nonlinear\+Temperature\+BC} $\ast$ {\bfseries m\+\_\+bc}
+\item 
+\mbox{\Hypertarget{class_nonlinear_b_c_solver_ad2dd12f84f4eebd48fa86f1858eb8f45}\label{class_nonlinear_b_c_solver_ad2dd12f84f4eebd48fa86f1858eb8f45}} 
+int {\bfseries m\+\_\+max\+\_\+iter}
+\item 
+\mbox{\Hypertarget{class_nonlinear_b_c_solver_ad2a6f7d7a6629939c4bf6f6dc98149c6}\label{class_nonlinear_b_c_solver_ad2a6f7d7a6629939c4bf6f6dc98149c6}} 
+\textbf{ Real} {\bfseries m\+\_\+max\+\_\+resid}
+\item 
+\mbox{\Hypertarget{class_nonlinear_b_c_solver_ae66b5b5bb8b88a249172180a9d433ed8}\label{class_nonlinear_b_c_solver_ae66b5b5bb8b88a249172180a9d433ed8}} 
+\textbf{ Real} {\bfseries m\+\_\+relax\+\_\+coeff}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for solving for nonlinear ghost cell values. 
+
+Given a \hyperlink{class_nonlinear_temperature_b_c}{Nonlinear\+Temperature\+BC} object which computes the residual, find the root 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/\+B\+Cutil/Nonlinear\+B\+C.\+H\end{DoxyCompactItemize}

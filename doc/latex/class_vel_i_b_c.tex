@@ -1,0 +1,142 @@
+\hypertarget{class_vel_i_b_c}{}\section{Vel\+I\+BC Class Reference}
+\label{class_vel_i_b_c}\index{Vel\+I\+BC@{Vel\+I\+BC}}
+
+
+I\+BC for simple Velocity advection (solid wall) boundary conditions.  
+
+
+
+
+{\ttfamily \#include $<$Vel\+I\+B\+C.\+H$>$}
+
+Inheritance diagram for Vel\+I\+BC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vel_i_b_c}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a5823ec0d34fc039346f6f5970ac20393}\label{class_vel_i_b_c_a5823ec0d34fc039346f6f5970ac20393}} 
+\hyperlink{class_vel_i_b_c_a5823ec0d34fc039346f6f5970ac20393}{Vel\+I\+BC} ()
+\begin{DoxyCompactList}\small\item\em Null constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a4b4e45d8bcd831ee73e360ca953fc3e3}\label{class_vel_i_b_c_a4b4e45d8bcd831ee73e360ca953fc3e3}} 
+\hyperlink{class_vel_i_b_c_a4b4e45d8bcd831ee73e360ca953fc3e3}{$\sim$\+Vel\+I\+BC} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\textbf{ Phys\+I\+BC} $\ast$ \hyperlink{class_vel_i_b_c_ac53daf9706542e3fa4734c8701f5fff5}{new\+\_\+phys\+I\+BC} ()
+\begin{DoxyCompactList}\small\item\em Factory method -\/ this object is its own factory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a67c793da1efebd887de7b0c7907b7e5b}\label{class_vel_i_b_c_a67c793da1efebd887de7b0c7907b7e5b}} 
+void \hyperlink{class_vel_i_b_c_a67c793da1efebd887de7b0c7907b7e5b}{set\+Default\+Values} ()
+\begin{DoxyCompactList}\small\item\em set default boundary values \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a30d5d96e3f384b7fa82d919a424c7847}\label{class_vel_i_b_c_a30d5d96e3f384b7fa82d919a424c7847}} 
+void \hyperlink{class_vel_i_b_c_a30d5d96e3f384b7fa82d919a424c7847}{prim\+BC} (\textbf{ F\+Array\+Box} \&a\+\_\+\+W\+Gdnv, const \textbf{ F\+Array\+Box} \&a\+\_\+\+Wextrap, const \textbf{ F\+Array\+Box} \&a\+\_\+W, const int \&a\+\_\+dir, const \textbf{ Side\+::\+Lo\+Hi\+Side} \&a\+\_\+side, const \textbf{ Real} \&a\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Set boundary fluxes. \end{DoxyCompactList}\item 
+void \hyperlink{class_vel_i_b_c_a39ac3b18e885c749a1081ba7042941df}{set\+Bdry\+Slopes} (\textbf{ F\+Array\+Box} \&a\+\_\+dW, const \textbf{ F\+Array\+Box} \&a\+\_\+W, const int \&a\+\_\+dir, const \textbf{ Real} \&a\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Set boundary slopes. \end{DoxyCompactList}\item 
+void \hyperlink{class_vel_i_b_c_a0f2d126d3a569f828e0370c0c7dc6ec9}{initialize} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+U)
+\begin{DoxyCompactList}\small\item\em Set up initial conditions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a6b43f398d36e8aeb1ca17d11003b57f4}\label{class_vel_i_b_c_a6b43f398d36e8aeb1ca17d11003b57f4}} 
+void \hyperlink{class_vel_i_b_c_a6b43f398d36e8aeb1ca17d11003b57f4}{advection\+Vel} (const \textbf{ Real\+Vect} \&a\+\_\+adv\+Vel)
+\begin{DoxyCompactList}\small\item\em set velocity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a04864dfb4b0af40248b7512a27759334}\label{class_vel_i_b_c_a04864dfb4b0af40248b7512a27759334}} 
+const \textbf{ Real\+Vect} \& \hyperlink{class_vel_i_b_c_a04864dfb4b0af40248b7512a27759334}{advection\+Vel} () const
+\begin{DoxyCompactList}\small\item\em Not sure why we have this. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_acbb613201240705e212ba21f906ba08e}\label{class_vel_i_b_c_acbb613201240705e212ba21f906ba08e}} 
+void \hyperlink{class_vel_i_b_c_acbb613201240705e212ba21f906ba08e}{prob\+Type} (const int a\+\_\+probtype)
+\begin{DoxyCompactList}\small\item\em set problem type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a5f45d506e02001c6c9b2034c973dc44e}\label{class_vel_i_b_c_a5f45d506e02001c6c9b2034c973dc44e}} 
+void \hyperlink{class_vel_i_b_c_a5f45d506e02001c6c9b2034c973dc44e}{set\+Normal\+Wall\+Vel} (\textbf{ Real} a\+\_\+bc\+Val, int a\+\_\+dir, \textbf{ Side\+::\+Lo\+Hi\+Side} a\+\_\+hi\+Lo)
+\begin{DoxyCompactList}\small\item\em set boundary value (default is 0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_aa259704a1f32949bb7964674d9c6a0bf}\label{class_vel_i_b_c_aa259704a1f32949bb7964674d9c6a0bf}} 
+\textbf{ Real} \hyperlink{class_vel_i_b_c_aa259704a1f32949bb7964674d9c6a0bf}{get\+Normal\+Wall\+Vel} (int a\+\_\+dir, \textbf{ Side\+::\+Lo\+Hi\+Side} a\+\_\+hi\+Lo) const
+\begin{DoxyCompactList}\small\item\em access boundary value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a927055b4423e2ff7f412a36a7c7f8072}\label{class_vel_i_b_c_a927055b4423e2ff7f412a36a7c7f8072}} 
+void \hyperlink{class_vel_i_b_c_a927055b4423e2ff7f412a36a7c7f8072}{set\+Slope\+Value} (\textbf{ Real} a\+\_\+slope\+Val, int a\+\_\+dir, \textbf{ Side\+::\+Lo\+Hi\+Side} a\+\_\+hi\+Lo)
+\begin{DoxyCompactList}\small\item\em set slope value (default is 0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a1c3c7d476c8890229ce3eee9533f5773}\label{class_vel_i_b_c_a1c3c7d476c8890229ce3eee9533f5773}} 
+\textbf{ Real} \hyperlink{class_vel_i_b_c_a1c3c7d476c8890229ce3eee9533f5773}{get\+Slope\+Value} (int a\+\_\+dir, \textbf{ Side\+::\+Lo\+Hi\+Side} a\+\_\+hi\+Lo) const
+\begin{DoxyCompactList}\small\item\em access slope value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a16760cd6971354c37ebe7e7482446ec4}\label{class_vel_i_b_c_a16760cd6971354c37ebe7e7482446ec4}} 
+void \hyperlink{class_vel_i_b_c_a16760cd6971354c37ebe7e7482446ec4}{art\+Visc\+BC} (\textbf{ F\+Array\+Box} \&a\+\_\+F, const \textbf{ F\+Array\+Box} \&a\+\_\+U, const \textbf{ F\+Array\+Box} \&a\+\_\+div\+Vel, const int \&a\+\_\+dir, const \textbf{ Real} \&a\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Apply artifical viscosity BC. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_af9cf29e58072a3c4e761af7e2fc2acb5}\label{class_vel_i_b_c_af9cf29e58072a3c4e761af7e2fc2acb5}} 
+int \hyperlink{class_vel_i_b_c_af9cf29e58072a3c4e761af7e2fc2acb5}{prob\+Type} () const
+\begin{DoxyCompactList}\small\item\em accessor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a3e9192d36c775a9b052578c5ec6a3afc}\label{class_vel_i_b_c_a3e9192d36c775a9b052578c5ec6a3afc}} 
+\textbf{ Real\+Vect} \hyperlink{class_vel_i_b_c_a3e9192d36c775a9b052578c5ec6a3afc}{m\+\_\+velocity}
+\begin{DoxyCompactList}\small\item\em advection velocity field \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_aff3f3f8a757a0116c190cdceb78b8547}\label{class_vel_i_b_c_aff3f3f8a757a0116c190cdceb78b8547}} 
+\textbf{ Real} \hyperlink{class_vel_i_b_c_aff3f3f8a757a0116c190cdceb78b8547}{m\+\_\+bc\+Val} \mbox{[}\textbf{ Space\+Dim}\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em BC values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a3cfacea013daf4121ebfbf1e2ef2b36d}\label{class_vel_i_b_c_a3cfacea013daf4121ebfbf1e2ef2b36d}} 
+\textbf{ Real} \hyperlink{class_vel_i_b_c_a3cfacea013daf4121ebfbf1e2ef2b36d}{m\+\_\+slope\+Val} \mbox{[}\textbf{ Space\+Dim}\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em BC slope values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a4d82a0285b2fd37173521c2e478d5cc7}\label{class_vel_i_b_c_a4d82a0285b2fd37173521c2e478d5cc7}} 
+bool \hyperlink{class_vel_i_b_c_a4d82a0285b2fd37173521c2e478d5cc7}{m\+\_\+is\+B\+Cval\+Set}
+\begin{DoxyCompactList}\small\item\em Are BC values set? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_ab2a7f49e9b7d93a22ecdffbd65516ca8}\label{class_vel_i_b_c_ab2a7f49e9b7d93a22ecdffbd65516ca8}} 
+bool \hyperlink{class_vel_i_b_c_ab2a7f49e9b7d93a22ecdffbd65516ca8}{m\+\_\+is\+Slope\+Val\+Set}
+\begin{DoxyCompactList}\small\item\em Are BC slope values set? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vel_i_b_c_a994f298ad10972ec9b53d8a74e26d3c8}\label{class_vel_i_b_c_a994f298ad10972ec9b53d8a74e26d3c8}} 
+int \hyperlink{class_vel_i_b_c_a994f298ad10972ec9b53d8a74e26d3c8}{m\+\_\+probtype}
+\begin{DoxyCompactList}\small\item\em initial condition type \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I\+BC for simple Velocity advection (solid wall) boundary conditions. 
+
+This I\+BC sets normal component of velocities to the prescribed value (normally 0) at physical boundaries, and uses extrapolation to set tangential velocities. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vel_i_b_c_a0f2d126d3a569f828e0370c0c7dc6ec9}\label{class_vel_i_b_c_a0f2d126d3a569f828e0370c0c7dc6ec9}} 
+\index{Vel\+I\+BC@{Vel\+I\+BC}!initialize@{initialize}}
+\index{initialize@{initialize}!Vel\+I\+BC@{Vel\+I\+BC}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Vel\+I\+B\+C\+::initialize (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+U }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set up initial conditions. 
+
+shouldn\textquotesingle{}t be in this function -- we\textquotesingle{}re required to 
+
+Implements \textbf{ Phys\+I\+BC}.
+
+\mbox{\Hypertarget{class_vel_i_b_c_ac53daf9706542e3fa4734c8701f5fff5}\label{class_vel_i_b_c_ac53daf9706542e3fa4734c8701f5fff5}} 
+\index{Vel\+I\+BC@{Vel\+I\+BC}!new\+\_\+phys\+I\+BC@{new\+\_\+phys\+I\+BC}}
+\index{new\+\_\+phys\+I\+BC@{new\+\_\+phys\+I\+BC}!Vel\+I\+BC@{Vel\+I\+BC}}
+\subsubsection{\texorpdfstring{new\+\_\+phys\+I\+B\+C()}{new\_physIBC()}}
+{\footnotesize\ttfamily \textbf{ Phys\+I\+BC} $\ast$ Vel\+I\+B\+C\+::new\+\_\+phys\+I\+BC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Factory method -\/ this object is its own factory. 
+
+Return a pointer to a new \textbf{ Phys\+I\+BC} object with m\+\_\+is\+Defined = false (i.\+e., its define() must be called before it is used) and m\+\_\+is\+Fortran\+Common\+Set set to value of m\+\_\+is\+Fortran\+Commonset in the current (factory) object. 
+
+Implements \textbf{ Phys\+I\+BC}.
+
+\mbox{\Hypertarget{class_vel_i_b_c_a39ac3b18e885c749a1081ba7042941df}\label{class_vel_i_b_c_a39ac3b18e885c749a1081ba7042941df}} 
+\index{Vel\+I\+BC@{Vel\+I\+BC}!set\+Bdry\+Slopes@{set\+Bdry\+Slopes}}
+\index{set\+Bdry\+Slopes@{set\+Bdry\+Slopes}!Vel\+I\+BC@{Vel\+I\+BC}}
+\subsubsection{\texorpdfstring{set\+Bdry\+Slopes()}{setBdrySlopes()}}
+{\footnotesize\ttfamily void Vel\+I\+B\+C\+::set\+Bdry\+Slopes (\begin{DoxyParamCaption}\item[{\textbf{ F\+Array\+Box} \&}]{a\+\_\+dW,  }\item[{const \textbf{ F\+Array\+Box} \&}]{a\+\_\+W,  }\item[{const int \&}]{a\+\_\+dir,  }\item[{const \textbf{ Real} \&}]{a\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set boundary slopes. 
+
+The boundary slopes in a\+\_\+dW are already set to one sided difference approximations. If this function doesn\textquotesingle{}t change them they will be used for the slopes at the boundaries. 
+
+Implements \textbf{ Phys\+I\+BC}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/\+B\+Cutil/Vel\+I\+B\+C.\+H\item 
+/home/parkinsonjl/mushy-\/layer/\+B\+Cutil/Vel\+I\+B\+C.\+cpp\end{DoxyCompactItemize}

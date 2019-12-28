@@ -1,0 +1,57 @@
+\hypertarget{class_nonlinear_temperature_b_c_robin}{}\section{Nonlinear\+Temperature\+B\+C\+Robin Class Reference}
+\label{class_nonlinear_temperature_b_c_robin}\index{Nonlinear\+Temperature\+B\+C\+Robin@{Nonlinear\+Temperature\+B\+C\+Robin}}
+
+
+Robin temperature bcs, for applying to the enthalpy field.  
+
+
+
+
+{\ttfamily \#include $<$Nonlinear\+B\+C.\+H$>$}
+
+Inheritance diagram for Nonlinear\+Temperature\+B\+C\+Robin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_nonlinear_temperature_b_c_robin}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_nonlinear_temperature_b_c_robin_a72c46675e6cf87ad4168bb10ca8fce1a}\label{class_nonlinear_temperature_b_c_robin_a72c46675e6cf87ad4168bb10ca8fce1a}} 
+{\bfseries Nonlinear\+Temperature\+B\+C\+Robin} (const \hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params} a\+\_\+params, const \textbf{ Real} a\+\_\+dx, const \textbf{ Real} a, const \textbf{ Real} b, const \textbf{ Real} F, const \textbf{ Real} T\+\_\+ref)
+\item 
+\mbox{\Hypertarget{class_nonlinear_temperature_b_c_robin_a9c22612ba28cd07329c43ac1a1963b21}\label{class_nonlinear_temperature_b_c_robin_a9c22612ba28cd07329c43ac1a1963b21}} 
+virtual void \hyperlink{class_nonlinear_temperature_b_c_robin_a9c22612ba28cd07329c43ac1a1963b21}{compute\+Residual} (\textbf{ Real} \&a\+\_\+residual, const \textbf{ Real} a\+\_\+ghost\+\_\+enthalpy, const \textbf{ Real} a\+\_\+ghost\+\_\+bulk\+\_\+concentration, const \textbf{ Real} a\+\_\+interior\+\_\+temperature)
+\begin{DoxyCompactList}\small\item\em Compute the residual given the current estimate of the enthalpy on the boundary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_nonlinear_temperature_b_c_robin_afe92c15fe4b2d876be91c082915e0102}\label{class_nonlinear_temperature_b_c_robin_afe92c15fe4b2d876be91c082915e0102}} 
+\textbf{ Real} {\bfseries m\+\_\+a}
+\item 
+\mbox{\Hypertarget{class_nonlinear_temperature_b_c_robin_a355abde33043b25f93639de8bff5c08b}\label{class_nonlinear_temperature_b_c_robin_a355abde33043b25f93639de8bff5c08b}} 
+\textbf{ Real} {\bfseries m\+\_\+b}
+\item 
+\mbox{\Hypertarget{class_nonlinear_temperature_b_c_robin_af3024521f773bbe3d05fb39500a337ab}\label{class_nonlinear_temperature_b_c_robin_af3024521f773bbe3d05fb39500a337ab}} 
+\textbf{ Real} {\bfseries m\+\_\+F}
+\item 
+\mbox{\Hypertarget{class_nonlinear_temperature_b_c_robin_a250705c8131bbfe423bdd461f2883edb}\label{class_nonlinear_temperature_b_c_robin_a250705c8131bbfe423bdd461f2883edb}} 
+\textbf{ Real} {\bfseries m\+\_\+\+T\+\_\+ref}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Robin temperature bcs, for applying to the enthalpy field. 
+
+Compute the residual of $ a \frac{dT}{dz} - F_0 - b(T - T_{ref}) $
+
+Specifically, the residual $ r $ is
+
+$ r = \left[F_0 - b( T_b - T_{ref}) \right] - \frac{T_g - T_i)}{\Delta x} $
+
+where $ T_b = (T_g + T_i)/2 $ is the temperature on the boundary, $ T_g $ is the temperature in the ghost cell and $ T_i $ is the temperature on the interior cell. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/\+B\+Cutil/Nonlinear\+B\+C.\+H\end{DoxyCompactItemize}

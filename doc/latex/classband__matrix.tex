@@ -1,0 +1,68 @@
+\hypertarget{classband__matrix}{}\section{band\+\_\+matrix Class Reference}
+\label{classband__matrix}\index{band\+\_\+matrix@{band\+\_\+matrix}}
+
+
+Class for describing the matrix.  
+
+
+
+
+{\ttfamily \#include $<$Chombo\+Spline.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classband__matrix_a6c5729451260e53bdc0988d818b6ab3b}\label{classband__matrix_a6c5729451260e53bdc0988d818b6ab3b}} 
+\hyperlink{classband__matrix_a6c5729451260e53bdc0988d818b6ab3b}{band\+\_\+matrix} ()
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_a4168e9aecf418e3471bddb516d3f1862}\label{classband__matrix_a4168e9aecf418e3471bddb516d3f1862}} 
+\hyperlink{classband__matrix_a4168e9aecf418e3471bddb516d3f1862}{band\+\_\+matrix} (int \hyperlink{classband__matrix_ad8ef88cdb013c85d2e90c117c7e16981}{dim}, int n\+\_\+u, int n\+\_\+l)
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_aa563a8b89b2bac6c99df710cfba880b1}\label{classband__matrix_aa563a8b89b2bac6c99df710cfba880b1}} 
+\hyperlink{classband__matrix_aa563a8b89b2bac6c99df710cfba880b1}{$\sim$band\+\_\+matrix} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_a1aa747b2d152bebd3d7840c81f1a1bd4}\label{classband__matrix_a1aa747b2d152bebd3d7840c81f1a1bd4}} 
+void \hyperlink{classband__matrix_a1aa747b2d152bebd3d7840c81f1a1bd4}{resize} (int \hyperlink{classband__matrix_ad8ef88cdb013c85d2e90c117c7e16981}{dim}, int n\+\_\+u, int n\+\_\+l)
+\begin{DoxyCompactList}\small\item\em init with dim,n\+\_\+u,n\+\_\+l \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_ad8ef88cdb013c85d2e90c117c7e16981}\label{classband__matrix_ad8ef88cdb013c85d2e90c117c7e16981}} 
+int \hyperlink{classband__matrix_ad8ef88cdb013c85d2e90c117c7e16981}{dim} () const
+\begin{DoxyCompactList}\small\item\em matrix dimension \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_afe1552086e9f956abfd7b8437d847e69}\label{classband__matrix_afe1552086e9f956abfd7b8437d847e69}} 
+int \hyperlink{classband__matrix_afe1552086e9f956abfd7b8437d847e69}{num\+\_\+upper} () const
+\begin{DoxyCompactList}\small\item\em num upper \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_a0c99d328b362f825e8dd8ff07e84305f}\label{classband__matrix_a0c99d328b362f825e8dd8ff07e84305f}} 
+int \hyperlink{classband__matrix_a0c99d328b362f825e8dd8ff07e84305f}{num\+\_\+lower} () const
+\begin{DoxyCompactList}\small\item\em num lower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_aaec1dcb90de7879c78e9abd99fe1c975}\label{classband__matrix_aaec1dcb90de7879c78e9abd99fe1c975}} 
+\textbf{ Real} \& \hyperlink{classband__matrix_aaec1dcb90de7879c78e9abd99fe1c975}{operator()} (int i, int j)
+\begin{DoxyCompactList}\small\item\em write access operator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_a1c5ce22028e645b75ebc4d62337c1f47}\label{classband__matrix_a1c5ce22028e645b75ebc4d62337c1f47}} 
+\textbf{ Real} \hyperlink{classband__matrix_a1c5ce22028e645b75ebc4d62337c1f47}{operator()} (int i, int j) const
+\begin{DoxyCompactList}\small\item\em read access operator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_ab810540005fc4a28650c1df42c94bb53}\label{classband__matrix_ab810540005fc4a28650c1df42c94bb53}} 
+\textbf{ Real} \& \hyperlink{classband__matrix_ab810540005fc4a28650c1df42c94bb53}{saved\+\_\+diag} (int i)
+\begin{DoxyCompactList}\small\item\em we can store an additional diagonal (in m\+\_\+lower) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_a04be7a6e304145e1f767c1ff46f17437}\label{classband__matrix_a04be7a6e304145e1f767c1ff46f17437}} 
+\textbf{ Real} \hyperlink{classband__matrix_a04be7a6e304145e1f767c1ff46f17437}{saved\+\_\+diag} (int i) const
+\begin{DoxyCompactList}\small\item\em we can store an additional diagonal (in m\+\_\+lower) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_ac5e874f32b8256dc18e5722997f79792}\label{classband__matrix_ac5e874f32b8256dc18e5722997f79792}} 
+void \hyperlink{classband__matrix_ac5e874f32b8256dc18e5722997f79792}{lu\+\_\+decompose} ()
+\begin{DoxyCompactList}\small\item\em lu decomposition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_a7a0ce07700f70150ecc3a76d38be9f89}\label{classband__matrix_a7a0ce07700f70150ecc3a76d38be9f89}} 
+std\+::vector$<$ \textbf{ Real} $>$ \hyperlink{classband__matrix_a7a0ce07700f70150ecc3a76d38be9f89}{r\+\_\+solve} (const std\+::vector$<$ \textbf{ Real} $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em r solve \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_ab4ea20ddd99472dff36812a9b5fd26d5}\label{classband__matrix_ab4ea20ddd99472dff36812a9b5fd26d5}} 
+std\+::vector$<$ \textbf{ Real} $>$ \hyperlink{classband__matrix_ab4ea20ddd99472dff36812a9b5fd26d5}{l\+\_\+solve} (const std\+::vector$<$ \textbf{ Real} $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em l solve \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classband__matrix_a7e7b28c210d76f3826dac2462ebdca48}\label{classband__matrix_a7e7b28c210d76f3826dac2462ebdca48}} 
+std\+::vector$<$ \textbf{ Real} $>$ \hyperlink{classband__matrix_a7e7b28c210d76f3826dac2462ebdca48}{lu\+\_\+solve} (const std\+::vector$<$ \textbf{ Real} $>$ \&b, bool is\+\_\+lu\+\_\+decomposed=false)
+\begin{DoxyCompactList}\small\item\em lu solve \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for describing the matrix. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src/Chombo\+Spline.\+h\item 
+/home/parkinsonjl/mushy-\/layer/src/Chombo\+Spline.\+cpp\end{DoxyCompactItemize}

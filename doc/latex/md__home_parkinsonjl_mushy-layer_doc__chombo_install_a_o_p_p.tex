@@ -1,0 +1,94 @@
+
+\begin{DoxyEnumerate}
+\item Login into the server e.\+g. {\ttfamily \$ ssh -\/X gyre1}
+\item {\bfseries 10 minutes}. Get the latest chombo version. Whilst the \href{https://anag-repo.lbl.gov/chombo-3.2/access.html}{\tt Chombo website} will tell you to get the repository located at {\ttfamily \href{https://anag-repo.lbl.gov/svn/Chombo/release/3.2}{\tt https\+://anag-\/repo.\+lbl.\+gov/svn/\+Chombo/release/3.\+2}}, you should actually get the code from \textquotesingle{}Chombo Trunk\textquotesingle{} which is like a development branch and contains code needed for the Mushy Layer program. This is located at {\ttfamily \href{https://anag-repo.lbl.gov/svn/Chombo/trunk/}{\tt https\+://anag-\/repo.\+lbl.\+gov/svn/\+Chombo/trunk/}}, so, using {\ttfamily svn}, you should run something like (replace \textquotesingle{}jparkinson\textquotesingle{} with your username) 
+\begin{DoxyCode}
+$ svn --username jparkinson co https://anag-repo.lbl.gov/svn/Chombo/trunk/ ~/Chombo
+\end{DoxyCode}
+
+\item Copy the makefile from {\ttfamily /mushy-\/layer/doc/\+Make.defs.\+A\+O\+PP} (in the same directory as this readme) to {\ttfamily Chombo/lib/mk/\+Make.\+defs.\+local} e.\+g. 
+\begin{DoxyCode}
+$ cp ~/mushy-layer/doc/Make.defs.AOPP ~/Chombo/lib/mk/Make.defs.local
+\end{DoxyCode}
+
+\item Add the following to your $\sim$/.login script (note this is for csh/tcsh shells, if you\textquotesingle{}re using a bash shell then you\textquotesingle{}ll need to use \href{https://web.fe.up.pt/~jmcruz/etc/unix/sh-vs-csh.html}{\tt different commands} to set the environmental variables). 
+\begin{DoxyCode}
+module load chombo/3.2\_\_hdf5v18
+setenv CH\_TIMER "true"
+\end{DoxyCode}
+ And to your .bashrc 
+\begin{DoxyCode}
+setenv CHOMBO\_HOME /path/to/Chombo/
+\end{DoxyCode}
+
+\item Logout and log back in.
+\item {\bfseries 10 minutes}. Go to the Chombo code and start compiling 
+\begin{DoxyCode}
+$ cd $CHOMBO\_HOME/lib/
+$ make lib
+\end{DoxyCode}
+ Technically you should now build and run all the test problems, but if you\textquotesingle{}re feeling lucky you can skip straight to step 7. 
+\begin{DoxyCode}
+$ make test
+$ make run | grep 'finished with'
+\end{DoxyCode}
+ Everything test should report \textquotesingle{}finished with status 0\textquotesingle{}
+\item {\bfseries 5 minutes}. Build and run one of the released examples as a test 
+\begin{DoxyCode}
+$ cd $CHOMBO\_HOME/releasedExamples/AMRGodunov/execAdvectDiffuse/
+$ make all
+$ ./amrGodunov2d.Linux.64.mpiCC.gfortran.OPT.MPI.ex diffuse.inputs 
+\end{DoxyCode}
+ The output files produced are most easily opened using the \href{https://wci.llnl.gov/simulation/computer-codes/visit}{\tt Visit software}, which is not currently installed on the A\+O\+PP servers (though it may be soon -\/ I have asked for it).
+\end{DoxyEnumerate}
+
+\subsection*{Running code on A\+O\+PP servers}
+
+There is an example S\+L\+U\+RM batch script in {\ttfamily exec\+Subcycle/slurm\+Example}. There is a batch script for building all the mushy layer code (with the relevant module dependencies) in {\ttfamily exec\+Subcycle/build\+Mushy\+Layer.\+sh}, which can be modified for your needs.
+
+\subsection*{Time saving tips for A\+O\+PP}
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries Automating tasks on login}. After logging in to the machine where you run code from (e.\+g. atmlxmaster), add commands to your $\sim$/.login file so you don\textquotesingle{}t have to run them manually each time you login, e.\+g. 
+\begin{DoxyCode}
+module load visit/2.13.2 # gives you access to the visit command, which will let you visualise hdf5 files
+module load hdf5/1.8.18v18\_\_parallel # load hdf5 for data I/O
+module load chombo/3.2\_\_hdf5v18 # load chombo (though you may find it easier to just compile your own copy
+       locally)
+
+# Set default squeue format to display longer job names
+setenv SQUEUE\_FORMAT "%.18i %.9P %.25j %.8u %.2t %.10M %.6D %.20R"
+
+# Make sure we produce time.table files in chombo
+setenv CH\_TIMER "true"
+\end{DoxyCode}
+
+\item {\bfseries Mounting remote drives}. (Currently only tested on linux machines). You can mount remote drives like shared storage or your home directory over S\+SH, so that you can access them from your default file browser. On your local computer, first create a blank directory into which you will mount the drive, e.\+g. 
+\begin{DoxyCode}
+$ cd ~
+$ mkdir mnt
+$ cd mnt
+$ mkdir shared\_storage
+\end{DoxyCode}
+ Now setup an S\+SH alias to tunnel through the gateway server, by adding the following (change your username!) to {\ttfamily $\sim$/.ssh/config} (create the file if it doesn\textquotesingle{}t already exist)\+: 
+\begin{DoxyCode}
+Host atmlxmaster
+User          parkinsonj
+HostName      atmlxmaster
+ProxyCommand  ssh parkinsonj@ssh-gateway.physics.ox.ac.uk nc %h %p %r 2> /dev/null
+\end{DoxyCode}
+ then run the command (change your shared storage folder unless you want to mount mine!) 
+\begin{DoxyCode}
+$ sshfs -o idmap=user atmlxmaster:/network/group/aopp/oceans/AW002\_PARKINSON\_MUSH ~/mnt/shared\_storage
+\end{DoxyCode}
+ you will be prompted for your S\+SH password (possibly twice). Thereafter you can access all your files from your local machine by going to 
+\begin{DoxyCode}
+cd ~/mnt/shared\_storage
+\end{DoxyCode}
+ You can also mount your home drive in the same way i.\+e. 
+\begin{DoxyCode}
+$ sshfs -o idmap=user atmlxmaster:/home/parkinsonj/  ~/mnt/home
+\end{DoxyCode}
+ 
+\end{DoxyEnumerate}

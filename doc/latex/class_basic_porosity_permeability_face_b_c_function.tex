@@ -1,0 +1,48 @@
+\hypertarget{class_basic_porosity_permeability_face_b_c_function}{}\section{Basic\+Porosity\+Permeability\+Face\+B\+C\+Function Class Reference}
+\label{class_basic_porosity_permeability_face_b_c_function}\index{Basic\+Porosity\+Permeability\+Face\+B\+C\+Function@{Basic\+Porosity\+Permeability\+Face\+B\+C\+Function}}
+
+
+Boundary condition for face centered porosity and permeability.  
+
+
+Inheritance diagram for Basic\+Porosity\+Permeability\+Face\+B\+C\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_basic_porosity_permeability_face_b_c_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_basic_porosity_permeability_face_b_c_function_a9c4f07215d310756b2cb65d57566c10c}\label{class_basic_porosity_permeability_face_b_c_function_a9c4f07215d310756b2cb65d57566c10c}} 
+\hyperlink{class_basic_porosity_permeability_face_b_c_function_a9c4f07215d310756b2cb65d57566c10c}{Basic\+Porosity\+Permeability\+Face\+B\+C\+Function} (bool a\+\_\+is\+Homogeneous, int a\+\_\+comp, \hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params} a\+\_\+params, \textbf{ Real} a\+\_\+plume\+Val, \textbf{ Vector}$<$ \textbf{ Vector}$<$ int $>$ $>$ a\+\_\+bc\+Type\+Lo, \textbf{ Vector}$<$ \textbf{ Vector}$<$ int $>$ $>$ a\+\_\+bc\+Type\+Hi, \textbf{ Vector}$<$ \textbf{ Vector}$<$ \textbf{ Real} $>$ $>$ a\+\_\+bc\+Val\+Lo, \textbf{ Vector}$<$ \textbf{ Vector}$<$ \textbf{ Real} $>$ $>$ a\+\_\+bc\+Val\+Hi)
+\begin{DoxyCompactList}\small\item\em Full constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_basic_porosity_permeability_face_b_c_function_a1acbb0ff29e6fe27f3a0907c611bddf2}\label{class_basic_porosity_permeability_face_b_c_function_a1acbb0ff29e6fe27f3a0907c611bddf2}} 
+void \hyperlink{class_basic_porosity_permeability_face_b_c_function_a1acbb0ff29e6fe27f3a0907c611bddf2}{operator()} (\textbf{ F\+Array\+Box} \&a\+\_\+state, const \textbf{ Box} \&a\+\_\+valid, const \textbf{ Problem\+Domain} \&a\+\_\+domain, \textbf{ Real} a\+\_\+dx, bool a\+\_\+homogeneous)
+\begin{DoxyCompactList}\small\item\em Apply BC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_basic_porosity_permeability_face_b_c_function_aa1d072b0f7a83cee89f8c74800724f2f}\label{class_basic_porosity_permeability_face_b_c_function_aa1d072b0f7a83cee89f8c74800724f2f}} 
+\textbf{ Real} \hyperlink{class_basic_porosity_permeability_face_b_c_function_aa1d072b0f7a83cee89f8c74800724f2f}{m\+\_\+plume\+Val}
+\begin{DoxyCompactList}\small\item\em Value in plume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_basic_porosity_permeability_face_b_c_function_adf25634e67df48830f18ddd5c2aab692}\label{class_basic_porosity_permeability_face_b_c_function_adf25634e67df48830f18ddd5c2aab692}} 
+\textbf{ Vector}$<$ \textbf{ Vector}$<$ int $>$ $>$ \hyperlink{class_basic_porosity_permeability_face_b_c_function_adf25634e67df48830f18ddd5c2aab692}{m\+\_\+bc\+Type\+Lo}
+\begin{DoxyCompactList}\small\item\em BC type on the lo side. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_basic_porosity_permeability_face_b_c_function_a14bc35227bde0f362318c3089918d728}\label{class_basic_porosity_permeability_face_b_c_function_a14bc35227bde0f362318c3089918d728}} 
+\textbf{ Vector}$<$ \textbf{ Vector}$<$ int $>$ $>$ \hyperlink{class_basic_porosity_permeability_face_b_c_function_a14bc35227bde0f362318c3089918d728}{m\+\_\+bc\+Type\+Hi}
+\begin{DoxyCompactList}\small\item\em BC type on the hi side. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_basic_porosity_permeability_face_b_c_function_afb2fb410e5dbcd33748fd5085c2fb0d4}\label{class_basic_porosity_permeability_face_b_c_function_afb2fb410e5dbcd33748fd5085c2fb0d4}} 
+\textbf{ Vector}$<$ \textbf{ Vector}$<$ \textbf{ Real} $>$ $>$ \hyperlink{class_basic_porosity_permeability_face_b_c_function_afb2fb410e5dbcd33748fd5085c2fb0d4}{m\+\_\+bc\+Val\+Lo}
+\begin{DoxyCompactList}\small\item\em BC type on the lo side. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_basic_porosity_permeability_face_b_c_function_ae15db449a406cd36b5b2306eb5ef8aeb}\label{class_basic_porosity_permeability_face_b_c_function_ae15db449a406cd36b5b2306eb5ef8aeb}} 
+\textbf{ Vector}$<$ \textbf{ Vector}$<$ \textbf{ Real} $>$ $>$ \hyperlink{class_basic_porosity_permeability_face_b_c_function_ae15db449a406cd36b5b2306eb5ef8aeb}{m\+\_\+bc\+Val\+Hi}
+\begin{DoxyCompactList}\small\item\em BC type on the hi side. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Boundary condition for face centered porosity and permeability. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/\+B\+Cutil/Phys\+B\+C\+Util.\+cpp\end{DoxyCompactItemize}

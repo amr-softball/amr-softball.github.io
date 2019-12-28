@@ -1,0 +1,45 @@
+\hypertarget{class_nonlinear_temperature_b_c}{}\section{Nonlinear\+Temperature\+BC Class Reference}
+\label{class_nonlinear_temperature_b_c}\index{Nonlinear\+Temperature\+BC@{Nonlinear\+Temperature\+BC}}
+
+
+Class for implementing temperature bcs on the enthalpy field.  
+
+
+
+
+{\ttfamily \#include $<$Nonlinear\+B\+C.\+H$>$}
+
+Inheritance diagram for Nonlinear\+Temperature\+BC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_nonlinear_temperature_b_c}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_nonlinear_temperature_b_c_acb225b8e7c46f557935ed2b31344dedc}\label{class_nonlinear_temperature_b_c_acb225b8e7c46f557935ed2b31344dedc}} 
+{\bfseries Nonlinear\+Temperature\+BC} (const \hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params} a\+\_\+params, const \textbf{ Real} a\+\_\+dx)
+\item 
+\mbox{\Hypertarget{class_nonlinear_temperature_b_c_ade1b56f6ac3b8f19d9f3374976bc6df9}\label{class_nonlinear_temperature_b_c_ade1b56f6ac3b8f19d9f3374976bc6df9}} 
+virtual void \hyperlink{class_nonlinear_temperature_b_c_ade1b56f6ac3b8f19d9f3374976bc6df9}{compute\+Residual} (\textbf{ Real} \&a\+\_\+residual, const \textbf{ Real} a\+\_\+ghost\+\_\+enthalpy, const \textbf{ Real} a\+\_\+ghost\+\_\+bulk\+\_\+concentration, const \textbf{ Real} a\+\_\+interior\+\_\+temperature)
+\begin{DoxyCompactList}\small\item\em Compute the residual given the current estimate of the enthalpy on the boundary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_nonlinear_temperature_b_c_aae892c30977d3cfd72d0a9b75a62f54d}\label{class_nonlinear_temperature_b_c_aae892c30977d3cfd72d0a9b75a62f54d}} 
+\hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params} {\bfseries m\+\_\+params}
+\item 
+\mbox{\Hypertarget{class_nonlinear_temperature_b_c_ac247d930ce149457c8a96003b4292f20}\label{class_nonlinear_temperature_b_c_ac247d930ce149457c8a96003b4292f20}} 
+\textbf{ Real} {\bfseries m\+\_\+dx}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for implementing temperature bcs on the enthalpy field. 
+
+This should be an abstract base class -\/ different applications should inherit from this 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/\+B\+Cutil/Nonlinear\+B\+C.\+H\end{DoxyCompactItemize}

@@ -1,0 +1,258 @@
+\hypertarget{_mushy_layer_params_8h}{}\section{/home/parkinsonjl/mushy-\/layer/src/\+Mushy\+Layer\+Params.h File Reference}
+\label{_mushy_layer_params_8h}\index{/home/parkinsonjl/mushy-\/layer/src/\+Mushy\+Layer\+Params.\+h@{/home/parkinsonjl/mushy-\/layer/src/\+Mushy\+Layer\+Params.\+h}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}Parm\+Parse.\+H\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Lo\+Hi\+Side.\+H\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parstream.\+H\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+H\+\_\+\+Timer.\+H\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Real\+Vect.\+H\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+H\+\_\+\+H\+D\+F5.\+H\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}B\+C\+Info.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params}
+\begin{DoxyCompactList}\small\item\em Class to handle the physical parameters of a mushy layer simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_mushy_layer_params_8h_ac2fc74331d371b146302307bfe8f664c}\label{_mushy_layer_params_8h_ac2fc74331d371b146302307bfe8f664c}} 
+enum {\bfseries Nonlinear\+B\+C\+Solve\+Methods} \{ {\bfseries picard}, 
+{\bfseries newton}
+ \}
+\item 
+enum \hyperlink{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeb}{Params\+Porosity\+Functions} \{ \newline
+\hyperlink{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaebaa0f486e5c2395ba42731a0b056f12f10}{m\+\_\+porosity\+Constant}, 
+\hyperlink{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba192060cc37277537db30a67a397a6ce4}{m\+\_\+porosity\+Linear}, 
+\hyperlink{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba680dfb629a0884dc4c207bfd545494da}{m\+\_\+porosity\+Gaussian}, 
+\hyperlink{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba2d76c808c10bf695902607445967a67f}{m\+\_\+porosity\+Edge}, 
+\newline
+\hyperlink{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba1df8b38a399a2217b14e63881872fa6a}{m\+\_\+porosity\+Time\+Dependent}
+ \}\begin{DoxyCompactList}\small\item\em Different options for enforced porosity. \end{DoxyCompactList}
+\item 
+enum \hyperlink{_mushy_layer_params_8h_a81bb69f27935895243a77999d80e81bc}{Viscosity\+Function} \{ \hyperlink{_mushy_layer_params_8h_a81bb69f27935895243a77999d80e81bca76df3c45276337460b50669c893f26e1}{uniform\+Viscosity}, 
+\hyperlink{_mushy_layer_params_8h_a81bb69f27935895243a77999d80e81bcabffb953cfa01f44a20100fb4a75310ef}{linear\+Viscosity}
+ \}\begin{DoxyCompactList}\small\item\em How does the fluid viscosity depend on the solute concentration (if at all)? \end{DoxyCompactList}
+\item 
+enum \hyperlink{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584}{Permeability\+Functions} \{ \newline
+\hyperlink{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a7809a1604df8c44295d18ca2dbb7d292}{m\+\_\+pure\+Fluid}, 
+\hyperlink{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584aace5b195a21f26f52aaaeeb1cb9d805d}{m\+\_\+cubic\+Permeability}, 
+\hyperlink{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a6588b2a4fb62ed00ac323e5e38ea527c}{m\+\_\+kozeny\+Carman}, 
+\hyperlink{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a67f7074781d8837124aedbe92a4e2ed1}{m\+\_\+log\+Permeability}, 
+\newline
+\hyperlink{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a46b898d491a67f1aca80cd3ca2adeeed}{m\+\_\+permeability\+X\+Squared}, 
+\hyperlink{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a28f3adb7037414c27b4df1d54139ddb5}{m\+\_\+porosity\+Permeability}
+ \}\begin{DoxyCompactList}\small\item\em Different possible permeability functions. \end{DoxyCompactList}
+\item 
+enum \hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4}{Physical\+Problems} \{ \newline
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ac779abd65cf88c60ba4f10ecfcd73e1c}{m\+\_\+mushy\+Layer}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4aa5cea8a8008a4eceb156e3b5b0145408}{m\+\_\+burgers\+Sin}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4af8eb87315d758bce6ed3106505b91dcf}{m\+\_\+burgers\+Periodic}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ac6b88c7a3c90a8ff853eb7578774b766}{m\+\_\+poiseuille\+Flow}, 
+\newline
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ab04dd14d206f22b973a2c698bf52334c}{m\+\_\+diffusion}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4abb1ae1e6491f214cec1c73c159c4e594}{m\+\_\+solidification\+No\+Flow}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a7d5f297927d13ae8c53a1394a78c5bd9}{m\+\_\+corner\+Flow}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4afc7b10a110929a3d66393295918af78a}{m\+\_\+sidewall\+Heating}, 
+\newline
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ab6b2a613265ae51f03d61e00fc5e76ad}{m\+\_\+\+H\+RL}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a3d801b8430137caabc4f836fed3957ac}{m\+\_\+rayleigh\+Benard}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a447a131f500ffd9879ce176315a85b30}{m\+\_\+solute\+Flux\+Test}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a1a76a5710ea6df3c3bcc24b98b533ae2}{m\+\_\+reflux\+Test}, 
+\newline
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a4323c46e942f878072b1a9680673ba2c}{m\+\_\+zero\+Porosity\+Test}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4abad48ad8193028948213cd5f199a7b00}{m\+\_\+melting\+Ice\+Block}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a149c7946750e32e373aaf9d2c9d63991}{m\+\_\+convection\+Mixed\+Porous}, 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a723bb9649aad0522aefdbd155f4ee2ae}{m\+\_\+vortex\+Pair}
+ \}\begin{DoxyCompactList}\small\item\em Different physical problems. Most of these, labelled (Old) should be considered fragile. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains immunity flag definitions 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeb}\label{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeb}} 
+\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!Params\+Porosity\+Functions@{Params\+Porosity\+Functions}}
+\index{Params\+Porosity\+Functions@{Params\+Porosity\+Functions}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}
+\subsubsection{\texorpdfstring{Params\+Porosity\+Functions}{ParamsPorosityFunctions}}
+{\footnotesize\ttfamily enum \hyperlink{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeb}{Params\+Porosity\+Functions}}
+
+
+
+Different options for enforced porosity. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+porosity\+Constant@{m\+\_\+porosity\+Constant}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+porosity\+Constant@{m\+\_\+porosity\+Constant}}}\mbox{\Hypertarget{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaebaa0f486e5c2395ba42731a0b056f12f10}\label{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaebaa0f486e5c2395ba42731a0b056f12f10}} 
+m\+\_\+porosity\+Constant&Sets porosity to it\textquotesingle{}s boundary value on the bottom of the domain, i.\+e. \hyperlink{class_mushy_layer_params_af47fd22702ced3bffd3ca0fc0c192e55}{Mushy\+Layer\+Params\+::bc\+Val\+Porosity\+Lo}\mbox{[}0\mbox{]}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+porosity\+Linear@{m\+\_\+porosity\+Linear}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+porosity\+Linear@{m\+\_\+porosity\+Linear}}}\mbox{\Hypertarget{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba192060cc37277537db30a67a397a6ce4}\label{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba192060cc37277537db30a67a397a6ce4}} 
+m\+\_\+porosity\+Linear&Porosity varies linearly from the middle to the boundary. Porosity = 1.\+0 in the middle, and takes the value given by \hyperlink{class_mushy_layer_params_af47fd22702ced3bffd3ca0fc0c192e55}{Mushy\+Layer\+Params\+::bc\+Val\+Porosity\+Lo}\mbox{[}0\mbox{]} on all sides. There is a box in the middle of width \hyperlink{struct_mushy_layer_options_afb7d1a06a3a576cd4a006f40d4273575}{Mushy\+Layer\+Options\+::fixed\+Porosity\+Fractional\+Inner\+Radius}$\ast$domain width which is all at porosity = 1.\+0. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+porosity\+Gaussian@{m\+\_\+porosity\+Gaussian}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+porosity\+Gaussian@{m\+\_\+porosity\+Gaussian}}}\mbox{\Hypertarget{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba680dfb629a0884dc4c207bfd545494da}\label{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba680dfb629a0884dc4c207bfd545494da}} 
+m\+\_\+porosity\+Gaussian&Gaussian profile. $ \chi = \chi_b + \chi_{max} \exp\left[-((x-x_c)^2 + (y-y_c)^2)/(s L) \right]$
+
+where $ \chi_b $ is the porosity enforced at the bottom boundary,
+
+$ \chi_{max} $ is given by \hyperlink{struct_mushy_layer_options_a5b8ba48579239f92a7f72f3d82ef48dd}{Mushy\+Layer\+Options\+::fixed\+Porosity\+Max\+Chi},
+
+$ (x_c, y_c)$ is the centre of the domain.
+
+$ s $, the standard deviation for the gaussian, is given by \hyperlink{struct_mushy_layer_options_a74cedccfecb3321ad61e2394fab36d83}{Mushy\+Layer\+Options\+::\+Fixed\+Porosity\+S\+TD}
+
+$ L $, the domain width, is given by \hyperlink{struct_mushy_layer_options_af1cae497f7c9a1053d5584851105986d}{Mushy\+Layer\+Options\+::domain\+Width} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+porosity\+Edge@{m\+\_\+porosity\+Edge}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+porosity\+Edge@{m\+\_\+porosity\+Edge}}}\mbox{\Hypertarget{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba2d76c808c10bf695902607445967a67f}\label{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba2d76c808c10bf695902607445967a67f}} 
+m\+\_\+porosity\+Edge&Gaussian profile but with highest porosity at the edge of the domain, rather than in the middle. $ \chi = \chi_b \left\{ 1 - \chi_{max} \exp\left[-((x-x_c)^2 + (y-y_c)^2)/(s L) \right] \right\} $
+
+where all the variables are defined as the same way as in m\+\_\+porosity\+Gaussian \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+porosity\+Time\+Dependent@{m\+\_\+porosity\+Time\+Dependent}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+porosity\+Time\+Dependent@{m\+\_\+porosity\+Time\+Dependent}}}\mbox{\Hypertarget{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba1df8b38a399a2217b14e63881872fa6a}\label{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeba1df8b38a399a2217b14e63881872fa6a}} 
+m\+\_\+porosity\+Time\+Dependent&Porosity which varies with time. $ \chi = 1- 0.3 \alpha (y/H)^2 \sin [\pi x / (2 L)] $
+
+where $ \alpha = \min(4.0, t / \tau) $, with the timescale $ \tau $ defined by \hyperlink{struct_mushy_layer_options_a2bb644686f4626c0c602147b861b19f1}{Mushy\+Layer\+Options\+::porosity\+Timescale}
+
+$ H $ is the domain height,
+
+$ L $ is the domain width \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584}\label{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584}} 
+\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!Permeability\+Functions@{Permeability\+Functions}}
+\index{Permeability\+Functions@{Permeability\+Functions}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}
+\subsubsection{\texorpdfstring{Permeability\+Functions}{PermeabilityFunctions}}
+{\footnotesize\ttfamily enum \hyperlink{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584}{Permeability\+Functions}}
+
+
+
+Different possible permeability functions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+pure\+Fluid@{m\+\_\+pure\+Fluid}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+pure\+Fluid@{m\+\_\+pure\+Fluid}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a7809a1604df8c44295d18ca2dbb7d292}\label{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a7809a1604df8c44295d18ca2dbb7d292}} 
+m\+\_\+pure\+Fluid&Permeability = 1.\+0. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+cubic\+Permeability@{m\+\_\+cubic\+Permeability}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+cubic\+Permeability@{m\+\_\+cubic\+Permeability}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584aace5b195a21f26f52aaaeeb1cb9d805d}\label{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584aace5b195a21f26f52aaaeeb1cb9d805d}} 
+m\+\_\+cubic\+Permeability&Cubic permeability function\+: $ \pi = \chi^3 $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+kozeny\+Carman@{m\+\_\+kozeny\+Carman}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+kozeny\+Carman@{m\+\_\+kozeny\+Carman}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a6588b2a4fb62ed00ac323e5e38ea527c}\label{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a6588b2a4fb62ed00ac323e5e38ea527c}} 
+m\+\_\+kozeny\+Carman&Kozeny-\/\+Carman function\+: $ \Pi = \frac{\chi^3}{(1-\chi)^2} $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+log\+Permeability@{m\+\_\+log\+Permeability}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+log\+Permeability@{m\+\_\+log\+Permeability}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a67f7074781d8837124aedbe92a4e2ed1}\label{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a67f7074781d8837124aedbe92a4e2ed1}} 
+m\+\_\+log\+Permeability&Logarithmic function\+: $ \Pi = - \chi^2 \log (1-\chi) $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+permeability\+X\+Squared@{m\+\_\+permeability\+X\+Squared}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+permeability\+X\+Squared@{m\+\_\+permeability\+X\+Squared}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a46b898d491a67f1aca80cd3ca2adeeed}\label{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a46b898d491a67f1aca80cd3ca2adeeed}} 
+m\+\_\+permeability\+X\+Squared&Permeability varies in space. Currently $ \Pi = -exp(-(x-0.5)^2/\alpha) $ where $\alpha=0.02$ is some scale. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+porosity\+Permeability@{m\+\_\+porosity\+Permeability}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+porosity\+Permeability@{m\+\_\+porosity\+Permeability}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a28f3adb7037414c27b4df1d54139ddb5}\label{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584a28f3adb7037414c27b4df1d54139ddb5}} 
+m\+\_\+porosity\+Permeability&Permeability = porosity, i.\+e. $ \pi = \chi $. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4}} 
+\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!Physical\+Problems@{Physical\+Problems}}
+\index{Physical\+Problems@{Physical\+Problems}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}
+\subsubsection{\texorpdfstring{Physical\+Problems}{PhysicalProblems}}
+{\footnotesize\ttfamily enum \hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4}{Physical\+Problems}}
+
+
+
+Different physical problems. Most of these, labelled (Old) should be considered fragile. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+mushy\+Layer@{m\+\_\+mushy\+Layer}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+mushy\+Layer@{m\+\_\+mushy\+Layer}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ac779abd65cf88c60ba4f10ecfcd73e1c}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ac779abd65cf88c60ba4f10ecfcd73e1c}} 
+m\+\_\+mushy\+Layer&Mushy layer -\/ coupled fluid flow, heat, and salt transfer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+burgers\+Sin@{m\+\_\+burgers\+Sin}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+burgers\+Sin@{m\+\_\+burgers\+Sin}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4aa5cea8a8008a4eceb156e3b5b0145408}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4aa5cea8a8008a4eceb156e3b5b0145408}} 
+m\+\_\+burgers\+Sin&(Old) Burgers equation \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+burgers\+Periodic@{m\+\_\+burgers\+Periodic}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+burgers\+Periodic@{m\+\_\+burgers\+Periodic}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4af8eb87315d758bce6ed3106505b91dcf}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4af8eb87315d758bce6ed3106505b91dcf}} 
+m\+\_\+burgers\+Periodic&(Old) Burgers equation \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+poiseuille\+Flow@{m\+\_\+poiseuille\+Flow}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+poiseuille\+Flow@{m\+\_\+poiseuille\+Flow}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ac6b88c7a3c90a8ff853eb7578774b766}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ac6b88c7a3c90a8ff853eb7578774b766}} 
+m\+\_\+poiseuille\+Flow&(Old) Poiseuille flow \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+diffusion@{m\+\_\+diffusion}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+diffusion@{m\+\_\+diffusion}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ab04dd14d206f22b973a2c698bf52334c}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ab04dd14d206f22b973a2c698bf52334c}} 
+m\+\_\+diffusion&(Old) diffusion (no flow flow) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+solidification\+No\+Flow@{m\+\_\+solidification\+No\+Flow}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+solidification\+No\+Flow@{m\+\_\+solidification\+No\+Flow}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4abb1ae1e6491f214cec1c73c159c4e594}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4abb1ae1e6491f214cec1c73c159c4e594}} 
+m\+\_\+solidification\+No\+Flow&Solidification with out flow -\/ useful benchmark problem. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+corner\+Flow@{m\+\_\+corner\+Flow}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+corner\+Flow@{m\+\_\+corner\+Flow}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a7d5f297927d13ae8c53a1394a78c5bd9}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a7d5f297927d13ae8c53a1394a78c5bd9}} 
+m\+\_\+corner\+Flow&(Old) corner flow \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+sidewall\+Heating@{m\+\_\+sidewall\+Heating}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+sidewall\+Heating@{m\+\_\+sidewall\+Heating}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4afc7b10a110929a3d66393295918af78a}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4afc7b10a110929a3d66393295918af78a}} 
+m\+\_\+sidewall\+Heating&(Old) Heating at the sidewalls, with a fixed porosity \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+\+H\+RL@{m\+\_\+\+H\+RL}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+\+H\+RL@{m\+\_\+\+H\+RL}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ab6b2a613265ae51f03d61e00fc5e76ad}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4ab6b2a613265ae51f03d61e00fc5e76ad}} 
+m\+\_\+\+H\+RL&(Old) Horton-\/\+Rogers-\/\+Lapwood problem\+: heating at the top and bottom in a fixed porous medium \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+rayleigh\+Benard@{m\+\_\+rayleigh\+Benard}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+rayleigh\+Benard@{m\+\_\+rayleigh\+Benard}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a3d801b8430137caabc4f836fed3957ac}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a3d801b8430137caabc4f836fed3957ac}} 
+m\+\_\+rayleigh\+Benard&(Old) Rayleigh-\/\+Benard convection (pure fluid -\/ no porosity effects) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+solute\+Flux\+Test@{m\+\_\+solute\+Flux\+Test}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+solute\+Flux\+Test@{m\+\_\+solute\+Flux\+Test}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a447a131f500ffd9879ce176315a85b30}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a447a131f500ffd9879ce176315a85b30}} 
+m\+\_\+solute\+Flux\+Test&(Old) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+reflux\+Test@{m\+\_\+reflux\+Test}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+reflux\+Test@{m\+\_\+reflux\+Test}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a1a76a5710ea6df3c3bcc24b98b533ae2}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a1a76a5710ea6df3c3bcc24b98b533ae2}} 
+m\+\_\+reflux\+Test&(Old) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+zero\+Porosity\+Test@{m\+\_\+zero\+Porosity\+Test}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+zero\+Porosity\+Test@{m\+\_\+zero\+Porosity\+Test}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a4323c46e942f878072b1a9680673ba2c}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a4323c46e942f878072b1a9680673ba2c}} 
+m\+\_\+zero\+Porosity\+Test&(Old) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+melting\+Ice\+Block@{m\+\_\+melting\+Ice\+Block}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+melting\+Ice\+Block@{m\+\_\+melting\+Ice\+Block}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4abad48ad8193028948213cd5f199a7b00}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4abad48ad8193028948213cd5f199a7b00}} 
+m\+\_\+melting\+Ice\+Block&(Old) Initialise with a block of ice and melt it \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+convection\+Mixed\+Porous@{m\+\_\+convection\+Mixed\+Porous}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+convection\+Mixed\+Porous@{m\+\_\+convection\+Mixed\+Porous}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a149c7946750e32e373aaf9d2c9d63991}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a149c7946750e32e373aaf9d2c9d63991}} 
+m\+\_\+convection\+Mixed\+Porous&Convection in a porous material with fixed porosity. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+vortex\+Pair@{m\+\_\+vortex\+Pair}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!m\+\_\+vortex\+Pair@{m\+\_\+vortex\+Pair}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a723bb9649aad0522aefdbd155f4ee2ae}\label{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4a723bb9649aad0522aefdbd155f4ee2ae}} 
+m\+\_\+vortex\+Pair&(Old) Vortex merger benchmark problem \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_mushy_layer_params_8h_a81bb69f27935895243a77999d80e81bc}\label{_mushy_layer_params_8h_a81bb69f27935895243a77999d80e81bc}} 
+\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!Viscosity\+Function@{Viscosity\+Function}}
+\index{Viscosity\+Function@{Viscosity\+Function}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}
+\subsubsection{\texorpdfstring{Viscosity\+Function}{ViscosityFunction}}
+{\footnotesize\ttfamily enum \hyperlink{_mushy_layer_params_8h_a81bb69f27935895243a77999d80e81bc}{Viscosity\+Function}}
+
+
+
+How does the fluid viscosity depend on the solute concentration (if at all)? 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{uniform\+Viscosity@{uniform\+Viscosity}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!uniform\+Viscosity@{uniform\+Viscosity}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a81bb69f27935895243a77999d80e81bca76df3c45276337460b50669c893f26e1}\label{_mushy_layer_params_8h_a81bb69f27935895243a77999d80e81bca76df3c45276337460b50669c893f26e1}} 
+uniform\+Viscosity&Uniform viscosity, $ \mu = 1.0 $ everywhere. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{linear\+Viscosity@{linear\+Viscosity}!Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}}\index{Mushy\+Layer\+Params.\+h@{Mushy\+Layer\+Params.\+h}!linear\+Viscosity@{linear\+Viscosity}}}\mbox{\Hypertarget{_mushy_layer_params_8h_a81bb69f27935895243a77999d80e81bcabffb953cfa01f44a20100fb4a75310ef}\label{_mushy_layer_params_8h_a81bb69f27935895243a77999d80e81bcabffb953cfa01f44a20100fb4a75310ef}} 
+linear\+Viscosity&Viscosity varies linearly with liquid concentration, from 1 to $ \mu_{max} $. $ \mu = 1 + (\mu_{max} - 1)(\Theta_l + \mathcal{C})/\mathcal{C} $
+
+where $\mu_{max} $ is defined by \hyperlink{class_mushy_layer_params_a96533d7a2509a604830f5319163ca113}{Mushy\+Layer\+Params\+::max\+\_\+viscosity} \\
+\hline
+
+\end{DoxyEnumFields}

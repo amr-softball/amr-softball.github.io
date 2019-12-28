@@ -1,0 +1,290 @@
+\hypertarget{class_a_m_r_non_linear_multi_comp_op}{}\section{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op Class Reference}
+\label{class_a_m_r_non_linear_multi_comp_op}\index{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}}
+
+
+Nonlinear variable coefficient operator.  
+
+
+
+
+{\ttfamily \#include $<$A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op.\+H$>$}
+
+Inheritance diagram for A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.865497cm]{class_a_m_r_non_linear_multi_comp_op}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_ad5c79a27d60fc17c24eea9c052aa84ac}{finer\+Operator\+Changed} (const \textbf{ M\+G\+Level\+Op}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \&a\+\_\+operator, int a\+\_\+coarsening\+Factor)
+\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a639364f5cf0da9ec0237241639ae8404}\label{class_a_m_r_non_linear_multi_comp_op_a639364f5cf0da9ec0237241639ae8404}} 
+\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \& \hyperlink{class_a_m_r_non_linear_multi_comp_op_a639364f5cf0da9ec0237241639ae8404}{identity\+Coef} ()
+\begin{DoxyCompactList}\small\item\em Returns identity coefficient data. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a64125ca23b133e2ca86437d7b8cfad3c}{set\+B\+Coef\+Interpolator} (\textbf{ Ref\+Counted\+Ptr}$<$ \hyperlink{class_coefficient_interpolator_linear_face}{Coefficient\+Interpolator\+Linear\+Face} $>$ \&a\+\_\+b\+Coef\+Interpolator)
+\item 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_afbc2843a557aa21ae1e88372dae80f9b}{set\+A\+Coef\+Interpolator} (\textbf{ Ref\+Counted\+Ptr}$<$ \hyperlink{class_coefficient_interpolator_linear}{Coefficient\+Interpolator\+Linear} $>$ \&a\+\_\+a\+Coef\+Interpolator)
+\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a58e58cbf6a60f356392931aaf4d6c268}\label{class_a_m_r_non_linear_multi_comp_op_a58e58cbf6a60f356392931aaf4d6c268}} 
+\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \& \hyperlink{class_a_m_r_non_linear_multi_comp_op_a58e58cbf6a60f356392931aaf4d6c268}{B\+Coef} ()
+\begin{DoxyCompactList}\small\item\em Returns the B coefficient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a15f72d25367f2a9a8c8a5211357947d0}\label{class_a_m_r_non_linear_multi_comp_op_a15f72d25367f2a9a8c8a5211357947d0}} 
+\textbf{ Ref\+Counted\+Ptr}$<$ \hyperlink{class_coefficient_interpolator_linear_face}{Coefficient\+Interpolator\+Linear\+Face} $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_a15f72d25367f2a9a8c8a5211357947d0}{B\+Coef\+Interpolator} ()
+\begin{DoxyCompactList}\small\item\em Allows access to the B coefficient interpolator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a3f2f1e5860115bff0d72527de816bc64}\label{class_a_m_r_non_linear_multi_comp_op_a3f2f1e5860115bff0d72527de816bc64}} 
+\textbf{ Ref\+Counted\+Ptr}$<$ \hyperlink{class_coefficient_interpolator_linear}{Coefficient\+Interpolator\+Linear} $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_a3f2f1e5860115bff0d72527de816bc64}{A\+Coef\+Interpolator} ()
+\begin{DoxyCompactList}\small\item\em Allows access to the A coefficient interpolator. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_afb810f3b1d7826edd752a2d90264cc8e}{set\+Time} (\textbf{ Real} a\+\_\+time)
+\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a8a43737a8d5fe5805ebbf3d72388df9b}\label{class_a_m_r_non_linear_multi_comp_op_a8a43737a8d5fe5805ebbf3d72388df9b}} 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a8a43737a8d5fe5805ebbf3d72388df9b}{compute\+Diffused\+Var} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&liquid\+Conc, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&bulk\+Conc, bool a\+\_\+homogeneous=false)
+\begin{DoxyCompactList}\small\item\em Compute temperature, liquid concentration from enthalpy, bulk concentration etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a7100d4ee1ab6e020e6fe62522c762b18}\label{class_a_m_r_non_linear_multi_comp_op_a7100d4ee1ab6e020e6fe62522c762b18}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a7100d4ee1ab6e020e6fe62522c762b18}{compute\+Diffused\+Var} (\textbf{ F\+Array\+Box} \&a\+\_\+calculated\+Var, const \textbf{ F\+Array\+Box} \&a\+\_\+primary\+Var, const \textbf{ Data\+Index} dit, bool a\+\_\+homogeneous=false)
+\begin{DoxyCompactList}\small\item\em Compute temperature, liquid concentration from enthalpy, bulk concentration etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op functions}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a2205291922bf767821fcbeb13f52a338}\label{class_a_m_r_non_linear_multi_comp_op_a2205291922bf767821fcbeb13f52a338}} 
+{\bfseries A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op} ()
+\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a6f358cdb028df9d5a9d274fda7c77a77}\label{class_a_m_r_non_linear_multi_comp_op_a6f358cdb028df9d5a9d274fda7c77a77}} 
+virtual {\bfseries $\sim$\+A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op} ()
+\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a8c6014f3d9208f5184d09d700876335b}\label{class_a_m_r_non_linear_multi_comp_op_a8c6014f3d9208f5184d09d700876335b}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a8c6014f3d9208f5184d09d700876335b}{residualI} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+lhs, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs, bool a\+\_\+homogeneous=false)
+\begin{DoxyCompactList}\small\item\em Compute residual. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_aef99970c9405719bde322dde73ba1aff}\label{class_a_m_r_non_linear_multi_comp_op_aef99970c9405719bde322dde73ba1aff}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_aef99970c9405719bde322dde73ba1aff}{pre\+Cond} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+correction, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+residual)
+\begin{DoxyCompactList}\small\item\em Preconditioner. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a8313cc6520e242cfc9eb796038268bb6}\label{class_a_m_r_non_linear_multi_comp_op_a8313cc6520e242cfc9eb796038268bb6}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a8313cc6520e242cfc9eb796038268bb6}{apply\+OpI} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+lhs, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, bool a\+\_\+homogeneous=false)
+\begin{DoxyCompactList}\small\item\em Apply operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_aa6b8a71fa8501fdb71adab30bc7d5295}\label{class_a_m_r_non_linear_multi_comp_op_aa6b8a71fa8501fdb71adab30bc7d5295}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_aa6b8a71fa8501fdb71adab30bc7d5295}{apply\+Op\+No\+Boundary} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+lhs, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi)
+\begin{DoxyCompactList}\small\item\em Apply operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a2dba9dd175512b57ac8e2a7d88a0d79c}\label{class_a_m_r_non_linear_multi_comp_op_a2dba9dd175512b57ac8e2a7d88a0d79c}} 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a2dba9dd175512b57ac8e2a7d88a0d79c}{apply\+Op\+No\+Boundary2} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+lhs, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, bool a\+\_\+homogeneous)
+\begin{DoxyCompactList}\small\item\em Apply operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a8febdc5604ebbaabbbb09832fe829a24}\label{class_a_m_r_non_linear_multi_comp_op_a8febdc5604ebbaabbbb09832fe829a24}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a8febdc5604ebbaabbbb09832fe829a24}{diagonal\+Scale} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs, bool a\+\_\+kappa\+Weighted)
+\begin{DoxyCompactList}\small\item\em Scale with identity coefficient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a9b8f70f0355ad8fe044d132d5235b50d}\label{class_a_m_r_non_linear_multi_comp_op_a9b8f70f0355ad8fe044d132d5235b50d}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a9b8f70f0355ad8fe044d132d5235b50d}{divide\+By\+Identity\+Coef} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs)
+\begin{DoxyCompactList}\small\item\em Divide by identity coefficient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a78c046aa738c5edede492bf14ef913de}\label{class_a_m_r_non_linear_multi_comp_op_a78c046aa738c5edede492bf14ef913de}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a78c046aa738c5edede492bf14ef913de}{set\+Alpha\+And\+Beta} (const \textbf{ Real} \&a\+\_\+alpha, const \textbf{ Real} \&a\+\_\+beta)
+\begin{DoxyCompactList}\small\item\em For tga stuff. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a6029b152d2e8faddbf820f188cb73c01}\label{class_a_m_r_non_linear_multi_comp_op_a6029b152d2e8faddbf820f188cb73c01}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a6029b152d2e8faddbf820f188cb73c01}{set\+Coefs} (const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \&a\+\_\+a\+Coef, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ \&a\+\_\+b\+Coef, const \textbf{ Real} \&a\+\_\+alpha, const \textbf{ Real} \&a\+\_\+beta)
+\begin{DoxyCompactList}\small\item\em Also calls reset lambda. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_aa558902d2bd88e41dff404c6b3ae206f}\label{class_a_m_r_non_linear_multi_comp_op_aa558902d2bd88e41dff404c6b3ae206f}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_aa558902d2bd88e41dff404c6b3ae206f}{reset\+Lambda} ()
+\begin{DoxyCompactList}\small\item\em Should be called before the relaxation parameter is needed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_ad3c8e757a15bb3fdfa03c7b0c05315df}\label{class_a_m_r_non_linear_multi_comp_op_ad3c8e757a15bb3fdfa03c7b0c05315df}} 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_ad3c8e757a15bb3fdfa03c7b0c05315df}{reset\+Lambda\+Non\+Linear} (const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi)
+\begin{DoxyCompactList}\small\item\em Recalculate lambda for nonlinear calculations (not actually current used) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a4fe4520a51b78a009eba0cde433949dd}\label{class_a_m_r_non_linear_multi_comp_op_a4fe4520a51b78a009eba0cde433949dd}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a4fe4520a51b78a009eba0cde433949dd}{compute\+Lambda} ()
+\begin{DoxyCompactList}\small\item\em Compute lambda once alpha, a\+Coef, beta, b\+Coef are defined. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a2fb72537fbed147bb56f3eea440746ea}\label{class_a_m_r_non_linear_multi_comp_op_a2fb72537fbed147bb56f3eea440746ea}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a2fb72537fbed147bb56f3eea440746ea}{reflux} (const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi\+Fine, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+residual, \textbf{ A\+M\+R\+Level\+Op}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $\ast$a\+\_\+finer\+Op)
+\begin{DoxyCompactList}\small\item\em Increment flux registers and calculate reflux. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a348203bd1783a1ce09fb8dbf876d79ae}{get\+Flux} (\textbf{ Flux\+Box} \&a\+\_\+flux, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+data, const \textbf{ Box} \&a\+\_\+grid, const \textbf{ Data\+Index} \&a\+\_\+dit, \textbf{ Real} a\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em get\+Flux function which matches interface to \textbf{ A\+M\+R\+Poisson\+Op} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_ab3b9ca0576f197409ff893e598a286d0}\label{class_a_m_r_non_linear_multi_comp_op_ab3b9ca0576f197409ff893e598a286d0}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_ab3b9ca0576f197409ff893e598a286d0}{get\+Flux} (\textbf{ Flux\+Box} \&a\+\_\+flux, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+data, const \textbf{ Flux\+Box} \&a\+\_\+b\+Coef, const \textbf{ Box} \&a\+\_\+grid, const \textbf{ Data\+Index} \&a\+\_\+dit, \textbf{ Real} a\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em get diffusive flux \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ M\+G\+Level\+Op functions}\par
+{\em \subsection*{$<$$<$$<$$<$$<$$<$$<$ \hyperlink{_a_m_r_non_linear_multi_comp_op_8_h_source}{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op.\+H} }}\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_ad0f58cb65ab237d61874f2aeae1a4da3}{restrict\+Residual} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+res\+Coarse, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi\+Fine, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs\+Fine)
+\begin{DoxyCompactList}\small\item\em calculate restricted residual \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a65b95bc4127ffdfab47bd5a81acf2772}\label{class_a_m_r_non_linear_multi_comp_op_a65b95bc4127ffdfab47bd5a81acf2772}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a65b95bc4127ffdfab47bd5a81acf2772}{restrict\+Residual} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+res\+Coarse, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi\+Fine, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Coarse, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs\+Fine, bool homogeneous)
+\begin{DoxyCompactList}\small\item\em calculate restricted residual \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_ac3ea29dd436c89aafde25c8f33fdb30d}\label{class_a_m_r_non_linear_multi_comp_op_ac3ea29dd436c89aafde25c8f33fdb30d}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_ac3ea29dd436c89aafde25c8f33fdb30d}{create\+Coarser} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+coarse, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+fine, bool a\+\_\+ghosted)
+\begin{DoxyCompactList}\small\item\em Create coarser version of field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a47ff0ed449857310593c55c4d192a581}\label{class_a_m_r_non_linear_multi_comp_op_a47ff0ed449857310593c55c4d192a581}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a47ff0ed449857310593c55c4d192a581}{prolong\+Increment} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi\+This\+Level, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+correct\+Coarse)
+\begin{DoxyCompactList}\small\item\em Prolong correction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a06ecad64d257df357ea7085974645b1d}\label{class_a_m_r_non_linear_multi_comp_op_a06ecad64d257df357ea7085974645b1d}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a06ecad64d257df357ea7085974645b1d}{restrictR} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi\+Coarse, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi\+Fine)
+\begin{DoxyCompactList}\small\item\em Restrict solution to coarser level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_aee81544614b579b9ca7cb03c6e92f9cd}\label{class_a_m_r_non_linear_multi_comp_op_aee81544614b579b9ca7cb03c6e92f9cd}} 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_aee81544614b579b9ca7cb03c6e92f9cd}{apply\+Op\+Mg} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+lhs, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Coarse, bool a\+\_\+homogeneous)
+\begin{DoxyCompactList}\small\item\em Apply operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_af95d5785a1c0291dbd7309b1539ab2fb}\label{class_a_m_r_non_linear_multi_comp_op_af95d5785a1c0291dbd7309b1539ab2fb}} 
+\textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_af95d5785a1c0291dbd7309b1539ab2fb}{m\+\_\+a\+Coef}
+\begin{DoxyCompactList}\small\item\em Identity operator spatially varying coefficient storage (cell-\/centered) --- if you change this call \hyperlink{class_a_m_r_non_linear_multi_comp_op_aa558902d2bd88e41dff404c6b3ae206f}{reset\+Lambda()} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a137649e6de11ed5ebf0fd06ed6766e65}\label{class_a_m_r_non_linear_multi_comp_op_a137649e6de11ed5ebf0fd06ed6766e65}} 
+\textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_a137649e6de11ed5ebf0fd06ed6766e65}{m\+\_\+secondary\+Var}
+\begin{DoxyCompactList}\small\item\em Which of enthalpy or bulk concentration we\textquotesingle{}re not solving for. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_ad6cea304fd804cbf1c7340a9740ad955}\label{class_a_m_r_non_linear_multi_comp_op_ad6cea304fd804cbf1c7340a9740ad955}} 
+\textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_ad6cea304fd804cbf1c7340a9740ad955}{m\+\_\+enthalpy\+Solidus}
+\begin{DoxyCompactList}\small\item\em Enthalpy solidus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a285a99a0a4dcf36cd641f8c46d815873}\label{class_a_m_r_non_linear_multi_comp_op_a285a99a0a4dcf36cd641f8c46d815873}} 
+\textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_a285a99a0a4dcf36cd641f8c46d815873}{m\+\_\+enthalpy\+Liquidus}
+\begin{DoxyCompactList}\small\item\em Enthalpy liquidus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a84014ea27489edc10ca99fd27e3fa59b}\label{class_a_m_r_non_linear_multi_comp_op_a84014ea27489edc10ca99fd27e3fa59b}} 
+\textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_a84014ea27489edc10ca99fd27e3fa59b}{m\+\_\+enthalpy\+Eutectic}
+\begin{DoxyCompactList}\small\item\em Eutectic enthalpy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a84251f9cbb92946cd0eba54571ba0010}\label{class_a_m_r_non_linear_multi_comp_op_a84251f9cbb92946cd0eba54571ba0010}} 
+\textbf{ B\+C\+Holder} \hyperlink{class_a_m_r_non_linear_multi_comp_op_a84251f9cbb92946cd0eba54571ba0010}{m\+\_\+diffused\+Var\+BC}
+\begin{DoxyCompactList}\small\item\em Boundary conditions for the diffused field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_aba5ebae2d6ab73cc327456c221de7172}\label{class_a_m_r_non_linear_multi_comp_op_aba5ebae2d6ab73cc327456c221de7172}} 
+bool \hyperlink{class_a_m_r_non_linear_multi_comp_op_aba5ebae2d6ab73cc327456c221de7172}{m\+\_\+apply\+\_\+bcs\+\_\+to\+\_\+diagnostic\+\_\+var}
+\begin{DoxyCompactList}\small\item\em Should we apply B\+Cs explicitly to the diagnostic variables? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a585689df6d0c8fe37528664bad748725}\label{class_a_m_r_non_linear_multi_comp_op_a585689df6d0c8fe37528664bad748725}} 
+\textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_a585689df6d0c8fe37528664bad748725}{m\+\_\+b\+Coef}
+\begin{DoxyCompactList}\small\item\em Laplacian operator spatially varying coefficient storage (face-\/centered) --- if you change this call \hyperlink{class_a_m_r_non_linear_multi_comp_op_aa558902d2bd88e41dff404c6b3ae206f}{reset\+Lambda()} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_afc96721bca344bb2d470d7f0731b4285}\label{class_a_m_r_non_linear_multi_comp_op_afc96721bca344bb2d470d7f0731b4285}} 
+\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_afc96721bca344bb2d470d7f0731b4285}{m\+\_\+lambda}
+\begin{DoxyCompactList}\small\item\em Reciprocal of the diagonal entry of the operator matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_aafb3edc6ac424eb1e6f7bbc9a15c1c9e}\label{class_a_m_r_non_linear_multi_comp_op_aafb3edc6ac424eb1e6f7bbc9a15c1c9e}} 
+\hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params} $\ast$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_aafb3edc6ac424eb1e6f7bbc9a15c1c9e}{m\+\_\+params}
+\begin{DoxyCompactList}\small\item\em Physical parameters for problems. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a56ee2a89dc1bce9701951d48633fc808}\label{class_a_m_r_non_linear_multi_comp_op_a56ee2a89dc1bce9701951d48633fc808}} 
+bool \hyperlink{class_a_m_r_non_linear_multi_comp_op_a56ee2a89dc1bce9701951d48633fc808}{m\+\_\+\+F\+AS}
+\begin{DoxyCompactList}\small\item\em true if we\textquotesingle{}re running in F\+AS mode (much quicker for nonlinear problems) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_ac6eaaca1f19c03eb6cd3f08c0b310143}\label{class_a_m_r_non_linear_multi_comp_op_ac6eaaca1f19c03eb6cd3f08c0b310143}} 
+bool \hyperlink{class_a_m_r_non_linear_multi_comp_op_ac6eaaca1f19c03eb6cd3f08c0b310143}{m\+\_\+super\+Optimised}
+\begin{DoxyCompactList}\small\item\em Do some dodgy stuff here to try and make the code quicker. Turned off by default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a8ec4d6960ca7282d700aa370b3ce875e}\label{class_a_m_r_non_linear_multi_comp_op_a8ec4d6960ca7282d700aa370b3ce875e}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a8ec4d6960ca7282d700aa370b3ce875e}{level\+G\+S\+RB} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs)
+\begin{DoxyCompactList}\small\item\em Gauss-\/seidel relaxation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a68cf60aeb967af9a3c7e1c628d7969f2}\label{class_a_m_r_non_linear_multi_comp_op_a68cf60aeb967af9a3c7e1c628d7969f2}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a68cf60aeb967af9a3c7e1c628d7969f2}{level\+Multi\+Color} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs)
+\begin{DoxyCompactList}\small\item\em Multicolor relaxation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a2bb1423e981bdf7357bc3faab3385908}\label{class_a_m_r_non_linear_multi_comp_op_a2bb1423e981bdf7357bc3faab3385908}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a2bb1423e981bdf7357bc3faab3385908}{loose\+G\+S\+RB} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs)
+\begin{DoxyCompactList}\small\item\em Gauss-\/seidel relaxation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a123577c271aa45f550fbc159b03a144c}\label{class_a_m_r_non_linear_multi_comp_op_a123577c271aa45f550fbc159b03a144c}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a123577c271aa45f550fbc159b03a144c}{overlap\+G\+S\+RB} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs)
+\begin{DoxyCompactList}\small\item\em Gauss-\/seidel relaxation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a301f4fedc4fed7a13e914d5f26f8d719}\label{class_a_m_r_non_linear_multi_comp_op_a301f4fedc4fed7a13e914d5f26f8d719}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a301f4fedc4fed7a13e914d5f26f8d719}{level\+G\+S\+R\+B\+Lazy} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs)
+\begin{DoxyCompactList}\small\item\em Gauss-\/seidel relaxation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a7fd508a366d0e779e8ac82ca7f03ec69}\label{class_a_m_r_non_linear_multi_comp_op_a7fd508a366d0e779e8ac82ca7f03ec69}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_a7fd508a366d0e779e8ac82ca7f03ec69}{level\+Jacobi} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs)
+\begin{DoxyCompactList}\small\item\em Jacobi relaxation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_af01ccd4569cbeb9a4085c8c6a4d06e8c}\label{class_a_m_r_non_linear_multi_comp_op_af01ccd4569cbeb9a4085c8c6a4d06e8c}} 
+virtual void \hyperlink{class_a_m_r_non_linear_multi_comp_op_af01ccd4569cbeb9a4085c8c6a4d06e8c}{get\+Flux} (\textbf{ F\+Array\+Box} \&a\+\_\+flux, const \textbf{ F\+Array\+Box} \&a\+\_\+data, const \textbf{ Flux\+Box} \&a\+\_\+b\+Coef, const \textbf{ Box} \&a\+\_\+facebox, int a\+\_\+dir, const \textbf{ Data\+Index} \&a\+\_\+dit, int a\+\_\+ref=1) const
+\begin{DoxyCompactList}\small\item\em computes flux over face-\/centered a\+\_\+facebox. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a15ba0831b7d6ed8509954fcdedbc68b2}\label{class_a_m_r_non_linear_multi_comp_op_a15ba0831b7d6ed8509954fcdedbc68b2}} 
+\textbf{ Layout\+Data}$<$ \textbf{ C\+F\+I\+VS} $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_a15ba0831b7d6ed8509954fcdedbc68b2}{m\+\_\+lo\+C\+F\+I\+VS} \mbox{[}\textbf{ Space\+Dim}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Intvects on coarse-\/fine interfaces. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_ad98133545fea83f7ea83d97b571864ab}\label{class_a_m_r_non_linear_multi_comp_op_ad98133545fea83f7ea83d97b571864ab}} 
+\textbf{ Layout\+Data}$<$ \textbf{ C\+F\+I\+VS} $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_ad98133545fea83f7ea83d97b571864ab}{m\+\_\+hi\+C\+F\+I\+VS} \mbox{[}\textbf{ Space\+Dim}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Intvects on coarse-\/fine interfaces. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a355e5cdcad525f983a8122bcf0ab09b4}\label{class_a_m_r_non_linear_multi_comp_op_a355e5cdcad525f983a8122bcf0ab09b4}} 
+\textbf{ Ref\+Counted\+Ptr}$<$ \hyperlink{class_coefficient_interpolator_linear_face}{Coefficient\+Interpolator\+Linear\+Face} $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_a355e5cdcad525f983a8122bcf0ab09b4}{m\+\_\+b\+Coef\+Interpolator}
+\begin{DoxyCompactList}\small\item\em Interpolator for b coefficient data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a725b0c0f13966b9b4ef303219a25fe7d}\label{class_a_m_r_non_linear_multi_comp_op_a725b0c0f13966b9b4ef303219a25fe7d}} 
+\textbf{ Ref\+Counted\+Ptr}$<$ \hyperlink{class_coefficient_interpolator_linear}{Coefficient\+Interpolator\+Linear} $>$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_a725b0c0f13966b9b4ef303219a25fe7d}{m\+\_\+a\+Coef\+Interpolator}
+\begin{DoxyCompactList}\small\item\em Interpolator for a coefficient data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a70bf32d1723de157b96d70bd53d2f255}\label{class_a_m_r_non_linear_multi_comp_op_a70bf32d1723de157b96d70bd53d2f255}} 
+\textbf{ Real} \hyperlink{class_a_m_r_non_linear_multi_comp_op_a70bf32d1723de157b96d70bd53d2f255}{m\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Current time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a799454b3424eebb1f152b131cf6ea1f4}\label{class_a_m_r_non_linear_multi_comp_op_a799454b3424eebb1f152b131cf6ea1f4}} 
+bool \hyperlink{class_a_m_r_non_linear_multi_comp_op_a799454b3424eebb1f152b131cf6ea1f4}{m\+\_\+lambda\+Needs\+Resetting}
+\begin{DoxyCompactList}\small\item\em Does the relaxation coefficient need to be reset? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Nonlinear variable coefficient operator. 
+
+Operator for solving variable-\/coefficient (alpha $\ast$ a\+Coef(x) $\ast$ I -\/ beta $\ast$ Div(b\+Coef(x) . Grad)) phi = rho over an \textbf{ A\+MR} hierarchy. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_ad5c79a27d60fc17c24eea9c052aa84ac}\label{class_a_m_r_non_linear_multi_comp_op_ad5c79a27d60fc17c24eea9c052aa84ac}} 
+\index{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}!finer\+Operator\+Changed@{finer\+Operator\+Changed}}
+\index{finer\+Operator\+Changed@{finer\+Operator\+Changed}!A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}}
+\subsubsection{\texorpdfstring{finer\+Operator\+Changed()}{finerOperatorChanged()}}
+{\footnotesize\ttfamily void A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+::finer\+Operator\+Changed (\begin{DoxyParamCaption}\item[{const \textbf{ M\+G\+Level\+Op}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \&}]{a\+\_\+operator,  }\item[{int}]{a\+\_\+coarsening\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Has finer operator changed? This is called on multigrid operators when their \textbf{ A\+MR} operators are altered. 
+
+Reimplemented from \textbf{ A\+M\+R\+Poisson\+Op}.
+
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a348203bd1783a1ce09fb8dbf876d79ae}\label{class_a_m_r_non_linear_multi_comp_op_a348203bd1783a1ce09fb8dbf876d79ae}} 
+\index{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}!get\+Flux@{get\+Flux}}
+\index{get\+Flux@{get\+Flux}!A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}}
+\subsubsection{\texorpdfstring{get\+Flux()}{getFlux()}}
+{\footnotesize\ttfamily virtual void A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+::get\+Flux (\begin{DoxyParamCaption}\item[{\textbf{ Flux\+Box} \&}]{a\+\_\+flux,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+data,  }\item[{const \textbf{ Box} \&}]{a\+\_\+grid,  }\item[{const \textbf{ Data\+Index} \&}]{a\+\_\+dit,  }\item[{\textbf{ Real}}]{a\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+get\+Flux function which matches interface to \textbf{ A\+M\+R\+Poisson\+Op} 
+
+assumes we want to use member-\/data b\+Coef, then calls second get\+Flux function Note that a\+\_\+data is the thing we take the gradient of, i.\+e. we calculate $ \chi \nabla \phi $ where $ \phi $ is a\+\_\+data. a\+\_\+data is N\+OT the bulk concentration or enthalpy 
+
+Reimplemented from \textbf{ A\+M\+R\+Poisson\+Op}.
+
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_ad0f58cb65ab237d61874f2aeae1a4da3}\label{class_a_m_r_non_linear_multi_comp_op_ad0f58cb65ab237d61874f2aeae1a4da3}} 
+\index{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}!restrict\+Residual@{restrict\+Residual}}
+\index{restrict\+Residual@{restrict\+Residual}!A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}}
+\subsubsection{\texorpdfstring{restrict\+Residual()}{restrictResidual()}}
+{\footnotesize\ttfamily void A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+::restrict\+Residual (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+res\+Coarse,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi\+Fine,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+rhs\+Fine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+calculate restricted residual 
+
+a\+\_\+res\+Coarse\mbox{[}2h\mbox{]} = I\mbox{[}h-\/$>$2h\mbox{]} (rhs\+Fine\mbox{[}h\mbox{]} -\/ L\mbox{[}h\mbox{]}(phi\+Fine\mbox{[}h\mbox{]}) 
+
+Reimplemented from \textbf{ A\+M\+R\+Poisson\+Op}.
+
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_afbc2843a557aa21ae1e88372dae80f9b}\label{class_a_m_r_non_linear_multi_comp_op_afbc2843a557aa21ae1e88372dae80f9b}} 
+\index{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}!set\+A\+Coef\+Interpolator@{set\+A\+Coef\+Interpolator}}
+\index{set\+A\+Coef\+Interpolator@{set\+A\+Coef\+Interpolator}!A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}}
+\subsubsection{\texorpdfstring{set\+A\+Coef\+Interpolator()}{setACoefInterpolator()}}
+{\footnotesize\ttfamily void A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+::set\+A\+Coef\+Interpolator (\begin{DoxyParamCaption}\item[{\textbf{ Ref\+Counted\+Ptr}$<$ \hyperlink{class_coefficient_interpolator_linear}{Coefficient\+Interpolator\+Linear} $>$ \&}]{a\+\_\+a\+Coef\+Interpolator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets up a model that modifies a coefficient data when the operator\textquotesingle{}s time is set. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+a\+Coef\+Interpolator} & A \textbf{ Coefficient\+Interpolator} that will be used to compute the a coefficient at specific times. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_a64125ca23b133e2ca86437d7b8cfad3c}\label{class_a_m_r_non_linear_multi_comp_op_a64125ca23b133e2ca86437d7b8cfad3c}} 
+\index{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}!set\+B\+Coef\+Interpolator@{set\+B\+Coef\+Interpolator}}
+\index{set\+B\+Coef\+Interpolator@{set\+B\+Coef\+Interpolator}!A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}}
+\subsubsection{\texorpdfstring{set\+B\+Coef\+Interpolator()}{setBCoefInterpolator()}}
+{\footnotesize\ttfamily void A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+::set\+B\+Coef\+Interpolator (\begin{DoxyParamCaption}\item[{\textbf{ Ref\+Counted\+Ptr}$<$ \hyperlink{class_coefficient_interpolator_linear_face}{Coefficient\+Interpolator\+Linear\+Face} $>$ \&}]{a\+\_\+b\+Coef\+Interpolator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets up a model that modifies b coefficient data when the operator\textquotesingle{}s time is set. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+b\+Coef\+Interpolator} & A \textbf{ Coefficient\+Interpolator} that will be used to compute the b coefficient at specific times. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_afb810f3b1d7826edd752a2d90264cc8e}\label{class_a_m_r_non_linear_multi_comp_op_afb810f3b1d7826edd752a2d90264cc8e}} 
+\index{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}!set\+Time@{set\+Time}}
+\index{set\+Time@{set\+Time}!A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op}}
+\subsubsection{\texorpdfstring{set\+Time()}{setTime()}}
+{\footnotesize\ttfamily void A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+::set\+Time (\begin{DoxyParamCaption}\item[{\textbf{ Real}}]{a\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets the time centering of the operator. This interpolates b coefficient data at the given time if an interpolator is set. 
+
+Reimplemented from \textbf{ A\+M\+R\+Poisson\+Op}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src/A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op.\+H\item 
+/home/parkinsonjl/mushy-\/layer/src/A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op.\+cpp\end{DoxyCompactItemize}

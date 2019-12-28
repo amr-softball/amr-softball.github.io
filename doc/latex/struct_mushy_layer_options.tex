@@ -1,0 +1,1110 @@
+\hypertarget{struct_mushy_layer_options}{}\section{Mushy\+Layer\+Options Struct Reference}
+\label{struct_mushy_layer_options}\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+
+
+Contains most of the options for running the code, and how to handle the equations.  
+
+
+
+
+{\ttfamily \#include $<$mushy\+Layer\+Opt.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a2ee16667e5052743f94322d9c95f954f}\label{struct_mushy_layer_options_a2ee16667e5052743f94322d9c95f954f}} 
+string \hyperlink{struct_mushy_layer_options_a2ee16667e5052743f94322d9c95f954f}{output\+\_\+dir}
+\begin{DoxyCompactList}\small\item\em Output directory for plot and checkpoint files. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa8faed523736e08a2768e375a06c38b4}\label{struct_mushy_layer_options_aa8faed523736e08a2768e375a06c38b4}} 
+string \hyperlink{struct_mushy_layer_options_aa8faed523736e08a2768e375a06c38b4}{plotfile\+\_\+prefix}
+\begin{DoxyCompactList}\small\item\em Prefix for plot files. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aaaf5949d5a2fdffd663e3cc17814bdfc}\label{struct_mushy_layer_options_aaaf5949d5a2fdffd663e3cc17814bdfc}} 
+bool \hyperlink{struct_mushy_layer_options_aaaf5949d5a2fdffd663e3cc17814bdfc}{minimal\+Output}
+\begin{DoxyCompactList}\small\item\em Turn on to only produce a minimal ammount of output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a590103c8a5df7418f6df6e717a842e67}\label{struct_mushy_layer_options_a590103c8a5df7418f6df6e717a842e67}} 
+bool \hyperlink{struct_mushy_layer_options_a590103c8a5df7418f6df6e717a842e67}{debug}
+\begin{DoxyCompactList}\small\item\em Turn on to produce lots of output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_abb4138937326352ee9ae6365c0c60315}\label{struct_mushy_layer_options_abb4138937326352ee9ae6365c0c60315}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_abb4138937326352ee9ae6365c0c60315}{steady\+State\+Condition}
+\begin{DoxyCompactList}\small\item\em Maximum value by which the solution may have changed for us to have reached steady state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a0646a4ef0e7bbfb0bc7840b6d07e5c31}\label{struct_mushy_layer_options_a0646a4ef0e7bbfb0bc7840b6d07e5c31}} 
+bool \hyperlink{struct_mushy_layer_options_a0646a4ef0e7bbfb0bc7840b6d07e5c31}{ignore\+Velocity\+Steady\+State}
+\begin{DoxyCompactList}\small\item\em Turn on to ignore changes in velocity when deciding if we\textquotesingle{}ve reached steady state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ab5c5847187f48b651e3b6119b4d0d39d}\label{struct_mushy_layer_options_ab5c5847187f48b651e3b6119b4d0d39d}} 
+bool \hyperlink{struct_mushy_layer_options_ab5c5847187f48b651e3b6119b4d0d39d}{ignore\+Bulk\+Conc\+Steady\+State}
+\begin{DoxyCompactList}\small\item\em Turn on to ignore changes in bulk concentration when deciding if we\textquotesingle{}ve reached steady state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af1cae497f7c9a1053d5584851105986d}\label{struct_mushy_layer_options_af1cae497f7c9a1053d5584851105986d}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_af1cae497f7c9a1053d5584851105986d}{domain\+Width}
+\begin{DoxyCompactList}\small\item\em Domain width. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_acfe9c8efd6b6bde93149c9e807efdc61}\label{struct_mushy_layer_options_acfe9c8efd6b6bde93149c9e807efdc61}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_acfe9c8efd6b6bde93149c9e807efdc61}{domain\+Height}
+\begin{DoxyCompactList}\small\item\em Domain height. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a20e47527add942e9f8e1b8c74b613719}\label{struct_mushy_layer_options_a20e47527add942e9f8e1b8c74b613719}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a20e47527add942e9f8e1b8c74b613719}{cfl}
+\begin{DoxyCompactList}\small\item\em Maximum allowed C\+FL number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a2ebb97c5431aecafe207cc55e3c56891}\label{struct_mushy_layer_options_a2ebb97c5431aecafe207cc55e3c56891}} 
+bool \hyperlink{struct_mushy_layer_options_a2ebb97c5431aecafe207cc55e3c56891}{skip\+Unsafe\+C\+FL}
+\begin{DoxyCompactList}\small\item\em T\+O\+DO\+: remove this. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aee9863fcf25858c91c53a3a987f1d9a3}\label{struct_mushy_layer_options_aee9863fcf25858c91c53a3a987f1d9a3}} 
+bool \hyperlink{struct_mushy_layer_options_aee9863fcf25858c91c53a3a987f1d9a3}{force\+Use\+U\+Chi\+For\+C\+FL}
+\begin{DoxyCompactList}\small\item\em Force the code to compute a C\+FL condition based on the size of $\mathbf{U}/\chi$, rather than $ \mathbf{U} $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af2368a8f3239bac1f42f9902474bb24f}\label{struct_mushy_layer_options_af2368a8f3239bac1f42f9902474bb24f}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_af2368a8f3239bac1f42f9902474bb24f}{min\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Minimum time to run simulations for (even if the steady state condition has been met) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a2b2b434f8c842db679314d1226d83930}\label{struct_mushy_layer_options_a2b2b434f8c842db679314d1226d83930}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a2b2b434f8c842db679314d1226d83930}{max\+\_\+dt\+\_\+growth}
+\begin{DoxyCompactList}\small\item\em Maximum allowed fractional increase in dt from one timestep to the next. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a4aaa6aa92a57d3df414d311ded23b0a6}{init\+\_\+dt\+\_\+scale}
+\begin{DoxyCompactList}\small\item\em Multiply the dt computed during initialisation procedures by this factor before using it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ae7c7b327c2036f515ad784e1deaedf1d}\label{struct_mushy_layer_options_ae7c7b327c2036f515ad784e1deaedf1d}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ae7c7b327c2036f515ad784e1deaedf1d}{fixed\+Dt}
+\begin{DoxyCompactList}\small\item\em Enforce a fixed timestep (if $>$ 0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af369a77065b02e1b2b5eb9089dc1264d}\label{struct_mushy_layer_options_af369a77065b02e1b2b5eb9089dc1264d}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_af369a77065b02e1b2b5eb9089dc1264d}{initial\+\_\+dt\+\_\+multiplier}
+\begin{DoxyCompactList}\small\item\em Scale initial dt\textquotesingle{}s by this factor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a5e1892ed6c932ef8f24cf957e8d998df}\label{struct_mushy_layer_options_a5e1892ed6c932ef8f24cf957e8d998df}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a5e1892ed6c932ef8f24cf957e8d998df}{min\+Dt}
+\begin{DoxyCompactList}\small\item\em Minimum dt allowed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa10931f3d610f30a954fd28f3dc74df8}\label{struct_mushy_layer_options_aa10931f3d610f30a954fd28f3dc74df8}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_aa10931f3d610f30a954fd28f3dc74df8}{max\+\_\+dt}
+\begin{DoxyCompactList}\small\item\em Maximum dt allowed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a1d7da8601808d29f278e4c4ecba43adc}\label{struct_mushy_layer_options_a1d7da8601808d29f278e4c4ecba43adc}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a1d7da8601808d29f278e4c4ecba43adc}{max\+\_\+init\+\_\+dt}
+\begin{DoxyCompactList}\small\item\em Maximum initial dt allowed. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ab64711234784b285045c7dfb904231f3}{accel\+C\+FL}
+\begin{DoxyCompactList}\small\item\em C\+FL number for acceleration. Only used if use\+Accel\+Dt = true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa61cb83edf273653cb57756730eaa146}\label{struct_mushy_layer_options_aa61cb83edf273653cb57756730eaa146}} 
+bool \hyperlink{struct_mushy_layer_options_aa61cb83edf273653cb57756730eaa146}{print\+Accel\+Dt}
+\begin{DoxyCompactList}\small\item\em Turn on to print some diagnostics about the dt computed according to acceleration considerations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af2f4e49cd5728b12ef4b64f1e0a819e5}\label{struct_mushy_layer_options_af2f4e49cd5728b12ef4b64f1e0a819e5}} 
+bool \hyperlink{struct_mushy_layer_options_af2f4e49cd5728b12ef4b64f1e0a819e5}{use\+Accel\+Dt}
+\begin{DoxyCompactList}\small\item\em Use the timesteps computed according to the cfl condition applied to accelerations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a5df4bdfad1515e71893b5c54996f3c17}\label{struct_mushy_layer_options_a5df4bdfad1515e71893b5c54996f3c17}} 
+bool \hyperlink{struct_mushy_layer_options_a5df4bdfad1515e71893b5c54996f3c17}{use\+Init\+Accel\+Dt}
+\begin{DoxyCompactList}\small\item\em For the first timestep, use dt computed according to the cfl condition applied to accelerations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a6300001d03a88445ca0bb15989d837d9}\label{struct_mushy_layer_options_a6300001d03a88445ca0bb15989d837d9}} 
+int \hyperlink{struct_mushy_layer_options_a6300001d03a88445ca0bb15989d837d9}{max\+\_\+possible\+\_\+level}
+\begin{DoxyCompactList}\small\item\em Maximum level allowed in this \textbf{ A\+MR} hierarchy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a6fc1ebea368c338af3708e41560eeb0f}\label{struct_mushy_layer_options_a6fc1ebea368c338af3708e41560eeb0f}} 
+bool \hyperlink{struct_mushy_layer_options_a6fc1ebea368c338af3708e41560eeb0f}{compute\+Vorticity\+Stream\+Function}
+\begin{DoxyCompactList}\small\item\em Turn on to compute the vorticity/streamfunction as a diagnostic. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a4d2370260d6a49bf5a988f379592320c}{use\+Fortran\+Regularisation\+Face}
+\begin{DoxyCompactList}\small\item\em Turn on to use fortran routines for regularising the solution on cell faces (i.\+e. ensuring porosity is not 0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a2a3357f2be7d8c6cd481578e59884ec1}\label{struct_mushy_layer_options_a2a3357f2be7d8c6cd481578e59884ec1}} 
+bool \hyperlink{struct_mushy_layer_options_a2a3357f2be7d8c6cd481578e59884ec1}{use\+Fortran\+Regularisation}
+\begin{DoxyCompactList}\small\item\em Turn on using fortran routines for regularising the solution on cell centres (i.\+e. ensuring porosity is not 0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ac5ffd9d1d42b13f5eb03e11e581ba061}\label{struct_mushy_layer_options_ac5ffd9d1d42b13f5eb03e11e581ba061}} 
+bool \hyperlink{struct_mushy_layer_options_ac5ffd9d1d42b13f5eb03e11e581ba061}{viscous\+B\+Cs}
+\begin{DoxyCompactList}\small\item\em Whether or not we want to use viscous boundary conditions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a97300ff9c544738642fc73114222e03f}\label{struct_mushy_layer_options_a97300ff9c544738642fc73114222e03f}} 
+int \hyperlink{struct_mushy_layer_options_a97300ff9c544738642fc73114222e03f}{num\+\_\+init\+\_\+passes}
+\begin{DoxyCompactList}\small\item\em Number of loops of the pressure initialisation routine. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af701f0c257d0fcbd02df0bb4bfeb4952}\label{struct_mushy_layer_options_af701f0c257d0fcbd02df0bb4bfeb4952}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_af701f0c257d0fcbd02df0bb4bfeb4952}{restart\+\_\+new\+\_\+time}
+\begin{DoxyCompactList}\small\item\em If $>$= 0, and we\textquotesingle{}re restarting, set the simulation time to this. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a647f70bde2bffc9ef777504a9127d298}{init\+\_\+use\+\_\+prev\+\_\+pressure\+\_\+for\+\_\+\+Ustar}
+\begin{DoxyCompactList}\small\item\em Whether to use previous estimates of the pressure to compute the initial cell centred $ \mathbf{U}^* $. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a4b9d47e17442336a6ae899dd7bb7ef07}{init\+\_\+compute\+\_\+u\+Delu}
+\begin{DoxyCompactList}\small\item\em Whether to compute $ \mathbf{U} \cdot \nabla \mathbf{U}/\chi $ terms during initialisation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a25cbdb9f8b22270abbe9bf0807d28bb5}\label{struct_mushy_layer_options_a25cbdb9f8b22270abbe9bf0807d28bb5}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a25cbdb9f8b22270abbe9bf0807d28bb5}{sponge\+Height}
+\begin{DoxyCompactList}\small\item\em Distance from the bottom of the domain that a sponge region will extend. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a5e60e50aa308b9dd73f46be0665b1bc0}\label{struct_mushy_layer_options_a5e60e50aa308b9dd73f46be0665b1bc0}} 
+bool \hyperlink{struct_mushy_layer_options_a5e60e50aa308b9dd73f46be0665b1bc0}{skip\+Salt\+Update}
+\begin{DoxyCompactList}\small\item\em Turn on to set the advective source term in the salt equation to 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a0e87171dbf29e4b081192dae579248ff}\label{struct_mushy_layer_options_a0e87171dbf29e4b081192dae579248ff}} 
+bool \hyperlink{struct_mushy_layer_options_a0e87171dbf29e4b081192dae579248ff}{skip\+H\+C\+Update}
+\begin{DoxyCompactList}\small\item\em Turn on to stop evolving the enthalpy and bulk concentration fields. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a0631b4a1d95690c036da9a09d6042aa8}{do\+Diffusion\+Src}
+\begin{DoxyCompactList}\small\item\em Use a diffusive source term to compute the advective terms more accurately. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a8fc6447bcbc0bba62f5534dd70c0c770}\label{struct_mushy_layer_options_a8fc6447bcbc0bba62f5534dd70c0c770}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a8fc6447bcbc0bba62f5534dd70c0c770}{ramp\+Buoyancy}
+\begin{DoxyCompactList}\small\item\em Fractional increase in the buoyancy force with each timestep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ac5c93d9ef6515f392f5de7d30cac9bbe}\label{struct_mushy_layer_options_ac5c93d9ef6515f392f5de7d30cac9bbe}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ac5c93d9ef6515f392f5de7d30cac9bbe}{init\+RaC}
+\begin{DoxyCompactList}\small\item\em Initial RaC when we\textquotesingle{}re changing the buoyancy force at each timestep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a74b262b3c0d6193d9fefa9b1de1b4594}\label{struct_mushy_layer_options_a74b262b3c0d6193d9fefa9b1de1b4594}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a74b262b3c0d6193d9fefa9b1de1b4594}{init\+RaT}
+\begin{DoxyCompactList}\small\item\em Initial RaT when we\textquotesingle{}re changing the buoyancy force at each timestep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ace80b85e9e274a8230c7b4c168bb9fe3}\label{struct_mushy_layer_options_ace80b85e9e274a8230c7b4c168bb9fe3}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ace80b85e9e274a8230c7b4c168bb9fe3}{max\+RaC}
+\begin{DoxyCompactList}\small\item\em Max RaC when we\textquotesingle{}re changing the buoyancy force at each timestep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_adedffaea8acb2f15ce2af114a9026295}\label{struct_mushy_layer_options_adedffaea8acb2f15ce2af114a9026295}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_adedffaea8acb2f15ce2af114a9026295}{max\+RaT}
+\begin{DoxyCompactList}\small\item\em Max RaT when we\textquotesingle{}re changing the buoyancy force at each timestep. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_abb4bbe1b7dc2088154775ac0915cd8e9}{init\+Adv\+Vel\+Centering}
+\begin{DoxyCompactList}\small\item\em At which time to compute advection velocities during initialisation. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a923817c4dd1baeb506c20cd081256175}{adv\+\_\+vel\+\_\+centering\+\_\+growth}
+\item 
+bool \hyperlink{struct_mushy_layer_options_a4bfcfa9308587a2c1fcce378eaecec1b}{ignore\+Solve\+Fails}
+\begin{DoxyCompactList}\small\item\em Whether or not we want to ignore solvers failing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_abf11a35aae07875e68c218024cf8bc73}\label{struct_mushy_layer_options_abf11a35aae07875e68c218024cf8bc73}} 
+int \hyperlink{struct_mushy_layer_options_abf11a35aae07875e68c218024cf8bc73}{solver\+Fail\+Restart\+Method}
+\begin{DoxyCompactList}\small\item\em What to do if a solver fails and we\textquotesingle{}re not ignoring the problem. \end{DoxyCompactList}\item 
+int \hyperlink{struct_mushy_layer_options_a8215f286dafdbe573df73258b544f307}{steady\+State\+Norm\+Type}
+\begin{DoxyCompactList}\small\item\em When testing for steady state can consider different norms of the solution. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a6cf246b25ca25948fa22e673b62ca017}{load\+\_\+adv\+Vel}
+\begin{DoxyCompactList}\small\item\em Whether we want to try and load the advection velocity from a restart file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a1689abf88e2e066a61b4c0108618ac9e}\label{struct_mushy_layer_options_a1689abf88e2e066a61b4c0108618ac9e}} 
+int \hyperlink{struct_mushy_layer_options_a1689abf88e2e066a61b4c0108618ac9e}{C\+Finterp\+Order\+\_\+advection}
+\begin{DoxyCompactList}\small\item\em Whether to do 1st order (set to 1) or 2nd order (set to 2) interpolation at coarse-\/fine boundaries. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a5e66ad315df2dbff60ee56ea25ed68ae}{nonlinear\+H\+C\+Op\+Super\+Optimised}
+\begin{DoxyCompactList}\small\item\em Whether we want to try and do some dodgy stuff to make the enthalpy-\/bulk concentration nonlinear solver quicker. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a078a1ef21c19a8b1eb903f0c5c90ad4f}{apply\+\_\+diagnostic\+\_\+bcs}
+\begin{DoxyCompactList}\small\item\em Whether to apply B\+Cs to temperature, porosity etc. explicitly during multigrid solves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ab64096542b22ce1e38b972854116f189}\label{struct_mushy_layer_options_ab64096542b22ce1e38b972854116f189}} 
+bool \hyperlink{struct_mushy_layer_options_ab64096542b22ce1e38b972854116f189}{use\+Subcycling}
+\begin{DoxyCompactList}\small\item\em Whether or not to do subcycling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ab8ba1fe9999541f8e83706d8c2fdbdc1}\label{struct_mushy_layer_options_ab8ba1fe9999541f8e83706d8c2fdbdc1}} 
+int \hyperlink{struct_mushy_layer_options_ab8ba1fe9999541f8e83706d8c2fdbdc1}{verbosity}
+\begin{DoxyCompactList}\small\item\em How much text output to produce on a scale of 0 -\/$>$ infinity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa02f318d80e38081925d47679b9539b8}\label{struct_mushy_layer_options_aa02f318d80e38081925d47679b9539b8}} 
+bool \hyperlink{struct_mushy_layer_options_aa02f318d80e38081925d47679b9539b8}{use\+Limiting}
+\begin{DoxyCompactList}\small\item\em Use slope limiting in advection calculations? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aee00363c430d38cedff300e5fbfc6e22}\label{struct_mushy_layer_options_aee00363c430d38cedff300e5fbfc6e22}} 
+int \hyperlink{struct_mushy_layer_options_aee00363c430d38cedff300e5fbfc6e22}{tag\+Buffer\+Size}
+\begin{DoxyCompactList}\small\item\em Number of cells to add around tagged cells before computing new meshes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ad4f7b1ce7b426d5a2a18b0fc0915c622}\label{struct_mushy_layer_options_ad4f7b1ce7b426d5a2a18b0fc0915c622}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ad4f7b1ce7b426d5a2a18b0fc0915c622}{refine\+Thresh}
+\begin{DoxyCompactList}\small\item\em Refinement threshold. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a35624a5dc740e78fdf2c3b4da9c30dc7}\label{struct_mushy_layer_options_a35624a5dc740e78fdf2c3b4da9c30dc7}} 
+bool {\bfseries do\+Euler\+Part}
+\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a94bd619c67b96acc2cda509f9e5dece4}\label{struct_mushy_layer_options_a94bd619c67b96acc2cda509f9e5dece4}} 
+bool \hyperlink{struct_mushy_layer_options_a94bd619c67b96acc2cda509f9e5dece4}{compute\+Diagnostics}
+\begin{DoxyCompactList}\small\item\em Whether or not to compute diagnostics ad hoc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ac0eb138e4101ea848084c498d668ac52}\label{struct_mushy_layer_options_ac0eb138e4101ea848084c498d668ac52}} 
+bool \hyperlink{struct_mushy_layer_options_ac0eb138e4101ea848084c498d668ac52}{do\+Projection}
+\begin{DoxyCompactList}\small\item\em Whether or not to do projection. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a0ee4602f8acbf255e32a89397409a67c}{use\+Incremental\+Pressure}
+\begin{DoxyCompactList}\small\item\em Whether or not to use the previous pressure when solving Darcy\textquotesingle{}s equation. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a58be59c481f1d2f2283b943c723cb73f}{use\+Incremental\+Pressure\+Refined\+Levels}
+\begin{DoxyCompactList}\small\item\em Whether or not to solve for an incremental pressure change on fine levels, rather than the full pressure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ad46eb0969cc8b7dbcbba0e719aa33b25}\label{struct_mushy_layer_options_ad46eb0969cc8b7dbcbba0e719aa33b25}} 
+bool \hyperlink{struct_mushy_layer_options_ad46eb0969cc8b7dbcbba0e719aa33b25}{do\+Sync\+Operations}
+\begin{DoxyCompactList}\small\item\em Whether or not to do synchronisation operations over multiple levels have reached the same time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a40bf0333dc4481f5a449785c58f16b76}\label{struct_mushy_layer_options_a40bf0333dc4481f5a449785c58f16b76}} 
+bool \hyperlink{struct_mushy_layer_options_a40bf0333dc4481f5a449785c58f16b76}{enforce\+Analytic\+Soln}
+\begin{DoxyCompactList}\small\item\em Whether or not to enforce an analytic solution at the start of the simulation. \end{DoxyCompactList}\item 
+int \hyperlink{struct_mushy_layer_options_abf28d877dea7de52109802ad51f75fa2}{analytic\+Solution}
+\begin{DoxyCompactList}\small\item\em Define the analytic solution to apply. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a40711d22ddae5f380a682e513a2aa62f}\label{struct_mushy_layer_options_a40711d22ddae5f380a682e513a2aa62f}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a40711d22ddae5f380a682e513a2aa62f}{max\+Div\+U\+Face}
+\begin{DoxyCompactList}\small\item\em Try and make sure the maximum divergence of the face centred velocity is less than this. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_acabfc7dcbcac5cb973e9478101e3768d}{scale\+P\+\_\+\+M\+AC}
+\begin{DoxyCompactList}\small\item\em Whether or not the M\+AC (face-\/centred) projection should solve for a pressure that is scaled by the porosity or permeability. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a862aeef81ad6231eed93035f9640e917}{scale\+P\+\_\+\+CC}
+\begin{DoxyCompactList}\small\item\em Whether or not the CC (cell-\/centred) projection should solve for a pressure that is scaled by the porosity. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a2ac51724bee29034037c2c26f320ee11}{use\+Pi\+Advection\+B\+Cs}
+\begin{DoxyCompactList}\small\item\em Use the cell centred pressure $ \pi $ as the boundary condition when solving for the face centred pressure $ \phi $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a97b3c19b1a7fc1118b568207d039aecc}\label{struct_mushy_layer_options_a97b3c19b1a7fc1118b568207d039aecc}} 
+int \hyperlink{struct_mushy_layer_options_a97b3c19b1a7fc1118b568207d039aecc}{projection\+\_\+verbosity}
+\begin{DoxyCompactList}\small\item\em How much output the projection object should generate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a074dfc6ec975c1656dd90ee7f579d4f4}\label{struct_mushy_layer_options_a074dfc6ec975c1656dd90ee7f579d4f4}} 
+bool \hyperlink{struct_mushy_layer_options_a074dfc6ec975c1656dd90ee7f579d4f4}{multi\+Comp\+U\+Star\+Solve}
+\begin{DoxyCompactList}\small\item\em Solve for all velocity componenents at once. Not currently implemented. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a437d5973f3095fbaf98c98b017e393ed}{solid\+Porosity}
+\begin{DoxyCompactList}\small\item\em Porosity below which we enforce zero velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ab1cf75b21ea55416604755a842f480b4}\label{struct_mushy_layer_options_ab1cf75b21ea55416604755a842f480b4}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ab1cf75b21ea55416604755a842f480b4}{adv\+Porosity\+Limit}
+\begin{DoxyCompactList}\small\item\em Porosity below which we ensure advection velocities are 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ac973e2e02877849b096e4b3a9017c7fd}\label{struct_mushy_layer_options_ac973e2e02877849b096e4b3a9017c7fd}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ac973e2e02877849b096e4b3a9017c7fd}{chi\+Limit}
+\begin{DoxyCompactList}\small\item\em If $>$ 0, use Darcy\textquotesingle{}s equation to compute velocities in cells with porosity less than this value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a34bebe514a7d5443a2f7f7d82073d70e}\label{struct_mushy_layer_options_a34bebe514a7d5443a2f7f7d82073d70e}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a34bebe514a7d5443a2f7f7d82073d70e}{cc\+Vel\+Porosity\+Limit}
+\begin{DoxyCompactList}\small\item\em Porosity below which we ensure cell-\/centred velocities are 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ae04804e2dd2036fd1197d616f2779cbe}\label{struct_mushy_layer_options_ae04804e2dd2036fd1197d616f2779cbe}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ae04804e2dd2036fd1197d616f2779cbe}{adv\+Velsrc\+Chi\+Limit}
+\begin{DoxyCompactList}\small\item\em Porosity below which we ensure that the src term for computing advection velocities is 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa286d4abdf0047619f3f72cd99263ba7}\label{struct_mushy_layer_options_aa286d4abdf0047619f3f72cd99263ba7}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_aa286d4abdf0047619f3f72cd99263ba7}{u\+Del\+U\+\_\+porosity\+Limit}
+\begin{DoxyCompactList}\small\item\em Porosity below which we ensure that the $ \mathbf{U} \cdot \nabla \mathbf{U} $ part of the cell-\/centred source term is 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a33619fcb4cc3a7023ed54b78120e3297}\label{struct_mushy_layer_options_a33619fcb4cc3a7023ed54b78120e3297}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a33619fcb4cc3a7023ed54b78120e3297}{adv\+Vel\+Chi\+Limit}
+\begin{DoxyCompactList}\small\item\em Porosity below which we ensure that velocities are zero when computing $ \mathbf{U} \cdot \nabla \mathbf{U} $. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a4e2bb36126700e04d36012af3412c817}{use\+Old\+Adv\+Vel}
+\begin{DoxyCompactList}\small\item\em Use advection velocity from previous timestep for tracing advection velocities. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a3c6edb0bc673aa9b69ae8b2792da2e7f}\label{struct_mushy_layer_options_a3c6edb0bc673aa9b69ae8b2792da2e7f}} 
+bool \hyperlink{struct_mushy_layer_options_a3c6edb0bc673aa9b69ae8b2792da2e7f}{enforce\+Analytic\+Vel}
+\begin{DoxyCompactList}\small\item\em Whether to enforce an analytic velocity field. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_ad55453d9ed5cc38c3bfb6be643d8e240}{project\+Analytic\+Vel}
+\begin{DoxyCompactList}\small\item\em Whether to project the enforced analytic velocity field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a44b95443518ac507326c3187d614d065}\label{struct_mushy_layer_options_a44b95443518ac507326c3187d614d065}} 
+int \hyperlink{struct_mushy_layer_options_a44b95443518ac507326c3187d614d065}{analytic\+Vel\+Type}
+\begin{DoxyCompactList}\small\item\em If enforcing an analytic velocity, decide what to use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_adb07b8d4f4f617a2f301246ed820f9b3}\label{struct_mushy_layer_options_adb07b8d4f4f617a2f301246ed820f9b3}} 
+bool \hyperlink{struct_mushy_layer_options_adb07b8d4f4f617a2f301246ed820f9b3}{init\+Analytic\+Vel}
+\begin{DoxyCompactList}\small\item\em Whether or not to initialise the velocity to an analytically specified value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a5e212b3332da0cb423b87cd829c9b445}\label{struct_mushy_layer_options_a5e212b3332da0cb423b87cd829c9b445}} 
+int \hyperlink{struct_mushy_layer_options_a5e212b3332da0cb423b87cd829c9b445}{max\+Proj\+Base\+Level}
+\begin{DoxyCompactList}\small\item\em Maximum number of projections to do on levle 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a629685501c6aa2109348a6166b9953ac}\label{struct_mushy_layer_options_a629685501c6aa2109348a6166b9953ac}} 
+int \hyperlink{struct_mushy_layer_options_a629685501c6aa2109348a6166b9953ac}{max\+Num\+M\+A\+C\+Proj}
+\begin{DoxyCompactList}\small\item\em Maximum number of M\+AC (face cented) projections to do. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa7af7e2f26de24f23e02c52d035f9b70}\label{struct_mushy_layer_options_aa7af7e2f26de24f23e02c52d035f9b70}} 
+int \hyperlink{struct_mushy_layer_options_aa7af7e2f26de24f23e02c52d035f9b70}{lap\+Vel\+B\+C\+Order}
+\begin{DoxyCompactList}\small\item\em Accuracy for boundary conditions applied to laplacian(velocity) in the advection velocity source term. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a238e5c01205e1ca02ab490263321863c}\label{struct_mushy_layer_options_a238e5c01205e1ca02ab490263321863c}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a238e5c01205e1ca02ab490263321863c}{C\+C\+Vel\+Src\+Term\+Centering}
+\begin{DoxyCompactList}\small\item\em Where to compute the CC velocity source term (default = 0.\+5 i.\+e. halfway through the timestep) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a87fc3eca6907a5fd12f3bbf0a73c8552}\label{struct_mushy_layer_options_a87fc3eca6907a5fd12f3bbf0a73c8552}} 
+int {\bfseries u\+Delu\+Method}
+\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_acdb5e62a932e22f25225cc87f8081cb1}\label{struct_mushy_layer_options_acdb5e62a932e22f25225cc87f8081cb1}} 
+int {\bfseries u\+Del\+U\+\_\+grow}
+\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa098e8b972f1e55db87e79b968a332ce}\label{struct_mushy_layer_options_aa098e8b972f1e55db87e79b968a332ce}} 
+bool {\bfseries u\+Del\+U\+Conservative\+Form}
+\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a1b1084eb70af14101d72d8a20e067716}\label{struct_mushy_layer_options_a1b1084eb70af14101d72d8a20e067716}} 
+bool \hyperlink{struct_mushy_layer_options_a1b1084eb70af14101d72d8a20e067716}{adv\+Vel\+Pressure\+Src}
+\begin{DoxyCompactList}\small\item\em Whether or not to include pressure in the advection velocity source term. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a5b1392cf925b8f13261507d42ac4f970}\label{struct_mushy_layer_options_a5b1392cf925b8f13261507d42ac4f970}} 
+bool \hyperlink{struct_mushy_layer_options_a5b1392cf925b8f13261507d42ac4f970}{adv\+Vel\+Darcy\+Src}
+\begin{DoxyCompactList}\small\item\em Whether or not to include the Darcy term in the advection velocity source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af9e18f4374942aa586eb2f6b99d441ab}\label{struct_mushy_layer_options_af9e18f4374942aa586eb2f6b99d441ab}} 
+bool \hyperlink{struct_mushy_layer_options_af9e18f4374942aa586eb2f6b99d441ab}{adv\+Vel\+Viscous\+Src}
+\begin{DoxyCompactList}\small\item\em Whether or not to include the viscous term in the advection velocity source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aab3695c6c01ec2b47d5536fd8fb97c65}\label{struct_mushy_layer_options_aab3695c6c01ec2b47d5536fd8fb97c65}} 
+bool \hyperlink{struct_mushy_layer_options_aab3695c6c01ec2b47d5536fd8fb97c65}{adv\+Vel\+Buoyancy\+Src}
+\begin{DoxyCompactList}\small\item\em Whether or not to include buoyancy in the advection velocity source term. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_afa118f040fb1b0d84cd5d6c4b8cc9edf}\label{struct_mushy_layer_options_afa118f040fb1b0d84cd5d6c4b8cc9edf}} 
+bool \hyperlink{struct_mushy_layer_options_afa118f040fb1b0d84cd5d6c4b8cc9edf}{C\+C\+Adv\+Src}
+\begin{DoxyCompactList}\small\item\em Whether or not to include $ \mathbf{U} \cdot \nabla \mathbf{U}/\chi $ in the cell centred velocity source term. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af3d333fea72127f9cd6a2230c6a0af2f}\label{struct_mushy_layer_options_af3d333fea72127f9cd6a2230c6a0af2f}} 
+bool \hyperlink{struct_mushy_layer_options_af3d333fea72127f9cd6a2230c6a0af2f}{C\+C\+Buoyancy\+Src}
+\begin{DoxyCompactList}\small\item\em Whether or not to include buoyancy in the cell centred velocity source term. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_ab873fea567aee972e6604297009cd0be}{C\+C\+Pressure\+Src}
+\begin{DoxyCompactList}\small\item\em Whether or not to include pressure in the cell centred velocity source term. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_af54eaaeb12b789f2f5cc3b47867584ce}{C\+C\+Pressure\+Src\+Override}
+\begin{DoxyCompactList}\small\item\em Turn to make sure we use \hyperlink{struct_mushy_layer_options_ab873fea567aee972e6604297009cd0be}{Mushy\+Layer\+Options\+::\+C\+C\+Pressure\+Src} to decide whether or not to include pressure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a465cfa3de637bc18a0f15075bc343439}\label{struct_mushy_layer_options_a465cfa3de637bc18a0f15075bc343439}} 
+bool \hyperlink{struct_mushy_layer_options_a465cfa3de637bc18a0f15075bc343439}{reflux\+\_\+momentum}
+\begin{DoxyCompactList}\small\item\em Whether or not to reflux momentum. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a936a77f7fce8a7d0a93100478bef8631}\label{struct_mushy_layer_options_a936a77f7fce8a7d0a93100478bef8631}} 
+bool \hyperlink{struct_mushy_layer_options_a936a77f7fce8a7d0a93100478bef8631}{reflux\+\_\+normal\+\_\+momentum}
+\begin{DoxyCompactList}\small\item\em Whether or not to just reflux momentum in the normal direction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ad52d6fdba865226b26190f88eb07f0fc}\label{struct_mushy_layer_options_ad52d6fdba865226b26190f88eb07f0fc}} 
+bool \hyperlink{struct_mushy_layer_options_ad52d6fdba865226b26190f88eb07f0fc}{reflux\+\_\+enthalpy}
+\begin{DoxyCompactList}\small\item\em Whether or not to reflux the enthalpy field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a57c02aa5dbb5863680cdeee3e6adfc9e}\label{struct_mushy_layer_options_a57c02aa5dbb5863680cdeee3e6adfc9e}} 
+bool \hyperlink{struct_mushy_layer_options_a57c02aa5dbb5863680cdeee3e6adfc9e}{reflux\+\_\+concentration}
+\begin{DoxyCompactList}\small\item\em Whether or not to reflux the bulk concentration field. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a7fcaaba35b9ec20a078c88bf199f4247}{reflux\+\_\+lambda}
+\begin{DoxyCompactList}\small\item\em Whether or not to reflux lambda. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a5f49a32e621d8c69bf2c6dae577b5db2}{reflux\+Average\+Down}
+\begin{DoxyCompactList}\small\item\em Whether or not to average down from fine levels to coarser levels after refluxing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_adcec185e701cfd6e7566065b0a4453d5}\label{struct_mushy_layer_options_adcec185e701cfd6e7566065b0a4453d5}} 
+\hyperlink{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0}{Reflux\+Method} \hyperlink{struct_mushy_layer_options_adcec185e701cfd6e7566065b0a4453d5}{reflux\+Method}
+\begin{DoxyCompactList}\small\item\em Method to use for implicit refluxing. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a8cf08767319ec63a4b6a0cf3f634cc81}{reflux\+Beta\+Sign}
+\begin{DoxyCompactList}\small\item\em Coefficient of the laplacian operator during implicit reflux solves. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_aa978db9bd7ffd2f72f72614f1cc2e769}{reflux\+Corr\+Sign}
+\begin{DoxyCompactList}\small\item\em Whether to add (+1) or subtract (-\/1) the correction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa8e946ee69340434302f12e9e5a18ac9}\label{struct_mushy_layer_options_aa8e946ee69340434302f12e9e5a18ac9}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_aa8e946ee69340434302f12e9e5a18ac9}{viscous\+\_\+solver\+\_\+tol}
+\begin{DoxyCompactList}\small\item\em Solver tolerance for the viscous solver, which we use for smoothing scalar fields and doing momentum reflux. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a3e07f76a85fc4c1315e21ff48095866f}\label{struct_mushy_layer_options_a3e07f76a85fc4c1315e21ff48095866f}} 
+int \hyperlink{struct_mushy_layer_options_a3e07f76a85fc4c1315e21ff48095866f}{viscous\+\_\+num\+\_\+smooth\+\_\+down}
+\begin{DoxyCompactList}\small\item\em Viscous solver -\/ number of smoothing steps during a down sweep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a029c7a8e1f1ef35d4009dd39199fecc8}\label{struct_mushy_layer_options_a029c7a8e1f1ef35d4009dd39199fecc8}} 
+int \hyperlink{struct_mushy_layer_options_a029c7a8e1f1ef35d4009dd39199fecc8}{viscous\+\_\+num\+\_\+smooth\+\_\+up}
+\begin{DoxyCompactList}\small\item\em Viscous solver -\/ number of smoothing steps during an up sweep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a9fb4c8240d0388260d51c02cd6430ef8}\label{struct_mushy_layer_options_a9fb4c8240d0388260d51c02cd6430ef8}} 
+int \hyperlink{struct_mushy_layer_options_a9fb4c8240d0388260d51c02cd6430ef8}{A\+M\+R\+Multigrid\+Verb}
+\begin{DoxyCompactList}\small\item\em Verbosity for the enthalpy-\/bulk concentration reflux solver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa0df638b68484fc7c9b52ee3a702fd04}\label{struct_mushy_layer_options_aa0df638b68484fc7c9b52ee3a702fd04}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_aa0df638b68484fc7c9b52ee3a702fd04}{A\+M\+R\+Multigrid\+Tolerance}
+\begin{DoxyCompactList}\small\item\em Solver tolerance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa14e7c8f812854ec6064d900ca2d322a}\label{struct_mushy_layer_options_aa14e7c8f812854ec6064d900ca2d322a}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_aa14e7c8f812854ec6064d900ca2d322a}{A\+M\+R\+Multigrid\+Hang}
+\begin{DoxyCompactList}\small\item\em Solver hang condition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a02fbb10851813cc95d6465532020adb7}\label{struct_mushy_layer_options_a02fbb10851813cc95d6465532020adb7}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a02fbb10851813cc95d6465532020adb7}{A\+M\+R\+Multigrid\+Norm\+Thresh}
+\begin{DoxyCompactList}\small\item\em If residual norm is less than this absolute value, solver decides we\textquotesingle{}ve converged. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a7b1f041859c963447dd12028132fedb2}\label{struct_mushy_layer_options_a7b1f041859c963447dd12028132fedb2}} 
+int \hyperlink{struct_mushy_layer_options_a7b1f041859c963447dd12028132fedb2}{vel\+M\+G\+Num\+Smooth}
+\begin{DoxyCompactList}\small\item\em Multigrid for implicit cell centred $ \mathbf{U}^* $ solve -\/ num smoothing steps. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a87cf39c4b1b9d7fbf101d607a9d575b0}\label{struct_mushy_layer_options_a87cf39c4b1b9d7fbf101d607a9d575b0}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a87cf39c4b1b9d7fbf101d607a9d575b0}{vel\+M\+G\+Tolerance}
+\begin{DoxyCompactList}\small\item\em Solver tolerance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a1244b96808d35b1702a894a8de2b6f69}\label{struct_mushy_layer_options_a1244b96808d35b1702a894a8de2b6f69}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a1244b96808d35b1702a894a8de2b6f69}{vel\+M\+G\+Hang}
+\begin{DoxyCompactList}\small\item\em Solver tolerance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a7d00e3c60dd7ec9433e5ddf537cdd015}\label{struct_mushy_layer_options_a7d00e3c60dd7ec9433e5ddf537cdd015}} 
+int \hyperlink{struct_mushy_layer_options_a7d00e3c60dd7ec9433e5ddf537cdd015}{vel\+M\+G\+Num\+MG}
+\begin{DoxyCompactList}\small\item\em Number of V-\/cycles to perform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa0022123e27c93fad50f6e821f4dbe7e}\label{struct_mushy_layer_options_aa0022123e27c93fad50f6e821f4dbe7e}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_aa0022123e27c93fad50f6e821f4dbe7e}{vel\+M\+G\+Norm\+Thresh}
+\begin{DoxyCompactList}\small\item\em Residual norm condition for convergence. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ad3bcd2b944b879a864b7ab94cf249973}\label{struct_mushy_layer_options_ad3bcd2b944b879a864b7ab94cf249973}} 
+int \hyperlink{struct_mushy_layer_options_ad3bcd2b944b879a864b7ab94cf249973}{Vel\+M\+G\+Max\+Iter}
+\begin{DoxyCompactList}\small\item\em Max number of multigrid iterations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a81979945907672bf45e86cfee26dbca1}\label{struct_mushy_layer_options_a81979945907672bf45e86cfee26dbca1}} 
+int \hyperlink{struct_mushy_layer_options_a81979945907672bf45e86cfee26dbca1}{H\+C\+Multigrid\+Num\+Smooth\+Up}
+\begin{DoxyCompactList}\small\item\em Multigrid for the coupled enthalpy-\/bulk concentration solve\+: number of smooths on each up sweep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ac632e3e49a867c4fef77449ced738d40}\label{struct_mushy_layer_options_ac632e3e49a867c4fef77449ced738d40}} 
+int \hyperlink{struct_mushy_layer_options_ac632e3e49a867c4fef77449ced738d40}{H\+C\+Multigrid\+Num\+Smooth\+Down}
+\begin{DoxyCompactList}\small\item\em Number of smooths on each down sweep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a5ad586323d4192169953d844ab13d31b}\label{struct_mushy_layer_options_a5ad586323d4192169953d844ab13d31b}} 
+int \hyperlink{struct_mushy_layer_options_a5ad586323d4192169953d844ab13d31b}{H\+C\+Multigrid\+Num\+MG}
+\begin{DoxyCompactList}\small\item\em Number of V-\/cycles to do. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a15ea7f5946ea069a2a0429feb18421ed}\label{struct_mushy_layer_options_a15ea7f5946ea069a2a0429feb18421ed}} 
+int \hyperlink{struct_mushy_layer_options_a15ea7f5946ea069a2a0429feb18421ed}{H\+C\+Multigrid\+Max\+Iter}
+\begin{DoxyCompactList}\small\item\em Max number of multigrid iterations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a8602e3d45c33b0cc34116c34f5e6ceef}\label{struct_mushy_layer_options_a8602e3d45c33b0cc34116c34f5e6ceef}} 
+int \hyperlink{struct_mushy_layer_options_a8602e3d45c33b0cc34116c34f5e6ceef}{H\+C\+Multigrid\+Verbosity}
+\begin{DoxyCompactList}\small\item\em How much output to print. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af5b0235dddaa3991b877d25b46182f60}\label{struct_mushy_layer_options_af5b0235dddaa3991b877d25b46182f60}} 
+int \hyperlink{struct_mushy_layer_options_af5b0235dddaa3991b877d25b46182f60}{H\+C\+Multigrid\+Bottom\+Solve\+Iterations}
+\begin{DoxyCompactList}\small\item\em Number of iterations of the bottom solver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a11749bc6d1fd67851b19f2216c4e1085}\label{struct_mushy_layer_options_a11749bc6d1fd67851b19f2216c4e1085}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a11749bc6d1fd67851b19f2216c4e1085}{H\+C\+Multigrid\+Tolerance}
+\begin{DoxyCompactList}\small\item\em Solver tolerance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ace155953d8c568fdf9a27762d6139d2c}\label{struct_mushy_layer_options_ace155953d8c568fdf9a27762d6139d2c}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ace155953d8c568fdf9a27762d6139d2c}{H\+C\+Multigrid\+Hang}
+\begin{DoxyCompactList}\small\item\em Hang condition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_abc8fe83852a42b5e6383edcd5969d6b8}\label{struct_mushy_layer_options_abc8fe83852a42b5e6383edcd5969d6b8}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_abc8fe83852a42b5e6383edcd5969d6b8}{H\+C\+Multigrid\+Norm\+Thresh}
+\begin{DoxyCompactList}\small\item\em Condition on the norm of the residual for convergence. \end{DoxyCompactList}\item 
+int \hyperlink{struct_mushy_layer_options_a8f5654eec8b54b68574513aba5d629cc}{H\+C\+Multigrid\+Relax\+Mode}
+\begin{DoxyCompactList}\small\item\em How to do relaxation. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_ab4b570de637aab8151bfb5b081768839}{H\+C\+Multigrid\+Use\+Relax\+Bottom\+Solver\+For\+HC}
+\begin{DoxyCompactList}\small\item\em Whether to use a relaxation scheme as the bottom solve. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ada6ee708d9641d293cd0a657f8c69b98}\label{struct_mushy_layer_options_ada6ee708d9641d293cd0a657f8c69b98}} 
+int \hyperlink{struct_mushy_layer_options_ada6ee708d9641d293cd0a657f8c69b98}{vel\+Adv\+Normal\+Pred\+Order}
+\begin{DoxyCompactList}\small\item\em Order of the normal predictor for velocity advection solves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a5346edd28b0f35e3cd26151fd8297ce1}\label{struct_mushy_layer_options_a5346edd28b0f35e3cd26151fd8297ce1}} 
+bool \hyperlink{struct_mushy_layer_options_a5346edd28b0f35e3cd26151fd8297ce1}{vel\+Adv\+Use\+Fourth\+Order\+Slopes}
+\begin{DoxyCompactList}\small\item\em Whether to use 4th order slopes for velocity advection solves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a06bd61e2ae80e93bfed2fbdc789aded6}\label{struct_mushy_layer_options_a06bd61e2ae80e93bfed2fbdc789aded6}} 
+bool \hyperlink{struct_mushy_layer_options_a06bd61e2ae80e93bfed2fbdc789aded6}{vel\+Adv\+Higher\+Order\+Limiter}
+\begin{DoxyCompactList}\small\item\em Whether to use a higher order flux limiter for velocity advection solves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aeb223c8f5df7b572753bf11a28b25ead}\label{struct_mushy_layer_options_aeb223c8f5df7b572753bf11a28b25ead}} 
+bool \hyperlink{struct_mushy_layer_options_aeb223c8f5df7b572753bf11a28b25ead}{vel\+Adv\+Use\+Art\+Visc}
+\begin{DoxyCompactList}\small\item\em Whether to use artifical viscosity for velocity advection solves. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a9c2d1485bfcf48a0b18a07861ea5a3b8}{vel\+Adv\+Art\+Visc}
+\begin{DoxyCompactList}\small\item\em Value of artifical viscosity to use for velocity advection solves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af347434ca002565471a46ab274d2ab7b}\label{struct_mushy_layer_options_af347434ca002565471a46ab274d2ab7b}} 
+bool \hyperlink{struct_mushy_layer_options_af347434ca002565471a46ab274d2ab7b}{H\+C\+Use\+Art\+Visc}
+\begin{DoxyCompactList}\small\item\em Whether to use artificial viscosity for enthalpy-\/bulk concentration advection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a918705dd9c687c689e6168e79e3c8b54}\label{struct_mushy_layer_options_a918705dd9c687c689e6168e79e3c8b54}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a918705dd9c687c689e6168e79e3c8b54}{H\+C\+Art\+Visc}
+\begin{DoxyCompactList}\small\item\em Value of artificial viscosity to use for enthalpy-\/bulk concentration advection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a12d5d7a2dc10359874712678ab27f598}\label{struct_mushy_layer_options_a12d5d7a2dc10359874712678ab27f598}} 
+int \hyperlink{struct_mushy_layer_options_a12d5d7a2dc10359874712678ab27f598}{H\+C\+Normal\+Pred\+Order}
+\begin{DoxyCompactList}\small\item\em Order of the normal predictor for enthalpy-\/bulk concentration advection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af3886f2b0b18cba16e716caa164093bc}\label{struct_mushy_layer_options_af3886f2b0b18cba16e716caa164093bc}} 
+bool \hyperlink{struct_mushy_layer_options_af3886f2b0b18cba16e716caa164093bc}{H\+C\+Use\+Fourth\+Order\+Slopes}
+\begin{DoxyCompactList}\small\item\em Whether to use 4th order slopes for enthalpy-\/bulk concentration advection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a1bb12736d03f03198672fabbdff9d4b0}\label{struct_mushy_layer_options_a1bb12736d03f03198672fabbdff9d4b0}} 
+bool \hyperlink{struct_mushy_layer_options_a1bb12736d03f03198672fabbdff9d4b0}{H\+C\+Higher\+Order\+Limiter}
+\begin{DoxyCompactList}\small\item\em Whether to use a higher order flux limiter for enthalpy-\/bulk concentration advection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a12dccfa9a858bed0dabcc73ca7c7046d}\label{struct_mushy_layer_options_a12dccfa9a858bed0dabcc73ca7c7046d}} 
+int \hyperlink{struct_mushy_layer_options_a12dccfa9a858bed0dabcc73ca7c7046d}{tagging\+Var}
+\begin{DoxyCompactList}\small\item\em Scalar variable to use for working out where to do refinement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ad9c050dd4acf197a67d7b77b1d0fbd7d}\label{struct_mushy_layer_options_ad9c050dd4acf197a67d7b77b1d0fbd7d}} 
+int \hyperlink{struct_mushy_layer_options_ad9c050dd4acf197a67d7b77b1d0fbd7d}{tagging\+Vector\+Var}
+\begin{DoxyCompactList}\small\item\em \textbf{ Vector} variable to use for working out where to do refinement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a825314da4a69c2d426324bcec1392814}\label{struct_mushy_layer_options_a825314da4a69c2d426324bcec1392814}} 
+\hyperlink{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71c}{Tagging\+Method} \hyperlink{struct_mushy_layer_options_a825314da4a69c2d426324bcec1392814}{tagging\+Method}
+\begin{DoxyCompactList}\small\item\em Strategy for tagging cells. See \hyperlink{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71c}{Tagging\+Method} for the options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a6e682ca65188c998a92859fddc1640b9}\label{struct_mushy_layer_options_a6e682ca65188c998a92859fddc1640b9}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a6e682ca65188c998a92859fddc1640b9}{min\+\_\+regrid\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Don\textquotesingle{}t start regridding until time $>$ min\+\_\+regrid\+\_\+time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a431749a623ed01eb602eecb39c9b8082}\label{struct_mushy_layer_options_a431749a623ed01eb602eecb39c9b8082}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a431749a623ed01eb602eecb39c9b8082}{fixed\+\_\+grid\+\_\+time}
+\begin{DoxyCompactList}\small\item\em If this is $>$ 0, then when time $>$ fixed\+\_\+grid\+\_\+time we will switch to the grid specified by \textquotesingle{}main.\+regrid\+\_\+gridfile\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a440b19f2f5f4f6d4987885c916e707fd}\label{struct_mushy_layer_options_a440b19f2f5f4f6d4987885c916e707fd}} 
+bool \hyperlink{struct_mushy_layer_options_a440b19f2f5f4f6d4987885c916e707fd}{tag\+Domain\+Boundary}
+\begin{DoxyCompactList}\small\item\em Whether we should tag the domain boundary for refinement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ade35a236c18464420083844e4ad8edc4}\label{struct_mushy_layer_options_ade35a236c18464420083844e4ad8edc4}} 
+bool \hyperlink{struct_mushy_layer_options_ade35a236c18464420083844e4ad8edc4}{tag\+M\+Lboundary}
+\begin{DoxyCompactList}\small\item\em Whether we should tag the mush-\/liquid boundary for refinement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ac28eb449f9452444a084ccc7325cb869}\label{struct_mushy_layer_options_ac28eb449f9452444a084ccc7325cb869}} 
+\hyperlink{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562}{Refinement\+Method} \hyperlink{struct_mushy_layer_options_ac28eb449f9452444a084ccc7325cb869}{refinement\+Method}
+\begin{DoxyCompactList}\small\item\em Method for refinement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a7b77bf057a303e7c266e4f3c97cb9b44}\label{struct_mushy_layer_options_a7b77bf057a303e7c266e4f3c97cb9b44}} 
+bool \hyperlink{struct_mushy_layer_options_a7b77bf057a303e7c266e4f3c97cb9b44}{only\+Tag\+Porous\+Cells}
+\begin{DoxyCompactList}\small\item\em Turn on to only tags cells where other refinement criteria are met and porosity $\chi < 1 $. \end{DoxyCompactList}\item 
+int \hyperlink{struct_mushy_layer_options_adf46ef76ff864b7fa57f69977e9a81d8}{porous\+Cells\+Shrink}
+\begin{DoxyCompactList}\small\item\em Filter porous cells to remove anomalies. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a34abc03bc7d8a50a7e3517a3df24e4db}\label{struct_mushy_layer_options_a34abc03bc7d8a50a7e3517a3df24e4db}} 
+bool \hyperlink{struct_mushy_layer_options_a34abc03bc7d8a50a7e3517a3df24e4db}{tag\+\_\+velocity}
+\begin{DoxyCompactList}\small\item\em Whether we should tag cells where the fluid velocity (magnitude) is greater than \hyperlink{struct_mushy_layer_options_aaa6e2f84d08048bf850d463055334710}{Mushy\+Layer\+Options\+::vel\+\_\+thresh}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ab64209e545edfc1784891b54d60aac5e}\label{struct_mushy_layer_options_ab64209e545edfc1784891b54d60aac5e}} 
+bool \hyperlink{struct_mushy_layer_options_ab64209e545edfc1784891b54d60aac5e}{composite\+Channel\+Tagging}
+\begin{DoxyCompactList}\small\item\em New option for a refinement method based on a composite criteria. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aaa6e2f84d08048bf850d463055334710}\label{struct_mushy_layer_options_aaa6e2f84d08048bf850d463055334710}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_aaa6e2f84d08048bf850d463055334710}{vel\+\_\+thresh}
+\begin{DoxyCompactList}\small\item\em If \hyperlink{struct_mushy_layer_options_a34abc03bc7d8a50a7e3517a3df24e4db}{Mushy\+Layer\+Options\+::tag\+\_\+velocity} is true, specify the velocity magnitude criteria here. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_ac65cf5a7ea59d60c33af0141d9d940c3}{tag\+\_\+plume\+\_\+mush}
+\begin{DoxyCompactList}\small\item\em Refine mushy regions on level 1, the refine around plumes according to some empirical criteria. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a65cf14658cc2885d6c2d5c8e0875a31b}\label{struct_mushy_layer_options_a65cf14658cc2885d6c2d5c8e0875a31b}} 
+bool \hyperlink{struct_mushy_layer_options_a65cf14658cc2885d6c2d5c8e0875a31b}{tag\+\_\+channels}
+\begin{DoxyCompactList}\small\item\em Just refine around channels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aef2b8175ef13294cdd87e521b89cc104}\label{struct_mushy_layer_options_aef2b8175ef13294cdd87e521b89cc104}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_aef2b8175ef13294cdd87e521b89cc104}{plume\+Vel\+Threshold}
+\begin{DoxyCompactList}\small\item\em Velocity theshold value for identifying plumes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a496277fda822832718ebe3a32479b24b}\label{struct_mushy_layer_options_a496277fda822832718ebe3a32479b24b}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a496277fda822832718ebe3a32479b24b}{plume\+Salinity\+Threshold}
+\begin{DoxyCompactList}\small\item\em Salinity threshold value for identifying plumes. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a940a2f3dfcfa29a2415eb48836369615}{tagging\+Marginal\+Porosity\+Limit}
+\begin{DoxyCompactList}\small\item\em If less than 1, use this limit to identify cells with tagging\+Marginal\+Porosity\+Limit $<$ porosity $<$ 1.\+0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a2b049b092633e277924d75e6bac9d9bc}\label{struct_mushy_layer_options_a2b049b092633e277924d75e6bac9d9bc}} 
+int \hyperlink{struct_mushy_layer_options_a2b049b092633e277924d75e6bac9d9bc}{tag\+Center\+Box\+Size}
+\begin{DoxyCompactList}\small\item\em Tag cells in the centre of the domain to make a box of this size. Leave as 0 (default) to do nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ad24de8058367b23a9dba3c8c9465f808}\label{struct_mushy_layer_options_ad24de8058367b23a9dba3c8c9465f808}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ad24de8058367b23a9dba3c8c9465f808}{tag\+Center\+Box\+Regrid\+Time}
+\begin{DoxyCompactList}\small\item\em If \hyperlink{struct_mushy_layer_options_a2b049b092633e277924d75e6bac9d9bc}{Mushy\+Layer\+Options\+::tag\+Center\+Box\+Size} $>$ 0, then regrid once time $>$ tag\+Center\+Box\+Regrid\+Time. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a837666f529c0421b42d23bf175094066}{test\+Regrid\+Coarsening}
+\begin{DoxyCompactList}\small\item\em For testing\+: if turned on, refined levels will only exist for one regrid cycle before being removed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa39139c0c6fe2cbe35efbf1a39ce5348}\label{struct_mushy_layer_options_aa39139c0c6fe2cbe35efbf1a39ce5348}} 
+bool \hyperlink{struct_mushy_layer_options_aa39139c0c6fe2cbe35efbf1a39ce5348}{scalar\+H\+Ointerp}
+\begin{DoxyCompactList}\small\item\em Whether to do higher order interpolationg for scalars to fill new cells following regridding. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ac2828ff84cc19039529d951819e8d082}\label{struct_mushy_layer_options_ac2828ff84cc19039529d951819e8d082}} 
+bool \hyperlink{struct_mushy_layer_options_ac2828ff84cc19039529d951819e8d082}{vector\+H\+Ointerp}
+\begin{DoxyCompactList}\small\item\em Whether to do higher order interpolation for vectors to fill new cells following regridding. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_aa149c736981aa04179325ffcef87bdba}{make\+Regrid\+Plots}
+\begin{DoxyCompactList}\small\item\em Whether or not to produce lots of plot files during regridding. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a6ffba979d8d897e01b6f81fadd4258d3}\label{struct_mushy_layer_options_a6ffba979d8d897e01b6f81fadd4258d3}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a6ffba979d8d897e01b6f81fadd4258d3}{regrid\+\_\+dt\+\_\+scale}
+\begin{DoxyCompactList}\small\item\em Factor by which to scale dt for re-\/initialising pressure following regridding. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a1f577134d5979f35e74e1dc2b7cdacd3}\label{struct_mushy_layer_options_a1f577134d5979f35e74e1dc2b7cdacd3}} 
+bool \hyperlink{struct_mushy_layer_options_a1f577134d5979f35e74e1dc2b7cdacd3}{init\+Lambda\+Post\+Regrid}
+\begin{DoxyCompactList}\small\item\em Whether or not to recalculate lambda after regridding. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a74ed5d4f02c0e0af01281446c30d3d7b}\label{struct_mushy_layer_options_a74ed5d4f02c0e0af01281446c30d3d7b}} 
+bool \hyperlink{struct_mushy_layer_options_a74ed5d4f02c0e0af01281446c30d3d7b}{regrid\+\_\+advect\+\_\+before\+\_\+freestream}
+\begin{DoxyCompactList}\small\item\em Whether or not to advect lambda after regridding, in order to recompute the freestream correction. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_aebd1a65fc80b78c57d6b945685cfa742}{regrid\+\_\+freestream\+\_\+subcycle}
+\begin{DoxyCompactList}\small\item\em Whether or not to do subcycling when advecting lambda after regridding. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a60ecf9ad0f510e7f77233b524cd86dae}{regrid\+\_\+eta\+\_\+scale}
+\begin{DoxyCompactList}\small\item\em Option to scale $ \eta $ before recomputing the freestream correction after regridding. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a55a4f6b0e5f9c61efe4a0af51aff8250}\label{struct_mushy_layer_options_a55a4f6b0e5f9c61efe4a0af51aff8250}} 
+bool \hyperlink{struct_mushy_layer_options_a55a4f6b0e5f9c61efe4a0af51aff8250}{do\+\_\+post\+Regrid\+\_\+smoothing}
+\begin{DoxyCompactList}\small\item\em Whether or not to do some smoothing after regridding. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a5f196fa338270027116ae0c14588655a}\label{struct_mushy_layer_options_a5f196fa338270027116ae0c14588655a}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a5f196fa338270027116ae0c14588655a}{regrid\+\_\+smoothing\+\_\+coeff}
+\begin{DoxyCompactList}\small\item\em Coefficient to determine how aggressively to do smoothing (if \hyperlink{struct_mushy_layer_options_a55a4f6b0e5f9c61efe4a0af51aff8250}{Mushy\+Layer\+Options\+::do\+\_\+post\+Regrid\+\_\+smoothing} = true) \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a0bd978ad44ee7dff6ca8d00c9092a18b}{project\+\_\+initial\+\_\+vel}
+\begin{DoxyCompactList}\small\item\em Whether or not to project the initial velocity field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_affa5c5d02f32371c382b4a3aa528dc29}\label{struct_mushy_layer_options_affa5c5d02f32371c382b4a3aa528dc29}} 
+bool \hyperlink{struct_mushy_layer_options_affa5c5d02f32371c382b4a3aa528dc29}{initialize\+\_\+pressures}
+\begin{DoxyCompactList}\small\item\em Whether or not to initialize pressures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a0215ad26e1d2ca7797101f50ba932c63}\label{struct_mushy_layer_options_a0215ad26e1d2ca7797101f50ba932c63}} 
+bool \hyperlink{struct_mushy_layer_options_a0215ad26e1d2ca7797101f50ba932c63}{regrid\+\_\+init\+\_\+pressure}
+\begin{DoxyCompactList}\small\item\em Whether or not to initialize pressure after regridding. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a1d8799620a4449e1d72c464eded2d4fb}\label{struct_mushy_layer_options_a1d8799620a4449e1d72c464eded2d4fb}} 
+bool \hyperlink{struct_mushy_layer_options_a1d8799620a4449e1d72c464eded2d4fb}{regrid\+\_\+linear\+\_\+interp}
+\begin{DoxyCompactList}\small\item\em Whether to do bi-\/linear interpolation when regridding. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_ac2ad0fd5e02c9c4bd42ac2f4f04d15df}{use\+Prev\+Pressure\+For\+U\+Star}
+\begin{DoxyCompactList}\small\item\em Set the initial value for \hyperlink{class_a_m_r_level_mushy_layer_af6dd293bd80f201846fc7d6fe6f851b1}{A\+M\+R\+Level\+Mushy\+Layer\+::m\+\_\+use\+Prev\+Pressure\+For\+U\+Star}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a9cd6c0292c7ad464b3e8dce21e74b653}\label{struct_mushy_layer_options_a9cd6c0292c7ad464b3e8dce21e74b653}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a9cd6c0292c7ad464b3e8dce21e74b653}{diagnostics\+\_\+period}
+\begin{DoxyCompactList}\small\item\em Time period between successive diagnostic reports. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a1a59e6335baf5228d9e734a527039dff}\label{struct_mushy_layer_options_a1a59e6335baf5228d9e734a527039dff}} 
+int \hyperlink{struct_mushy_layer_options_a1a59e6335baf5228d9e734a527039dff}{custom\+Init\+Data}
+\begin{DoxyCompactList}\small\item\em Some custom options for initial data. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_a7ed9632c43355a63ee6e4252145e5435}{write\+Pressure\+Init\+Fields}
+\begin{DoxyCompactList}\small\item\em Whether to write out plotfiles during pressure initialisation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a33f4be9ba6bfcd9b3881eca0b053e7d3}\label{struct_mushy_layer_options_a33f4be9ba6bfcd9b3881eca0b053e7d3}} 
+bool \hyperlink{struct_mushy_layer_options_a33f4be9ba6bfcd9b3881eca0b053e7d3}{init\+Reset\+States}
+\begin{DoxyCompactList}\small\item\em When initialising pressure via multiple iterations, decide whether or not to reset the other fields between iterations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a4c801e1e1eb418e57b4a97a59332caa1}\label{struct_mushy_layer_options_a4c801e1e1eb418e57b4a97a59332caa1}} 
+bool \hyperlink{struct_mushy_layer_options_a4c801e1e1eb418e57b4a97a59332caa1}{allow\+Multicomp\+Advection}
+\begin{DoxyCompactList}\small\item\em Advect both enthalpy and bulk concentration at the same time (slightly more efficient) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a9bb223932eb426011810a4208c7f8750}\label{struct_mushy_layer_options_a9bb223932eb426011810a4208c7f8750}} 
+bool \hyperlink{struct_mushy_layer_options_a9bb223932eb426011810a4208c7f8750}{compute\+\_\+initial\+\_\+\+V\+D\+\_\+corr}
+\begin{DoxyCompactList}\small\item\em Whether or not to compute the volume discrepancy correction at the start of a simulation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a49077940c621196e64ed753633096164}\label{struct_mushy_layer_options_a49077940c621196e64ed753633096164}} 
+int \hyperlink{struct_mushy_layer_options_a49077940c621196e64ed753633096164}{time\+Integration\+Order}
+\begin{DoxyCompactList}\small\item\em Order of accuracy for time integration (1 = backward euler, 2 = T\+GA) \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a1599e6fe13b0dc4c385cd1c835507bc5}{lower\+Porosity\+Limit}
+\begin{DoxyCompactList}\small\item\em How much output multigrid operators should print. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a1ce91441dbd9727f45134ef8fdb64018}\label{struct_mushy_layer_options_a1ce91441dbd9727f45134ef8fdb64018}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a1ce91441dbd9727f45134ef8fdb64018}{initial\+Perturbation}
+\begin{DoxyCompactList}\small\item\em Size of the initial perturbation (default = 0.\+0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a8629328cf1903d0bd0de7b692bfa29f3}\label{struct_mushy_layer_options_a8629328cf1903d0bd0de7b692bfa29f3}} 
+bool \hyperlink{struct_mushy_layer_options_a8629328cf1903d0bd0de7b692bfa29f3}{do\+Scalar\+Advection\+Diffusion}
+\begin{DoxyCompactList}\small\item\em Whether or not we should do advection and diffusion of scalars (enthalpy, bulk concentration) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a79ef75374fbdd1d7be8e2888b532248f}\label{struct_mushy_layer_options_a79ef75374fbdd1d7be8e2888b532248f}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a79ef75374fbdd1d7be8e2888b532248f}{init\+Vel}
+\begin{DoxyCompactList}\small\item\em Size of initial velocity if required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a8d8e7f72875030205f5d9d0b8a937f59}\label{struct_mushy_layer_options_a8d8e7f72875030205f5d9d0b8a937f59}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a8d8e7f72875030205f5d9d0b8a937f59}{perturbation\+Phase\+Shift}
+\begin{DoxyCompactList}\small\item\em Phase shift for sinusoidal perturbations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a642211894ae1be9d12b1c2bf69128015}\label{struct_mushy_layer_options_a642211894ae1be9d12b1c2bf69128015}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a642211894ae1be9d12b1c2bf69128015}{delayed\+Perturbation} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Size of perturbation to add at time \hyperlink{struct_mushy_layer_options_a19851a36aeca103fd11fe3aae89af265}{Mushy\+Layer\+Options\+::perturbation\+Time}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a19851a36aeca103fd11fe3aae89af265}\label{struct_mushy_layer_options_a19851a36aeca103fd11fe3aae89af265}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a19851a36aeca103fd11fe3aae89af265}{perturbation\+Time} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Specific time at which to introduce a perturbation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a62029abc276b13b7a1be2d93a02d0c4c}\label{struct_mushy_layer_options_a62029abc276b13b7a1be2d93a02d0c4c}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a62029abc276b13b7a1be2d93a02d0c4c}{perturbation\+Wavenumber}
+\begin{DoxyCompactList}\small\item\em Wavenumber of sinusoidal perturbations (default = 0.\+0, i.\+e. just a uniform value) \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_ae7dba5b6442e8a93cbecac967a1b1d1c}{perturbation\+Sin} = false
+\begin{DoxyCompactList}\small\item\em If true, sinusoidal perturbations take the form of a sin wave. Otherwise a cosine wave. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a08540a636a44abbf826e32ed27426ec3}\label{struct_mushy_layer_options_a08540a636a44abbf826e32ed27426ec3}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a08540a636a44abbf826e32ed27426ec3}{initial\+Random\+Perturbation} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Add an initial random perturbation to enthalpy. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_mushy_layer_options_ad38c7a08b2061d98daa9507b9b65877e}{seed\+Random\+Pert} = true
+\item 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a86277f0b87bcf72bbe6b9c78c0da8acf}{fixed\+Porosity} = -\/1.\+0
+\begin{DoxyCompactList}\small\item\em Porosity value to set if we\textquotesingle{}re using a fixed porosity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a2bb644686f4626c0c602147b861b19f1}\label{struct_mushy_layer_options_a2bb644686f4626c0c602147b861b19f1}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a2bb644686f4626c0c602147b861b19f1}{porosity\+Timescale}
+\begin{DoxyCompactList}\small\item\em Timescale for porosity variations if enforcing a fixed porosity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aeb47e7ed2e0486243c51c1fd815b2ee1}\label{struct_mushy_layer_options_aeb47e7ed2e0486243c51c1fd815b2ee1}} 
+\hyperlink{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38}{Porosity\+Functions} \hyperlink{struct_mushy_layer_options_aeb47e7ed2e0486243c51c1fd815b2ee1}{porosity\+Function}
+\begin{DoxyCompactList}\small\item\em Functional form to use for the porosity if using a fixed porosity (rather than a porosity computed from the solution). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a82ea1a6a37f3ae573d85e3ce18437902}\label{struct_mushy_layer_options_a82ea1a6a37f3ae573d85e3ce18437902}} 
+int \hyperlink{struct_mushy_layer_options_a82ea1a6a37f3ae573d85e3ce18437902}{max\+Restart\+Wavenumbers}
+\begin{DoxyCompactList}\small\item\em When restarting, if \hyperlink{struct_mushy_layer_options_a3849ad8027ac95aacd9734627d69239d}{Mushy\+Layer\+Options\+::restart\+Perturbation} $>$ 0.\+0 then add a perturbation which if the sum of waves with wavenumbers from 1-\/$>$max\+Restart\+Wavenumber. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a3849ad8027ac95aacd9734627d69239d}\label{struct_mushy_layer_options_a3849ad8027ac95aacd9734627d69239d}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a3849ad8027ac95aacd9734627d69239d}{restart\+Perturbation}
+\begin{DoxyCompactList}\small\item\em Size of perturbation to add when restarting a simulation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a833cf824726b39193b6fe01e3fd3398c}\label{struct_mushy_layer_options_a833cf824726b39193b6fe01e3fd3398c}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a833cf824726b39193b6fe01e3fd3398c}{porous\+Hole\+Radius}
+\begin{DoxyCompactList}\small\item\em Create a porous hole of this radius during initialisation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a9d8d05ccced7f6339a0264985d8c1724}\label{struct_mushy_layer_options_a9d8d05ccced7f6339a0264985d8c1724}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a9d8d05ccced7f6339a0264985d8c1724}{init\+Vel\+Scale}
+\begin{DoxyCompactList}\small\item\em Velocity scale for the initial conditions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af8bccc75a8039c786368acbf2907f9e8}\label{struct_mushy_layer_options_af8bccc75a8039c786368acbf2907f9e8}} 
+bool \hyperlink{struct_mushy_layer_options_af8bccc75a8039c786368acbf2907f9e8}{linear\+Gradient}
+\begin{DoxyCompactList}\small\item\em Whether to initialise with a linear enthalpy gradient in the vertical direction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_afe698dfa41e04dcddcbc22746194d63a}\label{struct_mushy_layer_options_afe698dfa41e04dcddcbc22746194d63a}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_afe698dfa41e04dcddcbc22746194d63a}{mush\+Height}
+\begin{DoxyCompactList}\small\item\em Approximate depth of mushy layer to create as part of an initial condition approximating some sea ice. \end{DoxyCompactList}\item 
+int \hyperlink{struct_mushy_layer_options_a101f8a57293409a158e31d44b2aea6ed}{summer\+Profile}
+\begin{DoxyCompactList}\small\item\em Different options for initialising data that looks a bit like year old sea ice. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a86441170b80199c78406edc85316764d}\label{struct_mushy_layer_options_a86441170b80199c78406edc85316764d}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a86441170b80199c78406edc85316764d}{melt\+Pond\+Depth}
+\begin{DoxyCompactList}\small\item\em Depth of melt pond to add. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ae33e42350b076d90bbdec475ef0e6ff6}\label{struct_mushy_layer_options_ae33e42350b076d90bbdec475ef0e6ff6}} 
+bool \hyperlink{struct_mushy_layer_options_ae33e42350b076d90bbdec475ef0e6ff6}{horiz\+Average\+Restart}
+\begin{DoxyCompactList}\small\item\em Whether or not to horizontally average all fields before restarting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af257596d4c754957aab12c03b3e48f84}\label{struct_mushy_layer_options_af257596d4c754957aab12c03b3e48f84}} 
+int \hyperlink{struct_mushy_layer_options_af257596d4c754957aab12c03b3e48f84}{restart\+\_\+perturbation\+\_\+var}
+\begin{DoxyCompactList}\small\item\em When restarting, add a perturbation to this variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ad7e8fbd0d67ccca7cdaf2dfbed224f61}\label{struct_mushy_layer_options_ad7e8fbd0d67ccca7cdaf2dfbed224f61}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ad7e8fbd0d67ccca7cdaf2dfbed224f61}{ref\+Temp}
+\begin{DoxyCompactList}\small\item\em Reference temperature for nondimensionalisation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_af8652850bc7203cb0b4f0664bfa46005}\label{struct_mushy_layer_options_af8652850bc7203cb0b4f0664bfa46005}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_af8652850bc7203cb0b4f0664bfa46005}{ref\+Salinity}
+\begin{DoxyCompactList}\small\item\em Reference salinity for nondimensionalisation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aafe458cd1cefadcacebaed5507085f71}\label{struct_mushy_layer_options_aafe458cd1cefadcacebaed5507085f71}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_aafe458cd1cefadcacebaed5507085f71}{prev\+Ref\+Salinity}
+\begin{DoxyCompactList}\small\item\em Previous reference salinity for nondimensionalisation (if restarting and different from the new value) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a75707a96ccd599b2750a80e99d2cf912}\label{struct_mushy_layer_options_a75707a96ccd599b2750a80e99d2cf912}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a75707a96ccd599b2750a80e99d2cf912}{prev\+Ref\+Temp}
+\begin{DoxyCompactList}\small\item\em Previous reference temperature for nondimensionalisation (if restarting and different from the new value) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a7f427164689a4cbf14082bad6bbcf888}\label{struct_mushy_layer_options_a7f427164689a4cbf14082bad6bbcf888}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a7f427164689a4cbf14082bad6bbcf888}{dt\+Reduction\+Factor}
+\begin{DoxyCompactList}\small\item\em Facotr by which to reduce dt after restarting\+: $ dt = dt / dtReductionFactor $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a5b8ba48579239f92a7f72f3d82ef48dd}\label{struct_mushy_layer_options_a5b8ba48579239f92a7f72f3d82ef48dd}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a5b8ba48579239f92a7f72f3d82ef48dd}{fixed\+Porosity\+Max\+Chi}
+\begin{DoxyCompactList}\small\item\em Fixed porosity maximum value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a74cedccfecb3321ad61e2394fab36d83}\label{struct_mushy_layer_options_a74cedccfecb3321ad61e2394fab36d83}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a74cedccfecb3321ad61e2394fab36d83}{Fixed\+Porosity\+S\+TD}
+\begin{DoxyCompactList}\small\item\em Standard deviation of the gaussian used to create a fixed porosity field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_afb7d1a06a3a576cd4a006f40d4273575}\label{struct_mushy_layer_options_afb7d1a06a3a576cd4a006f40d4273575}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_afb7d1a06a3a576cd4a006f40d4273575}{fixed\+Porosity\+Fractional\+Inner\+Radius}
+\begin{DoxyCompactList}\small\item\em For a fixed porosity which varies linearly from some constant value inside the domain to the edge, this is the radius of the inner region. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_ac803c6533d24a55850f9aca36a06538a}\label{struct_mushy_layer_options_ac803c6533d24a55850f9aca36a06538a}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_ac803c6533d24a55850f9aca36a06538a}{fixed\+Porosity\+End\+Time}
+\begin{DoxyCompactList}\small\item\em If using a time dependent enforced porosity, stop changing it after this time has passed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_abcd93960db395819aa2acae1424eb5eb}\label{struct_mushy_layer_options_abcd93960db395819aa2acae1424eb5eb}} 
+bool \hyperlink{struct_mushy_layer_options_abcd93960db395819aa2acae1424eb5eb}{scalar\+Exchange\+Corners}
+\begin{DoxyCompactList}\small\item\em Whether to exchange corner cells by default for scalar fields. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a39103919241a7c522a33a8828c914f7e}\label{struct_mushy_layer_options_a39103919241a7c522a33a8828c914f7e}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a39103919241a7c522a33a8828c914f7e}{buoyancy\+\_\+zero\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Set buoyancy forces to zero after this time. \end{DoxyCompactList}\item 
+\hyperlink{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079c}{M\+Gmethod} \hyperlink{struct_mushy_layer_options_a95b4866ff6bd6d9ba166a65cf0451873}{M\+Gtype}
+\begin{DoxyCompactList}\small\item\em If this is set to greater than 0,. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_aa4b570d63e22c480f19c9d280f579120}\label{struct_mushy_layer_options_aa4b570d63e22c480f19c9d280f579120}} 
+\hyperlink{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6}{velocity\+Advection\+Types} \hyperlink{struct_mushy_layer_options_aa4b570d63e22c480f19c9d280f579120}{advection\+Method}
+\begin{DoxyCompactList}\small\item\em Specify how to treat the $ \mathbf{U} \cdot \nabla \left( \mathbf{U}/\chi \right) $ term. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a7447ad03fa4ad121ed5ef6c8cab586dd}\label{struct_mushy_layer_options_a7447ad03fa4ad121ed5ef6c8cab586dd}} 
+bool \hyperlink{struct_mushy_layer_options_a7447ad03fa4ad121ed5ef6c8cab586dd}{include\+Tracers}
+\begin{DoxyCompactList}\small\item\em Whether to include tracer dynamics. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mushy_layer_options_a965af99babf9a15bc4762b26256354e9}\label{struct_mushy_layer_options_a965af99babf9a15bc4762b26256354e9}} 
+\textbf{ Real} \hyperlink{struct_mushy_layer_options_a965af99babf9a15bc4762b26256354e9}{surface\+Irradiance}
+\begin{DoxyCompactList}\small\item\em If $>$ 0, compute penetration of irradiance down through the ice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains most of the options for running the code, and how to handle the equations. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_mushy_layer_options_ab64711234784b285045c7dfb904231f3}\label{struct_mushy_layer_options_ab64711234784b285045c7dfb904231f3}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!accel\+C\+FL@{accel\+C\+FL}}
+\index{accel\+C\+FL@{accel\+C\+FL}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{accel\+C\+FL}{accelCFL}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::accel\+C\+FL}
+
+
+
+C\+FL number for acceleration. Only used if use\+Accel\+Dt = true. 
+
+When velocities are changing rapidly due to a large acceleration, the timestep computed based on the current velocities may not be a appropriate. Instead, we should estimate the new velocities given the acceleration\+:
+
+$ \Delta t = \sqrt{\sigma \Delta x / a} $,
+
+where $ \sigma $ is the cfl number and $ a$ is the maximum acceleration. \mbox{\Hypertarget{struct_mushy_layer_options_a923817c4dd1baeb506c20cd081256175}\label{struct_mushy_layer_options_a923817c4dd1baeb506c20cd081256175}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!adv\+\_\+vel\+\_\+centering\+\_\+growth@{adv\+\_\+vel\+\_\+centering\+\_\+growth}}
+\index{adv\+\_\+vel\+\_\+centering\+\_\+growth@{adv\+\_\+vel\+\_\+centering\+\_\+growth}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{adv\+\_\+vel\+\_\+centering\+\_\+growth}{adv\_vel\_centering\_growth}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::adv\+\_\+vel\+\_\+centering\+\_\+growth}
+
+When computing the advection velocity during multiple initialisation steps, grow \hyperlink{struct_mushy_layer_options_abb4bbe1b7dc2088154775ac0915cd8e9}{Mushy\+Layer\+Options\+::init\+Adv\+Vel\+Centering} by this factor with each iteration \mbox{\Hypertarget{struct_mushy_layer_options_abf28d877dea7de52109802ad51f75fa2}\label{struct_mushy_layer_options_abf28d877dea7de52109802ad51f75fa2}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!analytic\+Solution@{analytic\+Solution}}
+\index{analytic\+Solution@{analytic\+Solution}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{analytic\+Solution}{analyticSolution}}
+{\footnotesize\ttfamily int Mushy\+Layer\+Options\+::analytic\+Solution}
+
+
+
+Define the analytic solution to apply. 
+
+By default, analytic\+Solution = \hyperlink{class_mushy_layer_params_af648dea6d76d52f10124c33f6817be2b}{Mushy\+Layer\+Params\+::physical\+Problem} \mbox{\Hypertarget{struct_mushy_layer_options_a078a1ef21c19a8b1eb903f0c5c90ad4f}\label{struct_mushy_layer_options_a078a1ef21c19a8b1eb903f0c5c90ad4f}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!apply\+\_\+diagnostic\+\_\+bcs@{apply\+\_\+diagnostic\+\_\+bcs}}
+\index{apply\+\_\+diagnostic\+\_\+bcs@{apply\+\_\+diagnostic\+\_\+bcs}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{apply\+\_\+diagnostic\+\_\+bcs}{apply\_diagnostic\_bcs}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::apply\+\_\+diagnostic\+\_\+bcs}
+
+
+
+Whether to apply B\+Cs to temperature, porosity etc. explicitly during multigrid solves. 
+
+If false, use BC comptued from enthalpy/bulk concentration \mbox{\Hypertarget{struct_mushy_layer_options_ab873fea567aee972e6604297009cd0be}\label{struct_mushy_layer_options_ab873fea567aee972e6604297009cd0be}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!C\+C\+Pressure\+Src@{C\+C\+Pressure\+Src}}
+\index{C\+C\+Pressure\+Src@{C\+C\+Pressure\+Src}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{C\+C\+Pressure\+Src}{CCPressureSrc}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::\+C\+C\+Pressure\+Src}
+
+
+
+Whether or not to include pressure in the cell centred velocity source term. 
+
+Only matters if Mushylayer\+Options\+::\+C\+C\+Pressure\+Src\+Override is turned on \mbox{\Hypertarget{struct_mushy_layer_options_af54eaaeb12b789f2f5cc3b47867584ce}\label{struct_mushy_layer_options_af54eaaeb12b789f2f5cc3b47867584ce}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!C\+C\+Pressure\+Src\+Override@{C\+C\+Pressure\+Src\+Override}}
+\index{C\+C\+Pressure\+Src\+Override@{C\+C\+Pressure\+Src\+Override}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{C\+C\+Pressure\+Src\+Override}{CCPressureSrcOverride}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::\+C\+C\+Pressure\+Src\+Override}
+
+
+
+Turn to make sure we use \hyperlink{struct_mushy_layer_options_ab873fea567aee972e6604297009cd0be}{Mushy\+Layer\+Options\+::\+C\+C\+Pressure\+Src} to decide whether or not to include pressure. 
+
+Otherwise, we will use \hyperlink{class_a_m_r_level_mushy_layer_af6dd293bd80f201846fc7d6fe6f851b1}{A\+M\+R\+Level\+Mushy\+Layer\+::m\+\_\+use\+Prev\+Pressure\+For\+U\+Star}. This is turned on by default if \hyperlink{struct_mushy_layer_options_ab873fea567aee972e6604297009cd0be}{Mushy\+Layer\+Options\+::\+C\+C\+Pressure\+Src} is defined through the inputs file \mbox{\Hypertarget{struct_mushy_layer_options_a0631b4a1d95690c036da9a09d6042aa8}\label{struct_mushy_layer_options_a0631b4a1d95690c036da9a09d6042aa8}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!do\+Diffusion\+Src@{do\+Diffusion\+Src}}
+\index{do\+Diffusion\+Src@{do\+Diffusion\+Src}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{do\+Diffusion\+Src}{doDiffusionSrc}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::do\+Diffusion\+Src}
+
+
+
+Use a diffusive source term to compute the advective terms more accurately. 
+
+When computing things like $ \mathbf{U} \cdot \nabla T $, we upwind temperature to cell faces. As the temperature also obeys diffuses, we can add a diffusive source term to estimate the upwinded temperatures more accurately. Similarly for other advected and diffused quantities. \mbox{\Hypertarget{struct_mushy_layer_options_a86277f0b87bcf72bbe6b9c78c0da8acf}\label{struct_mushy_layer_options_a86277f0b87bcf72bbe6b9c78c0da8acf}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!fixed\+Porosity@{fixed\+Porosity}}
+\index{fixed\+Porosity@{fixed\+Porosity}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{fixed\+Porosity}{fixedPorosity}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::fixed\+Porosity = -\/1.\+0}
+
+
+
+Porosity value to set if we\textquotesingle{}re using a fixed porosity. 
+
+If $<$ 0, use some functional form for the porosity as defined by \hyperlink{struct_mushy_layer_options_aeb47e7ed2e0486243c51c1fd815b2ee1}{Mushy\+Layer\+Options\+::porosity\+Function} \mbox{\Hypertarget{struct_mushy_layer_options_a8f5654eec8b54b68574513aba5d629cc}\label{struct_mushy_layer_options_a8f5654eec8b54b68574513aba5d629cc}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!H\+C\+Multigrid\+Relax\+Mode@{H\+C\+Multigrid\+Relax\+Mode}}
+\index{H\+C\+Multigrid\+Relax\+Mode@{H\+C\+Multigrid\+Relax\+Mode}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{H\+C\+Multigrid\+Relax\+Mode}{HCMultigridRelaxMode}}
+{\footnotesize\ttfamily int Mushy\+Layer\+Options\+::\+H\+C\+Multigrid\+Relax\+Mode}
+
+
+
+How to do relaxation. 
+
+See \textbf{ A\+M\+R\+Poisson\+Op\+::relax} in Chombo for the various options. In particular, 1 = Gauss-\/\+Seidel Red-\/\+Black, 4 = Jacobi \mbox{\Hypertarget{struct_mushy_layer_options_ab4b570de637aab8151bfb5b081768839}\label{struct_mushy_layer_options_ab4b570de637aab8151bfb5b081768839}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!H\+C\+Multigrid\+Use\+Relax\+Bottom\+Solver\+For\+HC@{H\+C\+Multigrid\+Use\+Relax\+Bottom\+Solver\+For\+HC}}
+\index{H\+C\+Multigrid\+Use\+Relax\+Bottom\+Solver\+For\+HC@{H\+C\+Multigrid\+Use\+Relax\+Bottom\+Solver\+For\+HC}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{H\+C\+Multigrid\+Use\+Relax\+Bottom\+Solver\+For\+HC}{HCMultigridUseRelaxBottomSolverForHC}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::\+H\+C\+Multigrid\+Use\+Relax\+Bottom\+Solver\+For\+HC}
+
+
+
+Whether to use a relaxation scheme as the bottom solve. 
+
+We use this here as it treats the nonlinearity more sensibly than linear solvers like Bi\+C\+G\+Stab \mbox{\Hypertarget{struct_mushy_layer_options_a4bfcfa9308587a2c1fcce378eaecec1b}\label{struct_mushy_layer_options_a4bfcfa9308587a2c1fcce378eaecec1b}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!ignore\+Solve\+Fails@{ignore\+Solve\+Fails}}
+\index{ignore\+Solve\+Fails@{ignore\+Solve\+Fails}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{ignore\+Solve\+Fails}{ignoreSolveFails}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::ignore\+Solve\+Fails}
+
+
+
+Whether or not we want to ignore solvers failing. 
+
+If false, we\textquotesingle{}ll try and do some thing about the situation as dictated by \hyperlink{struct_mushy_layer_options_abf11a35aae07875e68c218024cf8bc73}{Mushy\+Layer\+Options\+::solver\+Fail\+Restart\+Method} \mbox{\Hypertarget{struct_mushy_layer_options_a4b9d47e17442336a6ae899dd7bb7ef07}\label{struct_mushy_layer_options_a4b9d47e17442336a6ae899dd7bb7ef07}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!init\+\_\+compute\+\_\+u\+Delu@{init\+\_\+compute\+\_\+u\+Delu}}
+\index{init\+\_\+compute\+\_\+u\+Delu@{init\+\_\+compute\+\_\+u\+Delu}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{init\+\_\+compute\+\_\+u\+Delu}{init\_compute\_uDelu}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::init\+\_\+compute\+\_\+u\+Delu}
+
+
+
+Whether to compute $ \mathbf{U} \cdot \nabla \mathbf{U}/\chi $ terms during initialisation. 
+
+Turned on by default \mbox{\Hypertarget{struct_mushy_layer_options_a4aaa6aa92a57d3df414d311ded23b0a6}\label{struct_mushy_layer_options_a4aaa6aa92a57d3df414d311ded23b0a6}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!init\+\_\+dt\+\_\+scale@{init\+\_\+dt\+\_\+scale}}
+\index{init\+\_\+dt\+\_\+scale@{init\+\_\+dt\+\_\+scale}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{init\+\_\+dt\+\_\+scale}{init\_dt\_scale}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::init\+\_\+dt\+\_\+scale}
+
+
+
+Multiply the dt computed during initialisation procedures by this factor before using it. 
+
+Useful for using a smaller dt initially for stability T\+O\+DO\+: can probably remove this, it\textquotesingle{}s just a duplicate of initial\+\_\+dt\+\_\+multiplier really \mbox{\Hypertarget{struct_mushy_layer_options_a647f70bde2bffc9ef777504a9127d298}\label{struct_mushy_layer_options_a647f70bde2bffc9ef777504a9127d298}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!init\+\_\+use\+\_\+prev\+\_\+pressure\+\_\+for\+\_\+\+Ustar@{init\+\_\+use\+\_\+prev\+\_\+pressure\+\_\+for\+\_\+\+Ustar}}
+\index{init\+\_\+use\+\_\+prev\+\_\+pressure\+\_\+for\+\_\+\+Ustar@{init\+\_\+use\+\_\+prev\+\_\+pressure\+\_\+for\+\_\+\+Ustar}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{init\+\_\+use\+\_\+prev\+\_\+pressure\+\_\+for\+\_\+\+Ustar}{init\_use\_prev\_pressure\_for\_Ustar}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::init\+\_\+use\+\_\+prev\+\_\+pressure\+\_\+for\+\_\+\+Ustar}
+
+
+
+Whether to use previous estimates of the pressure to compute the initial cell centred $ \mathbf{U}^* $. 
+
+Turned off by default \mbox{\Hypertarget{struct_mushy_layer_options_abb4bbe1b7dc2088154775ac0915cd8e9}\label{struct_mushy_layer_options_abb4bbe1b7dc2088154775ac0915cd8e9}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!init\+Adv\+Vel\+Centering@{init\+Adv\+Vel\+Centering}}
+\index{init\+Adv\+Vel\+Centering@{init\+Adv\+Vel\+Centering}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{init\+Adv\+Vel\+Centering}{initAdvVelCentering}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::init\+Adv\+Vel\+Centering}
+
+
+
+At which time to compute advection velocities during initialisation. 
+
+Default is 0.\+1, i.\+e. at time 0 + 0.\+1$\ast$dt \mbox{\Hypertarget{struct_mushy_layer_options_a6cf246b25ca25948fa22e673b62ca017}\label{struct_mushy_layer_options_a6cf246b25ca25948fa22e673b62ca017}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!load\+\_\+adv\+Vel@{load\+\_\+adv\+Vel}}
+\index{load\+\_\+adv\+Vel@{load\+\_\+adv\+Vel}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{load\+\_\+adv\+Vel}{load\_advVel}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::load\+\_\+adv\+Vel}
+
+
+
+Whether we want to try and load the advection velocity from a restart file. 
+
+Turned off by default, as this won\textquotesingle{}t always work with some of the restart files we generate (e.\+g. after refinement/adding new cells). This is only really useful for when we want to do post processing without recomputing velocity fields. \mbox{\Hypertarget{struct_mushy_layer_options_a1599e6fe13b0dc4c385cd1c835507bc5}\label{struct_mushy_layer_options_a1599e6fe13b0dc4c385cd1c835507bc5}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!lower\+Porosity\+Limit@{lower\+Porosity\+Limit}}
+\index{lower\+Porosity\+Limit@{lower\+Porosity\+Limit}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{lower\+Porosity\+Limit}{lowerPorosityLimit}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::lower\+Porosity\+Limit}
+
+
+
+How much output multigrid operators should print. 
+
+We don\textquotesingle{}t let the porosity go below this value \mbox{\Hypertarget{struct_mushy_layer_options_aa149c736981aa04179325ffcef87bdba}\label{struct_mushy_layer_options_aa149c736981aa04179325ffcef87bdba}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!make\+Regrid\+Plots@{make\+Regrid\+Plots}}
+\index{make\+Regrid\+Plots@{make\+Regrid\+Plots}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{make\+Regrid\+Plots}{makeRegridPlots}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::make\+Regrid\+Plots}
+
+
+
+Whether or not to produce lots of plot files during regridding. 
+
+Useful for debugging \mbox{\Hypertarget{struct_mushy_layer_options_a95b4866ff6bd6d9ba166a65cf0451873}\label{struct_mushy_layer_options_a95b4866ff6bd6d9ba166a65cf0451873}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!M\+Gtype@{M\+Gtype}}
+\index{M\+Gtype@{M\+Gtype}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{M\+Gtype}{MGtype}}
+{\footnotesize\ttfamily \hyperlink{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079c}{M\+Gmethod} Mushy\+Layer\+Options\+::\+M\+Gtype}
+
+
+
+If this is set to greater than 0,. 
+
+Whether to use linear or F\+AS geometric multigrid Should really be F\+AS as we\textquotesingle{}re solving nonlinear problems, but leaving the option here to change back to linear multigrid. \mbox{\Hypertarget{struct_mushy_layer_options_a5e66ad315df2dbff60ee56ea25ed68ae}\label{struct_mushy_layer_options_a5e66ad315df2dbff60ee56ea25ed68ae}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!nonlinear\+H\+C\+Op\+Super\+Optimised@{nonlinear\+H\+C\+Op\+Super\+Optimised}}
+\index{nonlinear\+H\+C\+Op\+Super\+Optimised@{nonlinear\+H\+C\+Op\+Super\+Optimised}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{nonlinear\+H\+C\+Op\+Super\+Optimised}{nonlinearHCOpSuperOptimised}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::nonlinear\+H\+C\+Op\+Super\+Optimised}
+
+
+
+Whether we want to try and do some dodgy stuff to make the enthalpy-\/bulk concentration nonlinear solver quicker. 
+
+Turned off by default, use with extreme caution. \mbox{\Hypertarget{struct_mushy_layer_options_ae7dba5b6442e8a93cbecac967a1b1d1c}\label{struct_mushy_layer_options_ae7dba5b6442e8a93cbecac967a1b1d1c}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!perturbation\+Sin@{perturbation\+Sin}}
+\index{perturbation\+Sin@{perturbation\+Sin}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{perturbation\+Sin}{perturbationSin}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::perturbation\+Sin = false}
+
+
+
+If true, sinusoidal perturbations take the form of a sin wave. Otherwise a cosine wave. 
+
+E.\+g, perturbation $ = \alpha \sin (2 \pi N x / L) $ where $\alpha$ is \hyperlink{struct_mushy_layer_options_a1ce91441dbd9727f45134ef8fdb64018}{Mushy\+Layer\+Options\+::initial\+Perturbation}, $ N $ is \hyperlink{struct_mushy_layer_options_a62029abc276b13b7a1be2d93a02d0c4c}{Mushy\+Layer\+Options\+::perturbation\+Wavenumber}, and $ L $ is the domain width \mbox{\Hypertarget{struct_mushy_layer_options_adf46ef76ff864b7fa57f69977e9a81d8}\label{struct_mushy_layer_options_adf46ef76ff864b7fa57f69977e9a81d8}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!porous\+Cells\+Shrink@{porous\+Cells\+Shrink}}
+\index{porous\+Cells\+Shrink@{porous\+Cells\+Shrink}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{porous\+Cells\+Shrink}{porousCellsShrink}}
+{\footnotesize\ttfamily int Mushy\+Layer\+Options\+::porous\+Cells\+Shrink}
+
+
+
+Filter porous cells to remove anomalies. 
+
+Select all cells with $\chi < 1$, then shift vertically by this value and tag only the intersection of the two \mbox{\Hypertarget{struct_mushy_layer_options_a0bd978ad44ee7dff6ca8d00c9092a18b}\label{struct_mushy_layer_options_a0bd978ad44ee7dff6ca8d00c9092a18b}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!project\+\_\+initial\+\_\+vel@{project\+\_\+initial\+\_\+vel}}
+\index{project\+\_\+initial\+\_\+vel@{project\+\_\+initial\+\_\+vel}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{project\+\_\+initial\+\_\+vel}{project\_initial\_vel}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::project\+\_\+initial\+\_\+vel}
+
+
+
+Whether or not to project the initial velocity field. 
+
+Projecting ensures it is divergence free \mbox{\Hypertarget{struct_mushy_layer_options_ad55453d9ed5cc38c3bfb6be643d8e240}\label{struct_mushy_layer_options_ad55453d9ed5cc38c3bfb6be643d8e240}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!project\+Analytic\+Vel@{project\+Analytic\+Vel}}
+\index{project\+Analytic\+Vel@{project\+Analytic\+Vel}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{project\+Analytic\+Vel}{projectAnalyticVel}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::project\+Analytic\+Vel}
+
+
+
+Whether to project the enforced analytic velocity field. 
+
+Useful for testing if the projection works as expected \mbox{\Hypertarget{struct_mushy_layer_options_a7fcaaba35b9ec20a078c88bf199f4247}\label{struct_mushy_layer_options_a7fcaaba35b9ec20a078c88bf199f4247}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!reflux\+\_\+lambda@{reflux\+\_\+lambda}}
+\index{reflux\+\_\+lambda@{reflux\+\_\+lambda}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{reflux\+\_\+lambda}{reflux\_lambda}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::reflux\+\_\+lambda}
+
+
+
+Whether or not to reflux lambda. 
+
+If you don\textquotesingle{}t do this, you won\textquotesingle{}t be able to calculate the freestream preservation correction. \mbox{\Hypertarget{struct_mushy_layer_options_a5f49a32e621d8c69bf2c6dae577b5db2}\label{struct_mushy_layer_options_a5f49a32e621d8c69bf2c6dae577b5db2}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!reflux\+Average\+Down@{reflux\+Average\+Down}}
+\index{reflux\+Average\+Down@{reflux\+Average\+Down}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{reflux\+Average\+Down}{refluxAverageDown}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::reflux\+Average\+Down}
+
+
+
+Whether or not to average down from fine levels to coarser levels after refluxing. 
+
+As the solution will have changed following refluxing, doing this ensures consistency between levels \mbox{\Hypertarget{struct_mushy_layer_options_a8cf08767319ec63a4b6a0cf3f634cc81}\label{struct_mushy_layer_options_a8cf08767319ec63a4b6a0cf3f634cc81}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!reflux\+Beta\+Sign@{reflux\+Beta\+Sign}}
+\index{reflux\+Beta\+Sign@{reflux\+Beta\+Sign}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{reflux\+Beta\+Sign}{refluxBetaSign}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::reflux\+Beta\+Sign}
+
+
+
+Coefficient of the laplacian operator during implicit reflux solves. 
+
+This might have to change depending on the operator being used, so left as an option. \mbox{\Hypertarget{struct_mushy_layer_options_aa978db9bd7ffd2f72f72614f1cc2e769}\label{struct_mushy_layer_options_aa978db9bd7ffd2f72f72614f1cc2e769}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!reflux\+Corr\+Sign@{reflux\+Corr\+Sign}}
+\index{reflux\+Corr\+Sign@{reflux\+Corr\+Sign}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{reflux\+Corr\+Sign}{refluxCorrSign}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::reflux\+Corr\+Sign}
+
+
+
+Whether to add (+1) or subtract (-\/1) the correction. 
+
+This might need to be changed depending on the operator being used, so left as an option. \mbox{\Hypertarget{struct_mushy_layer_options_a60ecf9ad0f510e7f77233b524cd86dae}\label{struct_mushy_layer_options_a60ecf9ad0f510e7f77233b524cd86dae}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!regrid\+\_\+eta\+\_\+scale@{regrid\+\_\+eta\+\_\+scale}}
+\index{regrid\+\_\+eta\+\_\+scale@{regrid\+\_\+eta\+\_\+scale}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{regrid\+\_\+eta\+\_\+scale}{regrid\_eta\_scale}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::regrid\+\_\+eta\+\_\+scale}
+
+
+
+Option to scale $ \eta $ before recomputing the freestream correction after regridding. 
+
+Default value = 1.\+0. \mbox{\Hypertarget{struct_mushy_layer_options_aebd1a65fc80b78c57d6b945685cfa742}\label{struct_mushy_layer_options_aebd1a65fc80b78c57d6b945685cfa742}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!regrid\+\_\+freestream\+\_\+subcycle@{regrid\+\_\+freestream\+\_\+subcycle}}
+\index{regrid\+\_\+freestream\+\_\+subcycle@{regrid\+\_\+freestream\+\_\+subcycle}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{regrid\+\_\+freestream\+\_\+subcycle}{regrid\_freestream\_subcycle}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::regrid\+\_\+freestream\+\_\+subcycle}
+
+
+
+Whether or not to do subcycling when advecting lambda after regridding. 
+
+Only used if \hyperlink{struct_mushy_layer_options_a74ed5d4f02c0e0af01281446c30d3d7b}{Mushy\+Layer\+Options\+::regrid\+\_\+advect\+\_\+before\+\_\+freestream} is true \mbox{\Hypertarget{struct_mushy_layer_options_a862aeef81ad6231eed93035f9640e917}\label{struct_mushy_layer_options_a862aeef81ad6231eed93035f9640e917}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!scale\+P\+\_\+\+CC@{scale\+P\+\_\+\+CC}}
+\index{scale\+P\+\_\+\+CC@{scale\+P\+\_\+\+CC}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{scale\+P\+\_\+\+CC}{scaleP\_CC}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::scale\+P\+\_\+\+CC}
+
+
+
+Whether or not the CC (cell-\/centred) projection should solve for a pressure that is scaled by the porosity. 
+
+If scaled, we solve something like $ \nabla \cdot \chi \nabla \pi = \nabla \cdot \mathbf{U}^* $, else we\textquotesingle{}ll solve $ \nabla^2 \pi = \nabla \cdot \mathbf{U}^* $. \mbox{\Hypertarget{struct_mushy_layer_options_acabfc7dcbcac5cb973e9478101e3768d}\label{struct_mushy_layer_options_acabfc7dcbcac5cb973e9478101e3768d}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!scale\+P\+\_\+\+M\+AC@{scale\+P\+\_\+\+M\+AC}}
+\index{scale\+P\+\_\+\+M\+AC@{scale\+P\+\_\+\+M\+AC}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{scale\+P\+\_\+\+M\+AC}{scaleP\_MAC}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::scale\+P\+\_\+\+M\+AC}
+
+
+
+Whether or not the M\+AC (face-\/centred) projection should solve for a pressure that is scaled by the porosity or permeability. 
+
+If scaled, we solve something like $ \nabla \cdot \chi \nabla \phi = \nabla \cdot \mathbf{U}^* $, else we\textquotesingle{}ll solve $ \nabla^2 \phi = \nabla \cdot \mathbf{U}^* $. \mbox{\Hypertarget{struct_mushy_layer_options_ad38c7a08b2061d98daa9507b9b65877e}\label{struct_mushy_layer_options_ad38c7a08b2061d98daa9507b9b65877e}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!seed\+Random\+Pert@{seed\+Random\+Pert}}
+\index{seed\+Random\+Pert@{seed\+Random\+Pert}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{seed\+Random\+Pert}{seedRandomPert}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::seed\+Random\+Pert = true}
+
+Turn on to seed random perturbations on different boxes to prevent the same \textquotesingle{}random\textquotesingle{} number patterns in each box \mbox{\Hypertarget{struct_mushy_layer_options_a437d5973f3095fbaf98c98b017e393ed}\label{struct_mushy_layer_options_a437d5973f3095fbaf98c98b017e393ed}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!solid\+Porosity@{solid\+Porosity}}
+\index{solid\+Porosity@{solid\+Porosity}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{solid\+Porosity}{solidPorosity}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::solid\+Porosity}
+
+
+
+Porosity below which we enforce zero velocity. 
+
+This needs to be greater than 0 \mbox{\Hypertarget{struct_mushy_layer_options_a8215f286dafdbe573df73258b544f307}\label{struct_mushy_layer_options_a8215f286dafdbe573df73258b544f307}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!steady\+State\+Norm\+Type@{steady\+State\+Norm\+Type}}
+\index{steady\+State\+Norm\+Type@{steady\+State\+Norm\+Type}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{steady\+State\+Norm\+Type}{steadyStateNormType}}
+{\footnotesize\ttfamily int Mushy\+Layer\+Options\+::steady\+State\+Norm\+Type}
+
+
+
+When testing for steady state can consider different norms of the solution. 
+
+0 -\/$>$ compute the max value 1 -\/$>$ compute the L1 norm of the solution (i.\+e. some of absolute values) 2 -\/$>$ compute the L2 norm of the solution (i.\+e. some of values squared) \mbox{\Hypertarget{struct_mushy_layer_options_a101f8a57293409a158e31d44b2aea6ed}\label{struct_mushy_layer_options_a101f8a57293409a158e31d44b2aea6ed}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!summer\+Profile@{summer\+Profile}}
+\index{summer\+Profile@{summer\+Profile}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{summer\+Profile}{summerProfile}}
+{\footnotesize\ttfamily int Mushy\+Layer\+Options\+::summer\+Profile}
+
+
+
+Different options for initialising data that looks a bit like year old sea ice. 
+
+See \hyperlink{class_a_m_r_level_mushy_layer_a601849adc5f5b5fc9e9999b568020922}{A\+M\+R\+Level\+Mushy\+Layer\+::initial\+Data\+Mushy\+Layer()} for more details \mbox{\Hypertarget{struct_mushy_layer_options_ac65cf5a7ea59d60c33af0141d9d940c3}\label{struct_mushy_layer_options_ac65cf5a7ea59d60c33af0141d9d940c3}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!tag\+\_\+plume\+\_\+mush@{tag\+\_\+plume\+\_\+mush}}
+\index{tag\+\_\+plume\+\_\+mush@{tag\+\_\+plume\+\_\+mush}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{tag\+\_\+plume\+\_\+mush}{tag\_plume\_mush}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::tag\+\_\+plume\+\_\+mush}
+
+
+
+Refine mushy regions on level 1, the refine around plumes according to some empirical criteria. 
+
+Specifically, identify plumes as regions where either a) the downwards velocity is greater than \hyperlink{struct_mushy_layer_options_aef2b8175ef13294cdd87e521b89cc104}{Mushy\+Layer\+Options\+::plume\+Vel\+Threshold}, and b) the bulk concentration is greater than \hyperlink{struct_mushy_layer_options_a496277fda822832718ebe3a32479b24b}{Mushy\+Layer\+Options\+::plume\+Salinity\+Threshold} \mbox{\Hypertarget{struct_mushy_layer_options_a940a2f3dfcfa29a2415eb48836369615}\label{struct_mushy_layer_options_a940a2f3dfcfa29a2415eb48836369615}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!tagging\+Marginal\+Porosity\+Limit@{tagging\+Marginal\+Porosity\+Limit}}
+\index{tagging\+Marginal\+Porosity\+Limit@{tagging\+Marginal\+Porosity\+Limit}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{tagging\+Marginal\+Porosity\+Limit}{taggingMarginalPorosityLimit}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::tagging\+Marginal\+Porosity\+Limit}
+
+
+
+If less than 1, use this limit to identify cells with tagging\+Marginal\+Porosity\+Limit $<$ porosity $<$ 1.\+0. 
+
+These cells are then not considered part of the mushy layer for tagging purposes, but also not liquid. \mbox{\Hypertarget{struct_mushy_layer_options_a837666f529c0421b42d23bf175094066}\label{struct_mushy_layer_options_a837666f529c0421b42d23bf175094066}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!test\+Regrid\+Coarsening@{test\+Regrid\+Coarsening}}
+\index{test\+Regrid\+Coarsening@{test\+Regrid\+Coarsening}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{test\+Regrid\+Coarsening}{testRegridCoarsening}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::test\+Regrid\+Coarsening}
+
+
+
+For testing\+: if turned on, refined levels will only exist for one regrid cycle before being removed. 
+
+This let\textquotesingle{}s us test levels being created then destroyed in a controlled manner \mbox{\Hypertarget{struct_mushy_layer_options_a4d2370260d6a49bf5a988f379592320c}\label{struct_mushy_layer_options_a4d2370260d6a49bf5a988f379592320c}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!use\+Fortran\+Regularisation\+Face@{use\+Fortran\+Regularisation\+Face}}
+\index{use\+Fortran\+Regularisation\+Face@{use\+Fortran\+Regularisation\+Face}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{use\+Fortran\+Regularisation\+Face}{useFortranRegularisationFace}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::use\+Fortran\+Regularisation\+Face}
+
+
+
+Turn on to use fortran routines for regularising the solution on cell faces (i.\+e. ensuring porosity is not 0) 
+
+Turned off by default as doesn\textquotesingle{}t work yet. \mbox{\Hypertarget{struct_mushy_layer_options_a0ee4602f8acbf255e32a89397409a67c}\label{struct_mushy_layer_options_a0ee4602f8acbf255e32a89397409a67c}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!use\+Incremental\+Pressure@{use\+Incremental\+Pressure}}
+\index{use\+Incremental\+Pressure@{use\+Incremental\+Pressure}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{use\+Incremental\+Pressure}{useIncrementalPressure}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::use\+Incremental\+Pressure}
+
+
+
+Whether or not to use the previous pressure when solving Darcy\textquotesingle{}s equation. 
+
+If true, we then only solve for a small extra pressure correction which is usually a lot quicker \mbox{\Hypertarget{struct_mushy_layer_options_a58be59c481f1d2f2283b943c723cb73f}\label{struct_mushy_layer_options_a58be59c481f1d2f2283b943c723cb73f}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!use\+Incremental\+Pressure\+Refined\+Levels@{use\+Incremental\+Pressure\+Refined\+Levels}}
+\index{use\+Incremental\+Pressure\+Refined\+Levels@{use\+Incremental\+Pressure\+Refined\+Levels}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{use\+Incremental\+Pressure\+Refined\+Levels}{useIncrementalPressureRefinedLevels}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::use\+Incremental\+Pressure\+Refined\+Levels}
+
+
+
+Whether or not to solve for an incremental pressure change on fine levels, rather than the full pressure. 
+
+This may not work fully yet... \mbox{\Hypertarget{struct_mushy_layer_options_a4e2bb36126700e04d36012af3412c817}\label{struct_mushy_layer_options_a4e2bb36126700e04d36012af3412c817}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!use\+Old\+Adv\+Vel@{use\+Old\+Adv\+Vel}}
+\index{use\+Old\+Adv\+Vel@{use\+Old\+Adv\+Vel}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{use\+Old\+Adv\+Vel}{useOldAdvVel}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::use\+Old\+Adv\+Vel}
+
+
+
+Use advection velocity from previous timestep for tracing advection velocities. 
+
+Default is false, in which case we average the cell centred velocities from the previous timestep to cell faces and use these (as they are calculated at a later time, they should be more accurate). \mbox{\Hypertarget{struct_mushy_layer_options_a2ac51724bee29034037c2c26f320ee11}\label{struct_mushy_layer_options_a2ac51724bee29034037c2c26f320ee11}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!use\+Pi\+Advection\+B\+Cs@{use\+Pi\+Advection\+B\+Cs}}
+\index{use\+Pi\+Advection\+B\+Cs@{use\+Pi\+Advection\+B\+Cs}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{use\+Pi\+Advection\+B\+Cs}{usePiAdvectionBCs}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::use\+Pi\+Advection\+B\+Cs}
+
+
+
+Use the cell centred pressure $ \pi $ as the boundary condition when solving for the face centred pressure $ \phi $. 
+
+Default is true. \mbox{\Hypertarget{struct_mushy_layer_options_ac2ad0fd5e02c9c4bd42ac2f4f04d15df}\label{struct_mushy_layer_options_ac2ad0fd5e02c9c4bd42ac2f4f04d15df}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!use\+Prev\+Pressure\+For\+U\+Star@{use\+Prev\+Pressure\+For\+U\+Star}}
+\index{use\+Prev\+Pressure\+For\+U\+Star@{use\+Prev\+Pressure\+For\+U\+Star}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{use\+Prev\+Pressure\+For\+U\+Star}{usePrevPressureForUStar}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::use\+Prev\+Pressure\+For\+U\+Star}
+
+
+
+Set the initial value for \hyperlink{class_a_m_r_level_mushy_layer_af6dd293bd80f201846fc7d6fe6f851b1}{A\+M\+R\+Level\+Mushy\+Layer\+::m\+\_\+use\+Prev\+Pressure\+For\+U\+Star}. 
+
+Determines if we should use the previous $ \nabla P $ to calculate $ \mathbf{u}^* $ \mbox{\Hypertarget{struct_mushy_layer_options_a9c2d1485bfcf48a0b18a07861ea5a3b8}\label{struct_mushy_layer_options_a9c2d1485bfcf48a0b18a07861ea5a3b8}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!vel\+Adv\+Art\+Visc@{vel\+Adv\+Art\+Visc}}
+\index{vel\+Adv\+Art\+Visc@{vel\+Adv\+Art\+Visc}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{vel\+Adv\+Art\+Visc}{velAdvArtVisc}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Options\+::vel\+Adv\+Art\+Visc}
+
+
+
+Value of artifical viscosity to use for velocity advection solves. 
+
+Only used if Mushylayer\+Options\+::vel\+Adv\+Use\+Art\+Visc is turned on \mbox{\Hypertarget{struct_mushy_layer_options_a7ed9632c43355a63ee6e4252145e5435}\label{struct_mushy_layer_options_a7ed9632c43355a63ee6e4252145e5435}} 
+\index{Mushy\+Layer\+Options@{Mushy\+Layer\+Options}!write\+Pressure\+Init\+Fields@{write\+Pressure\+Init\+Fields}}
+\index{write\+Pressure\+Init\+Fields@{write\+Pressure\+Init\+Fields}!Mushy\+Layer\+Options@{Mushy\+Layer\+Options}}
+\subsubsection{\texorpdfstring{write\+Pressure\+Init\+Fields}{writePressureInitFields}}
+{\footnotesize\ttfamily bool Mushy\+Layer\+Options\+::write\+Pressure\+Init\+Fields}
+
+
+
+Whether to write out plotfiles during pressure initialisation. 
+
+Useful for debugging 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src/\hyperlink{mushy_layer_opt_8h}{mushy\+Layer\+Opt.\+h}\end{DoxyCompactItemize}

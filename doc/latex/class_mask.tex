@@ -1,0 +1,45 @@
+\hypertarget{class_mask}{}\section{Mask Class Reference}
+\label{class_mask}\index{Mask@{Mask}}
+
+
+class to determine coarse-\/fine validity info  
+
+
+
+
+{\ttfamily \#include $<$Mask.\+H$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_mask_a81350474ba1eed5e378837d0772d86c2}\label{class_mask_a81350474ba1eed5e378837d0772d86c2}} 
+enum \hyperlink{class_mask_a81350474ba1eed5e378837d0772d86c2}{cell\+Type} \{ {\bfseries mask\+Covered} = -\/2, 
+{\bfseries mask\+Physical} = -\/1, 
+{\bfseries mask\+Copy} = 0, 
+{\bfseries mask\+Coarse} = 1
+ \}\begin{DoxyCompactList}\small\item\em Cell type. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_mask_ab1652414426159d30e756e1da3a8932c}\label{class_mask_ab1652414426159d30e756e1da3a8932c}} 
+void \hyperlink{class_mask_ab1652414426159d30e756e1da3a8932c}{build\+Mask} (\textbf{ Base\+Fab}$<$ int $>$ \&a\+\_\+mask, const \textbf{ Problem\+Domain} \&a\+\_\+d\+Problem, const \textbf{ Box\+Layout} \&a\+\_\+grids, const \textbf{ Box\+Layout} $\ast$a\+\_\+fine\+Grids\+Ptr=N\+U\+LL, int a\+\_\+n\+Ref\+Fine=-\/1)
+\begin{DoxyCompactList}\small\item\em Build mask. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mask_a2d53aed5c96ff103c2b54955a134c5af}\label{class_mask_a2d53aed5c96ff103c2b54955a134c5af}} 
+void \hyperlink{class_mask_a2d53aed5c96ff103c2b54955a134c5af}{build\+Masks} (\textbf{ Level\+Data}$<$ \textbf{ Base\+Fab}$<$ int $>$ $>$ \&a\+\_\+masks, const \textbf{ Problem\+Domain} \&a\+\_\+d\+Problem, const \textbf{ Box\+Layout} \&a\+\_\+grids, const \textbf{ Box\+Layout} $\ast$a\+\_\+fine\+Grids\+Ptr=N\+U\+LL, int a\+\_\+n\+Ref\+Fine=-\/1)
+\begin{DoxyCompactList}\small\item\em Build masks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mask_a5df266dd84059e03b3e1e139c98c6c66}\label{class_mask_a5df266dd84059e03b3e1e139c98c6c66}} 
+void \hyperlink{class_mask_a5df266dd84059e03b3e1e139c98c6c66}{build\+Mask} (\textbf{ Base\+Fab}$<$ int $>$ \&a\+\_\+mask, const \textbf{ Box} \&a\+\_\+d\+Problem, const \textbf{ Box\+Layout} \&a\+\_\+grids, const \textbf{ Box\+Layout} $\ast$a\+\_\+fine\+Grids\+Ptr=N\+U\+LL, int a\+\_\+n\+Ref\+Fine=-\/1)
+\begin{DoxyCompactList}\small\item\em deprecated interface \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mask_ac62bddb04af6dbbe798a870a1e86c01c}\label{class_mask_ac62bddb04af6dbbe798a870a1e86c01c}} 
+void \hyperlink{class_mask_ac62bddb04af6dbbe798a870a1e86c01c}{build\+Masks} (\textbf{ Level\+Data}$<$ \textbf{ Base\+Fab}$<$ int $>$ $>$ \&a\+\_\+masks, const \textbf{ Box} \&a\+\_\+d\+Problem, const \textbf{ Box\+Layout} \&a\+\_\+grids, const \textbf{ Box\+Layout} $\ast$a\+\_\+fine\+Grids\+Ptr=N\+U\+LL, int a\+\_\+n\+Ref\+Fine=-\/1)
+\begin{DoxyCompactList}\small\item\em deprecated interface \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class to determine coarse-\/fine validity info 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/util/Mask.\+H\item 
+/home/parkinsonjl/mushy-\/layer/util/Mask.\+cpp\end{DoxyCompactItemize}

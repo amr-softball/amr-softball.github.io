@@ -1,0 +1,529 @@
+\hypertarget{mushy_layer_opt_8h}{}\section{/home/parkinsonjl/mushy-\/layer/src/mushy\+Layer\+Opt.h File Reference}
+\label{mushy_layer_opt_8h}\index{/home/parkinsonjl/mushy-\/layer/src/mushy\+Layer\+Opt.\+h@{/home/parkinsonjl/mushy-\/layer/src/mushy\+Layer\+Opt.\+h}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_mushy_layer_options}{Mushy\+Layer\+Options}
+\begin{DoxyCompactList}\small\item\em Contains most of the options for running the code, and how to handle the equations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562}{Refinement\+Method} \{ \newline
+\hyperlink{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a04a077eabc14605b497a15728ca12384}{tag\+Speed}, 
+\hyperlink{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562abf275b0a72d8ab445fee714fcd63daee}{tag\+Channels}, 
+\hyperlink{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a376e52f642a67817b7c8d523f4b17ce2}{tag\+Plume\+Mush}, 
+\hyperlink{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a0f5f58d388420d1b0fc1f8d29875452e}{tag\+Mush\+Channels}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a88476b1fce912986d333788ca3d5b686}{tag\+Scalar}, 
+\hyperlink{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a729f0f386163c3feb5000986d9d8e402}{tag\+Vector}, 
+\hyperlink{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562aca40689acf67fcfe6b58a2e077fc9ba2}{tag\+Mush\+Channels\+Composite\+Criteria}
+ \}\begin{DoxyCompactList}\small\item\em Different ways to add refinement. \end{DoxyCompactList}
+\item 
+enum \hyperlink{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079c}{M\+Gmethod} \{ \hyperlink{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079ca15d1ab37d7419a79726483545ba0b4ef}{M\+G\+Type\+Standard}, 
+\hyperlink{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079ca87cf425fdac2d2b3b355cbf2b3c36ff1}{M\+G\+Type\+F\+AS}
+ \}\begin{DoxyCompactList}\small\item\em Different multigrid methods. \end{DoxyCompactList}
+\item 
+enum \hyperlink{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71c}{Tagging\+Method} \{ \hyperlink{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71ca8ca28a50b03017f42e0e676ce4ef6f4a}{Undivided\+Gradient}, 
+\hyperlink{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71ca336a41a665e98d8d074a17e9c8acef80}{Magnitude}, 
+\hyperlink{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71cab0cc265f5c806f935ed783690e474279}{Compare\+Larger\+Than}, 
+\hyperlink{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71ca71fef04c7952c08dbfb3e1a42b7ff2a9}{Compare\+Larger\+Than\+Negative}
+ \}\begin{DoxyCompactList}\small\item\em Strategy for tagging cells. \end{DoxyCompactList}
+\item 
+enum \hyperlink{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0}{Reflux\+Method} \{ \hyperlink{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0ae4fd4a35901108677c9db28c79fb647d}{Linear\+Reflux}, 
+\hyperlink{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0ab2b730f60accd692e01c94fa4c93b199}{Linear\+V\+C\+Reflux}, 
+\hyperlink{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0a1b482d4d207964e9e2db631c0d9146bd}{Nonlinear\+Reflux}
+ \}\begin{DoxyCompactList}\small\item\em Methods for doing implicit refluxing -\/ i.\+e. what sort of equation to we solve for the correction. \end{DoxyCompactList}
+\item 
+enum \hyperlink{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6}{velocity\+Advection\+Types} \{ \hyperlink{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6a777faf55ad27831bcd10eb6608ef7fc0}{m\+\_\+porosity\+In\+Advection}, 
+\hyperlink{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6a86328a35ac1c82bbf2b41beb3e293607}{m\+\_\+porosity\+Outside\+Advection}, 
+\hyperlink{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6a186c5cf0376bd3a55fc374525d7112f4}{m\+\_\+no\+Porosity}
+ \}\begin{DoxyCompactList}\small\item\em Options for handling advection velocities, where S is the source term. \end{DoxyCompactList}
+\item 
+enum \hyperlink{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38}{Porosity\+Functions} \{ \newline
+\hyperlink{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38ae2208e7b05200615dfaf1550270135c8}{constant\+Liquid}, 
+\hyperlink{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a4cfc14cb896a2f4e003dd5eb5adef579}{linear}, 
+\hyperlink{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a224052ac1022b991e847796340c9856a}{gaussian}, 
+\hyperlink{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a99fd95359d42f11e38caae2a0454b299}{gaussian\+Sinusoidal}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38ac3cfddb575b2fea6ba0f6d08a46e2b89}{constant\+Small}, 
+\hyperlink{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38acbf80121500507c24dac0e575046c210}{cubic}, 
+\hyperlink{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a2339c1400d6b79603b41786001cbcf0e}{hyperbolic\+Tan}
+ \}\begin{DoxyCompactList}\small\item\em Different options for enforcing a fixed porosity. \end{DoxyCompactList}
+\item 
+enum \hyperlink{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520}{Vector\+Vars} \{ \newline
+\hyperlink{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520acf6d7a2aa6c1a2f3364026a389b3b685}{m\+\_\+fluid\+Vel}, 
+\hyperlink{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a20cf6f7f84174b72c0c38bca9b6a3923}{m\+\_\+\+U\+\_\+porosity}, 
+\hyperlink{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520afa0ca2559f0ecde5d29f20153811d6ec}{m\+\_\+\+Ustar}, 
+\hyperlink{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520ad6649dc770bf43bd56aa13dfcdac3ab7}{m\+\_\+adv\+Ustar}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a86e65099848dee1fdd6ed56753f2841b}{m\+\_\+advection\+Vel}, 
+{\bfseries m\+\_\+viscous\+Solve\+Src}, 
+\hyperlink{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520ac48a17ab64863292eddd6ae5a81aa592}{m\+\_\+\+UdelU}, 
+\hyperlink{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a2b9a89ac8acc3c4c491f890d54d12fd1}{m\+\_\+advection\+Src}, 
+\newline
+{\bfseries m\+\_\+fluid\+Vel\+Analytic}, 
+{\bfseries m\+\_\+fluid\+Vel\+Err}, 
+{\bfseries m\+\_\+d\+Udt}, 
+{\bfseries m\+\_\+\+Fs\+Diffusion}, 
+\newline
+{\bfseries m\+\_\+\+Fs\+Fluid}, 
+{\bfseries m\+\_\+\+Fs}, 
+{\bfseries m\+\_\+freestream\+Correction}, 
+{\bfseries m\+\_\+\+Upre\+Projection}, 
+\newline
+{\bfseries m\+\_\+advection\+Implicit\+Src}, 
+{\bfseries m\+\_\+\+M\+A\+Ccorrection}, 
+{\bfseries C\+Ccorrection}, 
+{\bfseries m\+\_\+adv\+Src\+LapU}, 
+\newline
+{\bfseries m\+\_\+adv\+Upre\+Projection}, 
+{\bfseries m\+\_\+body\+Force}, 
+{\bfseries m\+\_\+adv\+Vel\+Corr}, 
+\hyperlink{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a0bc95e626dcdeae398d6bb728b28578f}{m\+\_\+num\+Vector\+Vars}
+ \}\begin{DoxyCompactList}\small\item\em Cell centred vector field. \end{DoxyCompactList}
+\item 
+enum \hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fe}{Scalar\+Vars} \{ \newline
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea60c3b49ecc83839102de3c062ef4b594}{m\+\_\+enthalpy}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea911d5a273fd95a302525826716868309}{m\+\_\+bulk\+Concentration}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feab26ee26d7915870533b18e10c924b0b2}{m\+\_\+temperature}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae163999cac4d8aa8207e52f204532688}{m\+\_\+porosity}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea499e837640bf6119c66c223a5573b00d}{m\+\_\+liquid\+Concentration}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea8891566d5ce193de925ee9dba214443d}{m\+\_\+solid\+Concentration}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea4b9e02d775ce01815fa6568250790fa8}{m\+\_\+pressure}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae7678ac7ed17857ec98c601e4b7e40fb}{m\+\_\+permeability}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea8e3d952f9a635a721a3c64ad63298148}{m\+\_\+viscosity}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feab2d2be92c8f455c80802325a8d2eeb8a}{m\+\_\+lambda}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea088b5a2f2bea675309cac8149618c1d2}{m\+\_\+lambda\+\_\+porosity}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea41c489849179ea77a638379160b2c5b7}{m\+\_\+enthalpy\+Solidus}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feabf0c51a5d0d9c2b3436732e25b4bd81b}{m\+\_\+enthalpy\+Liquidus}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae0f97f4fbb75f996f81be27d03e5c2ae}{m\+\_\+enthalpy\+Eutectic}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea1c896191dec7251a9b28f3edaf3af4a3}{m\+\_\+porosity\+Analytic}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea5043f806f9db03a281f34b64e3000d87}{m\+\_\+temperature\+Analytic}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea2066f8818ca4bd2c0e348d49681f92ae}{m\+\_\+salt\+Eqn\+Src\+Godunov}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feafbcc173907b901d6125febe0019d2483}{m\+\_\+\+Terr}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaaacd2b4646ffe61c3eec8783cc5f1ffe}{m\+\_\+enthalpy\+Src}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea65a14f219744db523f7c0c18c30f1e62}{m\+\_\+div\+Uadv}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaf797808e9983981407208ff4d135a622}{m\+\_\+d\+Hdt}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea361d1047f38132ae8aea866b48fce0da}{m\+\_\+d\+Sdt}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feab5111665103ec87d4a1d8d8270ac6d42}{m\+\_\+average\+Vertical\+Flux}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae5fb749555308e3da2316a3a91813af7}{m\+\_\+solute\+Flux\+Analytic}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea85b90abc67a4d8ff117b913e9f738ee8}{m\+\_\+vertical\+Flux}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea5e9e724b07b87e4ab5f654f317d0d064}{m\+\_\+divU}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea9f4326270494ebd8e949dcbde608ea77}{m\+\_\+average\+Heat\+Flux}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea02ce59a46dbdd022a31c3bcc2f003472}{m\+\_\+streamfunction}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaefc051678347657d07879a690bc01ab0}{m\+\_\+vorticity}, 
+{\bfseries m\+\_\+\+Fs\+Vert\+Diffusion}, 
+{\bfseries m\+\_\+\+Fs\+Vert\+Fluid}, 
+{\bfseries m\+\_\+\+Fs\+Vert\+Frame}, 
+\newline
+{\bfseries m\+\_\+div\+Ucorr}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea50e0c2eba153cc739350b337c6a41cca}{m\+\_\+pi}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaa5690b7d4f90193580fe8c95f7dea7f3}{m\+\_\+phi}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea14e73fadfbc93400c01b81a26ba13ff5}{m\+\_\+\+M\+A\+C\+BC}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea662a7ffa4f458ed31e76f16ee63ae122}{m\+\_\+\+M\+A\+Crhs}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaeeea11e6b6c633d30e54b6328b66268d}{m\+\_\+\+C\+Crhs}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea72bde2fc88a76859f088436857cdd4d0}{m\+\_\+passive\+Scalar}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fead7da5e5f39a4b4f8bcf84eb639438ed3}{m\+\_\+active\+Scalar}, 
+\newline
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaf192d2dab073b1eabfb0de906ebada1b}{m\+\_\+light\+Intensity}, 
+\hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea83db32f5839575c9d7812f3cd0727d07}{m\+\_\+num\+Scalar\+Vars}
+ \}\begin{DoxyCompactList}\small\item\em Identifiers for different scalar variables. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains immunity flag definitions 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079c}\label{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079c}} 
+\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!M\+Gmethod@{M\+Gmethod}}
+\index{M\+Gmethod@{M\+Gmethod}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}
+\subsubsection{\texorpdfstring{M\+Gmethod}{MGmethod}}
+{\footnotesize\ttfamily enum \hyperlink{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079c}{M\+Gmethod}}
+
+
+
+Different multigrid methods. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+G\+Type\+Standard@{M\+G\+Type\+Standard}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!M\+G\+Type\+Standard@{M\+G\+Type\+Standard}}}\mbox{\Hypertarget{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079ca15d1ab37d7419a79726483545ba0b4ef}\label{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079ca15d1ab37d7419a79726483545ba0b4ef}} 
+M\+G\+Type\+Standard&Normal linear multigrid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+G\+Type\+F\+AS@{M\+G\+Type\+F\+AS}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!M\+G\+Type\+F\+AS@{M\+G\+Type\+F\+AS}}}\mbox{\Hypertarget{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079ca87cf425fdac2d2b3b355cbf2b3c36ff1}\label{mushy_layer_opt_8h_a1f6390801f119adac644ec2f1b17079ca87cf425fdac2d2b3b355cbf2b3c36ff1}} 
+M\+G\+Type\+F\+AS&Full Approximation Scheme (for nonlinear problems) \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38}\label{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38}} 
+\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Porosity\+Functions@{Porosity\+Functions}}
+\index{Porosity\+Functions@{Porosity\+Functions}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}
+\subsubsection{\texorpdfstring{Porosity\+Functions}{PorosityFunctions}}
+{\footnotesize\ttfamily enum \hyperlink{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38}{Porosity\+Functions}}
+
+
+
+Different options for enforcing a fixed porosity. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{constant\+Liquid@{constant\+Liquid}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!constant\+Liquid@{constant\+Liquid}}}\mbox{\Hypertarget{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38ae2208e7b05200615dfaf1550270135c8}\label{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38ae2208e7b05200615dfaf1550270135c8}} 
+constant\+Liquid&Porosity = 1.\+0 everywhere. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{linear@{linear}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!linear@{linear}}}\mbox{\Hypertarget{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a4cfc14cb896a2f4e003dd5eb5adef579}\label{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a4cfc14cb896a2f4e003dd5eb5adef579}} 
+linear&Porosity varies linearly with x, $ \chi = 0.1 + 0.9 x $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{gaussian@{gaussian}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!gaussian@{gaussian}}}\mbox{\Hypertarget{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a224052ac1022b991e847796340c9856a}\label{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a224052ac1022b991e847796340c9856a}} 
+gaussian&Porosity looks like a gaussian, $ \chi = 0.1 + 0.9 exp(-100 (x-0.5)^2) $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{gaussian\+Sinusoidal@{gaussian\+Sinusoidal}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!gaussian\+Sinusoidal@{gaussian\+Sinusoidal}}}\mbox{\Hypertarget{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a99fd95359d42f11e38caae2a0454b299}\label{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a99fd95359d42f11e38caae2a0454b299}} 
+gaussian\+Sinusoidal&Gaussian with some sinuosoidal variation, $ \chi = (exp(-(x-0.5)^2))*(0.5 + 0.1 sin(2 \pi y)) $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{constant\+Small@{constant\+Small}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!constant\+Small@{constant\+Small}}}\mbox{\Hypertarget{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38ac3cfddb575b2fea6ba0f6d08a46e2b89}\label{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38ac3cfddb575b2fea6ba0f6d08a46e2b89}} 
+constant\+Small&Porosity = 0.\+1. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cubic@{cubic}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!cubic@{cubic}}}\mbox{\Hypertarget{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38acbf80121500507c24dac0e575046c210}\label{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38acbf80121500507c24dac0e575046c210}} 
+cubic&Porosity varies with the y-\/direction cubed, $ \chi = 0.01 + (y-0.01)^3 $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hyperbolic\+Tan@{hyperbolic\+Tan}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!hyperbolic\+Tan@{hyperbolic\+Tan}}}\mbox{\Hypertarget{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a2339c1400d6b79603b41786001cbcf0e}\label{mushy_layer_opt_8h_af4a9a40836c85b07e8dae4e26a7efb38a2339c1400d6b79603b41786001cbcf0e}} 
+hyperbolic\+Tan&$ \chi = 0.5 ( (1-tanh(20 y)) + (1-x)) $ \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562}\label{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562}} 
+\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Refinement\+Method@{Refinement\+Method}}
+\index{Refinement\+Method@{Refinement\+Method}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}
+\subsubsection{\texorpdfstring{Refinement\+Method}{RefinementMethod}}
+{\footnotesize\ttfamily enum \hyperlink{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562}{Refinement\+Method}}
+
+
+
+Different ways to add refinement. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tag\+Speed@{tag\+Speed}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!tag\+Speed@{tag\+Speed}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a04a077eabc14605b497a15728ca12384}\label{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a04a077eabc14605b497a15728ca12384}} 
+tag\+Speed&Tag where fluid speed exceeds threshold. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tag\+Channels@{tag\+Channels}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!tag\+Channels@{tag\+Channels}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562abf275b0a72d8ab445fee714fcd63daee}\label{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562abf275b0a72d8ab445fee714fcd63daee}} 
+tag\+Channels&Tag where channels are. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tag\+Plume\+Mush@{tag\+Plume\+Mush}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!tag\+Plume\+Mush@{tag\+Plume\+Mush}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a376e52f642a67817b7c8d523f4b17ce2}\label{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a376e52f642a67817b7c8d523f4b17ce2}} 
+tag\+Plume\+Mush&Tag where these is strong downflow in the mushy layer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tag\+Mush\+Channels@{tag\+Mush\+Channels}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!tag\+Mush\+Channels@{tag\+Mush\+Channels}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a0f5f58d388420d1b0fc1f8d29875452e}\label{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a0f5f58d388420d1b0fc1f8d29875452e}} 
+tag\+Mush\+Channels&Tag porosity on level 0, and strong solute rich downflow thereafter. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tag\+Scalar@{tag\+Scalar}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!tag\+Scalar@{tag\+Scalar}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a88476b1fce912986d333788ca3d5b686}\label{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a88476b1fce912986d333788ca3d5b686}} 
+tag\+Scalar&Tag on some scalar field given by tagging\+Var. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tag\+Vector@{tag\+Vector}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!tag\+Vector@{tag\+Vector}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a729f0f386163c3feb5000986d9d8e402}\label{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562a729f0f386163c3feb5000986d9d8e402}} 
+tag\+Vector&Tag on some vector field given by tagging\+Vector\+Var. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tag\+Mush\+Channels\+Composite\+Criteria@{tag\+Mush\+Channels\+Composite\+Criteria}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!tag\+Mush\+Channels\+Composite\+Criteria@{tag\+Mush\+Channels\+Composite\+Criteria}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562aca40689acf67fcfe6b58a2e077fc9ba2}\label{mushy_layer_opt_8h_ad767f132740c90bc3329dc12556cd562aca40689acf67fcfe6b58a2e077fc9ba2}} 
+tag\+Mush\+Channels\+Composite\+Criteria&Composite criteria for tagging cells. Tag where $ \Delta x |\nabla \chi| ( 1 - \textrm{min}(w (\mathscr{C} - \Theta), 0) ) > r $ where $ r $ is the refinement threshold, $ w $ is the vertical velocity, \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0}\label{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0}} 
+\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Reflux\+Method@{Reflux\+Method}}
+\index{Reflux\+Method@{Reflux\+Method}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}
+\subsubsection{\texorpdfstring{Reflux\+Method}{RefluxMethod}}
+{\footnotesize\ttfamily enum \hyperlink{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0}{Reflux\+Method}}
+
+
+
+Methods for doing implicit refluxing -\/ i.\+e. what sort of equation to we solve for the correction. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Linear\+Reflux@{Linear\+Reflux}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Linear\+Reflux@{Linear\+Reflux}}}\mbox{\Hypertarget{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0ae4fd4a35901108677c9db28c79fb647d}\label{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0ae4fd4a35901108677c9db28c79fb647d}} 
+Linear\+Reflux&linear correction \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Linear\+V\+C\+Reflux@{Linear\+V\+C\+Reflux}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Linear\+V\+C\+Reflux@{Linear\+V\+C\+Reflux}}}\mbox{\Hypertarget{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0ab2b730f60accd692e01c94fa4c93b199}\label{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0ab2b730f60accd692e01c94fa4c93b199}} 
+Linear\+V\+C\+Reflux&linear variable-\/coefficient correction \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Nonlinear\+Reflux@{Nonlinear\+Reflux}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Nonlinear\+Reflux@{Nonlinear\+Reflux}}}\mbox{\Hypertarget{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0a1b482d4d207964e9e2db631c0d9146bd}\label{mushy_layer_opt_8h_a5a98ef78cd7e0d1e6f335bd304c34bc0a1b482d4d207964e9e2db631c0d9146bd}} 
+Nonlinear\+Reflux&nonlinear correction \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fe}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fe}} 
+\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Scalar\+Vars@{Scalar\+Vars}}
+\index{Scalar\+Vars@{Scalar\+Vars}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}
+\subsubsection{\texorpdfstring{Scalar\+Vars}{ScalarVars}}
+{\footnotesize\ttfamily enum \hyperlink{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fe}{Scalar\+Vars}}
+
+
+
+Identifiers for different scalar variables. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+enthalpy@{m\+\_\+enthalpy}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+enthalpy@{m\+\_\+enthalpy}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea60c3b49ecc83839102de3c062ef4b594}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea60c3b49ecc83839102de3c062ef4b594}} 
+m\+\_\+enthalpy&Enthalpy $ H $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+bulk\+Concentration@{m\+\_\+bulk\+Concentration}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+bulk\+Concentration@{m\+\_\+bulk\+Concentration}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea911d5a273fd95a302525826716868309}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea911d5a273fd95a302525826716868309}} 
+m\+\_\+bulk\+Concentration&Bulk concentration $ \Theta $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+temperature@{m\+\_\+temperature}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+temperature@{m\+\_\+temperature}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feab26ee26d7915870533b18e10c924b0b2}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feab26ee26d7915870533b18e10c924b0b2}} 
+m\+\_\+temperature&Temperature, $ \theta $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+porosity@{m\+\_\+porosity}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+porosity@{m\+\_\+porosity}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae163999cac4d8aa8207e52f204532688}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae163999cac4d8aa8207e52f204532688}} 
+m\+\_\+porosity&Porosity $ \chi $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+liquid\+Concentration@{m\+\_\+liquid\+Concentration}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+liquid\+Concentration@{m\+\_\+liquid\+Concentration}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea499e837640bf6119c66c223a5573b00d}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea499e837640bf6119c66c223a5573b00d}} 
+m\+\_\+liquid\+Concentration&Liquid concentration $ \Theta_l $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+solid\+Concentration@{m\+\_\+solid\+Concentration}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+solid\+Concentration@{m\+\_\+solid\+Concentration}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea8891566d5ce193de925ee9dba214443d}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea8891566d5ce193de925ee9dba214443d}} 
+m\+\_\+solid\+Concentration&Solid concentration $ \Theta_s $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+pressure@{m\+\_\+pressure}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+pressure@{m\+\_\+pressure}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea4b9e02d775ce01815fa6568250790fa8}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea4b9e02d775ce01815fa6568250790fa8}} 
+m\+\_\+pressure&Pressure used in the face centred projection $ \phi $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+permeability@{m\+\_\+permeability}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+permeability@{m\+\_\+permeability}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae7678ac7ed17857ec98c601e4b7e40fb}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae7678ac7ed17857ec98c601e4b7e40fb}} 
+m\+\_\+permeability&Permeability $ \Pi $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+viscosity@{m\+\_\+viscosity}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+viscosity@{m\+\_\+viscosity}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea8e3d952f9a635a721a3c64ad63298148}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea8e3d952f9a635a721a3c64ad63298148}} 
+m\+\_\+viscosity&Viscosity $ \nu $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+lambda@{m\+\_\+lambda}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+lambda@{m\+\_\+lambda}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feab2d2be92c8f455c80802325a8d2eeb8a}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feab2d2be92c8f455c80802325a8d2eeb8a}} 
+m\+\_\+lambda&Auxillary field lambda $ \lambda $ for computing the freestream correction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+lambda\+\_\+porosity@{m\+\_\+lambda\+\_\+porosity}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+lambda\+\_\+porosity@{m\+\_\+lambda\+\_\+porosity}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea088b5a2f2bea675309cac8149618c1d2}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea088b5a2f2bea675309cac8149618c1d2}} 
+m\+\_\+lambda\+\_\+porosity&$ \lambda / \chi $ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+enthalpy\+Solidus@{m\+\_\+enthalpy\+Solidus}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+enthalpy\+Solidus@{m\+\_\+enthalpy\+Solidus}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea41c489849179ea77a638379160b2c5b7}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea41c489849179ea77a638379160b2c5b7}} 
+m\+\_\+enthalpy\+Solidus&Solidus phase boundary, $ H_S $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+enthalpy\+Liquidus@{m\+\_\+enthalpy\+Liquidus}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+enthalpy\+Liquidus@{m\+\_\+enthalpy\+Liquidus}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feabf0c51a5d0d9c2b3436732e25b4bd81b}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feabf0c51a5d0d9c2b3436732e25b4bd81b}} 
+m\+\_\+enthalpy\+Liquidus&Liquidus phase boundary, $ H_L $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+enthalpy\+Eutectic@{m\+\_\+enthalpy\+Eutectic}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+enthalpy\+Eutectic@{m\+\_\+enthalpy\+Eutectic}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae0f97f4fbb75f996f81be27d03e5c2ae}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae0f97f4fbb75f996f81be27d03e5c2ae}} 
+m\+\_\+enthalpy\+Eutectic&Eutectic phase boundary, $ H_E $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+porosity\+Analytic@{m\+\_\+porosity\+Analytic}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+porosity\+Analytic@{m\+\_\+porosity\+Analytic}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea1c896191dec7251a9b28f3edaf3af4a3}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea1c896191dec7251a9b28f3edaf3af4a3}} 
+m\+\_\+porosity\+Analytic&Some analytically calculated porosity field $ \chi_{analytic} $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+temperature\+Analytic@{m\+\_\+temperature\+Analytic}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+temperature\+Analytic@{m\+\_\+temperature\+Analytic}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea5043f806f9db03a281f34b64e3000d87}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea5043f806f9db03a281f34b64e3000d87}} 
+m\+\_\+temperature\+Analytic&Some analytically calculated temperature field $ \theta_{analytic} $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+salt\+Eqn\+Src\+Godunov@{m\+\_\+salt\+Eqn\+Src\+Godunov}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+salt\+Eqn\+Src\+Godunov@{m\+\_\+salt\+Eqn\+Src\+Godunov}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea2066f8818ca4bd2c0e348d49681f92ae}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea2066f8818ca4bd2c0e348d49681f92ae}} 
+m\+\_\+salt\+Eqn\+Src\+Godunov&Explicit source term for the bulk concentration update. $ - \nabla \cdot \left( \mathbf{U} \Theta_l \right) - V \frac{\partial \Theta}{\partial z} $ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+\+Terr@{m\+\_\+\+Terr}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+\+Terr@{m\+\_\+\+Terr}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feafbcc173907b901d6125febe0019d2483}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feafbcc173907b901d6125febe0019d2483}} 
+m\+\_\+\+Terr&Computes $ \theta_{analytic} - \theta $ if required. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+enthalpy\+Src@{m\+\_\+enthalpy\+Src}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+enthalpy\+Src@{m\+\_\+enthalpy\+Src}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaaacd2b4646ffe61c3eec8783cc5f1ffe}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaaacd2b4646ffe61c3eec8783cc5f1ffe}} 
+m\+\_\+enthalpy\+Src&Explicit source term for the enthalpy update. $ - \nabla \cdot \left( \mathbf{U} \theta \right) - V \frac{\partial H}{\partial z} $ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+div\+Uadv@{m\+\_\+div\+Uadv}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+div\+Uadv@{m\+\_\+div\+Uadv}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea65a14f219744db523f7c0c18c30f1e62}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea65a14f219744db523f7c0c18c30f1e62}} 
+m\+\_\+div\+Uadv&Level divergence of the advection velocities $ \mathbf{U}_{AD} $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+d\+Hdt@{m\+\_\+d\+Hdt}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+d\+Hdt@{m\+\_\+d\+Hdt}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaf797808e9983981407208ff4d135a622}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaf797808e9983981407208ff4d135a622}} 
+m\+\_\+d\+Hdt&Rate of change of enthalpy with time $ \frac{\partial H}{\partial t} $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+d\+Sdt@{m\+\_\+d\+Sdt}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+d\+Sdt@{m\+\_\+d\+Sdt}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea361d1047f38132ae8aea866b48fce0da}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea361d1047f38132ae8aea866b48fce0da}} 
+m\+\_\+d\+Sdt&Rate of change of bulk concentration with time $ \frac{\partial \Theta}{\partial t} $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+average\+Vertical\+Flux@{m\+\_\+average\+Vertical\+Flux}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+average\+Vertical\+Flux@{m\+\_\+average\+Vertical\+Flux}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feab5111665103ec87d4a1d8d8270ac6d42}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feab5111665103ec87d4a1d8d8270ac6d42}} 
+m\+\_\+average\+Vertical\+Flux&Horizontally averaged vertical solute flux. $ \int_0^L \mathbf{F}_s \cdot \mathbf{z} dx $ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+solute\+Flux\+Analytic@{m\+\_\+solute\+Flux\+Analytic}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+solute\+Flux\+Analytic@{m\+\_\+solute\+Flux\+Analytic}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae5fb749555308e3da2316a3a91813af7}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feae5fb749555308e3da2316a3a91813af7}} 
+m\+\_\+solute\+Flux\+Analytic&Analytic solute flux for test problems. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+vertical\+Flux@{m\+\_\+vertical\+Flux}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+vertical\+Flux@{m\+\_\+vertical\+Flux}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea85b90abc67a4d8ff117b913e9f738ee8}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea85b90abc67a4d8ff117b913e9f738ee8}} 
+m\+\_\+vertical\+Flux&Vertical component of the solute flux $ \mathbf{F}_s \cdot \mathbf{z} $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+divU@{m\+\_\+divU}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+divU@{m\+\_\+divU}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea5e9e724b07b87e4ab5f654f317d0d064}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea5e9e724b07b87e4ab5f654f317d0d064}} 
+m\+\_\+divU&Level divergence of the cell centred velocity field $ \nabla \cdot \mathbf{U} $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+average\+Heat\+Flux@{m\+\_\+average\+Heat\+Flux}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+average\+Heat\+Flux@{m\+\_\+average\+Heat\+Flux}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea9f4326270494ebd8e949dcbde608ea77}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea9f4326270494ebd8e949dcbde608ea77}} 
+m\+\_\+average\+Heat\+Flux&Horizontally averaged vertical heat flux. $ \int_0^L \mathbf{F}_H \cdot \mathbf{z} dx $ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+streamfunction@{m\+\_\+streamfunction}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+streamfunction@{m\+\_\+streamfunction}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea02ce59a46dbdd022a31c3bcc2f003472}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea02ce59a46dbdd022a31c3bcc2f003472}} 
+m\+\_\+streamfunction&Streamfunction $ \psi $ (if calculated ad hoc during post processing) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+vorticity@{m\+\_\+vorticity}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+vorticity@{m\+\_\+vorticity}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaefc051678347657d07879a690bc01ab0}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaefc051678347657d07879a690bc01ab0}} 
+m\+\_\+vorticity&Vorticity $ \omega $ (if calculated ad hoc during post processing) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+pi@{m\+\_\+pi}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+pi@{m\+\_\+pi}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea50e0c2eba153cc739350b337c6a41cca}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea50e0c2eba153cc739350b337c6a41cca}} 
+m\+\_\+pi&Pressure calculated in face-\/centred projection $ \pi $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+phi@{m\+\_\+phi}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+phi@{m\+\_\+phi}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaa5690b7d4f90193580fe8c95f7dea7f3}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaa5690b7d4f90193580fe8c95f7dea7f3}} 
+m\+\_\+phi&Pressure calculated in cell-\/centred projection $ \phi $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+\+M\+A\+C\+BC@{m\+\_\+\+M\+A\+C\+BC}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+\+M\+A\+C\+BC@{m\+\_\+\+M\+A\+C\+BC}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea14e73fadfbc93400c01b81a26ba13ff5}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea14e73fadfbc93400c01b81a26ba13ff5}} 
+m\+\_\+\+M\+A\+C\+BC&Coarse-\/fine boundary condition used in the face-\/centred projection. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+\+M\+A\+Crhs@{m\+\_\+\+M\+A\+Crhs}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+\+M\+A\+Crhs@{m\+\_\+\+M\+A\+Crhs}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea662a7ffa4f458ed31e76f16ee63ae122}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea662a7ffa4f458ed31e76f16ee63ae122}} 
+m\+\_\+\+M\+A\+Crhs&Right hand side for the face-\/centred projection solve, $ \nabla \cdot \mathbf{U}_f $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+\+C\+Crhs@{m\+\_\+\+C\+Crhs}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+\+C\+Crhs@{m\+\_\+\+C\+Crhs}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaeeea11e6b6c633d30e54b6328b66268d}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaeeea11e6b6c633d30e54b6328b66268d}} 
+m\+\_\+\+C\+Crhs&Right hand side for the face-\/centred projection solve, $ \nabla \cdot \mathbf{U} $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+passive\+Scalar@{m\+\_\+passive\+Scalar}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+passive\+Scalar@{m\+\_\+passive\+Scalar}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea72bde2fc88a76859f088436857cdd4d0}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea72bde2fc88a76859f088436857cdd4d0}} 
+m\+\_\+passive\+Scalar&Passive scalar advcted by flow. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+active\+Scalar@{m\+\_\+active\+Scalar}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+active\+Scalar@{m\+\_\+active\+Scalar}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fead7da5e5f39a4b4f8bcf84eb639438ed3}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fead7da5e5f39a4b4f8bcf84eb639438ed3}} 
+m\+\_\+active\+Scalar&Active scalar which is advected and also has sources/sinks. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+light\+Intensity@{m\+\_\+light\+Intensity}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+light\+Intensity@{m\+\_\+light\+Intensity}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaf192d2dab073b1eabfb0de906ebada1b}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191feaf192d2dab073b1eabfb0de906ebada1b}} 
+m\+\_\+light\+Intensity&Intensity of radiation from the surface. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+num\+Scalar\+Vars@{m\+\_\+num\+Scalar\+Vars}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+num\+Scalar\+Vars@{m\+\_\+num\+Scalar\+Vars}}}\mbox{\Hypertarget{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea83db32f5839575c9d7812f3cd0727d07}\label{mushy_layer_opt_8h_afcada9fb65a998951da882b5c10191fea83db32f5839575c9d7812f3cd0727d07}} 
+m\+\_\+num\+Scalar\+Vars&Number of scalars variables. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71c}\label{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71c}} 
+\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Tagging\+Method@{Tagging\+Method}}
+\index{Tagging\+Method@{Tagging\+Method}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}
+\subsubsection{\texorpdfstring{Tagging\+Method}{TaggingMethod}}
+{\footnotesize\ttfamily enum \hyperlink{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71c}{Tagging\+Method}}
+
+
+
+Strategy for tagging cells. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undivided\+Gradient@{Undivided\+Gradient}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Undivided\+Gradient@{Undivided\+Gradient}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71ca8ca28a50b03017f42e0e676ce4ef6f4a}\label{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71ca8ca28a50b03017f42e0e676ce4ef6f4a}} 
+Undivided\+Gradient&Tag where the undivided gradient of some field is bigger than some value. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Magnitude@{Magnitude}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Magnitude@{Magnitude}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71ca336a41a665e98d8d074a17e9c8acef80}\label{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71ca336a41a665e98d8d074a17e9c8acef80}} 
+Magnitude&Tag where the magnitude of some field is bigger than some values. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Compare\+Larger\+Than@{Compare\+Larger\+Than}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Compare\+Larger\+Than@{Compare\+Larger\+Than}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71cab0cc265f5c806f935ed783690e474279}\label{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71cab0cc265f5c806f935ed783690e474279}} 
+Compare\+Larger\+Than&Tag where the value of some field is larger than some criteria. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Compare\+Larger\+Than\+Negative@{Compare\+Larger\+Than\+Negative}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Compare\+Larger\+Than\+Negative@{Compare\+Larger\+Than\+Negative}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71ca71fef04c7952c08dbfb3e1a42b7ff2a9}\label{mushy_layer_opt_8h_ab82ea28e90e93c3551db99693337d71ca71fef04c7952c08dbfb3e1a42b7ff2a9}} 
+Compare\+Larger\+Than\+Negative&Tag where the value of some field multiplied by -\/1 is larger than some criteria. Alternatively, can think of this as when some field is smaller than some criteria. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520}\label{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520}} 
+\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!Vector\+Vars@{Vector\+Vars}}
+\index{Vector\+Vars@{Vector\+Vars}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}
+\subsubsection{\texorpdfstring{Vector\+Vars}{VectorVars}}
+{\footnotesize\ttfamily enum \hyperlink{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520}{Vector\+Vars}}
+
+
+
+Cell centred vector field. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+fluid\+Vel@{m\+\_\+fluid\+Vel}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+fluid\+Vel@{m\+\_\+fluid\+Vel}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520acf6d7a2aa6c1a2f3364026a389b3b685}\label{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520acf6d7a2aa6c1a2f3364026a389b3b685}} 
+m\+\_\+fluid\+Vel&Cell centred fluid velocity, $ \mathbf{U} $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+\+U\+\_\+porosity@{m\+\_\+\+U\+\_\+porosity}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+\+U\+\_\+porosity@{m\+\_\+\+U\+\_\+porosity}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a20cf6f7f84174b72c0c38bca9b6a3923}\label{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a20cf6f7f84174b72c0c38bca9b6a3923}} 
+m\+\_\+\+U\+\_\+porosity&Fluid velocity divided by porosity, $ \mathbf{U}/\chi $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+\+Ustar@{m\+\_\+\+Ustar}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+\+Ustar@{m\+\_\+\+Ustar}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520afa0ca2559f0ecde5d29f20153811d6ec}\label{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520afa0ca2559f0ecde5d29f20153811d6ec}} 
+m\+\_\+\+Ustar&Unprojected cell centred fluid velocity, $ \mathbf{U}^* $. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+adv\+Ustar@{m\+\_\+adv\+Ustar}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+adv\+Ustar@{m\+\_\+adv\+Ustar}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520ad6649dc770bf43bd56aa13dfcdac3ab7}\label{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520ad6649dc770bf43bd56aa13dfcdac3ab7}} 
+m\+\_\+adv\+Ustar&Unprojected face centred fluid velocity, as used for advection, which has been averaged to cell centres. $ {Av}^{F \to C} \mathbf{U}_f $ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+advection\+Vel@{m\+\_\+advection\+Vel}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+advection\+Vel@{m\+\_\+advection\+Vel}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a86e65099848dee1fdd6ed56753f2841b}\label{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a86e65099848dee1fdd6ed56753f2841b}} 
+m\+\_\+advection\+Vel&Face centred fluid velocity, as used for advection, which has been averaged to cell centres. $ {Av}^{F \to C} \mathbf{U}_{AD} $ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+\+UdelU@{m\+\_\+\+UdelU}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+\+UdelU@{m\+\_\+\+UdelU}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520ac48a17ab64863292eddd6ae5a81aa592}\label{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520ac48a17ab64863292eddd6ae5a81aa592}} 
+m\+\_\+\+UdelU&Inertial term $ \mathbf{U} \cdot \nabla \left( \mathbf{U} / \chi \right)$. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+advection\+Src@{m\+\_\+advection\+Src}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+advection\+Src@{m\+\_\+advection\+Src}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a2b9a89ac8acc3c4c491f890d54d12fd1}\label{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a2b9a89ac8acc3c4c491f890d54d12fd1}} 
+m\+\_\+advection\+Src&Source term for the velocity advection. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+num\+Vector\+Vars@{m\+\_\+num\+Vector\+Vars}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+num\+Vector\+Vars@{m\+\_\+num\+Vector\+Vars}}}\mbox{\Hypertarget{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a0bc95e626dcdeae398d6bb728b28578f}\label{mushy_layer_opt_8h_ad67b5b87e24a070e739a68078dcb7520a0bc95e626dcdeae398d6bb728b28578f}} 
+m\+\_\+num\+Vector\+Vars&Number of vector variables. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6}\label{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6}} 
+\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!velocity\+Advection\+Types@{velocity\+Advection\+Types}}
+\index{velocity\+Advection\+Types@{velocity\+Advection\+Types}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}
+\subsubsection{\texorpdfstring{velocity\+Advection\+Types}{velocityAdvectionTypes}}
+{\footnotesize\ttfamily enum \hyperlink{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6}{velocity\+Advection\+Types}}
+
+
+
+Options for handling advection velocities, where S is the source term. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+porosity\+In\+Advection@{m\+\_\+porosity\+In\+Advection}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+porosity\+In\+Advection@{m\+\_\+porosity\+In\+Advection}}}\mbox{\Hypertarget{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6a777faf55ad27831bcd10eb6608ef7fc0}\label{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6a777faf55ad27831bcd10eb6608ef7fc0}} 
+m\+\_\+porosity\+In\+Advection&solve $ \frac{\partial (\mathbf{u}/\chi)}{\partial t} + (u/porosity) \cdot \nabla (u/porosity) = S/porosity (-(u/porosity^2)dporosity/dt) $ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+porosity\+Outside\+Advection@{m\+\_\+porosity\+Outside\+Advection}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+porosity\+Outside\+Advection@{m\+\_\+porosity\+Outside\+Advection}}}\mbox{\Hypertarget{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6a86328a35ac1c82bbf2b41beb3e293607}\label{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6a86328a35ac1c82bbf2b41beb3e293607}} 
+m\+\_\+porosity\+Outside\+Advection&solve du/dt + (u/porosity).grad(u) = S + (u.\+grad(porosity)/porosity$^\wedge$2)u \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+no\+Porosity@{m\+\_\+no\+Porosity}!mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}}\index{mushy\+Layer\+Opt.\+h@{mushy\+Layer\+Opt.\+h}!m\+\_\+no\+Porosity@{m\+\_\+no\+Porosity}}}\mbox{\Hypertarget{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6a186c5cf0376bd3a55fc374525d7112f4}\label{mushy_layer_opt_8h_a42c926e6b1363d4c5b151bbac3494fc6a186c5cf0376bd3a55fc374525d7112f4}} 
+m\+\_\+no\+Porosity&solve du/dt + u.\+grad(u) = S \\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,467 @@
+\hypertarget{class_projector}{}\section{Projector Class Reference}
+\label{class_projector}\index{Projector@{Projector}}
+
+
+this class manages the various forms of the projection  
+
+
+
+
+{\ttfamily \#include $<$Projector.\+H$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_projector_ae63e4c28ef37e033c1d7eec1252461ef}\label{class_projector_ae63e4c28ef37e033c1d7eec1252461ef}} 
+\hyperlink{class_projector_ae63e4c28ef37e033c1d7eec1252461ef}{Projector} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ae09d7fe04293bb74f2474083ecdd3ef4}\label{class_projector_ae09d7fe04293bb74f2474083ecdd3ef4}} 
+\hyperlink{class_projector_ae09d7fe04293bb74f2474083ecdd3ef4}{Projector} (const \textbf{ Disjoint\+Box\+Layout} \&a\+\_\+grids, const \textbf{ Disjoint\+Box\+Layout} $\ast$a\+\_\+crse\+Grids\+Ptr, const \textbf{ Box} \&a\+\_\+domain, const \textbf{ Real} a\+\_\+dx, \hyperlink{class_projector}{Projector} $\ast$a\+\_\+finer\+Proj, \hyperlink{class_projector}{Projector} $\ast$a\+\_\+crse\+Proj, int a\+\_\+n\+Ref\+Crse, int a\+\_\+level, \hyperlink{class_phys_b_c_util}{Phys\+B\+C\+Util} \&a\+\_\+phys\+BC)
+\begin{DoxyCompactList}\small\item\em full constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a8bae1546100678aeb49649aee7be825f}\label{class_projector_a8bae1546100678aeb49649aee7be825f}} 
+\hyperlink{class_projector_a8bae1546100678aeb49649aee7be825f}{Projector} (const \textbf{ Disjoint\+Box\+Layout} \&a\+\_\+grids, const \textbf{ Disjoint\+Box\+Layout} $\ast$a\+\_\+crse\+Grids\+Ptr, const \textbf{ Problem\+Domain} \&a\+\_\+domain, const \textbf{ Real} a\+\_\+dx, \hyperlink{class_projector}{Projector} $\ast$a\+\_\+finer\+Proj, \hyperlink{class_projector}{Projector} $\ast$a\+\_\+crse\+Proj, int a\+\_\+n\+Ref\+Crse, int a\+\_\+level, \hyperlink{class_phys_b_c_util}{Phys\+B\+C\+Util} \&a\+\_\+phys\+BC)
+\begin{DoxyCompactList}\small\item\em full constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a064aa6bfcee589711f44874c41d32968}\label{class_projector_a064aa6bfcee589711f44874c41d32968}} 
+void \hyperlink{class_projector_a064aa6bfcee589711f44874c41d32968}{copy\+Pressure} (\hyperlink{class_projector}{Projector} \&a\+\_\+proj)
+\begin{DoxyCompactList}\small\item\em Copy pressure from another projection object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a63a157fecdf3b981c1d3eca83f04429c}\label{class_projector_a63a157fecdf3b981c1d3eca83f04429c}} 
+void \hyperlink{class_projector_a63a157fecdf3b981c1d3eca83f04429c}{rescale\+Pressure} (\textbf{ Real} a\+\_\+old\+Dt, \textbf{ Real} a\+\_\+new\+Dt)
+\begin{DoxyCompactList}\small\item\em May need to rescale pressures after changing the timestep? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a24513cbefdcc21dc3dec3ff76f7483b4}\label{class_projector_a24513cbefdcc21dc3dec3ff76f7483b4}} 
+\hyperlink{class_projector_a24513cbefdcc21dc3dec3ff76f7483b4}{$\sim$\+Projector} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a2f884ed717e774460d0de351a8daf3c8}\label{class_projector_a2f884ed717e774460d0de351a8daf3c8}} 
+void \hyperlink{class_projector_a2f884ed717e774460d0de351a8daf3c8}{define} (const \textbf{ Disjoint\+Box\+Layout} \&a\+\_\+grids, const \textbf{ Disjoint\+Box\+Layout} $\ast$a\+\_\+crse\+Grids\+Ptr, const \textbf{ Box} \&a\+\_\+domain, const \textbf{ Real} a\+\_\+dx, \hyperlink{class_projector}{Projector} $\ast$a\+\_\+finer\+Proj, \hyperlink{class_projector}{Projector} $\ast$a\+\_\+crse\+Proj, int a\+\_\+n\+Ref\+Crse, int a\+\_\+level, \hyperlink{class_phys_b_c_util}{Phys\+B\+C\+Util} \&a\+\_\+phys\+BC, bool a\+\_\+use\+Pi\+Advection\+B\+Cs=true)
+\begin{DoxyCompactList}\small\item\em define function \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a3749cb76ce7aee935cd62e2f3003993d}\label{class_projector_a3749cb76ce7aee935cd62e2f3003993d}} 
+void \hyperlink{class_projector_a3749cb76ce7aee935cd62e2f3003993d}{define} (const \textbf{ Disjoint\+Box\+Layout} \&a\+\_\+grids, const \textbf{ Disjoint\+Box\+Layout} $\ast$a\+\_\+crse\+Grids\+Ptr, const \textbf{ Problem\+Domain} \&a\+\_\+domain, const \textbf{ Real} a\+\_\+dx, \hyperlink{class_projector}{Projector} $\ast$a\+\_\+finer\+Proj, \hyperlink{class_projector}{Projector} $\ast$a\+\_\+crse\+Proj, int a\+\_\+n\+Ref\+Crse, int a\+\_\+level, \hyperlink{class_phys_b_c_util}{Phys\+B\+C\+Util} \&a\+\_\+phys\+BC, bool a\+\_\+use\+Pi\+Advection\+B\+Cs=true)
+\begin{DoxyCompactList}\small\item\em define function \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a271c94f164d08cf5e220e3e5fbcd9725}\label{class_projector_a271c94f164d08cf5e220e3e5fbcd9725}} 
+void \hyperlink{class_projector_a271c94f164d08cf5e220e3e5fbcd9725}{init} (const \hyperlink{class_projector}{Projector} \&a\+\_\+old\+Proj)
+\begin{DoxyCompactList}\small\item\em initialize new projection with data from old projection \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a29ae6c2bf314d8f4a3edc801ec56036f}\label{class_projector_a29ae6c2bf314d8f4a3edc801ec56036f}} 
+void \hyperlink{class_projector_a29ae6c2bf314d8f4a3edc801ec56036f}{variable\+Set\+Up} ()
+\begin{DoxyCompactList}\small\item\em define static parts \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_aff8434c93bc06d73e50894edf3170b9f}\label{class_projector_aff8434c93bc06d73e50894edf3170b9f}} 
+void \hyperlink{class_projector_aff8434c93bc06d73e50894edf3170b9f}{set\+Crse\+Proj} (\hyperlink{class_projector}{Projector} $\ast$a\+\_\+crse\+Proj, int \hyperlink{class_projector_ad602a3f4c02994971e2bffd71cbb5ba0}{n\+Ref\+Crse})
+\begin{DoxyCompactList}\small\item\em set coarse projection operator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_aafcccb9f646a75efa56c32c83e1a41c1}\label{class_projector_aafcccb9f646a75efa56c32c83e1a41c1}} 
+void \hyperlink{class_projector_aafcccb9f646a75efa56c32c83e1a41c1}{set\+Fine\+Proj} (\hyperlink{class_projector}{Projector} $\ast$a\+\_\+fine\+Proj)
+\begin{DoxyCompactList}\small\item\em set fine projection operator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a63b3df702c2b7993e4e9ae0e00bf59fa}\label{class_projector_a63b3df702c2b7993e4e9ae0e00bf59fa}} 
+void \hyperlink{class_projector_a63b3df702c2b7993e4e9ae0e00bf59fa}{scale\+Pwith\+Porosity} (bool a\+\_\+scale\+Pwith\+Porosity)
+\begin{DoxyCompactList}\small\item\em set whether to scale pressure with porosity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ada6c530003a482cac3285f0972961584}\label{class_projector_ada6c530003a482cac3285f0972961584}} 
+void \hyperlink{class_projector_ada6c530003a482cac3285f0972961584}{limit\+Solver\+Coarsening} (bool a\+\_\+limit\+Solver\+Coarsening)
+\begin{DoxyCompactList}\small\item\em set solver parameter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a10669de3b347ecc904938bfeda3fd70c}\label{class_projector_a10669de3b347ecc904938bfeda3fd70c}} 
+void \hyperlink{class_projector_a10669de3b347ecc904938bfeda3fd70c}{write\+Checkpoint\+Header} (\textbf{ H\+D\+F5\+Handle} \&a\+\_\+handle) const
+\begin{DoxyCompactList}\small\item\em write checkpoint header \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a6c52b70f83d8f0c416ea16b81d63a50b}\label{class_projector_a6c52b70f83d8f0c416ea16b81d63a50b}} 
+void \hyperlink{class_projector_a6c52b70f83d8f0c416ea16b81d63a50b}{write\+Checkpoint\+Level} (\textbf{ H\+D\+F5\+Handle} \&a\+\_\+handle) const
+\begin{DoxyCompactList}\small\item\em write this class to a checkpoint file for later restart \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a26da7130c9aad23dd28488c305a8211c}\label{class_projector_a26da7130c9aad23dd28488c305a8211c}} 
+void \hyperlink{class_projector_a26da7130c9aad23dd28488c305a8211c}{read\+Checkpoint\+Header} (\textbf{ H\+D\+F5\+Handle} \&a\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em read the checkpoint header \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_aab6a24828bcc051259ecf12136395e55}\label{class_projector_aab6a24828bcc051259ecf12136395e55}} 
+void \hyperlink{class_projector_aab6a24828bcc051259ecf12136395e55}{read\+Checkpoint\+Level} (\textbf{ H\+D\+F5\+Handle} \&a\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em read this class from a checkpoint file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_aec36d09f7af52f4392aec78bbd865d1d}\label{class_projector_aec36d09f7af52f4392aec78bbd865d1d}} 
+int \hyperlink{class_projector_aec36d09f7af52f4392aec78bbd865d1d}{level\+Mac\+Project} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&u\+Edge, \textbf{ Real} a\+\_\+old\+Time, \textbf{ Real} a\+\_\+dt, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+porosity\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+crse\+Porosity\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+porosity\+Edge\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+crse\+Porosity\+Edge\+Ptr)
+\begin{DoxyCompactList}\small\item\em do level M\+AC projection, correct u\+Edge. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_projector_a87058c308a90f992ce88a668a65a1a79}{get\+Phi\+Scale} (\textbf{ Real} a\+\_\+dt)
+\begin{DoxyCompactList}\small\item\em Scale for $ \phi $. \end{DoxyCompactList}\item 
+void \hyperlink{class_projector_ad063e890cdab51aa662c02fc8137cc49}{check\+Divergence} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+u\+Edge)
+\begin{DoxyCompactList}\small\item\em Check if the divergence of the velocity is sufficiently small. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_acefbf42b8eeba92e70773f49a59b138f}\label{class_projector_acefbf42b8eeba92e70773f49a59b138f}} 
+\textbf{ Real} \hyperlink{class_projector_acefbf42b8eeba92e70773f49a59b138f}{get\+Scale} (\textbf{ Real} a\+\_\+scale, \textbf{ Real} a\+\_\+dt)
+\begin{DoxyCompactList}\small\item\em Return the scale for $ \phi $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a04cd23cb859525e30ae28aa4b8c0de22}\label{class_projector_a04cd23cb859525e30ae28aa4b8c0de22}} 
+void \hyperlink{class_projector_a04cd23cb859525e30ae28aa4b8c0de22}{set\+Non\+Subcycled\+M\+A\+C\+B\+Cs} ()
+\begin{DoxyCompactList}\small\item\em Set up for nonsubcycled solves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a9ce7020803aef876be472bff56871019}\label{class_projector_a9ce7020803aef876be472bff56871019}} 
+void \hyperlink{class_projector_a9ce7020803aef876be472bff56871019}{set\+Subcycled\+M\+A\+C\+B\+Cs} ()
+\begin{DoxyCompactList}\small\item\em Set up for subcycled solves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a0879082fa81c4a63cfc018b0fdd55d91}\label{class_projector_a0879082fa81c4a63cfc018b0fdd55d91}} 
+int \hyperlink{class_projector_a0879082fa81c4a63cfc018b0fdd55d91}{level\+Mac\+Project} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+u\+Edge, \textbf{ Real} a\+\_\+dt, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+crse\+Pressure\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+porosity\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+crse\+Porosity\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+porosity\+Edge\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+crse\+Porosity\+Edge\+Ptr, bool alreadyhas\+Phi=false, \textbf{ Real} correct\+Scale=1.\+0)
+\begin{DoxyCompactList}\small\item\em Projection function that let\textquotesingle{}s user specify pressure coarse fine boundary condition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a1c9b0e5180fdb560c77a242eceb1e76c}\label{class_projector_a1c9b0e5180fdb560c77a242eceb1e76c}} 
+void \hyperlink{class_projector_a1c9b0e5180fdb560c77a242eceb1e76c}{get\+C\+F\+BC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&crse\+Vel\+Ptr, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+crse\+Vel\+Ptr, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+crse\+Porosity\+Ptr, \textbf{ Real} a\+\_\+dt)
+\begin{DoxyCompactList}\small\item\em Get the boundary condition on internal (coarse-\/fine) boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a5f55153d654433b1ac89f831c91925a0}\label{class_projector_a5f55153d654433b1ac89f831c91925a0}} 
+void \hyperlink{class_projector_a5f55153d654433b1ac89f831c91925a0}{set\+Pressure\+Scale\+Ptr} (\textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+pressure\+Scale\+Ptr)
+\begin{DoxyCompactList}\small\item\em Set pointer to the pressure scaling factor (cell centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a9e6d2eacd1d226780b5bb89023ba8880}\label{class_projector_a9e6d2eacd1d226780b5bb89023ba8880}} 
+void \hyperlink{class_projector_a9e6d2eacd1d226780b5bb89023ba8880}{set\+Pressure\+Scale\+Edge\+Ptr} (\textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+pressure\+Scale\+Edge\+Ptr)
+\begin{DoxyCompactList}\small\item\em Set pointer to the pressure scaling factor (face centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a7d7b82061bdc9a32f73a214202625ab3}\label{class_projector_a7d7b82061bdc9a32f73a214202625ab3}} 
+void \hyperlink{class_projector_a7d7b82061bdc9a32f73a214202625ab3}{scale\+R\+HS} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs, \textbf{ Real} a\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Refactored to use in implicit M\+AC solve. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a1a30fbdcd32859f694c6189e9557c552}\label{class_projector_a1a30fbdcd32859f694c6189e9557c552}} 
+void \hyperlink{class_projector_a1a30fbdcd32859f694c6189e9557c552}{Level\+Project} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+velocity, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+crse\+Vel\+Ptr, const \textbf{ Real} a\+\_\+new\+Time, const \textbf{ Real} a\+\_\+dt, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+porosity\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+crse\+Porosity\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+porosity\+Edge\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+crse\+Porosity\+Edge\+Ptr, const bool a\+\_\+is\+Viscous)
+\begin{DoxyCompactList}\small\item\em do level projection and correct (cell-\/centered) velocities; \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ac67669184dc9e3af633cda1dfbb83a69}\label{class_projector_ac67669184dc9e3af633cda1dfbb83a69}} 
+void \hyperlink{class_projector_ac67669184dc9e3af633cda1dfbb83a69}{Additional\+Level\+Project} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+velocity, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+crse\+Vel\+Ptr, const \textbf{ Real} a\+\_\+new\+Time, const \textbf{ Real} a\+\_\+dt, const bool a\+\_\+is\+Viscous)
+\begin{DoxyCompactList}\small\item\em For doing a further (constant coefficient) projection. \end{DoxyCompactList}\item 
+void \hyperlink{class_projector_a0e127be31f7058f463334ba5c40eaef5}{do\+Sync\+Operations} (\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+velocity, \textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+lambda, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&a\+\_\+porosity\+Face, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+porosity, const \textbf{ Real} a\+\_\+new\+Time, const \textbf{ Real} a\+\_\+dt\+Sync)
+\begin{DoxyCompactList}\small\item\em do synchronisation operations \end{DoxyCompactList}\item 
+void \hyperlink{class_projector_a4bacdf13f2e4a10653e04042bef587f6}{initial\+Level\+Project} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+velocity, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+crse\+Vel\+Ptr, const \textbf{ Real} a\+\_\+old\+Time, const \textbf{ Real} a\+\_\+new\+Time, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+porosity\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+crse\+Porosity\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+porosity\+Edge\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+crse\+Porosity\+Edge\+Ptr)
+\begin{DoxyCompactList}\small\item\em Initialization functions. \end{DoxyCompactList}\item 
+void \hyperlink{class_projector_a09145be377ec504e0412ce78207448fe}{do\+Initial\+Sync\+Operations} (\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+vel, \textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+lambda, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&a\+\_\+porosity\+Face, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+porosity, const \textbf{ Real} a\+\_\+new\+Time, const \textbf{ Real} a\+\_\+dt\+Sync)
+\item 
+void \hyperlink{class_projector_ad4afeedf8d3cbac3778b4952aa967be2}{initial\+Velocity\+Project} (\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+velocity, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&a\+\_\+porosity\+Face, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+porosity, bool a\+\_\+homogeneous\+C\+F\+BC=true)
+\begin{DoxyCompactList}\small\item\em performs multilevel projection on velocity, modifies velocity in place \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a753d3c89f627a92931da16de08af9587}\label{class_projector_a753d3c89f627a92931da16de08af9587}} 
+void \hyperlink{class_projector_a753d3c89f627a92931da16de08af9587}{initial\+Velocity\+Project} (\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+velocity, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+porosity, \textbf{ A\+M\+R\+Multi\+Grid}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \&a\+\_\+solver, bool a\+\_\+homogeneous\+C\+F\+BC=true)
+\begin{DoxyCompactList}\small\item\em same as other initial\+Velocity\+Project, but uses a pre-\/defined A\+M\+R\+Solver \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ac94969d447d694e5a6e6fd4ddf23dacb}\label{class_projector_ac94969d447d694e5a6e6fd4ddf23dacb}} 
+void \hyperlink{class_projector_ac94969d447d694e5a6e6fd4ddf23dacb}{do\+Post\+Regrid\+Ops} (\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+lambda, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&a\+\_\+porosity, const \textbf{ Real} a\+\_\+dt, const \textbf{ Real} a\+\_\+time, const \textbf{ Real} a\+\_\+eta\+Scale=1.\+0)
+\begin{DoxyCompactList}\small\item\em performs the necessary re-\/initialization after regridding \end{DoxyCompactList}\item 
+int \hyperlink{class_projector_aa7f8e7fa6873b1972dbaf7458f3af71d}{get\+Level} () const
+\begin{DoxyCompactList}\small\item\em access functions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ae0e798308e9b38472172696b390ca876}\label{class_projector_ae0e798308e9b38472172696b390ca876}} 
+const \textbf{ Problem\+Domain} \& \hyperlink{class_projector_ae0e798308e9b38472172696b390ca876}{d\+Problem} () const
+\begin{DoxyCompactList}\small\item\em get the problem domain \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a139b4c4a107978be04259f436af16b65}\label{class_projector_a139b4c4a107978be04259f436af16b65}} 
+const \textbf{ Disjoint\+Box\+Layout} \& \hyperlink{class_projector_a139b4c4a107978be04259f436af16b65}{get\+Boxes} () const
+\begin{DoxyCompactList}\small\item\em get the \textbf{ Disjoint\+Box\+Layout} for this projection operator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ad602a3f4c02994971e2bffd71cbb5ba0}\label{class_projector_ad602a3f4c02994971e2bffd71cbb5ba0}} 
+int \hyperlink{class_projector_ad602a3f4c02994971e2bffd71cbb5ba0}{n\+Ref\+Crse} () const
+\begin{DoxyCompactList}\small\item\em get the refinement ratio to the coarser level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a84cae9538d1fb0cc3fca902a799d5e9d}\label{class_projector_a84cae9538d1fb0cc3fca902a799d5e9d}} 
+\textbf{ Real} \hyperlink{class_projector_a84cae9538d1fb0cc3fca902a799d5e9d}{dx} () const
+\begin{DoxyCompactList}\small\item\em get the cell spacing \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a3f98f84a909efe50397f1e58e21c3db9}\label{class_projector_a3f98f84a909efe50397f1e58e21c3db9}} 
+\textbf{ Real} \hyperlink{class_projector_a3f98f84a909efe50397f1e58e21c3db9}{eta\+Lambda} () const
+\begin{DoxyCompactList}\small\item\em returns coefficient for volume-\/discrepancy solve. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ac56d963da35eaead061ee441c2667370}\label{class_projector_ac56d963da35eaead061ee441c2667370}} 
+void \hyperlink{class_projector_ac56d963da35eaead061ee441c2667370}{eta\+Lambda} (\textbf{ Real} a\+\_\+eta)
+\begin{DoxyCompactList}\small\item\em We may want to change the value of $ \eta $ during a simulation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ae65d01b87c70cca4206bd00590ad2154}\label{class_projector_ae65d01b87c70cca4206bd00590ad2154}} 
+\hyperlink{class_projector}{Projector} $\ast$ \hyperlink{class_projector_ae65d01b87c70cca4206bd00590ad2154}{fine\+Proj\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em pointer to fine projection operator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a288075033d467acad9d816b08ff7ad8a}\label{class_projector_a288075033d467acad9d816b08ff7ad8a}} 
+\hyperlink{class_projector}{Projector} $\ast$ \hyperlink{class_projector_a288075033d467acad9d816b08ff7ad8a}{crse\+Proj\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em pointer to coarse projection operator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a5b1dba855fe2bce8766a4e0e09f15dd0}\label{class_projector_a5b1dba855fe2bce8766a4e0e09f15dd0}} 
+\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \& \hyperlink{class_projector_a5b1dba855fe2bce8766a4e0e09f15dd0}{phi} ()
+\begin{DoxyCompactList}\small\item\em returns M\+AC correction \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a8ccfb169a91c1def065977e944cc1727}\label{class_projector_a8ccfb169a91c1def065977e944cc1727}} 
+void \hyperlink{class_projector_a8ccfb169a91c1def065977e944cc1727}{get\+Phi} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi)
+\begin{DoxyCompactList}\small\item\em Get $ \phi $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ad5e4d77e887b9a05fc31369c105f8518}\label{class_projector_ad5e4d77e887b9a05fc31369c105f8518}} 
+const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \& \hyperlink{class_projector_ad5e4d77e887b9a05fc31369c105f8518}{phi} () const
+\begin{DoxyCompactList}\small\item\em const version of accessor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a729e591ff64a078b5a4602447603f974}\label{class_projector_a729e591ff64a078b5a4602447603f974}} 
+void \hyperlink{class_projector_a729e591ff64a078b5a4602447603f974}{grad\+Phi} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad\+Phi, int a\+\_\+dir) const
+\begin{DoxyCompactList}\small\item\em returns edge-\/centered grad(phi) in direction dir \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a488492af7d2aca796610a7e7cf836263}\label{class_projector_a488492af7d2aca796610a7e7cf836263}} 
+void \hyperlink{class_projector_a488492af7d2aca796610a7e7cf836263}{grad\+Phi} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+grad\+Phi) const
+\begin{DoxyCompactList}\small\item\em returns all components of grad(phi) (grad\+Phi should be correct size) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_aa5da43cdd9b4e8c56835ac9a3ba582c9}\label{class_projector_aa5da43cdd9b4e8c56835ac9a3ba582c9}} 
+\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \& \hyperlink{class_projector_aa5da43cdd9b4e8c56835ac9a3ba582c9}{Pi} ()
+\begin{DoxyCompactList}\small\item\em returns level-\/projection pressure \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ae27ef8f42b654c28d9d2a2e88d67bf37}\label{class_projector_ae27ef8f42b654c28d9d2a2e88d67bf37}} 
+\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \& \hyperlink{class_projector_ae27ef8f42b654c28d9d2a2e88d67bf37}{C\+Crhs} ()
+\begin{DoxyCompactList}\small\item\em R\+HS for projection, i.\+e. $ \nabla \cdot \mathbf{U}^* $ (cell centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a34940ed1f5599a8d7d8dd518bf41c3f8}\label{class_projector_a34940ed1f5599a8d7d8dd518bf41c3f8}} 
+\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \& \hyperlink{class_projector_a34940ed1f5599a8d7d8dd518bf41c3f8}{M\+A\+Crhs} ()
+\begin{DoxyCompactList}\small\item\em R\+HS for projection solve, i.\+e. $ \nabla \cdot \mathbf{U}^* $ (face centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a65dfc7e4b02b93b2f7783754998bf4ee}\label{class_projector_a65dfc7e4b02b93b2f7783754998bf4ee}} 
+\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \& \hyperlink{class_projector_a65dfc7e4b02b93b2f7783754998bf4ee}{C\+Ccorrection} ()
+\begin{DoxyCompactList}\small\item\em Correction to make velocity incompressible (cell centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a423fff791b15dd42aec0d9fb11efd07f}\label{class_projector_a423fff791b15dd42aec0d9fb11efd07f}} 
+\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \& \hyperlink{class_projector_a423fff791b15dd42aec0d9fb11efd07f}{M\+A\+Ccorrection} ()
+\begin{DoxyCompactList}\small\item\em Correction to make velocity incompressible (face centred) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a5114f784e55ecec7882484ccfd1665a4}\label{class_projector_a5114f784e55ecec7882484ccfd1665a4}} 
+void \hyperlink{class_projector_a5114f784e55ecec7882484ccfd1665a4}{unscaled\+Pi} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&unscaled\+Pi, \textbf{ Real} a\+\_\+dt)
+\begin{DoxyCompactList}\small\item\em Pressure, not scaled by the timestep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a6bdb37a30d9a472538e02a195dd85ac8}\label{class_projector_a6bdb37a30d9a472538e02a195dd85ac8}} 
+void \hyperlink{class_projector_a6bdb37a30d9a472538e02a195dd85ac8}{grad\+Pi} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad\+Pi, int a\+\_\+dir) const
+\begin{DoxyCompactList}\small\item\em returns grad(pi) in direction dir \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a23b6f27c830c31f78add1fa11a65d0af}\label{class_projector_a23b6f27c830c31f78add1fa11a65d0af}} 
+void \hyperlink{class_projector_a23b6f27c830c31f78add1fa11a65d0af}{grad\+Pi} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad\+Pi) const
+\begin{DoxyCompactList}\small\item\em returns grad(pi) in all directions into Space\+Dim-\/dimensioned grad\+Pi \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a1cb34981c45964fa244da99d8007136d}\label{class_projector_a1cb34981c45964fa244da99d8007136d}} 
+void \hyperlink{class_projector_a1cb34981c45964fa244da99d8007136d}{grad\+Pi\+B\+Cs} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad\+Pi, bool extrap\+B\+Cs=false, bool a\+\_\+use\+Phi=false)
+\begin{DoxyCompactList}\small\item\em Applys B\+Cs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ab850ed86d8cf58160b011c6f78a1b388}\label{class_projector_ab850ed86d8cf58160b011c6f78a1b388}} 
+\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \& \hyperlink{class_projector_ab850ed86d8cf58160b011c6f78a1b388}{e\+Sync} ()
+\begin{DoxyCompactList}\small\item\em returns synchronization correction \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a1ef6630a08e20d17f7471f6eca699315}\label{class_projector_a1ef6630a08e20d17f7471f6eca699315}} 
+const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \& \hyperlink{class_projector_a1ef6630a08e20d17f7471f6eca699315}{e\+Sync} () const
+\begin{DoxyCompactList}\small\item\em returns synchronization correction (const version) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_afe61ff1a55d247df28839c60694f6418}\label{class_projector_afe61ff1a55d247df28839c60694f6418}} 
+void \hyperlink{class_projector_afe61ff1a55d247df28839c60694f6418}{grad\+\_\+e\+Sync} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad\+\_\+e\+Sync, int a\+\_\+dir) const
+\begin{DoxyCompactList}\small\item\em returns cell-\/centered grad(e\+Sync) (composite gradient) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a0fa40963ac03b1d31ef0235a218c1289}\label{class_projector_a0fa40963ac03b1d31ef0235a218c1289}} 
+void \hyperlink{class_projector_a0fa40963ac03b1d31ef0235a218c1289}{grad\+\_\+e\+Sync} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad\+\_\+e\+Sync) const
+\begin{DoxyCompactList}\small\item\em returns cell-\/centered G$^\wedge$\{comp\}(e\+Sync) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ac2cd27b388f9bb0b0c689929236eb99e}\label{class_projector_ac2cd27b388f9bb0b0c689929236eb99e}} 
+\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \& \hyperlink{class_projector_ac2cd27b388f9bb0b0c689929236eb99e}{e\+Lambda} ()
+\begin{DoxyCompactList}\small\item\em returns volume-\/discrepancy correction \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_afe65831dec803c572b906df514517b9e}\label{class_projector_afe65831dec803c572b906df514517b9e}} 
+const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \& \hyperlink{class_projector_afe65831dec803c572b906df514517b9e}{e\+Lambda} () const
+\begin{DoxyCompactList}\small\item\em returns volume-\/discrepancy correction (const version) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a0e99730057058f22d19854baaa3c14e7}\label{class_projector_a0e99730057058f22d19854baaa3c14e7}} 
+void \hyperlink{class_projector_a0e99730057058f22d19854baaa3c14e7}{grad\+\_\+e\+Lambda} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad\+\_\+e\+Lambda, int a\+\_\+dir) const
+\begin{DoxyCompactList}\small\item\em returns edge-\/centered grad(e\+Lambda) in direction dir \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a907f799a7ed29d3a3b0e3e5af52f5e3d}\label{class_projector_a907f799a7ed29d3a3b0e3e5af52f5e3d}} 
+void \hyperlink{class_projector_a907f799a7ed29d3a3b0e3e5af52f5e3d}{apply\+Freestream\+Correction} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+adv\+Vel, \textbf{ Real} \textbf{ scale}=1.\+0)
+\begin{DoxyCompactList}\small\item\em correct face centred velocities with the already calculated grad(e\+\_\+lambda) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a8184919e3f6703bbdcc725ed01b5f0db}\label{class_projector_a8184919e3f6703bbdcc725ed01b5f0db}} 
+void \hyperlink{class_projector_a8184919e3f6703bbdcc725ed01b5f0db}{remove\+Freestream\+Correction} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+adv\+Vel)
+\begin{DoxyCompactList}\small\item\em Remove freestream correction from face centred velocities. \end{DoxyCompactList}\item 
+\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \& \hyperlink{class_projector_a63fba24063458770cdc25a630fad02f2}{grad\+\_\+e\+Lambda} ()
+\begin{DoxyCompactList}\small\item\em returns edge-\/centered grad(e\+Lambda) in all directions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a22a97a48cce9731ff6b9f9c80fc0af51}\label{class_projector_a22a97a48cce9731ff6b9f9c80fc0af51}} 
+const \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \& \hyperlink{class_projector_a22a97a48cce9731ff6b9f9c80fc0af51}{grad\+\_\+e\+Lambda} () const
+\begin{DoxyCompactList}\small\item\em returns edge-\/centered grad(e\+Lambda) in all directions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a85ae1986ae8342810df272b4df98c609}\label{class_projector_a85ae1986ae8342810df272b4df98c609}} 
+bool \hyperlink{class_projector_a85ae1986ae8342810df272b4df98c609}{do\+Sync\+Projection} () const
+\begin{DoxyCompactList}\small\item\em should we do sync projection? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a71e658f3576ab11b891908e00405db8d}\label{class_projector_a71e658f3576ab11b891908e00405db8d}} 
+bool \hyperlink{class_projector_a71e658f3576ab11b891908e00405db8d}{do\+Mac\+Sync} () const
+\begin{DoxyCompactList}\small\item\em should we do volume discrepancy correction? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a1c93789693717e75855827647f72a5dc}\label{class_projector_a1c93789693717e75855827647f72a5dc}} 
+bool \hyperlink{class_projector_a1c93789693717e75855827647f72a5dc}{is\+Initialized} () const
+\begin{DoxyCompactList}\small\item\em has this object been completely initialized? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a166fe8e7bb7362e4d41babf3c4dabbe6}\label{class_projector_a166fe8e7bb7362e4d41babf3c4dabbe6}} 
+bool \hyperlink{class_projector_a166fe8e7bb7362e4d41babf3c4dabbe6}{do\+Quad\+Interp} () const
+\begin{DoxyCompactList}\small\item\em use quadratic interpolation (instead of extrap) for c/f bc \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a783a25978cda4802d5d755a837f740b0}\label{class_projector_a783a25978cda4802d5d755a837f740b0}} 
+\textbf{ Quad\+C\+F\+Interp} \& \hyperlink{class_projector_a783a25978cda4802d5d755a837f740b0}{quad\+C\+F\+Interpolator} ()
+\begin{DoxyCompactList}\small\item\em returns predefined quadratic coarse-\/fine interpolation object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ade3858f0f281582b49acfbe814302e46}\label{class_projector_ade3858f0f281582b49acfbe814302e46}} 
+const \textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \& \hyperlink{class_projector_ade3858f0f281582b49acfbe814302e46}{get\+Grid\+I\+VS} ()
+\begin{DoxyCompactList}\small\item\em returns predefined intvectset which shows coverage \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a9865cf6c60e422b1c4bb592b919b7935}\label{class_projector_a9865cf6c60e422b1c4bb592b919b7935}} 
+bool \hyperlink{class_projector_a9865cf6c60e422b1c4bb592b919b7935}{is\+Finest\+Level} () const
+\begin{DoxyCompactList}\small\item\em is this the finest level? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a340a88a867452edf5a322bc2d9e2ec49}\label{class_projector_a340a88a867452edf5a322bc2d9e2ec49}} 
+void \hyperlink{class_projector_a340a88a867452edf5a322bc2d9e2ec49}{is\+Finest\+Level} (bool a\+\_\+finest\+\_\+level)
+\begin{DoxyCompactList}\small\item\em set whether this is the finest level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a423fb315802ec3c5bf95982bccb082ce}\label{class_projector_a423fb315802ec3c5bf95982bccb082ce}} 
+void \hyperlink{class_projector_a423fb315802ec3c5bf95982bccb082ce}{verbosity} (int a\+\_\+verbosity)
+\begin{DoxyCompactList}\small\item\em set verbosity \end{DoxyCompactList}\item 
+int \hyperlink{class_projector_a4b633f9f7bf0f239e91050a577c0a29e}{verbosity} () const
+\begin{DoxyCompactList}\small\item\em Set fine proj ptr. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a46ba32cacf31f39cb4e9bf7bdeb85d49}\label{class_projector_a46ba32cacf31f39cb4e9bf7bdeb85d49}} 
+void \hyperlink{class_projector_a46ba32cacf31f39cb4e9bf7bdeb85d49}{set\+Phys\+BC} (\hyperlink{class_phys_b_c_util}{Phys\+B\+C\+Util} \&a\+\_\+bc)
+\begin{DoxyCompactList}\small\item\em sets phys\+B\+Cs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_aa6952cbd9be6fee4abc5cfeb36a2de4a}\label{class_projector_aa6952cbd9be6fee4abc5cfeb36a2de4a}} 
+\hyperlink{class_phys_b_c_util}{Phys\+B\+C\+Util} $\ast$ \hyperlink{class_projector_aa6952cbd9be6fee4abc5cfeb36a2de4a}{get\+Phys\+B\+C\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em pointer to the boundary condition object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a2eb9b7b71f45168a9d6a94e878a601eb}\label{class_projector_a2eb9b7b71f45168a9d6a94e878a601eb}} 
+void \hyperlink{class_projector_a2eb9b7b71f45168a9d6a94e878a601eb}{compute\+V\+D\+Correction} (\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+lambda, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&a\+\_\+porosity, const \textbf{ Real} a\+\_\+new\+Time, const \textbf{ Real} a\+\_\+dt\+Sync)
+\begin{DoxyCompactList}\small\item\em Version which defines it\textquotesingle{}s own amr multigrid. \end{DoxyCompactList}\item 
+void \hyperlink{class_projector_ad55a4e31a840ff9476db4a2b7b9833cb}{apply\+Mac\+Correction} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+u\+Edge, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$crse\+B\+C\+Data\+Ptr, \textbf{ Real} phi\+Scale=1.\+0)
+\begin{DoxyCompactList}\small\item\em returns u\+Edge -\/ G(phi\+\_\+mac); C/F BC is C\+Fscale$\ast$\+Pi(crse) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_projector_ad17387c22fc3e2ad197e9d53460bbf05}\label{class_projector_ad17387c22fc3e2ad197e9d53460bbf05}} 
+\textbf{ Real} \hyperlink{class_projector_ad17387c22fc3e2ad197e9d53460bbf05}{m\+\_\+sum\+V\+Drhs}
+\begin{DoxyCompactList}\small\item\em Sum of R\+HS for VD correction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_projector_a760ab8ccacded1496730c00c952ee957}{apply\+C\+Ccorrection} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+velocity, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+pressure, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+pressure\+Scale\+Ptr, const \textbf{ Real} \textbf{ scale})
+\begin{DoxyCompactList}\small\item\em vel \+:= vel -\/ scale$\ast$\+G\+\_\+\+CC(pi) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a554b357b8e988ae99a7d53be9725a31f}\label{class_projector_a554b357b8e988ae99a7d53be9725a31f}} 
+void \hyperlink{class_projector_a554b357b8e988ae99a7d53be9725a31f}{do\+Sync\+Projection} (\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+velocity, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+porosity, const \textbf{ Real} a\+\_\+new\+Time, const \textbf{ Real} a\+\_\+dt\+Sync, \textbf{ A\+M\+R\+Multi\+Grid}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \&a\+\_\+solver)
+\begin{DoxyCompactList}\small\item\em do sync projection with this level as l\+Base; corrects velocity in place \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ab0637d2061d3d7cbc885366c4cf9ace4}\label{class_projector_ab0637d2061d3d7cbc885366c4cf9ace4}} 
+void \hyperlink{class_projector_ab0637d2061d3d7cbc885366c4cf9ace4}{initial\+Sync\+Projection} (\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+velocity, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+porosity, const \textbf{ Real} a\+\_\+new\+Time, const \textbf{ Real} a\+\_\+dt\+Sync, \textbf{ A\+M\+R\+Multi\+Grid}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \&a\+\_\+solver)
+\begin{DoxyCompactList}\small\item\em perform initial sync projection \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a6e07f1d02ca8606d9672e4005ebfe4a7}\label{class_projector_a6e07f1d02ca8606d9672e4005ebfe4a7}} 
+void \hyperlink{class_projector_a6e07f1d02ca8606d9672e4005ebfe4a7}{compute\+V\+D\+Correction} (\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+lambda, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&a\+\_\+porosity, const \textbf{ Real} a\+\_\+new\+Time, const \textbf{ Real} a\+\_\+dt\+Sync, \textbf{ A\+M\+R\+Multi\+Grid}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \&a\+\_\+solver)
+\begin{DoxyCompactList}\small\item\em do volume discrepancy solve, with this level as l\+Base \end{DoxyCompactList}\item 
+void \hyperlink{class_projector_ae631800ea52b4cd4b446ef86a697fb3f}{apply\+Sync\+Correction} (\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+velocity, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+porosity, const \textbf{ Real} \textbf{ scale}, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$crse\+Corr)
+\begin{DoxyCompactList}\small\item\em Compute volume discrepancy with this level as l\+Max. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a08af2ad88a5cd0e72725d5992f81d613}\label{class_projector_a08af2ad88a5cd0e72725d5992f81d613}} 
+void \hyperlink{class_projector_a08af2ad88a5cd0e72725d5992f81d613}{compute\+Grad\+\_\+e\+Lambda} (\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&a\+\_\+porosity)
+\begin{DoxyCompactList}\small\item\em compute composite gradient of e\+Lambda -- does this recursively \end{DoxyCompactList}\item 
+void \hyperlink{class_projector_a75e907d5ebcf83bdf5c59761578dcf68}{define\+Multi\+Grid} (\textbf{ A\+M\+R\+Multi\+Grid}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \&a\+\_\+solver, const \textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&a\+\_\+vel, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&a\+\_\+porosity, bool a\+\_\+freestream\+Solver)
+\begin{DoxyCompactList}\small\item\em rescales composite gradient of e\+Lambda, recursively all finer levels \end{DoxyCompactList}\item 
+void \hyperlink{class_projector_a328920a24092d06892c154a0910a2d81}{define\+Solver\+M\+Glevel} (const \textbf{ Disjoint\+Box\+Layout} \&a\+\_\+grids, const \textbf{ Disjoint\+Box\+Layout} $\ast$a\+\_\+crse\+Grids\+Ptr)
+\begin{DoxyCompactList}\small\item\em Define multigrid solver for freestream preservation solve. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ab83bb9dd2a10772de480eae7c4aac621}\label{class_projector_ab83bb9dd2a10772de480eae7c4aac621}} 
+void \hyperlink{class_projector_ab83bb9dd2a10772de480eae7c4aac621}{set\+Solver\+Parameters} ()
+\begin{DoxyCompactList}\small\item\em Set things like tolerance, number of smoothing steps etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a6111cb6a5efd8c2c514adca89e62371e}\label{class_projector_a6111cb6a5efd8c2c514adca89e62371e}} 
+void \hyperlink{class_projector_a6111cb6a5efd8c2c514adca89e62371e}{make\+Bottom\+Solvers} ()
+\begin{DoxyCompactList}\small\item\em Setup bototm solvers. \end{DoxyCompactList}\item 
+void \hyperlink{class_projector_a5640c62724e4682f79997f16012e12f7}{define\+Solver\+M\+G\+Level\+V\+C\+Op} (const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+porosity\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+crse\+Porosity\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+porosity\+Edge\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+crse\+Porosity\+Edge\+Ptr, bool cell\+Centred=false, \textbf{ Real} beta=-\/1)
+\begin{DoxyCompactList}\small\item\em define multigrid solver for this level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_ab7d28a7696b51dca78d0b73f36ad0809}\label{class_projector_ab7d28a7696b51dca78d0b73f36ad0809}} 
+int \hyperlink{class_projector_ab7d28a7696b51dca78d0b73f36ad0809}{solve\+M\+Glevel} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Coarse\+Ptr, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+porosity\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ a\+\_\+crse\+Pressure\+Scale\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+porosity\+Edge\+Ptr, const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ a\+\_\+crse\+Porosity\+Edge\+Ptr, bool cell\+Centred=false)
+\begin{DoxyCompactList}\small\item\em solve for pressure on this level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a0156fbb319d6f21b8ee5341e1731972a}\label{class_projector_a0156fbb319d6f21b8ee5341e1731972a}} 
+void \hyperlink{class_projector_a0156fbb319d6f21b8ee5341e1731972a}{solve\+M\+Glevel} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Coarse\+Ptr, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+rhs, bool cell\+Centred)
+\begin{DoxyCompactList}\small\item\em For when we don\textquotesingle{}t have any pressure scale. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projector_a0118bdf045f4e250e039ed976601fe60}\label{class_projector_a0118bdf045f4e250e039ed976601fe60}} 
+void \hyperlink{class_projector_a0118bdf045f4e250e039ed976601fe60}{post\+Restart} ()
+\begin{DoxyCompactList}\small\item\em takes care of setting ghost cell values after restarting \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this class manages the various forms of the projection 
+
+this class performs the various cell-\/centered projections required by the I\+A\+MR algorithm. These include the single-\/level operators level\+Mac and level\+Project, as well as the multilevel sync projection and volume discrepancy solves. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projector_a760ab8ccacded1496730c00c952ee957}\label{class_projector_a760ab8ccacded1496730c00c952ee957}} 
+\index{Projector@{Projector}!apply\+C\+Ccorrection@{apply\+C\+Ccorrection}}
+\index{apply\+C\+Ccorrection@{apply\+C\+Ccorrection}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{apply\+C\+Ccorrection()}{applyCCcorrection()}}
+{\footnotesize\ttfamily void Projector\+::apply\+C\+Ccorrection (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+velocity,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+pressure,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+pressure\+Scale\+Ptr,  }\item[{const \textbf{ Real}}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+vel \+:= vel -\/ scale$\ast$\+G\+\_\+\+CC(pi) 
+
+\[ \mathbf{u} = \mathbf{u} - \alpha \nabla \Pi \] where $ \alpha $ is the scale \mbox{\Hypertarget{class_projector_ad55a4e31a840ff9476db4a2b7b9833cb}\label{class_projector_ad55a4e31a840ff9476db4a2b7b9833cb}} 
+\index{Projector@{Projector}!apply\+Mac\+Correction@{apply\+Mac\+Correction}}
+\index{apply\+Mac\+Correction@{apply\+Mac\+Correction}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{apply\+Mac\+Correction()}{applyMacCorrection()}}
+{\footnotesize\ttfamily void Projector\+::apply\+Mac\+Correction (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&}]{a\+\_\+u\+Edge,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{crse\+B\+C\+Data\+Ptr,  }\item[{\textbf{ Real}}]{phi\+Scale = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+
+
+returns u\+Edge -\/ G(phi\+\_\+mac); C/F BC is C\+Fscale$\ast$\+Pi(crse) 
+
+\[ \mathbf{u}^{edge} - \nabla \phi^{mac} \] \mbox{\Hypertarget{class_projector_ae631800ea52b4cd4b446ef86a697fb3f}\label{class_projector_ae631800ea52b4cd4b446ef86a697fb3f}} 
+\index{Projector@{Projector}!apply\+Sync\+Correction@{apply\+Sync\+Correction}}
+\index{apply\+Sync\+Correction@{apply\+Sync\+Correction}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{apply\+Sync\+Correction()}{applySyncCorrection()}}
+{\footnotesize\ttfamily void Projector\+::apply\+Sync\+Correction (\begin{DoxyParamCaption}\item[{\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&}]{a\+\_\+velocity,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&}]{a\+\_\+porosity,  }\item[{const \textbf{ Real}}]{scale,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{crse\+Corr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute volume discrepancy with this level as l\+Max. 
+
+apply sync correction vel = vel -\/ scale$\ast$\+G$^\wedge$\{comp\} e\+Sync (recursively applies correction to all finer levels) \mbox{\Hypertarget{class_projector_ad063e890cdab51aa662c02fc8137cc49}\label{class_projector_ad063e890cdab51aa662c02fc8137cc49}} 
+\index{Projector@{Projector}!check\+Divergence@{check\+Divergence}}
+\index{check\+Divergence@{check\+Divergence}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{check\+Divergence()}{checkDivergence()}}
+{\footnotesize\ttfamily void Projector\+::check\+Divergence (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&}]{a\+\_\+u\+Edge }\end{DoxyParamCaption})}
+
+
+
+Check if the divergence of the velocity is sufficiently small. 
+
+If not, increase the number of smoothing steps \mbox{\Hypertarget{class_projector_a75e907d5ebcf83bdf5c59761578dcf68}\label{class_projector_a75e907d5ebcf83bdf5c59761578dcf68}} 
+\index{Projector@{Projector}!define\+Multi\+Grid@{define\+Multi\+Grid}}
+\index{define\+Multi\+Grid@{define\+Multi\+Grid}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{define\+Multi\+Grid()}{defineMultiGrid()}}
+{\footnotesize\ttfamily void Projector\+::define\+Multi\+Grid (\begin{DoxyParamCaption}\item[{\textbf{ A\+M\+R\+Multi\+Grid}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ \&}]{a\+\_\+solver,  }\item[{const \textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&}]{a\+\_\+vel,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&}]{a\+\_\+porosity,  }\item[{bool}]{a\+\_\+freestream\+Solver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+rescales composite gradient of e\+Lambda, recursively all finer levels 
+
+rescales grad(e\+Lambda) by (a\+\_\+dx\+\_\+lbase)/m\+\_\+dx for this level and recursively calls this function for finer levels. This is done for stability reasons.\+defines Multilevel A\+M\+R\+Solver used for composite projections uses grids in vel, l\+Base is this level. a\+\_\+freestream solver is true if solver will be used for freestream preservation solve. \mbox{\Hypertarget{class_projector_a328920a24092d06892c154a0910a2d81}\label{class_projector_a328920a24092d06892c154a0910a2d81}} 
+\index{Projector@{Projector}!define\+Solver\+M\+Glevel@{define\+Solver\+M\+Glevel}}
+\index{define\+Solver\+M\+Glevel@{define\+Solver\+M\+Glevel}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{define\+Solver\+M\+Glevel()}{defineSolverMGlevel()}}
+{\footnotesize\ttfamily void Projector\+::define\+Solver\+M\+Glevel (\begin{DoxyParamCaption}\item[{const \textbf{ Disjoint\+Box\+Layout} \&}]{a\+\_\+grids,  }\item[{const \textbf{ Disjoint\+Box\+Layout} $\ast$}]{a\+\_\+crse\+Grids\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Define multigrid solver for freestream preservation solve. 
+
+defines multigrid solver for this level \mbox{\Hypertarget{class_projector_a5640c62724e4682f79997f16012e12f7}\label{class_projector_a5640c62724e4682f79997f16012e12f7}} 
+\index{Projector@{Projector}!define\+Solver\+M\+G\+Level\+V\+C\+Op@{define\+Solver\+M\+G\+Level\+V\+C\+Op}}
+\index{define\+Solver\+M\+G\+Level\+V\+C\+Op@{define\+Solver\+M\+G\+Level\+V\+C\+Op}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{define\+Solver\+M\+G\+Level\+V\+C\+Op()}{defineSolverMGLevelVCOp()}}
+{\footnotesize\ttfamily void Projector\+::define\+Solver\+M\+G\+Level\+V\+C\+Op (\begin{DoxyParamCaption}\item[{const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$}]{a\+\_\+porosity\+Ptr,  }\item[{const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$}]{a\+\_\+crse\+Porosity\+Ptr,  }\item[{const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$}]{a\+\_\+porosity\+Edge\+Ptr,  }\item[{const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$}]{a\+\_\+crse\+Porosity\+Edge\+Ptr,  }\item[{bool}]{cell\+Centred = {\ttfamily false},  }\item[{\textbf{ Real}}]{beta = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+define multigrid solver for this level 
+
+variable coefficient version to deal with variable porosity \mbox{\Hypertarget{class_projector_a09145be377ec504e0412ce78207448fe}\label{class_projector_a09145be377ec504e0412ce78207448fe}} 
+\index{Projector@{Projector}!do\+Initial\+Sync\+Operations@{do\+Initial\+Sync\+Operations}}
+\index{do\+Initial\+Sync\+Operations@{do\+Initial\+Sync\+Operations}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{do\+Initial\+Sync\+Operations()}{doInitialSyncOperations()}}
+{\footnotesize\ttfamily void Projector\+::do\+Initial\+Sync\+Operations (\begin{DoxyParamCaption}\item[{\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&}]{a\+\_\+vel,  }\item[{\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&}]{a\+\_\+lambda,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&}]{a\+\_\+porosity\+Face,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&}]{a\+\_\+porosity,  }\item[{const \textbf{ Real}}]{a\+\_\+new\+Time,  }\item[{const \textbf{ Real}}]{a\+\_\+dt\+Sync }\end{DoxyParamCaption})}
+
+defines A\+M\+R\+Solver and calls initial sync projection and freestream preservation solves \mbox{\Hypertarget{class_projector_a0e127be31f7058f463334ba5c40eaef5}\label{class_projector_a0e127be31f7058f463334ba5c40eaef5}} 
+\index{Projector@{Projector}!do\+Sync\+Operations@{do\+Sync\+Operations}}
+\index{do\+Sync\+Operations@{do\+Sync\+Operations}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{do\+Sync\+Operations()}{doSyncOperations()}}
+{\footnotesize\ttfamily void Projector\+::do\+Sync\+Operations (\begin{DoxyParamCaption}\item[{\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&}]{a\+\_\+velocity,  }\item[{\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&}]{a\+\_\+lambda,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&}]{a\+\_\+porosity\+Face,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&}]{a\+\_\+porosity,  }\item[{const \textbf{ Real}}]{a\+\_\+new\+Time,  }\item[{const \textbf{ Real}}]{a\+\_\+dt\+Sync }\end{DoxyParamCaption})}
+
+
+
+do synchronisation operations 
+
+defines A\+M\+R\+Solver and calls sync projection and freestream preservation solve. assumes all physical and copy BC\textquotesingle{}s already set (does C/F BC\textquotesingle{}s however) \mbox{\Hypertarget{class_projector_aa7f8e7fa6873b1972dbaf7458f3af71d}\label{class_projector_aa7f8e7fa6873b1972dbaf7458f3af71d}} 
+\index{Projector@{Projector}!get\+Level@{get\+Level}}
+\index{get\+Level@{get\+Level}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{get\+Level()}{getLevel()}}
+{\footnotesize\ttfamily int Projector\+::get\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+access functions 
+
+first define quick-\/n-\/easy access functions
+
+get the level this \hyperlink{class_projector}{Projector} is defined for \mbox{\Hypertarget{class_projector_a87058c308a90f992ce88a668a65a1a79}\label{class_projector_a87058c308a90f992ce88a668a65a1a79}} 
+\index{Projector@{Projector}!get\+Phi\+Scale@{get\+Phi\+Scale}}
+\index{get\+Phi\+Scale@{get\+Phi\+Scale}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{get\+Phi\+Scale()}{getPhiScale()}}
+{\footnotesize\ttfamily \textbf{ Real} Projector\+::get\+Phi\+Scale (\begin{DoxyParamCaption}\item[{\textbf{ Real}}]{a\+\_\+dt }\end{DoxyParamCaption})}
+
+
+
+Scale for $ \phi $. 
+
+Important to get this right for coarse-\/fine interface matching \mbox{\Hypertarget{class_projector_a63fba24063458770cdc25a630fad02f2}\label{class_projector_a63fba24063458770cdc25a630fad02f2}} 
+\index{Projector@{Projector}!grad\+\_\+e\+Lambda@{grad\+\_\+e\+Lambda}}
+\index{grad\+\_\+e\+Lambda@{grad\+\_\+e\+Lambda}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{grad\+\_\+e\+Lambda()}{grad\_eLambda()}}
+{\footnotesize\ttfamily \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \& Projector\+::grad\+\_\+e\+Lambda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns edge-\/centered grad(e\+Lambda) in all directions 
+
+non-\/constant reference returned because of need to rescale. \mbox{\Hypertarget{class_projector_a4bacdf13f2e4a10653e04042bef587f6}\label{class_projector_a4bacdf13f2e4a10653e04042bef587f6}} 
+\index{Projector@{Projector}!initial\+Level\+Project@{initial\+Level\+Project}}
+\index{initial\+Level\+Project@{initial\+Level\+Project}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{initial\+Level\+Project()}{initialLevelProject()}}
+{\footnotesize\ttfamily void Projector\+::initial\+Level\+Project (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+velocity,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+crse\+Vel\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+old\+Time,  }\item[{const \textbf{ Real}}]{a\+\_\+new\+Time,  }\item[{const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$}]{a\+\_\+porosity\+Ptr,  }\item[{const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$}]{a\+\_\+crse\+Porosity\+Ptr,  }\item[{const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$}]{a\+\_\+porosity\+Edge\+Ptr,  }\item[{const \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$}]{a\+\_\+crse\+Porosity\+Edge\+Ptr }\end{DoxyParamCaption})}
+
+
+
+Initialization functions. 
+
+performs initial level projection -- phys and copy BC\textquotesingle{}s should be preset \mbox{\Hypertarget{class_projector_ad4afeedf8d3cbac3778b4952aa967be2}\label{class_projector_ad4afeedf8d3cbac3778b4952aa967be2}} 
+\index{Projector@{Projector}!initial\+Velocity\+Project@{initial\+Velocity\+Project}}
+\index{initial\+Velocity\+Project@{initial\+Velocity\+Project}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{initial\+Velocity\+Project()}{initialVelocityProject()}}
+{\footnotesize\ttfamily void Projector\+::initial\+Velocity\+Project (\begin{DoxyParamCaption}\item[{\textbf{ Vector}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$ $>$ \&}]{a\+\_\+velocity,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&}]{a\+\_\+porosity\+Face,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&}]{a\+\_\+porosity,  }\item[{bool}]{a\+\_\+homogeneous\+C\+F\+BC = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+performs multilevel projection on velocity, modifies velocity in place 
+
+dt\+Sync is used as a scaling factor for coarse-\/level BC\textquotesingle{}s, not used in actual projection. if homogeneous\+C\+F\+BC is false, C/F bc for l\+\_\+base is taken from coarse-\/level e\+Sync, o/w use l\+\_\+base-\/1 correction field = 0. if apply\+Correction == false, then correction is computed, but not applied (can be useful as a diagnostic). physical and copy BC\textquotesingle{}s should already be set before this is called. \mbox{\Hypertarget{class_projector_a4b633f9f7bf0f239e91050a577c0a29e}\label{class_projector_a4b633f9f7bf0f239e91050a577c0a29e}} 
+\index{Projector@{Projector}!verbosity@{verbosity}}
+\index{verbosity@{verbosity}!Projector@{Projector}}
+\subsubsection{\texorpdfstring{verbosity()}{verbosity()}}
+{\footnotesize\ttfamily int Projector\+::verbosity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Set fine proj ptr. 
+
+returns verbosity 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src\+Subcycle/Projector.\+H\item 
+/home/parkinsonjl/mushy-\/layer/src\+Subcycle/Projector.\+cpp\end{DoxyCompactItemize}

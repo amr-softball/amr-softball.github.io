@@ -1,0 +1,775 @@
+\hypertarget{class_mushy_layer_params}{}\section{Mushy\+Layer\+Params Class Reference}
+\label{class_mushy_layer_params}\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+
+
+Class to handle the physical parameters of a mushy layer simulation.  
+
+
+
+
+{\ttfamily \#include $<$Mushy\+Layer\+Params.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8}{nondimensionalisations} \{ \newline
+\hyperlink{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8a0a6a16ab5fc194f854e89368f43c7c19}{m\+\_\+diffusive\+Time\+\_\+advective\+Vel}, 
+\hyperlink{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8acbb36c4d62aacfa031e24bdeccd628eb}{m\+\_\+darcy\+Time\+\_\+advective\+Vel}, 
+\hyperlink{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8aaadfdd616da7cb4dbaab31e60d5d12e7}{m\+\_\+darcy\+Time\+\_\+darcy\+Vel}, 
+\hyperlink{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8ae83bbc932e7440f2a95c09628e7b9451}{m\+\_\+advective\+Time\+\_\+darcy\+Vel}, 
+\newline
+\hyperlink{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8a53a77635db4cc741e10e7d2ddaaa3236}{m\+\_\+buoyancy\+Time\+\_\+advective\+Vel}, 
+\hyperlink{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8ad984db365974fb0878c4a138d41c5ead}{m\+\_\+num\+\_\+nondimensionalisations}
+ \}\begin{DoxyCompactList}\small\item\em Different options for nondimensionalisation. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_mushy_layer_params_a029cd583b3d31671363f600177a885ac}{time\+Dependent\+B\+Ctypes} \{ {\bfseries m\+\_\+constant}, 
+{\bfseries m\+\_\+sinusoid}, 
+{\bfseries m\+\_\+custom}
+ \}\begin{DoxyCompactList}\small\item\em Possible time dependences for B\+Cs. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a90d6072c0605f207643cf48fd36d856c}\label{class_mushy_layer_params_a90d6072c0605f207643cf48fd36d856c}} 
+\hyperlink{class_mushy_layer_params_a90d6072c0605f207643cf48fd36d856c}{Mushy\+Layer\+Params} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a5a4cb3860b79d218af7509fb04088b74}\label{class_mushy_layer_params_a5a4cb3860b79d218af7509fb04088b74}} 
+virtual \hyperlink{class_mushy_layer_params_a5a4cb3860b79d218af7509fb04088b74}{$\sim$\+Mushy\+Layer\+Params} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a2adf3cf11a6d85e97d1bd05d21e0fda0}\label{class_mushy_layer_params_a2adf3cf11a6d85e97d1bd05d21e0fda0}} 
+void \hyperlink{class_mushy_layer_params_a2adf3cf11a6d85e97d1bd05d21e0fda0}{get\+Parameters} ()
+\begin{DoxyCompactList}\small\item\em Get all parameters from the inputs file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ab0c7b6204884af8093216788b3d1635f}\label{class_mushy_layer_params_ab0c7b6204884af8093216788b3d1635f}} 
+void \hyperlink{class_mushy_layer_params_ab0c7b6204884af8093216788b3d1635f}{print\+Parameters} ()
+\begin{DoxyCompactList}\small\item\em Write out parameters to the command line (pout) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a63bfa2c38942a3113a2cd99c694c003b}\label{class_mushy_layer_params_a63bfa2c38942a3113a2cd99c694c003b}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a63bfa2c38942a3113a2cd99c694c003b}{directional\+Solidification\+MushyZ} (\textbf{ Real} theta, \textbf{ Real} z\+Eutectic=1.\+0)
+\begin{DoxyCompactList}\small\item\em Calculate $ z(\theta) $ for the directional solidification without flow benchmark. \end{DoxyCompactList}\item 
+void \hyperlink{class_mushy_layer_params_a497dc7bd7c29819bd697d255af8de3d6}{parse\+B\+Cs} (string a\+\_\+name, \textbf{ Vector}$<$ int $>$ $\ast$a\+\_\+bc\+Holder, bool required=false)
+\begin{DoxyCompactList}\small\item\em Read in B\+Cs from the inputs file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a534c1e576d710007d5bb7ad8354cd495}\label{class_mushy_layer_params_a534c1e576d710007d5bb7ad8354cd495}} 
+void \hyperlink{class_mushy_layer_params_a534c1e576d710007d5bb7ad8354cd495}{parse\+B\+C\+Vals} (string a\+\_\+name, \textbf{ Real\+Vect} \&a\+\_\+bc\+Holder, bool required=false)
+\begin{DoxyCompactList}\small\item\em Read in BC vals from inputs file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a096f90c939815ffda795d7c81a0a25d3}\label{class_mushy_layer_params_a096f90c939815ffda795d7c81a0a25d3}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a096f90c939815ffda795d7c81a0a25d3}{temp\+Totheta} (const \textbf{ Real} T)
+\begin{DoxyCompactList}\small\item\em Convert dimensional to non-\/dimensional temperature. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ab9cc390b6c5db5c4d6f083c0f2f14503}\label{class_mushy_layer_params_ab9cc390b6c5db5c4d6f083c0f2f14503}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ab9cc390b6c5db5c4d6f083c0f2f14503}{conc\+To\+Theta} (const \textbf{ Real} \textbf{ C})
+\begin{DoxyCompactList}\small\item\em Convert dimensional to non-\/dimensional composition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ae036d6b6250a955546827dd17b9f967c}\label{class_mushy_layer_params_ae036d6b6250a955546827dd17b9f967c}} 
+int \hyperlink{class_mushy_layer_params_ae036d6b6250a955546827dd17b9f967c}{get\+Vel\+B\+C\+Type} (int dir, \textbf{ Side\+::\+Lo\+Hi\+Side} side)
+\begin{DoxyCompactList}\small\item\em Get the velocity boundary condition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a4b241acadb703afb0034a7bc39bdce00}\label{class_mushy_layer_params_a4b241acadb703afb0034a7bc39bdce00}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a4b241acadb703afb0034a7bc39bdce00}{calculate\+Permeability} (\textbf{ Real} liquid\+Fraction)
+\begin{DoxyCompactList}\small\item\em Compute permeability from porosity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ab026a06d59c128d23f360e83cbd41eaa}\label{class_mushy_layer_params_ab026a06d59c128d23f360e83cbd41eaa}} 
+void \hyperlink{class_mushy_layer_params_ab026a06d59c128d23f360e83cbd41eaa}{set\+Time} (\textbf{ Real} a\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Set the time, might be used for B\+Cs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a1313920d8997006fc94d4303f00976d5}\label{class_mushy_layer_params_a1313920d8997006fc94d4303f00976d5}} 
+void \hyperlink{class_mushy_layer_params_a1313920d8997006fc94d4303f00976d5}{write\+To\+H\+D\+F5} (\textbf{ H\+D\+F5\+Header\+Data} \&a\+\_\+header) const
+\begin{DoxyCompactList}\small\item\em Write out the key parameters to hdf5 file, so that solution can be reconstructed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a6578a9bab6d277243d35455dfc4d641f}\label{class_mushy_layer_params_a6578a9bab6d277243d35455dfc4d641f}} 
+string \hyperlink{class_mushy_layer_params_a6578a9bab6d277243d35455dfc4d641f}{get\+Velocity\+Scale} () const
+\begin{DoxyCompactList}\small\item\em Returns a string indicating the velocity scale used for nondimensionalisation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a91a19d85efeb430336443b7a3ec41fa3}\label{class_mushy_layer_params_a91a19d85efeb430336443b7a3ec41fa3}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a91a19d85efeb430336443b7a3ec41fa3}{compute\+Porosity} (\textbf{ Real} H, \textbf{ Real} \textbf{ C})
+\begin{DoxyCompactList}\small\item\em Utility function to compute porosity given a single enthalpy/bulk concentration value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a87dc72784b3a76e63ab000bede1168fb}\label{class_mushy_layer_params_a87dc72784b3a76e63ab000bede1168fb}} 
+\textbf{ Real} {\bfseries compute\+\_\+d\+HdT} (\textbf{ Real} H, \textbf{ Real} \textbf{ C})
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a1d2c91e6c12ef6f0571529895226e4ba}\label{class_mushy_layer_params_a1d2c91e6c12ef6f0571529895226e4ba}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a1d2c91e6c12ef6f0571529895226e4ba}{compute\+Temperature} (\textbf{ Real} H, \textbf{ Real} \textbf{ C})
+\begin{DoxyCompactList}\small\item\em Utility function to compute temperature given a single enthalpy/bulk concentration value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_acfabb7142e80ce08f6dc3ab2fd93589e}\label{class_mushy_layer_params_acfabb7142e80ce08f6dc3ab2fd93589e}} 
+void \hyperlink{class_mushy_layer_params_acfabb7142e80ce08f6dc3ab2fd93589e}{compute\+Diagnostic\+Vars} (\textbf{ Real} H, \textbf{ Real} \textbf{ C}, \textbf{ Real} T, \textbf{ Real} porosity, \textbf{ Real} Cl, \textbf{ Real} Cs)
+\begin{DoxyCompactList}\small\item\em Compute everything from enthalpy and bulk concentration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a8d57fc06f29cb82e69b0c8c6d89dd60c}\label{class_mushy_layer_params_a8d57fc06f29cb82e69b0c8c6d89dd60c}} 
+string \hyperlink{class_mushy_layer_params_a8d57fc06f29cb82e69b0c8c6d89dd60c}{get\+Timescale} () const
+\begin{DoxyCompactList}\small\item\em Returns a string indicating the time scale used for nondimensionalisation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a21363037824da89e96f9cef4989c6b8c}\label{class_mushy_layer_params_a21363037824da89e96f9cef4989c6b8c}} 
+bool \hyperlink{class_mushy_layer_params_a21363037824da89e96f9cef4989c6b8c}{is\+Darcy\+Brinkman} ()
+\begin{DoxyCompactList}\small\item\em Returns whether or not we\textquotesingle{}re solving the Darcy-\/\+Brinkman equation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a3e940f4b1941f65b43b2eb8a18cccfe9}\label{class_mushy_layer_params_a3e940f4b1941f65b43b2eb8a18cccfe9}} 
+bool \hyperlink{class_mushy_layer_params_a3e940f4b1941f65b43b2eb8a18cccfe9}{is\+Viscous} ()
+\begin{DoxyCompactList}\small\item\em Returns whether or not the problem we\textquotesingle{}re solving contains viscous terms. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a1a8bb3a4632fdefb7aeaa72d761b56b9}\label{class_mushy_layer_params_a1a8bb3a4632fdefb7aeaa72d761b56b9}} 
+void \hyperlink{class_mushy_layer_params_a1a8bb3a4632fdefb7aeaa72d761b56b9}{compute\+Derived\+B\+Cs} ()
+\begin{DoxyCompactList}\small\item\em Compute boundary conditions for fields which can be found from the enthalpy and salinity via the phase diagram. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_af648dea6d76d52f10124c33f6817be2b}\label{class_mushy_layer_params_af648dea6d76d52f10124c33f6817be2b}} 
+\hyperlink{_mushy_layer_params_8h_a9d2eece4e74f7ad0ebcd5759116a94a4}{Physical\+Problems} \hyperlink{class_mushy_layer_params_af648dea6d76d52f10124c33f6817be2b}{physical\+Problem}
+\begin{DoxyCompactList}\small\item\em Benchmark problem to solve. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a0458bb90fd4db3977b2af0a0aa369386}\label{class_mushy_layer_params_a0458bb90fd4db3977b2af0a0aa369386}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a0458bb90fd4db3977b2af0a0aa369386}{viscosity}
+\begin{DoxyCompactList}\small\item\em Viscosity, $ \eta $, used in rayleigh number calculations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ac5dcaee57b4ea4ea4fc1c26d578f2e48}\label{class_mushy_layer_params_ac5dcaee57b4ea4ea4fc1c26d578f2e48}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ac5dcaee57b4ea4ea4fc1c26d578f2e48}{heat\+Conductivity\+Liquid}
+\begin{DoxyCompactList}\small\item\em Liquid heat conductivity, $ k_l $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a57cd61cc35cfd06330a3cb6e67c1bddc}\label{class_mushy_layer_params_a57cd61cc35cfd06330a3cb6e67c1bddc}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a57cd61cc35cfd06330a3cb6e67c1bddc}{heat\+Conductivity\+Solid}
+\begin{DoxyCompactList}\small\item\em Solid heat conductivity, $ k_s $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ab80de1952111d2c7bd8eeb30c4388441}\label{class_mushy_layer_params_ab80de1952111d2c7bd8eeb30c4388441}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ab80de1952111d2c7bd8eeb30c4388441}{specific\+Heat\+Liquid}
+\begin{DoxyCompactList}\small\item\em Specific heat capacity of the liquid phase, $ c_l $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ad7f89d49eb18122b9a8a6be3359ae5c1}\label{class_mushy_layer_params_ad7f89d49eb18122b9a8a6be3359ae5c1}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ad7f89d49eb18122b9a8a6be3359ae5c1}{specific\+Heat\+Solid}
+\begin{DoxyCompactList}\small\item\em Specific heat capacity of the solid phase, $c_s$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_add77a2b935f21ac4cf3d7fe83afac04c}\label{class_mushy_layer_params_add77a2b935f21ac4cf3d7fe83afac04c}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_add77a2b935f21ac4cf3d7fe83afac04c}{liquid\+Density}
+\begin{DoxyCompactList}\small\item\em Density of the liquid. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a98ffdd6b098c0950601611df2b6c60a4}\label{class_mushy_layer_params_a98ffdd6b098c0950601611df2b6c60a4}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a98ffdd6b098c0950601611df2b6c60a4}{latent\+Heat\+Dissolution}
+\begin{DoxyCompactList}\small\item\em Latent heat for liquid-\/$>$solid phase change. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_abac32891e2e9f03ab16ce6502104db9a}\label{class_mushy_layer_params_abac32891e2e9f03ab16ce6502104db9a}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_abac32891e2e9f03ab16ce6502104db9a}{thermal\+Expansivity}
+\begin{DoxyCompactList}\small\item\em Thermal expansivity ( $\mbox{K}^{-1} $) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a2aa5fcbb49c158c75b8728596ed25b45}\label{class_mushy_layer_params_a2aa5fcbb49c158c75b8728596ed25b45}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a2aa5fcbb49c158c75b8728596ed25b45}{solutal\+Expansivity}
+\begin{DoxyCompactList}\small\item\em Solutal expansitivity ( $\mbox{(g/kg)}^{-1}$ ) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a7e4644fe40db5622b9ff782e46b968c8}\label{class_mushy_layer_params_a7e4644fe40db5622b9ff782e46b968c8}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a7e4644fe40db5622b9ff782e46b968c8}{eutectic\+Temp}
+\begin{DoxyCompactList}\small\item\em Temperature at the eutectic point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a0bda0637f2ed28646edd079ebc2e3f71}\label{class_mushy_layer_params_a0bda0637f2ed28646edd079ebc2e3f71}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a0bda0637f2ed28646edd079ebc2e3f71}{eutectic\+Composition}
+\begin{DoxyCompactList}\small\item\em Bulk concentration at the eutectic point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ad4d662e2932cc5ee90ecd5caa6ba466a}\label{class_mushy_layer_params_ad4d662e2932cc5ee90ecd5caa6ba466a}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ad4d662e2932cc5ee90ecd5caa6ba466a}{initial\+Composition}
+\begin{DoxyCompactList}\small\item\em Initial bulk concentration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a36aab0acf29577d5eef1f92870ee60f2}\label{class_mushy_layer_params_a36aab0acf29577d5eef1f92870ee60f2}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a36aab0acf29577d5eef1f92870ee60f2}{liquidus\+Slope}
+\begin{DoxyCompactList}\small\item\em Slope of the linearised liquidus $\mbox{ K (g/kg)}^{-1} $. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a2b0038ec10c9660952ea88efd146a846}{water\+Distribution\+Coeff}
+\begin{DoxyCompactList}\small\item\em Water distribution coefficient, $ p_c $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aad3b65b68693c8e28778eed4738cfeb7}\label{class_mushy_layer_params_aad3b65b68693c8e28778eed4738cfeb7}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_aad3b65b68693c8e28778eed4738cfeb7}{hele\+Shaw\+Cooling\+Coeff}
+\begin{DoxyCompactList}\small\item\em Hele-\/\+Shaw cooling coefficient -\/ not currently in use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aeb3d05c0fc784e2fbe216e2ca086d5e1}\label{class_mushy_layer_params_aeb3d05c0fc784e2fbe216e2ca086d5e1}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_aeb3d05c0fc784e2fbe216e2ca086d5e1}{liquid\+Solute\+Diffusivity}
+\begin{DoxyCompactList}\small\item\em Diffusivity of salt in the liquid phase, $ D_l $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a5016899efd8d969b2f65c20a3239fbe7}\label{class_mushy_layer_params_a5016899efd8d969b2f65c20a3239fbe7}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a5016899efd8d969b2f65c20a3239fbe7}{d}
+\begin{DoxyCompactList}\small\item\em Hele-\/\+Shaw cell width -\/ not currently in use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ae6c806a4560f2711543ba1a9b72e7d76}\label{class_mushy_layer_params_ae6c806a4560f2711543ba1a9b72e7d76}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ae6c806a4560f2711543ba1a9b72e7d76}{height}
+\begin{DoxyCompactList}\small\item\em Domain height. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a90af7620cab61b798af5843f8b003386}\label{class_mushy_layer_params_a90af7620cab61b798af5843f8b003386}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a90af7620cab61b798af5843f8b003386}{width}
+\begin{DoxyCompactList}\small\item\em Domain width -\/ not currently in use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a8124873b3f9a1a5657b1b980b99d6b3b}\label{class_mushy_layer_params_a8124873b3f9a1a5657b1b980b99d6b3b}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a8124873b3f9a1a5657b1b980b99d6b3b}{reference\+Permeability}
+\begin{DoxyCompactList}\small\item\em Reference permeability $ K_0 $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a8ef8bc3509b02356ed98368f5e484771}\label{class_mushy_layer_params_a8ef8bc3509b02356ed98368f5e484771}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a8ef8bc3509b02356ed98368f5e484771}{gravitational\+Acceleration}
+\begin{DoxyCompactList}\small\item\em Gravitational acceleration, $ g $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_afa52e49caf853141c99a7505dfa293b6}\label{class_mushy_layer_params_afa52e49caf853141c99a7505dfa293b6}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_afa52e49caf853141c99a7505dfa293b6}{V}
+\begin{DoxyCompactList}\small\item\em Frame advection velocity $ V $. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ae221423b95517958c6a2c7acf5c271c6}{delta\+Temp}
+\begin{DoxyCompactList}\small\item\em Temperature differenece used for nondimensionalisation. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_acea8da7cc75a779bb8dd7967fb3b0586}{delta\+Salt}
+\begin{DoxyCompactList}\small\item\em Salt difference used for nondimensionalisation. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ae226ddaa8dc0171b6fcb1e5393ef61a4}{stefan}
+\begin{DoxyCompactList}\small\item\em Stefan number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ac97e799b81db331d775928ab31c9080e}\label{class_mushy_layer_params_ac97e799b81db331d775928ab31c9080e}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ac97e799b81db331d775928ab31c9080e}{composition\+Ratio}
+\begin{DoxyCompactList}\small\item\em Composition ratio = $ \frac{S_e (p_c - 1)}{S_i -S_e} $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a7ebd7811b912361059bb8fcde091dec3}\label{class_mushy_layer_params_a7ebd7811b912361059bb8fcde091dec3}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a7ebd7811b912361059bb8fcde091dec3}{liquid\+Heat\+Diffusivity}
+\begin{DoxyCompactList}\small\item\em Heat diffusivity in the liquid phase. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aca0e7fca4cf6ab1fca77d8ff63045125}\label{class_mushy_layer_params_aca0e7fca4cf6ab1fca77d8ff63045125}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_aca0e7fca4cf6ab1fca77d8ff63045125}{heat\+Conductivity\+Ratio}
+\begin{DoxyCompactList}\small\item\em Thermal conductivity ratio $ \bar{k} = k_s/k_l $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ae74a860e74c94a9592de44ad52139ffa}\label{class_mushy_layer_params_ae74a860e74c94a9592de44ad52139ffa}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ae74a860e74c94a9592de44ad52139ffa}{specific\+Heat\+Ratio}
+\begin{DoxyCompactList}\small\item\em Specific heat ratio $ \bar{c} = c_s/c_l $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_add4a51dbf21185fb7172b52d54425cb5}\label{class_mushy_layer_params_add4a51dbf21185fb7172b52d54425cb5}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_add4a51dbf21185fb7172b52d54425cb5}{lewis}
+\begin{DoxyCompactList}\small\item\em Lewis number $ Le = \kappa_l/D_l $. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a1cc8074618d57c994ce1771cba4a973c}{darcy}
+\begin{DoxyCompactList}\small\item\em Darcy number $ K_0/h^2 $. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a157dde93ce7d9c83740fb9fc7fc0aadd}{non\+Dim\+Reluctance}
+\begin{DoxyCompactList}\small\item\em Non dimensional reluctance of the hele-\/shaw cell. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_add7d54ce252c7efdaad45e934fdff49d}{hele\+Sham\+Permeability}
+\begin{DoxyCompactList}\small\item\em Dimensionless Hele-\/\+Shaw cell permeability. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a6d4d8af975cb229d66da7b66b84de8e1}\label{class_mushy_layer_params_a6d4d8af975cb229d66da7b66b84de8e1}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a6d4d8af975cb229d66da7b66b84de8e1}{reynolds}
+\begin{DoxyCompactList}\small\item\em Reynolds number $ \rho_0 \kappa_l / \eta $. Not used any more. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a5b15d882a9c331fd9e63873e7bf44b80}\label{class_mushy_layer_params_a5b15d882a9c331fd9e63873e7bf44b80}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a5b15d882a9c331fd9e63873e7bf44b80}{prandtl}
+\begin{DoxyCompactList}\small\item\em Prandtl number $ \eta / \rho_0 \kappa_l $. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ada4f0f588513e96f72dcb1ba35a2585f}{rayleigh\+Temp}
+\begin{DoxyCompactList}\small\item\em Rayleigh number for temperature contributions to buoyancy. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a7caaf9bff2bf7525386717144ecb7118}{rayleigh\+Composition}
+\begin{DoxyCompactList}\small\item\em Rayleigh number for salinity contributions to buoyancy. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a77c66c8908da36411b789c07dd412eca}{timescale}
+\begin{DoxyCompactList}\small\item\em Timescale for nondimensionalisation -\/ not currently used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aa9567ee5806f9aa8619a760da3574ba4}\label{class_mushy_layer_params_aa9567ee5806f9aa8619a760da3574ba4}} 
+int \hyperlink{class_mushy_layer_params_aa9567ee5806f9aa8619a760da3574ba4}{m\+\_\+nondimensionalisation}
+\begin{DoxyCompactList}\small\item\em How to nondimensionalise the governing equations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a6c0e412490392930b9e23bc271fa6538}\label{class_mushy_layer_params_a6c0e412490392930b9e23bc271fa6538}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a6c0e412490392930b9e23bc271fa6538}{m\+\_\+heat\+Diffusion\+Coeff}
+\begin{DoxyCompactList}\small\item\em Heat diffusion coefficient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a797b35fc1db221bff72743474c7a89a8}\label{class_mushy_layer_params_a797b35fc1db221bff72743474c7a89a8}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a797b35fc1db221bff72743474c7a89a8}{m\+\_\+salt\+Diffusion\+Coeff}
+\begin{DoxyCompactList}\small\item\em Salt diffusion coefficient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a06f6b389e587cfa4b24b40b02db73a87}\label{class_mushy_layer_params_a06f6b389e587cfa4b24b40b02db73a87}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a06f6b389e587cfa4b24b40b02db73a87}{active\+Tracer\+Diffusion\+Coeff}
+\begin{DoxyCompactList}\small\item\em Active tracer diffusion coefficient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a0d32262edb5a40d40c084ef8d55579a4}\label{class_mushy_layer_params_a0d32262edb5a40d40c084ef8d55579a4}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a0d32262edb5a40d40c084ef8d55579a4}{passive\+Tracer\+Diffusion\+Coeff}
+\begin{DoxyCompactList}\small\item\em Passive tracer diffusion coefficient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a11c0ff4f85eed66f670ec23cca1dc707}\label{class_mushy_layer_params_a11c0ff4f85eed66f670ec23cca1dc707}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a11c0ff4f85eed66f670ec23cca1dc707}{active\+Tracer\+Init\+Val}
+\begin{DoxyCompactList}\small\item\em Initial value of active tracer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a45878fe25ee98a2e46b8f81bd237cd8b}\label{class_mushy_layer_params_a45878fe25ee98a2e46b8f81bd237cd8b}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a45878fe25ee98a2e46b8f81bd237cd8b}{passive\+Tracer\+Init\+Val}
+\begin{DoxyCompactList}\small\item\em Initial value of passive tracer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a739fe4d09f2dc6d3af092275bf74af9d}\label{class_mushy_layer_params_a739fe4d09f2dc6d3af092275bf74af9d}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a739fe4d09f2dc6d3af092275bf74af9d}{m\+\_\+viscosity\+Coeff}
+\begin{DoxyCompactList}\small\item\em Viscosity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a750c29a32b8ca88dd3c62fe093ec2760}\label{class_mushy_layer_params_a750c29a32b8ca88dd3c62fe093ec2760}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a750c29a32b8ca88dd3c62fe093ec2760}{m\+\_\+buoyancy\+T\+Coeff}
+\begin{DoxyCompactList}\small\item\em Buoyancy due to temperature. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aaa23101aa42c18cf486657a7f67ba849}\label{class_mushy_layer_params_aaa23101aa42c18cf486657a7f67ba849}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_aaa23101aa42c18cf486657a7f67ba849}{m\+\_\+buoyancy\+S\+Coeff}
+\begin{DoxyCompactList}\small\item\em Buoyancy due to liquid concentration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aaebe5958b0fba7ee680fd50ce2cddcc5}\label{class_mushy_layer_params_aaebe5958b0fba7ee680fd50ce2cddcc5}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_aaebe5958b0fba7ee680fd50ce2cddcc5}{m\+\_\+darcy\+Coeff}
+\begin{DoxyCompactList}\small\item\em Darcy coefficient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ab92ff3374f9423afb3757c46e6ca4ea2}\label{class_mushy_layer_params_ab92ff3374f9423afb3757c46e6ca4ea2}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ab92ff3374f9423afb3757c46e6ca4ea2}{m\+\_\+advection\+Coeff}
+\begin{DoxyCompactList}\small\item\em Coefficient for advection terms. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_afa6da58ee2a066966d6745040c03bc3c}{body\+\_\+force}
+\begin{DoxyCompactList}\small\item\em Constant body force, which we add to the buoyancy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ad39ae54e74b73aa8ec86df8186b6fa6d}\label{class_mushy_layer_params_ad39ae54e74b73aa8ec86df8186b6fa6d}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ad39ae54e74b73aa8ec86df8186b6fa6d}{non\+Dim\+Vel}
+\begin{DoxyCompactList}\small\item\em Dimensionless frame advection velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aa62c3b14e58be4912cacb2120068960a}\label{class_mushy_layer_params_aa62c3b14e58be4912cacb2120068960a}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_aa62c3b14e58be4912cacb2120068960a}{non\+Dim\+Hele\+Shaw\+Cooling}
+\begin{DoxyCompactList}\small\item\em Dimensionless hele-\/shaw cooling coefficient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a45829b6d494fc913f1680e2352596c38}\label{class_mushy_layer_params_a45829b6d494fc913f1680e2352596c38}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a45829b6d494fc913f1680e2352596c38}{theta\+Eutectic}
+\begin{DoxyCompactList}\small\item\em Dimensionless temperature at the eutectic, $ \theta_e $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a5fbe1ecc5dec8ea3d40f2f790207245c}\label{class_mushy_layer_params_a5fbe1ecc5dec8ea3d40f2f790207245c}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a5fbe1ecc5dec8ea3d40f2f790207245c}{theta\+Inf}
+\begin{DoxyCompactList}\small\item\em Dimensionless temperature at infinity, $ \theta_\infty $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a5cbbc3540205aa69d2e54d1695c08c86}\label{class_mushy_layer_params_a5cbbc3540205aa69d2e54d1695c08c86}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a5cbbc3540205aa69d2e54d1695c08c86}{theta\+Initial\+Liquidus}
+\begin{DoxyCompactList}\small\item\em Dimensionless initial temperature calculated from liquidus (not currently used) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a8f801f6995fcd9d6cbe8a99fb07c4aaf}\label{class_mushy_layer_params_a8f801f6995fcd9d6cbe8a99fb07c4aaf}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a8f801f6995fcd9d6cbe8a99fb07c4aaf}{theta\+Initial}
+\begin{DoxyCompactList}\small\item\em Dimensionless initial temperature $ \theta_i $. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a4f5bbe8dd1098ccc6bac03fce6b6bfa0}{theta\+Interface}
+\begin{DoxyCompactList}\small\item\em Dimensionless temperature at mush-\/liquid interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_add018c55cd0f09f969e3fa03872c6cf3}\label{class_mushy_layer_params_add018c55cd0f09f969e3fa03872c6cf3}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_add018c55cd0f09f969e3fa03872c6cf3}{Theta\+Eutectic}
+\begin{DoxyCompactList}\small\item\em Dimensionless bulk concentration at the eutectic $ \Theta_e $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ae326e39ee5950300791ce6d4a03657fc}\label{class_mushy_layer_params_ae326e39ee5950300791ce6d4a03657fc}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ae326e39ee5950300791ce6d4a03657fc}{Theta\+Initial}
+\begin{DoxyCompactList}\small\item\em Dimensionless initial bulk concentration $ \Theta_i $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ae6ea963354fd718de64b7fefc8d06446}\label{class_mushy_layer_params_ae6ea963354fd718de64b7fefc8d06446}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ae6ea963354fd718de64b7fefc8d06446}{Theta\+Inf}
+\begin{DoxyCompactList}\small\item\em Dimensionless far field bulk concentration $ \Theta_\infty $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a3781f0d56c7054c5f28a7004324a0891}\label{class_mushy_layer_params_a3781f0d56c7054c5f28a7004324a0891}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a3781f0d56c7054c5f28a7004324a0891}{Theta\+L\+Initial}
+\begin{DoxyCompactList}\small\item\em Dimensionless initial liquid concentration $ \Theta_{l,i} $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a71937d2796fc2c061fc8b4781355fd00}\label{class_mushy_layer_params_a71937d2796fc2c061fc8b4781355fd00}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a71937d2796fc2c061fc8b4781355fd00}{Theta\+S\+Initial}
+\begin{DoxyCompactList}\small\item\em Dimensionless initial solid concentration $ \Theta_{s,i} $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ab2e1279e2b97f6b6bfbd79aef9f4fd07}\label{class_mushy_layer_params_ab2e1279e2b97f6b6bfbd79aef9f4fd07}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ab2e1279e2b97f6b6bfbd79aef9f4fd07}{Hinitial}
+\begin{DoxyCompactList}\small\item\em Dimensionless initial enthalpy. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_abd2acb1163b9a8660abea009ecbc2a09}{theta\+Plume\+Inflow}
+\begin{DoxyCompactList}\small\item\em For plumes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ae3cbbe4b6c0ac5438a2c753d615e175e}\label{class_mushy_layer_params_ae3cbbe4b6c0ac5438a2c753d615e175e}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ae3cbbe4b6c0ac5438a2c753d615e175e}{H\+Plume\+Inflow}
+\begin{DoxyCompactList}\small\item\em Enthalpy inflow value in plume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a20062da3b7047b0f9fc5a3f5d320499c}\label{class_mushy_layer_params_a20062da3b7047b0f9fc5a3f5d320499c}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a20062da3b7047b0f9fc5a3f5d320499c}{Theta\+Plume\+Inflow}
+\begin{DoxyCompactList}\small\item\em Bulk concentration inflow value in plume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ab0d16dc81fb443313e427b11ff37a83d}\label{class_mushy_layer_params_ab0d16dc81fb443313e427b11ff37a83d}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ab0d16dc81fb443313e427b11ff37a83d}{Theta\+L\+Plume\+Inflow}
+\begin{DoxyCompactList}\small\item\em Liquid concentration inflow value in plume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a70175dbbe59391b96e645b6177299f46}\label{class_mushy_layer_params_a70175dbbe59391b96e645b6177299f46}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a70175dbbe59391b96e645b6177299f46}{Theta\+S\+Plume\+Inflow}
+\begin{DoxyCompactList}\small\item\em Solid concentration inflow value in plume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_af380ecbe4bc2c44acc5f857e715743dc}\label{class_mushy_layer_params_af380ecbe4bc2c44acc5f857e715743dc}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_af380ecbe4bc2c44acc5f857e715743dc}{porosity\+Plume}
+\begin{DoxyCompactList}\small\item\em Porosity inflow value in plume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a4b59e75468fdf85d06da1539de16ff15}\label{class_mushy_layer_params_a4b59e75468fdf85d06da1539de16ff15}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a4b59e75468fdf85d06da1539de16ff15}{permeability\+Plume}
+\begin{DoxyCompactList}\small\item\em Permeability inflow value in plume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a54b70cb9b79d980e8b0ae541f2123be6}\label{class_mushy_layer_params_a54b70cb9b79d980e8b0ae541f2123be6}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a54b70cb9b79d980e8b0ae541f2123be6}{H\+Liquidus\+Plume}
+\begin{DoxyCompactList}\small\item\em Liquidus inflow value in plume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ad4c0bfd873c178376e2d9238f97c40f2}\label{class_mushy_layer_params_ad4c0bfd873c178376e2d9238f97c40f2}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_ad4c0bfd873c178376e2d9238f97c40f2}{H\+Eutectic\+Plume}
+\begin{DoxyCompactList}\small\item\em Eutectic inflow value in plume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_af82a376576ff4165d3e43729d2f367a9}\label{class_mushy_layer_params_af82a376576ff4165d3e43729d2f367a9}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_af82a376576ff4165d3e43729d2f367a9}{H\+Solidus\+Plume}
+\begin{DoxyCompactList}\small\item\em Solidus inflow value in plume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a3eeb2d5c33ea07b2ae1921af69bde3fc}\label{class_mushy_layer_params_a3eeb2d5c33ea07b2ae1921af69bde3fc}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a3eeb2d5c33ea07b2ae1921af69bde3fc}{reference\+Temperature}
+\begin{DoxyCompactList}\small\item\em Reference temperature for nondimensionalisation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a0c53c6f3d00bb95fbdb3c3a2c42275ec}\label{class_mushy_layer_params_a0c53c6f3d00bb95fbdb3c3a2c42275ec}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a0c53c6f3d00bb95fbdb3c3a2c42275ec}{reference\+Salinity}
+\begin{DoxyCompactList}\small\item\em Reference salinity for nondimensionalisation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a624702d391490bba774a2f9db3db004f}\label{class_mushy_layer_params_a624702d391490bba774a2f9db3db004f}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a624702d391490bba774a2f9db3db004f}{inflow\+Velocity}
+\begin{DoxyCompactList}\small\item\em Inflow velocity, when required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a7e689b4f8e1c531490260fd0bb3cec9a}\label{class_mushy_layer_params_a7e689b4f8e1c531490260fd0bb3cec9a}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a7e689b4f8e1c531490260fd0bb3cec9a}{pressure\+Head}
+\begin{DoxyCompactList}\small\item\em Pressure difference between top and bottom boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a958ff5abdfeb7c6e40b1f872730fe096}\label{class_mushy_layer_params_a958ff5abdfeb7c6e40b1f872730fe096}} 
+\textbf{ Vector}$<$ \textbf{ Real} $>$ \hyperlink{class_mushy_layer_params_a958ff5abdfeb7c6e40b1f872730fe096}{plume\+Bounds}
+\begin{DoxyCompactList}\small\item\em Specify start and end of an inflow plume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ab4202e8c981298a3723c865fefd5595b}\label{class_mushy_layer_params_ab4202e8c981298a3723c865fefd5595b}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_ab4202e8c981298a3723c865fefd5595b}{bc\+Type\+Vel\+Lo}
+\begin{DoxyCompactList}\small\item\em Velocity boundary conditions (lo side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_adb891e3de531ee991361b91b7d8aa528}\label{class_mushy_layer_params_adb891e3de531ee991361b91b7d8aa528}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_adb891e3de531ee991361b91b7d8aa528}{bc\+Type\+Vel\+Hi}
+\begin{DoxyCompactList}\small\item\em Velocity boundary conditions (hi side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ac308a0d191cc626bf2df54e3a3a9fdca}\label{class_mushy_layer_params_ac308a0d191cc626bf2df54e3a3a9fdca}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_ac308a0d191cc626bf2df54e3a3a9fdca}{bc\+Type\+Enthalpy\+Lo}
+\begin{DoxyCompactList}\small\item\em Enthalpy boundary conditions (lo side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ae81f844a9bb7d53ca363b255942d1f87}\label{class_mushy_layer_params_ae81f844a9bb7d53ca363b255942d1f87}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_ae81f844a9bb7d53ca363b255942d1f87}{bc\+Type\+Enthalpy\+Hi}
+\begin{DoxyCompactList}\small\item\em Enthalpy boundary conditions (hi side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a255ae9ca43a9de9d1cd160504d7d8050}\label{class_mushy_layer_params_a255ae9ca43a9de9d1cd160504d7d8050}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_a255ae9ca43a9de9d1cd160504d7d8050}{bc\+Type\+Bulk\+Concentration\+Lo}
+\begin{DoxyCompactList}\small\item\em Bulk concentration boundary conditions (lo side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a368d1490a15b2c3ee6e62cb0aff82b5e}\label{class_mushy_layer_params_a368d1490a15b2c3ee6e62cb0aff82b5e}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_a368d1490a15b2c3ee6e62cb0aff82b5e}{bc\+Type\+Bulk\+Concentration\+Hi}
+\begin{DoxyCompactList}\small\item\em Bulk concentration boundary conditions (hi side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aa6d0b74290e73410c2fb7eda2bb2efa5}\label{class_mushy_layer_params_aa6d0b74290e73410c2fb7eda2bb2efa5}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_aa6d0b74290e73410c2fb7eda2bb2efa5}{bc\+Type\+Temperature\+Lo}
+\begin{DoxyCompactList}\small\item\em Temperature boundary conditions (low side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a8862878c5d545a228a100fb6ef527cc9}\label{class_mushy_layer_params_a8862878c5d545a228a100fb6ef527cc9}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_a8862878c5d545a228a100fb6ef527cc9}{bc\+Type\+Temperature\+Hi}
+\begin{DoxyCompactList}\small\item\em Temperature boundary conditions (hi side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a14ab801e982911620a5367a5a19091a2}\label{class_mushy_layer_params_a14ab801e982911620a5367a5a19091a2}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_a14ab801e982911620a5367a5a19091a2}{bc\+Type\+Liquid\+Concentration\+Lo}
+\begin{DoxyCompactList}\small\item\em Liquid concentration boundary conditions (low side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a7ef4f85d8b31359cb3a4bab15333a885}\label{class_mushy_layer_params_a7ef4f85d8b31359cb3a4bab15333a885}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_a7ef4f85d8b31359cb3a4bab15333a885}{bc\+Type\+Liquid\+Concentration\+Hi}
+\begin{DoxyCompactList}\small\item\em Liquid concentration boundary conditions (hi side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a32e3ba5dee5c413aabdbd237b10665c6}\label{class_mushy_layer_params_a32e3ba5dee5c413aabdbd237b10665c6}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_a32e3ba5dee5c413aabdbd237b10665c6}{bc\+Type\+Porosity\+Lo}
+\begin{DoxyCompactList}\small\item\em Porosity boundary conditions (low side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a0c21268e365bffc758882f01ca67bc7f}\label{class_mushy_layer_params_a0c21268e365bffc758882f01ca67bc7f}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_a0c21268e365bffc758882f01ca67bc7f}{bc\+Type\+Porosity\+Hi}
+\begin{DoxyCompactList}\small\item\em Porosity boundary conditions (hi side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a4b8ab639d783fa87bfe65eaddc2386b1}\label{class_mushy_layer_params_a4b8ab639d783fa87bfe65eaddc2386b1}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_a4b8ab639d783fa87bfe65eaddc2386b1}{bc\+Type\+Permeability\+Lo}
+\begin{DoxyCompactList}\small\item\em Permeability boundary conditions (low side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a5b6fae7451c1f563711f732308058d0c}\label{class_mushy_layer_params_a5b6fae7451c1f563711f732308058d0c}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_a5b6fae7451c1f563711f732308058d0c}{bc\+Type\+Permeability\+Hi}
+\begin{DoxyCompactList}\small\item\em Permeability boundary conditions (hi side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a20a1d7a413a67824498266e1477b1309}\label{class_mushy_layer_params_a20a1d7a413a67824498266e1477b1309}} 
+\textbf{ Real} {\bfseries sinusoidal\+\_\+temperature\+\_\+bc\+\_\+timescale}
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a89941b4d0f3984469388df57a5268298}\label{class_mushy_layer_params_a89941b4d0f3984469388df57a5268298}} 
+\textbf{ Real} {\bfseries sinusoidal\+\_\+temperature\+\_\+bc\+\_\+amplitude}
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a5fe25e2665c1cf898731e66c5f7e9f3d}\label{class_mushy_layer_params_a5fe25e2665c1cf898731e66c5f7e9f3d}} 
+\textbf{ Real} {\bfseries sinusoidal\+\_\+temperature\+\_\+bc\+\_\+av}
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a3ed398bb3132c12df017957640fe6db5}\label{class_mushy_layer_params_a3ed398bb3132c12df017957640fe6db5}} 
+\textbf{ Real} {\bfseries sinusoidal\+\_\+temperature\+\_\+bc\+\_\+phase\+\_\+diff}
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a9f6c79192f3543f76536ee658717dd9c}\label{class_mushy_layer_params_a9f6c79192f3543f76536ee658717dd9c}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_a9f6c79192f3543f76536ee658717dd9c}{bc\+Type\+Scalar\+Lo}
+\begin{DoxyCompactList}\small\item\em Unified B\+Cs for all scalars (lo side, for each spatial direction) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a0967dab260886cd49012d03cd38bb0fd}\label{class_mushy_layer_params_a0967dab260886cd49012d03cd38bb0fd}} 
+\textbf{ Vector}$<$ int $>$ \hyperlink{class_mushy_layer_params_a0967dab260886cd49012d03cd38bb0fd}{bc\+Type\+Scalar\+Hi}
+\begin{DoxyCompactList}\small\item\em Unified B\+Cs for all scalars (hi side, for each spatial direction) \end{DoxyCompactList}\item 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a54544cff481fc73b80114133caeb08f4}{bc\+Val\+Enthalpy\+Hi}
+\begin{DoxyCompactList}\small\item\em \textbf{ Vector} containing boundary values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a7c6879d90958f9798389e497779cecbc}\label{class_mushy_layer_params_a7c6879d90958f9798389e497779cecbc}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a7c6879d90958f9798389e497779cecbc}{bc\+Val\+Enthalpy\+Lo}
+\begin{DoxyCompactList}\small\item\em Enthalpy B\+Cs on lo-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a10f2afe241fb5442559ae32da03ace73}\label{class_mushy_layer_params_a10f2afe241fb5442559ae32da03ace73}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a10f2afe241fb5442559ae32da03ace73}{bc\+Val\+Bulk\+Concentration\+Hi}
+\begin{DoxyCompactList}\small\item\em Bulk Concentration B\+Cs on hi-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a06f2d284d0ad84792bc599a7cdf540e7}\label{class_mushy_layer_params_a06f2d284d0ad84792bc599a7cdf540e7}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a06f2d284d0ad84792bc599a7cdf540e7}{bc\+Val\+Bulk\+Concentration\+Lo}
+\begin{DoxyCompactList}\small\item\em Bulk Concentration B\+Cs on lo-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a7fb0967406b3327327e5173fce438576}\label{class_mushy_layer_params_a7fb0967406b3327327e5173fce438576}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a7fb0967406b3327327e5173fce438576}{bc\+Val\+Temperature\+Hi}
+\begin{DoxyCompactList}\small\item\em Temperature B\+Cs on hi-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ae51b5d35b60e2a82d430bf98fc8ddbd8}\label{class_mushy_layer_params_ae51b5d35b60e2a82d430bf98fc8ddbd8}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_ae51b5d35b60e2a82d430bf98fc8ddbd8}{bc\+Val\+Temperature\+Lo}
+\begin{DoxyCompactList}\small\item\em Temperature B\+Cs on lo-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a85ff36d3793f22046df4837fdf72087c}\label{class_mushy_layer_params_a85ff36d3793f22046df4837fdf72087c}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a85ff36d3793f22046df4837fdf72087c}{bc\+Val\+Liquid\+Concentration\+Lo}
+\begin{DoxyCompactList}\small\item\em Liquid concentration B\+Cs on lo-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_af2cdd1c9f59cdeaf080d45787265f092}\label{class_mushy_layer_params_af2cdd1c9f59cdeaf080d45787265f092}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_af2cdd1c9f59cdeaf080d45787265f092}{bc\+Val\+Liquid\+Concentration\+Hi}
+\begin{DoxyCompactList}\small\item\em Liquid concentration B\+Cs on hi-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_af47fd22702ced3bffd3ca0fc0c192e55}\label{class_mushy_layer_params_af47fd22702ced3bffd3ca0fc0c192e55}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_af47fd22702ced3bffd3ca0fc0c192e55}{bc\+Val\+Porosity\+Lo}
+\begin{DoxyCompactList}\small\item\em Porosity B\+Cs on lo-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ae0b8c12c138c8e461e5e5a1765650991}\label{class_mushy_layer_params_ae0b8c12c138c8e461e5e5a1765650991}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_ae0b8c12c138c8e461e5e5a1765650991}{bc\+Val\+Porosity\+Hi}
+\begin{DoxyCompactList}\small\item\em Porosity B\+Cs on hi-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ac8aa3ddd33f0c56267398fa301da5484}\label{class_mushy_layer_params_ac8aa3ddd33f0c56267398fa301da5484}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_ac8aa3ddd33f0c56267398fa301da5484}{bc\+Val\+Permeability\+Lo}
+\begin{DoxyCompactList}\small\item\em Permeability B\+Cs on lo-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_af397adcc43a1fa6770b16563719bf68f}\label{class_mushy_layer_params_af397adcc43a1fa6770b16563719bf68f}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_af397adcc43a1fa6770b16563719bf68f}{bc\+Val\+Permeability\+Hi}
+\begin{DoxyCompactList}\small\item\em Permeability B\+Cs on hi-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aaf7f9ac5ba10e69efd231de803e8b88a}\label{class_mushy_layer_params_aaf7f9ac5ba10e69efd231de803e8b88a}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_aaf7f9ac5ba10e69efd231de803e8b88a}{bc\+Val\+Vel\+Hi}
+\begin{DoxyCompactList}\small\item\em Velocity B\+Cs on hi-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a02557e4768584af590e549f7c5885b6a}\label{class_mushy_layer_params_a02557e4768584af590e549f7c5885b6a}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a02557e4768584af590e549f7c5885b6a}{bc\+Val\+Vel\+Lo}
+\begin{DoxyCompactList}\small\item\em Velocity B\+Cs on lo-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a0e15c65909ba92b45761d1cc37a63815}\label{class_mushy_layer_params_a0e15c65909ba92b45761d1cc37a63815}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a0e15c65909ba92b45761d1cc37a63815}{bc\+Val\+Solidus\+Hi}
+\begin{DoxyCompactList}\small\item\em Solidus B\+Cs on hi-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_af3f11d55e8b2c20877342ec5805e0095}\label{class_mushy_layer_params_af3f11d55e8b2c20877342ec5805e0095}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_af3f11d55e8b2c20877342ec5805e0095}{bc\+Val\+Solidus\+Lo}
+\begin{DoxyCompactList}\small\item\em Solidus B\+Cs on lo-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aa02bf078b2d372f5d05fd27bf2479881}\label{class_mushy_layer_params_aa02bf078b2d372f5d05fd27bf2479881}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_aa02bf078b2d372f5d05fd27bf2479881}{bc\+Val\+Liquidus\+Hi}
+\begin{DoxyCompactList}\small\item\em Liquidus B\+Cs on hi-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a24a6dca9f6fd3aa7b67f73b6e90e4d7f}\label{class_mushy_layer_params_a24a6dca9f6fd3aa7b67f73b6e90e4d7f}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a24a6dca9f6fd3aa7b67f73b6e90e4d7f}{bc\+Val\+Liquidus\+Lo}
+\begin{DoxyCompactList}\small\item\em Liquidus B\+Cs on lo-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a902bc54e365a674dfb832981ffe4c105}\label{class_mushy_layer_params_a902bc54e365a674dfb832981ffe4c105}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a902bc54e365a674dfb832981ffe4c105}{bc\+Val\+Eutectic\+Hi}
+\begin{DoxyCompactList}\small\item\em Eutectic B\+Cs on hi-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a7b5ccdd2995d371414f37d7b4817e6b2}\label{class_mushy_layer_params_a7b5ccdd2995d371414f37d7b4817e6b2}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a7b5ccdd2995d371414f37d7b4817e6b2}{bc\+Val\+Eutectic\+Lo}
+\begin{DoxyCompactList}\small\item\em Eutectic B\+Cs on lo-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a6a4304fd045912277d4ddfcbe4fa1736}\label{class_mushy_layer_params_a6a4304fd045912277d4ddfcbe4fa1736}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a6a4304fd045912277d4ddfcbe4fa1736}{bc\+Val\+Solid\+Concentration\+Lo}
+\begin{DoxyCompactList}\small\item\em Solid concentration B\+Cs on lo-\/side boundaries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a38066e836e93647e50557ffa9fa5b8bd}\label{class_mushy_layer_params_a38066e836e93647e50557ffa9fa5b8bd}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a38066e836e93647e50557ffa9fa5b8bd}{bc\+Val\+Solid\+Concentration\+Hi}
+\begin{DoxyCompactList}\small\item\em Solid concentration B\+Cs on hi-\/side boundaries. \end{DoxyCompactList}\item 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_a2a636c632d746bcdbe7f29c0b70c50d2}{bc\+Val\+Pressure\+Hi}
+\begin{DoxyCompactList}\small\item\em Pressure B\+Cs on hi/lo sides. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ac1b2a3539ae1d6b7d716d3796ca221db}\label{class_mushy_layer_params_ac1b2a3539ae1d6b7d716d3796ca221db}} 
+\textbf{ Real\+Vect} \hyperlink{class_mushy_layer_params_ac1b2a3539ae1d6b7d716d3796ca221db}{bc\+Val\+Pressure\+Lo}
+\begin{DoxyCompactList}\small\item\em Pressure BC on the low side of the domain in each direction (x, y, z) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a2af9063a5030a32afcc3c2c99933a624}\label{class_mushy_layer_params_a2af9063a5030a32afcc3c2c99933a624}} 
+\hyperlink{class_b_c_info}{B\+C\+Info} \hyperlink{class_mushy_layer_params_a2af9063a5030a32afcc3c2c99933a624}{m\+\_\+bc\+\_\+no\+Flux\+Limit}
+\begin{DoxyCompactList}\small\item\em Position along each face, below which to enforce no heat flux (above this position, enforce some other specified heat flux) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a72dce1a01cda103fc315cdab0b0f383a}\label{class_mushy_layer_params_a72dce1a01cda103fc315cdab0b0f383a}} 
+\hyperlink{class_b_c_info}{B\+C\+Info} \hyperlink{class_mushy_layer_params_a72dce1a01cda103fc315cdab0b0f383a}{m\+\_\+bc\+\_\+b\+Tref}
+\begin{DoxyCompactList}\small\item\em Reference temperature for radiation boundary conditions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a8b98ef06ad47d5eba490031d95135f42}\label{class_mushy_layer_params_a8b98ef06ad47d5eba490031d95135f42}} 
+\hyperlink{class_b_c_info}{B\+C\+Info} \hyperlink{class_mushy_layer_params_a8b98ef06ad47d5eba490031d95135f42}{m\+\_\+bc\+\_\+b}
+\begin{DoxyCompactList}\small\item\em Some generic variable which can be used in various boundary conditions if required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a355e6ad5af4829cef3c4ded140445787}\label{class_mushy_layer_params_a355e6ad5af4829cef3c4ded140445787}} 
+\hyperlink{class_b_c_info}{B\+C\+Info} {\bfseries m\+\_\+bc\+\_\+a}
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aac9042c8c6d931f14b718fba83270548}\label{class_mushy_layer_params_aac9042c8c6d931f14b718fba83270548}} 
+int {\bfseries max\+\_\+bc\+\_\+iter}
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a7e7166ca5b2867c20a41d31fe0259b22}\label{class_mushy_layer_params_a7e7166ca5b2867c20a41d31fe0259b22}} 
+int {\bfseries bc\+\_\+nonlinear\+\_\+solve\+\_\+method}
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a2747ee618dbc6d411939f0849e0dc7ea}\label{class_mushy_layer_params_a2747ee618dbc6d411939f0849e0dc7ea}} 
+\textbf{ Real} {\bfseries max\+\_\+bc\+\_\+residual}
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_abc635e34cb46ed18bdcbd4b1759b8a25}\label{class_mushy_layer_params_abc635e34cb46ed18bdcbd4b1759b8a25}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_abc635e34cb46ed18bdcbd4b1759b8a25}{bc\+\_\+relax\+\_\+coeff}
+\begin{DoxyCompactList}\small\item\em For nonlinear B\+Cs solve. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a0c73810c485b313090d83f1f0f6d44fa}\label{class_mushy_layer_params_a0c73810c485b313090d83f1f0f6d44fa}} 
+int \hyperlink{class_mushy_layer_params_a0c73810c485b313090d83f1f0f6d44fa}{m\+\_\+\+B\+C\+Accuracy}
+\begin{DoxyCompactList}\small\item\em First or second order B\+Cs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aa78cd01c27b8c35fe4e42a9ef75fdb54}\label{class_mushy_layer_params_aa78cd01c27b8c35fe4e42a9ef75fdb54}} 
+int \hyperlink{class_mushy_layer_params_aa78cd01c27b8c35fe4e42a9ef75fdb54}{m\+\_\+pressure\+B\+C\+Accuracy}
+\begin{DoxyCompactList}\small\item\em Accuracy for pressure bcs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a0b5cfae6cbb345071e9b37bb07eb5287}\label{class_mushy_layer_params_a0b5cfae6cbb345071e9b37bb07eb5287}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a0b5cfae6cbb345071e9b37bb07eb5287}{m\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Time, in case B\+Cs are time-\/dependent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a937df03bcbfa36f79227b731e8531e13}\label{class_mushy_layer_params_a937df03bcbfa36f79227b731e8531e13}} 
+int \hyperlink{class_mushy_layer_params_a937df03bcbfa36f79227b731e8531e13}{m\+\_\+time\+Dependent\+BC}
+\begin{DoxyCompactList}\small\item\em To specify which of time\+Dependent\+B\+Ctypes we want to use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_aece8565e95c703995b0dc90bcc7066db}\label{class_mushy_layer_params_aece8565e95c703995b0dc90bcc7066db}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_aece8565e95c703995b0dc90bcc7066db}{m\+\_\+\+B\+Camplitude}
+\begin{DoxyCompactList}\small\item\em Amplitude of time periodic boundary conditions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_acd308081fbec823c35e80f63b10d0b22}\label{class_mushy_layer_params_acd308081fbec823c35e80f63b10d0b22}} 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_acd308081fbec823c35e80f63b10d0b22}{m\+\_\+\+B\+Ctimescale}
+\begin{DoxyCompactList}\small\item\em Time scale (period) for time periodic boundary conditions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ad6f93ffb81ff66d7cf3a8f26c41e807f}\label{class_mushy_layer_params_ad6f93ffb81ff66d7cf3a8f26c41e807f}} 
+int \hyperlink{class_mushy_layer_params_ad6f93ffb81ff66d7cf3a8f26c41e807f}{fixed\+Temp\+Direction}
+\begin{DoxyCompactList}\small\item\em 0 means sidewall heating, 1 means vertical heating (sea ice) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ab73ff4bd56df707ef11f6dddd8055202}\label{class_mushy_layer_params_ab73ff4bd56df707ef11f6dddd8055202}} 
+\hyperlink{_mushy_layer_params_8h_a41f47972c3b8df9c133931b4b9b73584}{Permeability\+Functions} \hyperlink{class_mushy_layer_params_ab73ff4bd56df707ef11f6dddd8055202}{permeability\+Function}
+\begin{DoxyCompactList}\small\item\em Which permeability function should we use? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a55a2f43bc312f950f53d4e05dca51b55}\label{class_mushy_layer_params_a55a2f43bc312f950f53d4e05dca51b55}} 
+bool \hyperlink{class_mushy_layer_params_a55a2f43bc312f950f53d4e05dca51b55}{hele\+Shaw}
+\begin{DoxyCompactList}\small\item\em Are we running the experiment in a Hele-\/\+Shaw cell? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a2b48c8871993e8d83577f794e51a979f}\label{class_mushy_layer_params_a2b48c8871993e8d83577f794e51a979f}} 
+\hyperlink{_mushy_layer_params_8h_aa4852525f865bc1315152f4690eeaaeb}{Params\+Porosity\+Functions} \hyperlink{class_mushy_layer_params_a2b48c8871993e8d83577f794e51a979f}{m\+\_\+porosity\+Function}
+\begin{DoxyCompactList}\small\item\em For cases where want to impose a porosity, e.\+g. for benchmarking. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ab4584b1a17d87ac40ef334a87aa70903}\label{class_mushy_layer_params_ab4584b1a17d87ac40ef334a87aa70903}} 
+\hyperlink{_mushy_layer_params_8h_a81bb69f27935895243a77999d80e81bc}{Viscosity\+Function} \hyperlink{class_mushy_layer_params_ab4584b1a17d87ac40ef334a87aa70903}{m\+\_\+viscosity\+Function}
+\begin{DoxyCompactList}\small\item\em For when we want the fluid viscosity to depend on the solute concentration. \end{DoxyCompactList}\item 
+\textbf{ Real} \hyperlink{class_mushy_layer_params_a96533d7a2509a604830f5319163ca113}{max\+\_\+viscosity}
+\begin{DoxyCompactList}\small\item\em Maximum dimensionless viscosity the fluid can have. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a8b58b8b36c7fe399d6b8e6c704459421}\label{class_mushy_layer_params_a8b58b8b36c7fe399d6b8e6c704459421}} 
+static string \hyperlink{class_mushy_layer_params_a8b58b8b36c7fe399d6b8e6c704459421}{s\+\_\+\+D\+A\+R\+C\+Y\+\_\+\+T\+I\+M\+E\+S\+C\+A\+LE} = \char`\"{}Darcy\char`\"{}
+\begin{DoxyCompactList}\small\item\em Darcy timescale. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_ac67a4fe28ad2dd726bb0c27f0a8d0be2}\label{class_mushy_layer_params_ac67a4fe28ad2dd726bb0c27f0a8d0be2}} 
+static string \hyperlink{class_mushy_layer_params_ac67a4fe28ad2dd726bb0c27f0a8d0be2}{s\+\_\+\+D\+I\+F\+F\+U\+S\+I\+V\+E\+\_\+\+T\+I\+M\+E\+S\+C\+A\+LE} = \char`\"{}Diffusive\char`\"{}
+\begin{DoxyCompactList}\small\item\em Diffusive timescale. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a5ea3607034b7bf698b7e4f6fbd315004}\label{class_mushy_layer_params_a5ea3607034b7bf698b7e4f6fbd315004}} 
+static string \hyperlink{class_mushy_layer_params_a5ea3607034b7bf698b7e4f6fbd315004}{s\+\_\+\+B\+U\+O\+Y\+A\+N\+C\+Y\+\_\+\+T\+I\+M\+E\+S\+C\+A\+LE} = \char`\"{}Buoyancy\char`\"{}
+\begin{DoxyCompactList}\small\item\em Buoyancy timescale. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a87db5b32e8e0c45382166d656f6f5d44}\label{class_mushy_layer_params_a87db5b32e8e0c45382166d656f6f5d44}} 
+static string \hyperlink{class_mushy_layer_params_a87db5b32e8e0c45382166d656f6f5d44}{s\+\_\+\+A\+D\+V\+E\+C\+T\+I\+V\+E\+\_\+\+T\+I\+M\+E\+S\+C\+A\+LE} = \char`\"{}Advective\char`\"{}
+\begin{DoxyCompactList}\small\item\em Advective timescale. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a63da4997934ff9382613b0a06a186d51}\label{class_mushy_layer_params_a63da4997934ff9382613b0a06a186d51}} 
+static string \hyperlink{class_mushy_layer_params_a63da4997934ff9382613b0a06a186d51}{s\+\_\+\+A\+D\+V\+E\+C\+T\+I\+V\+E\+\_\+\+V\+E\+L\+O\+C\+I\+T\+Y\+\_\+\+S\+C\+A\+LE} = \char`\"{}Advective\char`\"{}
+\begin{DoxyCompactList}\small\item\em Advective velocity scale. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mushy_layer_params_a3eb0c2ebf0a11c519d8e2a853670c1f2}\label{class_mushy_layer_params_a3eb0c2ebf0a11c519d8e2a853670c1f2}} 
+static string \hyperlink{class_mushy_layer_params_a3eb0c2ebf0a11c519d8e2a853670c1f2}{s\+\_\+\+D\+A\+R\+C\+Y\+\_\+\+V\+E\+L\+O\+C\+I\+T\+Y\+\_\+\+S\+C\+A\+LE} = \char`\"{}Darcy\char`\"{}
+\begin{DoxyCompactList}\small\item\em Darcy velocity scale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to handle the physical parameters of a mushy layer simulation. 
+
+This includes material properties, boundary conditions, initial conditions and more. Properties are read in and then non-\/dimensionalised here. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8}\label{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!nondimensionalisations@{nondimensionalisations}}
+\index{nondimensionalisations@{nondimensionalisations}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{nondimensionalisations}{nondimensionalisations}}
+{\footnotesize\ttfamily enum \hyperlink{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8}{Mushy\+Layer\+Params\+::nondimensionalisations}}
+
+
+
+Different options for nondimensionalisation. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+diffusive\+Time\+\_\+advective\+Vel@{m\+\_\+diffusive\+Time\+\_\+advective\+Vel}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!m\+\_\+diffusive\+Time\+\_\+advective\+Vel@{m\+\_\+diffusive\+Time\+\_\+advective\+Vel}}}\mbox{\Hypertarget{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8a0a6a16ab5fc194f854e89368f43c7c19}\label{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8a0a6a16ab5fc194f854e89368f43c7c19}} 
+m\+\_\+diffusive\+Time\+\_\+advective\+Vel&Diffusive timescale, advective velocity scale. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+darcy\+Time\+\_\+advective\+Vel@{m\+\_\+darcy\+Time\+\_\+advective\+Vel}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!m\+\_\+darcy\+Time\+\_\+advective\+Vel@{m\+\_\+darcy\+Time\+\_\+advective\+Vel}}}\mbox{\Hypertarget{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8acbb36c4d62aacfa031e24bdeccd628eb}\label{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8acbb36c4d62aacfa031e24bdeccd628eb}} 
+m\+\_\+darcy\+Time\+\_\+advective\+Vel&Darcy timescales, advective velocity scale. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+darcy\+Time\+\_\+darcy\+Vel@{m\+\_\+darcy\+Time\+\_\+darcy\+Vel}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!m\+\_\+darcy\+Time\+\_\+darcy\+Vel@{m\+\_\+darcy\+Time\+\_\+darcy\+Vel}}}\mbox{\Hypertarget{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8aaadfdd616da7cb4dbaab31e60d5d12e7}\label{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8aaadfdd616da7cb4dbaab31e60d5d12e7}} 
+m\+\_\+darcy\+Time\+\_\+darcy\+Vel&Darcy timescale, darcy velocity scale. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+advective\+Time\+\_\+darcy\+Vel@{m\+\_\+advective\+Time\+\_\+darcy\+Vel}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!m\+\_\+advective\+Time\+\_\+darcy\+Vel@{m\+\_\+advective\+Time\+\_\+darcy\+Vel}}}\mbox{\Hypertarget{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8ae83bbc932e7440f2a95c09628e7b9451}\label{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8ae83bbc932e7440f2a95c09628e7b9451}} 
+m\+\_\+advective\+Time\+\_\+darcy\+Vel&Advective timescale, darcy velocity scale. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+buoyancy\+Time\+\_\+advective\+Vel@{m\+\_\+buoyancy\+Time\+\_\+advective\+Vel}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!m\+\_\+buoyancy\+Time\+\_\+advective\+Vel@{m\+\_\+buoyancy\+Time\+\_\+advective\+Vel}}}\mbox{\Hypertarget{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8a53a77635db4cc741e10e7d2ddaaa3236}\label{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8a53a77635db4cc741e10e7d2ddaaa3236}} 
+m\+\_\+buoyancy\+Time\+\_\+advective\+Vel&Buoyancy timescale, advective velocity scale. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{m\+\_\+num\+\_\+nondimensionalisations@{m\+\_\+num\+\_\+nondimensionalisations}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!m\+\_\+num\+\_\+nondimensionalisations@{m\+\_\+num\+\_\+nondimensionalisations}}}\mbox{\Hypertarget{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8ad984db365974fb0878c4a138d41c5ead}\label{class_mushy_layer_params_a9de94ba9465c51de9b37fc946622bee8ad984db365974fb0878c4a138d41c5ead}} 
+m\+\_\+num\+\_\+nondimensionalisations&Number of nondimensional schemes. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_mushy_layer_params_a029cd583b3d31671363f600177a885ac}\label{class_mushy_layer_params_a029cd583b3d31671363f600177a885ac}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!time\+Dependent\+B\+Ctypes@{time\+Dependent\+B\+Ctypes}}
+\index{time\+Dependent\+B\+Ctypes@{time\+Dependent\+B\+Ctypes}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{time\+Dependent\+B\+Ctypes}{timeDependentBCtypes}}
+{\footnotesize\ttfamily enum \hyperlink{class_mushy_layer_params_a029cd583b3d31671363f600177a885ac}{Mushy\+Layer\+Params\+::time\+Dependent\+B\+Ctypes}}
+
+
+
+Possible time dependences for B\+Cs. 
+
+These are implemented in \hyperlink{class_phys_b_c_util_a0caf25dc5c31d42a6f41734c5d9feaff}{Phys\+B\+C\+Util\+::update\+Time\+Dependent\+B\+Cs()} With the parameters for each option contained with this \hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params} object. You can add your own options to the list below, then implement them in \hyperlink{class_phys_b_c_util_a0caf25dc5c31d42a6f41734c5d9feaff}{Phys\+B\+C\+Util\+::update\+Time\+Dependent\+B\+Cs()} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mushy_layer_params_a497dc7bd7c29819bd697d255af8de3d6}\label{class_mushy_layer_params_a497dc7bd7c29819bd697d255af8de3d6}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!parse\+B\+Cs@{parse\+B\+Cs}}
+\index{parse\+B\+Cs@{parse\+B\+Cs}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{parse\+B\+Cs()}{parseBCs()}}
+{\footnotesize\ttfamily void Mushy\+Layer\+Params\+::parse\+B\+Cs (\begin{DoxyParamCaption}\item[{string}]{a\+\_\+name,  }\item[{\textbf{ Vector}$<$ int $>$ $\ast$}]{a\+\_\+bc\+Holder,  }\item[{bool}]{required = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Read in B\+Cs from the inputs file. 
+
+Solid\+Wall, Inflow, Outflow, Outflow\+Normal, // only a normal velocity Vel\+Inflow\+Outflow, // both inflow and outflow possible no\+Shear, Symmetry, Vel\+Inflow\+Plume, Outflow\+Pressure\+Grad, Pressure\+Head,
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mushy_layer_params_a54544cff481fc73b80114133caeb08f4}\label{class_mushy_layer_params_a54544cff481fc73b80114133caeb08f4}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!bc\+Val\+Enthalpy\+Hi@{bc\+Val\+Enthalpy\+Hi}}
+\index{bc\+Val\+Enthalpy\+Hi@{bc\+Val\+Enthalpy\+Hi}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{bc\+Val\+Enthalpy\+Hi}{bcValEnthalpyHi}}
+{\footnotesize\ttfamily \textbf{ Real\+Vect} Mushy\+Layer\+Params\+::bc\+Val\+Enthalpy\+Hi}
+
+
+
+\textbf{ Vector} containing boundary values. 
+
+Enthalpy B\+Cs on hi-\/side boundaries \mbox{\Hypertarget{class_mushy_layer_params_a2a636c632d746bcdbe7f29c0b70c50d2}\label{class_mushy_layer_params_a2a636c632d746bcdbe7f29c0b70c50d2}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!bc\+Val\+Pressure\+Hi@{bc\+Val\+Pressure\+Hi}}
+\index{bc\+Val\+Pressure\+Hi@{bc\+Val\+Pressure\+Hi}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{bc\+Val\+Pressure\+Hi}{bcValPressureHi}}
+{\footnotesize\ttfamily \textbf{ Real\+Vect} Mushy\+Layer\+Params\+::bc\+Val\+Pressure\+Hi}
+
+
+
+Pressure B\+Cs on hi/lo sides. 
+
+Note that the type of pressure bc is determine from the type of velocity bc specified, as the two are coupled. The values specified here are only used for enforcing a pressure head \mbox{\Hypertarget{class_mushy_layer_params_afa6da58ee2a066966d6745040c03bc3c}\label{class_mushy_layer_params_afa6da58ee2a066966d6745040c03bc3c}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!body\+\_\+force@{body\+\_\+force}}
+\index{body\+\_\+force@{body\+\_\+force}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{body\+\_\+force}{body\_force}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::body\+\_\+force}
+
+
+
+Constant body force, which we add to the buoyancy. 
+
+Buoyancy $ = \chi (Ra_T \theta - Ra_c*\Theta_l) \mathbf{k} + \mathbf{F}_B $
+
+where $ \mathbf{F}_B $ is the buoyancy force \mbox{\Hypertarget{class_mushy_layer_params_a1cc8074618d57c994ce1771cba4a973c}\label{class_mushy_layer_params_a1cc8074618d57c994ce1771cba4a973c}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!darcy@{darcy}}
+\index{darcy@{darcy}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{darcy}{darcy}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::darcy}
+
+
+
+Darcy number $ K_0/h^2 $. 
+
+Set to zero to turn off viscosity. \mbox{\Hypertarget{class_mushy_layer_params_acea8da7cc75a779bb8dd7967fb3b0586}\label{class_mushy_layer_params_acea8da7cc75a779bb8dd7967fb3b0586}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!delta\+Salt@{delta\+Salt}}
+\index{delta\+Salt@{delta\+Salt}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{delta\+Salt}{deltaSalt}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::delta\+Salt}
+
+
+
+Salt difference used for nondimensionalisation. 
+
+$ \Delta S = S_e - S_i $ \mbox{\Hypertarget{class_mushy_layer_params_ae221423b95517958c6a2c7acf5c271c6}\label{class_mushy_layer_params_ae221423b95517958c6a2c7acf5c271c6}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!delta\+Temp@{delta\+Temp}}
+\index{delta\+Temp@{delta\+Temp}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{delta\+Temp}{deltaTemp}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::delta\+Temp}
+
+
+
+Temperature differenece used for nondimensionalisation. 
+
+$ \Delta T = - \Gamma \Delta S $ \mbox{\Hypertarget{class_mushy_layer_params_add7d54ce252c7efdaad45e934fdff49d}\label{class_mushy_layer_params_add7d54ce252c7efdaad45e934fdff49d}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!hele\+Sham\+Permeability@{hele\+Sham\+Permeability}}
+\index{hele\+Sham\+Permeability@{hele\+Sham\+Permeability}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{hele\+Sham\+Permeability}{heleShamPermeability}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::hele\+Sham\+Permeability}
+
+
+
+Dimensionless Hele-\/\+Shaw cell permeability. 
+
+$ \Pi_H = d^2/(12 K_0)$. Inverse of non\+Dim\+Reluctance. \mbox{\Hypertarget{class_mushy_layer_params_a96533d7a2509a604830f5319163ca113}\label{class_mushy_layer_params_a96533d7a2509a604830f5319163ca113}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!max\+\_\+viscosity@{max\+\_\+viscosity}}
+\index{max\+\_\+viscosity@{max\+\_\+viscosity}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{max\+\_\+viscosity}{max\_viscosity}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::max\+\_\+viscosity}
+
+
+
+Maximum dimensionless viscosity the fluid can have. 
+
+Only used when m\+\_\+viscosity\+Function is not = 0 \mbox{\Hypertarget{class_mushy_layer_params_a157dde93ce7d9c83740fb9fc7fc0aadd}\label{class_mushy_layer_params_a157dde93ce7d9c83740fb9fc7fc0aadd}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!non\+Dim\+Reluctance@{non\+Dim\+Reluctance}}
+\index{non\+Dim\+Reluctance@{non\+Dim\+Reluctance}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{non\+Dim\+Reluctance}{nonDimReluctance}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::non\+Dim\+Reluctance}
+
+
+
+Non dimensional reluctance of the hele-\/shaw cell. 
+
+Inverse of permeability. Equivalent to the Darcy number if Katz \& Worster (2008) Reluctance = 12 K\+\_\+0/d$^\wedge$2 = Da $\ast$ 12 $\ast$ (h/d)$^\wedge$2 \mbox{\Hypertarget{class_mushy_layer_params_a7caaf9bff2bf7525386717144ecb7118}\label{class_mushy_layer_params_a7caaf9bff2bf7525386717144ecb7118}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!rayleigh\+Composition@{rayleigh\+Composition}}
+\index{rayleigh\+Composition@{rayleigh\+Composition}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{rayleigh\+Composition}{rayleighComposition}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::rayleigh\+Composition}
+
+
+
+Rayleigh number for salinity contributions to buoyancy. 
+
+\[ Ra_T = \frac{\rho_0 g h K_0 \beta (S_i - S_e)}{\kappa_l \eta} \] \mbox{\Hypertarget{class_mushy_layer_params_ada4f0f588513e96f72dcb1ba35a2585f}\label{class_mushy_layer_params_ada4f0f588513e96f72dcb1ba35a2585f}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!rayleigh\+Temp@{rayleigh\+Temp}}
+\index{rayleigh\+Temp@{rayleigh\+Temp}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{rayleigh\+Temp}{rayleighTemp}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::rayleigh\+Temp}
+
+
+
+Rayleigh number for temperature contributions to buoyancy. 
+
+\[ Ra_T = \frac{\rho_0 g h K_0 \alpha (T_i - T_e)}{\kappa_l \eta} \] \mbox{\Hypertarget{class_mushy_layer_params_ae226ddaa8dc0171b6fcb1e5393ef61a4}\label{class_mushy_layer_params_ae226ddaa8dc0171b6fcb1e5393ef61a4}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!stefan@{stefan}}
+\index{stefan@{stefan}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{stefan}{stefan}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::stefan}
+
+
+
+Stefan number. 
+
+\[ = \frac{L}{c_{p,l} (T_i - T_e)} \] \mbox{\Hypertarget{class_mushy_layer_params_a4f5bbe8dd1098ccc6bac03fce6b6bfa0}\label{class_mushy_layer_params_a4f5bbe8dd1098ccc6bac03fce6b6bfa0}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!theta\+Interface@{theta\+Interface}}
+\index{theta\+Interface@{theta\+Interface}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{theta\+Interface}{thetaInterface}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::theta\+Interface}
+
+
+
+Dimensionless temperature at mush-\/liquid interface. 
+
+Used particularly for solidification without flow benchmark problem \mbox{\Hypertarget{class_mushy_layer_params_abd2acb1163b9a8660abea009ecbc2a09}\label{class_mushy_layer_params_abd2acb1163b9a8660abea009ecbc2a09}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!theta\+Plume\+Inflow@{theta\+Plume\+Inflow}}
+\index{theta\+Plume\+Inflow@{theta\+Plume\+Inflow}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{theta\+Plume\+Inflow}{thetaPlumeInflow}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::theta\+Plume\+Inflow}
+
+
+
+For plumes. 
+
+Temperature inflow value in plume \mbox{\Hypertarget{class_mushy_layer_params_a77c66c8908da36411b789c07dd412eca}\label{class_mushy_layer_params_a77c66c8908da36411b789c07dd412eca}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!timescale@{timescale}}
+\index{timescale@{timescale}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{timescale}{timescale}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::timescale}
+
+
+
+Timescale for nondimensionalisation -\/ not currently used. 
+
+$ \tau = h^2 / \kappa_l $ \mbox{\Hypertarget{class_mushy_layer_params_a2b0038ec10c9660952ea88efd146a846}\label{class_mushy_layer_params_a2b0038ec10c9660952ea88efd146a846}} 
+\index{Mushy\+Layer\+Params@{Mushy\+Layer\+Params}!water\+Distribution\+Coeff@{water\+Distribution\+Coeff}}
+\index{water\+Distribution\+Coeff@{water\+Distribution\+Coeff}!Mushy\+Layer\+Params@{Mushy\+Layer\+Params}}
+\subsubsection{\texorpdfstring{water\+Distribution\+Coeff}{waterDistributionCoeff}}
+{\footnotesize\ttfamily \textbf{ Real} Mushy\+Layer\+Params\+::water\+Distribution\+Coeff}
+
+
+
+Water distribution coefficient, $ p_c $. 
+
+ratio of solid to liquid concentration, $ S_s/S_l $. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src/\hyperlink{_mushy_layer_params_8h}{Mushy\+Layer\+Params.\+h}\item 
+/home/parkinsonjl/mushy-\/layer/src/Mushy\+Layer\+Params.\+cpp\end{DoxyCompactItemize}

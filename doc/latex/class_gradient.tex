@@ -1,0 +1,331 @@
+\hypertarget{class_gradient}{}\section{Gradient Class Reference}
+\label{class_gradient}\index{Gradient@{Gradient}}
+
+
+Class to encapsulate \hyperlink{class_gradient}{Gradient} functions (both CC and face-\/centered)  
+
+
+
+
+{\ttfamily \#include $<$Gradient.\+H$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_gradient_aa657ff462b1dd44565ab4e5c35c097fa}{level\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse\+Ptr, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Crse, const \textbf{ Problem\+Domain} \&a\+\_\+d\+Problem)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered level-\/operator gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a9e85cf629d0e4b0ad7809c0db1f0322c}{level\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse\+Ptr, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Crse, const \textbf{ Box} \&a\+\_\+d\+Problem)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered level-\/operator gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a6a14b8f09f7882545497dcccac01e35e}{level\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse\+Ptr, const \textbf{ Real} a\+\_\+dx, const \textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&a\+\_\+grid\+I\+VS, \textbf{ Quad\+C\+F\+Interp} \&a\+\_\+cf\+Interp)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered level-\/operator gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a6103f7090b4d658cc1086f31a47474ba}{level\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Real} a\+\_\+dx)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered, level-\/operator gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gradient_a64c92cb13194902b86017a98cd73f775}\label{class_gradient_a64c92cb13194902b86017a98cd73f775}} 
+static void \hyperlink{class_gradient_a64c92cb13194902b86017a98cd73f775}{level\+Gradient\+C\+C\+\_\+\+HO} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Real} a\+\_\+dx)
+\begin{DoxyCompactList}\small\item\em Higher order method. \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a8962d5f7dabe25690dce34ce1c00726d}{level\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, const \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+phi, const \textbf{ Real} a\+\_\+dx)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered, level-\/operator gradient of face-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a476a6adb3c37375c48b60d91a3c9c949}{level\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Real} a\+\_\+dx, const int n\+Ghost)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered, level-\/operator gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_ab5fa9029705d216a3c1ae97b58bb970e}{level\+Gradient\+C\+C\+Upwind} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Real} a\+\_\+dx)
+\begin{DoxyCompactList}\small\item\em computes onesided, level-\/operator gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_ab55b4c85431294e40707bd0bdae6e012}{level\+Gradient\+C\+C\+Upwind} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Real} a\+\_\+dx, const \textbf{ Side\+::\+Lo\+Hi\+Side} extrap\+Side, int order=2)
+\begin{DoxyCompactList}\small\item\em computes level-\/operator gradient of cell-\/centred phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a00daa2aa0e66c5f70545cbd9cdf633a2}{level\+Gradient\+C\+C\+New\+One\+Sided} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Real} a\+\_\+dx, int order=2)
+\begin{DoxyCompactList}\small\item\em computes level-\/operator gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a306b5f347d51c38d5cf8a7f446ea0b86}{level\+Gradient\+C\+C\+New\+Centred} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Real} a\+\_\+dx, int order=2)
+\item 
+static void \hyperlink{class_gradient_a6c741fa4909be6c7d55ddc70a128ca93}{comp\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse\+Ptr, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Fine\+Ptr, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Crse, const int a\+\_\+n\+Ref\+Fine, const \textbf{ Problem\+Domain} \&a\+\_\+d\+Problem)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered composite gradient of cell centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a0a941dcb9ad58ed819f41d4fe1080106}{comp\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse\+Ptr, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Fine\+Ptr, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Crse, const int a\+\_\+n\+Ref\+Fine, const \textbf{ Box} \&a\+\_\+d\+Problem)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered composite gradient of cell centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a029f7d1cb39888c2e12b9fb016b58928}{comp\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse\+Ptr, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Fine\+Ptr, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Fine, const \textbf{ Problem\+Domain} \&a\+\_\+d\+Problem, const \textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&a\+\_\+grid\+I\+VS, \textbf{ Quad\+C\+F\+Interp} \&a\+\_\+cf\+Interp\+Crse)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered composite gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a4f44d7eef3d2b675d9c67c90b9904747}{comp\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse\+Ptr, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Fine\+Ptr, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Fine, const \textbf{ Box} \&a\+\_\+d\+Problem, const \textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&a\+\_\+grid\+I\+VS, \textbf{ Quad\+C\+F\+Interp} \&a\+\_\+cf\+Interp\+Crse)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered composite gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a23967a97f57bc4c1609e63faa2eaf437}{comp\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+\+Grad, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Fine\+Ptr, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Fine, const \textbf{ Problem\+Domain} \&a\+\_\+d\+Problem)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered composite gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_ad59fcf73da0f075761f2363b1d1e6c2b}{comp\+Gradient\+CC} (\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+\+Grad, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Fine\+Ptr, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Fine, const \textbf{ Box} \&a\+\_\+d\+Problem)
+\begin{DoxyCompactList}\small\item\em computes cell-\/centered composite gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a7d6a189f7e14c864e35ef507128c9113}{level\+Gradient\+M\+AC} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+edge\+Grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse\+Ptr, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Crse, const \textbf{ Problem\+Domain} \&a\+\_\+d\+Problem)
+\begin{DoxyCompactList}\small\item\em computes edge-\/centered level-\/operator gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a984db420418480a063fa7e60dc18144d}{level\+Gradient\+M\+AC} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+edge\+Grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse\+Ptr, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Crse, const \textbf{ Box} \&a\+\_\+d\+Problem)
+\begin{DoxyCompactList}\small\item\em computes edge-\/centered level-\/operator gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a1e5777612a7ff994896d694e2c1c816b}{level\+Gradient\+M\+AC} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+edge\+Grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse\+Ptr, const \textbf{ Real} a\+\_\+dx, const \textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&a\+\_\+grid\+I\+VS, \textbf{ Quad\+C\+F\+Interp} \&a\+\_\+cf\+Interp\+Crse)
+\begin{DoxyCompactList}\small\item\em computes edge-\/centered level-\/operator gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a3d95193c15462219bd5159de5341b291}{level\+Gradient\+M\+AC} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+edge\+Grad, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Real} a\+\_\+dx)
+\begin{DoxyCompactList}\small\item\em computes edge-\/centered level-\/operator gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gradient_a9346502d05a030c51820bc034816d898}\label{class_gradient_a9346502d05a030c51820bc034816d898}} 
+static void \hyperlink{class_gradient_a9346502d05a030c51820bc034816d898}{level\+Gradient\+M\+A\+C\+New} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+edge\+Grad, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Real} a\+\_\+dx)
+\begin{DoxyCompactList}\small\item\em Edge centred gradient, new version, assume ghost cells have been set. \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a50d364c2e9951e70a74200537ebbd73d}{comp\+Gradient\+M\+AC} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+edge\+Grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Fine, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Crse, const int a\+\_\+n\+Ref\+Fine, const \textbf{ Box} \&a\+\_\+d\+Problem)
+\begin{DoxyCompactList}\small\item\em computes edge-\/centered composite gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_ab53c80ecc42d684acd3456c47b4db5f2}{comp\+Gradient\+M\+AC} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+edge\+Grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Fine, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Crse, const int a\+\_\+n\+Ref\+Fine, const \textbf{ Problem\+Domain} \&a\+\_\+d\+Problem)
+\begin{DoxyCompactList}\small\item\em computes edge-\/centered composite gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a82e5e91499de8d5cbddf3c42528c9421}{comp\+Gradient\+M\+AC} (\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&a\+\_\+edge\+Grad, \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&a\+\_\+phi, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Crse, const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$a\+\_\+phi\+Fine, const \textbf{ Real} a\+\_\+dx, const int a\+\_\+n\+Ref\+Fine, const \textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&a\+\_\+grid\+I\+VS, \textbf{ Quad\+C\+F\+Interp} \&a\+\_\+cf\+Interp\+Crse)
+\begin{DoxyCompactList}\small\item\em computes edge-\/centered composite gradient of cell-\/centered phi \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gradient_a54d7c331f9bf1ee1b95f6683b5ef4ca3}\label{class_gradient_a54d7c331f9bf1ee1b95f6683b5ef4ca3}} 
+static void \hyperlink{class_gradient_a54d7c331f9bf1ee1b95f6683b5ef4ca3}{single\+Box\+Mac\+Grad} (\textbf{ F\+Array\+Box} \&a\+\_\+grad\+Fab, const \textbf{ F\+Array\+Box} \&a\+\_\+phi\+Fab, int a\+\_\+grad\+Comp, int a\+\_\+phi\+Comp, int a\+\_\+num\+Comp, const \textbf{ Box} \&a\+\_\+edge\+Box, \textbf{ Real} a\+\_\+dx, int a\+\_\+dir, int a\+\_\+edge\+Dir, const \textbf{ Int\+Vect\+Set} \&a\+\_\+grid\+I\+VS)
+\begin{DoxyCompactList}\small\item\em utility function for internal use \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_a85f5cea4187536e8430d485a306b131d}{create\+Grid\+I\+VS} (\textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&a\+\_\+grids\+I\+VS, const \textbf{ Disjoint\+Box\+Layout} \&a\+\_\+grids, const int a\+\_\+n\+Grow)
+\begin{DoxyCompactList}\small\item\em create grid I\+VS for all grids \end{DoxyCompactList}\item 
+static void \hyperlink{class_gradient_ab8d450f2f5e455e2a33ef3a33b2f5a98}{create\+Grid\+I\+VS} (\textbf{ Int\+Vect\+Set} \&a\+\_\+grid\+I\+VS, const \textbf{ Disjoint\+Box\+Layout} \&a\+\_\+grids, const \textbf{ Box} \&a\+\_\+local\+Box, const int a\+\_\+n\+Grow=1)
+\begin{DoxyCompactList}\small\item\em internal utility function \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to encapsulate \hyperlink{class_gradient}{Gradient} functions (both CC and face-\/centered) 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gradient_a6c741fa4909be6c7d55ddc70a128ca93}\label{class_gradient_a6c741fa4909be6c7d55ddc70a128ca93}} 
+\index{Gradient@{Gradient}!comp\+Gradient\+CC@{comp\+Gradient\+CC}}
+\index{comp\+Gradient\+CC@{comp\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{comp\+Gradient\+C\+C()}{compGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void Gradient\+::comp\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse\+Ptr,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Fine\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Crse,  }\item[{const int}]{a\+\_\+n\+Ref\+Fine,  }\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+d\+Problem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered composite gradient of cell centered phi 
+
+Uses same coarse-\/level C/F BC\textquotesingle{}s as Level\+Gradient\+CC, if phi\+Fine\+Ptr != N\+U\+LL, then also uses one-\/sided differencing to compute gradient on coarse side of coarse-\/fine interface. \mbox{\Hypertarget{class_gradient_a0a941dcb9ad58ed819f41d4fe1080106}\label{class_gradient_a0a941dcb9ad58ed819f41d4fe1080106}} 
+\index{Gradient@{Gradient}!comp\+Gradient\+CC@{comp\+Gradient\+CC}}
+\index{comp\+Gradient\+CC@{comp\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{comp\+Gradient\+C\+C()}{compGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void Gradient\+::comp\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse\+Ptr,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Fine\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Crse,  }\item[{const int}]{a\+\_\+n\+Ref\+Fine,  }\item[{const \textbf{ Box} \&}]{a\+\_\+d\+Problem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered composite gradient of cell centered phi 
+
+uses same coarse-\/level C/F BC\textquotesingle{}s as Level\+Gradient\+CC, if phi\+Fine\+Ptr != N\+U\+LL, then also uses one-\/sided differencing to compute gradient on coarse side of coarse-\/fine interface. This (deprecated) interface uses a \textbf{ Box} instead of a \textbf{ Problem\+Domain} \mbox{\Hypertarget{class_gradient_a029f7d1cb39888c2e12b9fb016b58928}\label{class_gradient_a029f7d1cb39888c2e12b9fb016b58928}} 
+\index{Gradient@{Gradient}!comp\+Gradient\+CC@{comp\+Gradient\+CC}}
+\index{comp\+Gradient\+CC@{comp\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{comp\+Gradient\+C\+C()}{compGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void Gradient\+::comp\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse\+Ptr,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Fine\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Fine,  }\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+d\+Problem,  }\item[{const \textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&}]{a\+\_\+grid\+I\+VS,  }\item[{\textbf{ Quad\+C\+F\+Interp} \&}]{a\+\_\+cf\+Interp\+Crse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered composite gradient of cell-\/centered phi 
+
+uses same coarse-\/level C/F BC\textquotesingle{}s as Level\+Gradient\+CC, if phi\+Fine\+Ptr != N\+U\+LL, then also uses one-\/sided differencing to compute gradient on coarse side of coarse-\/fine interface. A predefined \textbf{ Quad\+C\+F\+Interp} is also passed in for efficiency. Note that no fine \textbf{ Quad\+C\+F\+Interp} is necessary because we use one-\/sided differencing for coarse cells adjacent to finer-\/level coarse-\/fine interfaces. Note also that gradient is only really defined in valid regions of grids. \mbox{\Hypertarget{class_gradient_a4f44d7eef3d2b675d9c67c90b9904747}\label{class_gradient_a4f44d7eef3d2b675d9c67c90b9904747}} 
+\index{Gradient@{Gradient}!comp\+Gradient\+CC@{comp\+Gradient\+CC}}
+\index{comp\+Gradient\+CC@{comp\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{comp\+Gradient\+C\+C()}{compGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void Gradient\+::comp\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse\+Ptr,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Fine\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Fine,  }\item[{const \textbf{ Box} \&}]{a\+\_\+d\+Problem,  }\item[{const \textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&}]{a\+\_\+grid\+I\+VS,  }\item[{\textbf{ Quad\+C\+F\+Interp} \&}]{a\+\_\+cf\+Interp\+Crse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered composite gradient of cell-\/centered phi 
+
+uses same coarse-\/level C/F BC\textquotesingle{}s as Level\+Gradient\+CC, if phi\+Fine\+Ptr != N\+U\+LL, then also uses one-\/sided differencing to compute gradient on coarse side of coarse-\/fine interface. A predefined \textbf{ Quad\+C\+F\+Interp} is also passed in for efficiency. Note that no fine \textbf{ Quad\+C\+F\+Interp} is necessary because we use one-\/sided differencing for coarse cells adjacent to finer-\/level coarse-\/fine interfaces. Note also that gradient is only really defined in valid regions of grids. This (deprecated) interface uses a \textbf{ Box} instead of a \textbf{ Problem\+Domain} \mbox{\Hypertarget{class_gradient_a23967a97f57bc4c1609e63faa2eaf437}\label{class_gradient_a23967a97f57bc4c1609e63faa2eaf437}} 
+\index{Gradient@{Gradient}!comp\+Gradient\+CC@{comp\+Gradient\+CC}}
+\index{comp\+Gradient\+CC@{comp\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{comp\+Gradient\+C\+C()}{compGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void Gradient\+::comp\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+\+Grad,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Fine\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Fine,  }\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+d\+Problem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered composite gradient of cell-\/centered phi 
+
+this one assumes that all ghost-\/cell values have already been set; if phi\+Fine\+Ptr != N\+U\+LL, then also uses one-\/sided differencing to compute gradient on coarse side of corarse-\/fine interface. note that gradient is only really defined in valid regions of grids. \mbox{\Hypertarget{class_gradient_ad59fcf73da0f075761f2363b1d1e6c2b}\label{class_gradient_ad59fcf73da0f075761f2363b1d1e6c2b}} 
+\index{Gradient@{Gradient}!comp\+Gradient\+CC@{comp\+Gradient\+CC}}
+\index{comp\+Gradient\+CC@{comp\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{comp\+Gradient\+C\+C()}{compGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily void Gradient\+::comp\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+\+Grad,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Fine\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Fine,  }\item[{const \textbf{ Box} \&}]{a\+\_\+d\+Problem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered composite gradient of cell-\/centered phi 
+
+this one assumes that all ghost-\/cell values have already been set; if phi\+Fine\+Ptr != N\+U\+LL, then also uses one-\/sided differencing to compute gradient on coarse side of corarse-\/fine interface. note that gradient is only really defined in valid regions of grids. This (deprecated) interface uses a \textbf{ Box} instead of a \textbf{ Problem\+Domain} \mbox{\Hypertarget{class_gradient_a50d364c2e9951e70a74200537ebbd73d}\label{class_gradient_a50d364c2e9951e70a74200537ebbd73d}} 
+\index{Gradient@{Gradient}!comp\+Gradient\+M\+AC@{comp\+Gradient\+M\+AC}}
+\index{comp\+Gradient\+M\+AC@{comp\+Gradient\+M\+AC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{comp\+Gradient\+M\+A\+C()}{compGradientMAC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Gradient\+::comp\+Gradient\+M\+AC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&}]{a\+\_\+edge\+Grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Fine,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Crse,  }\item[{const int}]{a\+\_\+n\+Ref\+Fine,  }\item[{const \textbf{ Box} \&}]{a\+\_\+d\+Problem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes edge-\/centered composite gradient of cell-\/centered phi 
+
+if phi\+Crse\+Ptr != N\+U\+LL, does quadratic interpolation to compute coarse-\/fine boundary conditions for phi; since the edge between this level and finer levels is not considered to be a part of this level, there is no fine-\/level coarse-\/fine BC. because of this, this function produces exactly the same results as Level\+Gradient\+M\+AC -- it\textquotesingle{}s just included for completeness... \mbox{\Hypertarget{class_gradient_ab53c80ecc42d684acd3456c47b4db5f2}\label{class_gradient_ab53c80ecc42d684acd3456c47b4db5f2}} 
+\index{Gradient@{Gradient}!comp\+Gradient\+M\+AC@{comp\+Gradient\+M\+AC}}
+\index{comp\+Gradient\+M\+AC@{comp\+Gradient\+M\+AC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{comp\+Gradient\+M\+A\+C()}{compGradientMAC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Gradient\+::comp\+Gradient\+M\+AC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&}]{a\+\_\+edge\+Grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Fine,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Crse,  }\item[{const int}]{a\+\_\+n\+Ref\+Fine,  }\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+d\+Problem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes edge-\/centered composite gradient of cell-\/centered phi 
+
+if phi\+Crse\+Ptr != N\+U\+LL, does quadratic interpolation to compute coarse-\/fine boundary conditions for phi; since the edge between this level and finer levels is not considered to be a part of this level, there is no fine-\/level coarse-\/fine BC. because of this, this function produces exactly the same results as Level\+Gradient\+M\+AC -- it\textquotesingle{}s just included for completeness... \mbox{\Hypertarget{class_gradient_a82e5e91499de8d5cbddf3c42528c9421}\label{class_gradient_a82e5e91499de8d5cbddf3c42528c9421}} 
+\index{Gradient@{Gradient}!comp\+Gradient\+M\+AC@{comp\+Gradient\+M\+AC}}
+\index{comp\+Gradient\+M\+AC@{comp\+Gradient\+M\+AC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{comp\+Gradient\+M\+A\+C()}{compGradientMAC()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Gradient\+::comp\+Gradient\+M\+AC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&}]{a\+\_\+edge\+Grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Fine,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Fine,  }\item[{const \textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&}]{a\+\_\+grid\+I\+VS,  }\item[{\textbf{ Quad\+C\+F\+Interp} \&}]{a\+\_\+cf\+Interp\+Crse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes edge-\/centered composite gradient of cell-\/centered phi 
+
+if phi\+Crse\+Ptr != N\+U\+LL, does quadratic interpolation to compute coarse-\/fine boundary conditions for phi; since the edge between this level and finer levels is not considered to be a part of this level, there is no fine-\/level coarse-\/fine BC. because of this, this function produces exactly the same results as Level\+Gradient\+M\+AC -- it\textquotesingle{}s just included for completeness... In this one, a predefined \textbf{ Quad\+C\+F\+Interp} object is passed in. This (deprecated) interface uses a \textbf{ Box} instead of a \textbf{ Problem\+Domain} object \mbox{\Hypertarget{class_gradient_a85f5cea4187536e8430d485a306b131d}\label{class_gradient_a85f5cea4187536e8430d485a306b131d}} 
+\index{Gradient@{Gradient}!create\+Grid\+I\+VS@{create\+Grid\+I\+VS}}
+\index{create\+Grid\+I\+VS@{create\+Grid\+I\+VS}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{create\+Grid\+I\+V\+S()}{createGridIVS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Gradient\+::create\+Grid\+I\+VS (\begin{DoxyParamCaption}\item[{\textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&}]{a\+\_\+grids\+I\+VS,  }\item[{const \textbf{ Disjoint\+Box\+Layout} \&}]{a\+\_\+grids,  }\item[{const int}]{a\+\_\+n\+Grow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+create grid I\+VS for all grids 
+
+creates an I\+VS representation of the \textbf{ Disjoint\+Box\+Layout} in the neighborhood around each box in the D\+BL. \mbox{\Hypertarget{class_gradient_ab8d450f2f5e455e2a33ef3a33b2f5a98}\label{class_gradient_ab8d450f2f5e455e2a33ef3a33b2f5a98}} 
+\index{Gradient@{Gradient}!create\+Grid\+I\+VS@{create\+Grid\+I\+VS}}
+\index{create\+Grid\+I\+VS@{create\+Grid\+I\+VS}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{create\+Grid\+I\+V\+S()}{createGridIVS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Gradient\+::create\+Grid\+I\+VS (\begin{DoxyParamCaption}\item[{\textbf{ Int\+Vect\+Set} \&}]{a\+\_\+grid\+I\+VS,  }\item[{const \textbf{ Disjoint\+Box\+Layout} \&}]{a\+\_\+grids,  }\item[{const \textbf{ Box} \&}]{a\+\_\+local\+Box,  }\item[{const int}]{a\+\_\+n\+Grow = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+internal utility function 
+
+creates I\+VS representation of the \textbf{ Disjoint\+Box\+Layout} in the neighborhood of local\+Box \mbox{\Hypertarget{class_gradient_aa657ff462b1dd44565ab4e5c35c097fa}\label{class_gradient_aa657ff462b1dd44565ab4e5c35c097fa}} 
+\index{Gradient@{Gradient}!level\+Gradient\+CC@{level\+Gradient\+CC}}
+\index{level\+Gradient\+CC@{level\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+C\+C()}{levelGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Crse,  }\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+d\+Problem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered level-\/operator gradient of cell-\/centered phi 
+
+if phi\+Crse != N\+U\+LL, does coarse-\/fine boundary conditions for phi (quadratic interpolation) \mbox{\Hypertarget{class_gradient_a9e85cf629d0e4b0ad7809c0db1f0322c}\label{class_gradient_a9e85cf629d0e4b0ad7809c0db1f0322c}} 
+\index{Gradient@{Gradient}!level\+Gradient\+CC@{level\+Gradient\+CC}}
+\index{level\+Gradient\+CC@{level\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+C\+C()}{levelGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Crse,  }\item[{const \textbf{ Box} \&}]{a\+\_\+d\+Problem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered level-\/operator gradient of cell-\/centered phi 
+
+if phi\+Crse != N\+U\+LL, does coarse-\/fine boundary conditions for phi (quadratic interpolation). This (deprecated) interface uses a \textbf{ Box} instead of a \textbf{ Problem\+Domain} \mbox{\Hypertarget{class_gradient_a6a14b8f09f7882545497dcccac01e35e}\label{class_gradient_a6a14b8f09f7882545497dcccac01e35e}} 
+\index{Gradient@{Gradient}!level\+Gradient\+CC@{level\+Gradient\+CC}}
+\index{level\+Gradient\+CC@{level\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+C\+C()}{levelGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const \textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&}]{a\+\_\+grid\+I\+VS,  }\item[{\textbf{ Quad\+C\+F\+Interp} \&}]{a\+\_\+cf\+Interp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered level-\/operator gradient of cell-\/centered phi 
+
+if phi\+Crse != N\+U\+LL, does coarse-\/fine boundary conditions for phi (quadratic C/F interpolation); predefined \textbf{ Quad\+C\+F\+Interp} object is passed in for efficiency \mbox{\Hypertarget{class_gradient_a6103f7090b4d658cc1086f31a47474ba}\label{class_gradient_a6103f7090b4d658cc1086f31a47474ba}} 
+\index{Gradient@{Gradient}!level\+Gradient\+CC@{level\+Gradient\+CC}}
+\index{level\+Gradient\+CC@{level\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+C\+C()}{levelGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Real}}]{a\+\_\+dx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered, level-\/operator gradient of cell-\/centered phi 
+
+in this case, assume that all relevant BC\textquotesingle{}s (coarse-\/fine and physical) have already been set, so phi can be a const variable \mbox{\Hypertarget{class_gradient_a8962d5f7dabe25690dce34ce1c00726d}\label{class_gradient_a8962d5f7dabe25690dce34ce1c00726d}} 
+\index{Gradient@{Gradient}!level\+Gradient\+CC@{level\+Gradient\+CC}}
+\index{level\+Gradient\+CC@{level\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+C\+C()}{levelGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Real}}]{a\+\_\+dx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered, level-\/operator gradient of face-\/centered phi 
+
+in this case, assume that all relevant BC\textquotesingle{}s (coarse-\/fine and physical) have already been set, so phi can be a const variable \mbox{\Hypertarget{class_gradient_a476a6adb3c37375c48b60d91a3c9c949}\label{class_gradient_a476a6adb3c37375c48b60d91a3c9c949}} 
+\index{Gradient@{Gradient}!level\+Gradient\+CC@{level\+Gradient\+CC}}
+\index{level\+Gradient\+CC@{level\+Gradient\+CC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+C\+C()}{levelGradientCC()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+CC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{n\+Ghost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes cell-\/centered, level-\/operator gradient of cell-\/centered phi 
+
+in this case, assume that all relevant BC\textquotesingle{}s (coarse-\/fine and physical) have already been set, so phi can be a const variable gradient is also calculate in nghost ghost cells, assuming that nghost+1 cells have been filled in phi \mbox{\Hypertarget{class_gradient_a306b5f347d51c38d5cf8a7f446ea0b86}\label{class_gradient_a306b5f347d51c38d5cf8a7f446ea0b86}} 
+\index{Gradient@{Gradient}!level\+Gradient\+C\+C\+New\+Centred@{level\+Gradient\+C\+C\+New\+Centred}}
+\index{level\+Gradient\+C\+C\+New\+Centred@{level\+Gradient\+C\+C\+New\+Centred}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+C\+C\+New\+Centred()}{levelGradientCCNewCentred()}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+C\+C\+New\+Centred (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{int}]{order = {\ttfamily 2} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Fills interior cells with centred diffs and one set of ghost cells with one sided diffs. All 2nd order. \mbox{\Hypertarget{class_gradient_a00daa2aa0e66c5f70545cbd9cdf633a2}\label{class_gradient_a00daa2aa0e66c5f70545cbd9cdf633a2}} 
+\index{Gradient@{Gradient}!level\+Gradient\+C\+C\+New\+One\+Sided@{level\+Gradient\+C\+C\+New\+One\+Sided}}
+\index{level\+Gradient\+C\+C\+New\+One\+Sided@{level\+Gradient\+C\+C\+New\+One\+Sided}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+C\+C\+New\+One\+Sided()}{levelGradientCCNewOneSided()}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+C\+C\+New\+One\+Sided (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{int}]{order = {\ttfamily 2} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes level-\/operator gradient of cell-\/centered phi 
+
+use one sided differences everywhere for smooth errors. Doesn\textquotesingle{}t fill ghost cells \mbox{\Hypertarget{class_gradient_ab5fa9029705d216a3c1ae97b58bb970e}\label{class_gradient_ab5fa9029705d216a3c1ae97b58bb970e}} 
+\index{Gradient@{Gradient}!level\+Gradient\+C\+C\+Upwind@{level\+Gradient\+C\+C\+Upwind}}
+\index{level\+Gradient\+C\+C\+Upwind@{level\+Gradient\+C\+C\+Upwind}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+C\+C\+Upwind()}{levelGradientCCUpwind()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+C\+C\+Upwind (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Real}}]{a\+\_\+dx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes onesided, level-\/operator gradient of cell-\/centered phi 
+
+in this case, assume that all relevant BC\textquotesingle{}s (coarse-\/fine and physical) have already been set, so phi can be a const variable. Uses grid cells at (i,j,k) and (i+1,j+1,k+1) \mbox{\Hypertarget{class_gradient_ab55b4c85431294e40707bd0bdae6e012}\label{class_gradient_ab55b4c85431294e40707bd0bdae6e012}} 
+\index{Gradient@{Gradient}!level\+Gradient\+C\+C\+Upwind@{level\+Gradient\+C\+C\+Upwind}}
+\index{level\+Gradient\+C\+C\+Upwind@{level\+Gradient\+C\+C\+Upwind}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+C\+C\+Upwind()}{levelGradientCCUpwind()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+C\+C\+Upwind (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+grad,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const \textbf{ Side\+::\+Lo\+Hi\+Side}}]{extrap\+Side,  }\item[{int}]{order = {\ttfamily 2} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes level-\/operator gradient of cell-\/centred phi 
+
+Uses upwind stencil \mbox{\Hypertarget{class_gradient_a7d6a189f7e14c864e35ef507128c9113}\label{class_gradient_a7d6a189f7e14c864e35ef507128c9113}} 
+\index{Gradient@{Gradient}!level\+Gradient\+M\+AC@{level\+Gradient\+M\+AC}}
+\index{level\+Gradient\+M\+AC@{level\+Gradient\+M\+AC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+M\+A\+C()}{levelGradientMAC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+M\+AC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&}]{a\+\_\+edge\+Grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Crse,  }\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+d\+Problem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes edge-\/centered level-\/operator gradient of cell-\/centered phi 
+
+if phi\+Crse\+Ptr != N\+U\+LL, does quadratic interpolation to compute coarse-\/fine boundary conditions for phi \mbox{\Hypertarget{class_gradient_a984db420418480a063fa7e60dc18144d}\label{class_gradient_a984db420418480a063fa7e60dc18144d}} 
+\index{Gradient@{Gradient}!level\+Gradient\+M\+AC@{level\+Gradient\+M\+AC}}
+\index{level\+Gradient\+M\+AC@{level\+Gradient\+M\+AC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+M\+A\+C()}{levelGradientMAC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+M\+AC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&}]{a\+\_\+edge\+Grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const int}]{a\+\_\+n\+Ref\+Crse,  }\item[{const \textbf{ Box} \&}]{a\+\_\+d\+Problem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes edge-\/centered level-\/operator gradient of cell-\/centered phi 
+
+if phi\+Crse\+Ptr != N\+U\+LL, does quadratic interpolation to compute coarse-\/fine boundary conditions for phi. This (deprecated) interface uses a \textbf{ Box} instead of a \textbf{ Problem\+Domain} \mbox{\Hypertarget{class_gradient_a1e5777612a7ff994896d694e2c1c816b}\label{class_gradient_a1e5777612a7ff994896d694e2c1c816b}} 
+\index{Gradient@{Gradient}!level\+Gradient\+M\+AC@{level\+Gradient\+M\+AC}}
+\index{level\+Gradient\+M\+AC@{level\+Gradient\+M\+AC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+M\+A\+C()}{levelGradientMAC()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+M\+AC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&}]{a\+\_\+edge\+Grad,  }\item[{\textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $\ast$}]{a\+\_\+phi\+Crse\+Ptr,  }\item[{const \textbf{ Real}}]{a\+\_\+dx,  }\item[{const \textbf{ Layout\+Data}$<$ \textbf{ Int\+Vect\+Set} $>$ \&}]{a\+\_\+grid\+I\+VS,  }\item[{\textbf{ Quad\+C\+F\+Interp} \&}]{a\+\_\+cf\+Interp\+Crse }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes edge-\/centered level-\/operator gradient of cell-\/centered phi 
+
+if phi\+Crse\+Ptr != N\+U\+LL, does quadratic interpolation to compute coarse-\/fine boundary conditions for phi. A predefined \textbf{ Quad\+C\+F\+Interp} object is passed in for efficiency \mbox{\Hypertarget{class_gradient_a3d95193c15462219bd5159de5341b291}\label{class_gradient_a3d95193c15462219bd5159de5341b291}} 
+\index{Gradient@{Gradient}!level\+Gradient\+M\+AC@{level\+Gradient\+M\+AC}}
+\index{level\+Gradient\+M\+AC@{level\+Gradient\+M\+AC}!Gradient@{Gradient}}
+\subsubsection{\texorpdfstring{level\+Gradient\+M\+A\+C()}{levelGradientMAC()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Gradient\+::level\+Gradient\+M\+AC (\begin{DoxyParamCaption}\item[{\textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ \&}]{a\+\_\+edge\+Grad,  }\item[{const \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ \&}]{a\+\_\+phi,  }\item[{const \textbf{ Real}}]{a\+\_\+dx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+computes edge-\/centered level-\/operator gradient of cell-\/centered phi 
+
+assumes {\itshape A\+LL} ghost cell values have been preset (so phi can be const) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/util/Gradient.\+H\item 
+/home/parkinsonjl/mushy-\/layer/util/Gradient.\+cpp\end{DoxyCompactItemize}

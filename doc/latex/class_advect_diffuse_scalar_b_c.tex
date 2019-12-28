@@ -1,0 +1,50 @@
+\hypertarget{class_advect_diffuse_scalar_b_c}{}\section{Advect\+Diffuse\+Scalar\+BC Class Reference}
+\label{class_advect_diffuse_scalar_b_c}\index{Advect\+Diffuse\+Scalar\+BC@{Advect\+Diffuse\+Scalar\+BC}}
+
+
+Boundary condition function for fields which are advected and diffused.  
+
+
+Inheritance diagram for Advect\+Diffuse\+Scalar\+BC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_advect_diffuse_scalar_b_c}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_advect_diffuse_scalar_b_c_a2227cd96500613d5eb7918cc6fa3a645}\label{class_advect_diffuse_scalar_b_c_a2227cd96500613d5eb7918cc6fa3a645}} 
+\hyperlink{class_advect_diffuse_scalar_b_c_a2227cd96500613d5eb7918cc6fa3a645}{Advect\+Diffuse\+Scalar\+BC} (bool a\+\_\+is\+Defined, \hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params} a\+\_\+params, bool a\+\_\+homogeneous, \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $\ast$a\+\_\+adv\+Vel, \textbf{ Real} a\+\_\+dx, \textbf{ Vector}$<$ \textbf{ Real} $>$ a\+\_\+plume\+Vals, \textbf{ Interval} a\+\_\+interval, \textbf{ Vector}$<$ \textbf{ Vector}$<$ int $>$ $>$ \&a\+\_\+custom\+Lo\+BC, \textbf{ Vector}$<$ \textbf{ Vector}$<$ int $>$ $>$ \&a\+\_\+custom\+Hi\+BC, \textbf{ Vector}$<$ \textbf{ Vector}$<$ \textbf{ Real} $>$ $>$ \&a\+\_\+custom\+Lo\+B\+C\+Val, \textbf{ Vector}$<$ \textbf{ Vector}$<$ \textbf{ Real} $>$ $>$ \&a\+\_\+custom\+Hi\+B\+C\+Val)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advect_diffuse_scalar_b_c_ab55b1f2a27a3ff1ecda0d56acdbf0d77}\label{class_advect_diffuse_scalar_b_c_ab55b1f2a27a3ff1ecda0d56acdbf0d77}} 
+virtual void \hyperlink{class_advect_diffuse_scalar_b_c_ab55b1f2a27a3ff1ecda0d56acdbf0d77}{operator()} (\textbf{ F\+Array\+Box} \&a\+\_\+state, const \textbf{ Box} \&a\+\_\+valid, const \textbf{ Problem\+Domain} \&a\+\_\+domain, \textbf{ Real} a\+\_\+dx, bool a\+\_\+homogeneous)
+\begin{DoxyCompactList}\small\item\em Apply BC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_advect_diffuse_scalar_b_c_a24079c63607fa7aaada70d393c91038e}\label{class_advect_diffuse_scalar_b_c_a24079c63607fa7aaada70d393c91038e}} 
+\textbf{ Vector}$<$ \textbf{ Real} $>$ \hyperlink{class_advect_diffuse_scalar_b_c_a24079c63607fa7aaada70d393c91038e}{m\+\_\+plume\+Val}
+\begin{DoxyCompactList}\small\item\em Each element of the vector corresponds to a different interval. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advect_diffuse_scalar_b_c_a88722dbb4d1fde30f3608db8104640c0}\label{class_advect_diffuse_scalar_b_c_a88722dbb4d1fde30f3608db8104640c0}} 
+\textbf{ Vector}$<$ \textbf{ Vector}$<$ int $>$ $>$ \hyperlink{class_advect_diffuse_scalar_b_c_a88722dbb4d1fde30f3608db8104640c0}{m\+\_\+custom\+Lo\+BC}
+\begin{DoxyCompactList}\small\item\em BC type on the lo side. First index refers to direction, second to component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advect_diffuse_scalar_b_c_a3143ed8cc319ce90e64e936c459f9b12}\label{class_advect_diffuse_scalar_b_c_a3143ed8cc319ce90e64e936c459f9b12}} 
+\textbf{ Vector}$<$ \textbf{ Vector}$<$ int $>$ $>$ \hyperlink{class_advect_diffuse_scalar_b_c_a3143ed8cc319ce90e64e936c459f9b12}{m\+\_\+custom\+Hi\+BC}
+\begin{DoxyCompactList}\small\item\em BC type on the hi side. First index refers to direction, second to component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advect_diffuse_scalar_b_c_ab09adbfb8bbf7bd9ec9d51f2d0b1106a}\label{class_advect_diffuse_scalar_b_c_ab09adbfb8bbf7bd9ec9d51f2d0b1106a}} 
+\textbf{ Vector}$<$ \textbf{ Vector}$<$ \textbf{ Real} $>$ $>$ \hyperlink{class_advect_diffuse_scalar_b_c_ab09adbfb8bbf7bd9ec9d51f2d0b1106a}{m\+\_\+custom\+Lo\+B\+C\+Val}
+\begin{DoxyCompactList}\small\item\em BC value on the lo side. First index refers to direction, second to component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_advect_diffuse_scalar_b_c_a5733082dd61f2021d755cfebda84481d}\label{class_advect_diffuse_scalar_b_c_a5733082dd61f2021d755cfebda84481d}} 
+\textbf{ Vector}$<$ \textbf{ Vector}$<$ \textbf{ Real} $>$ $>$ \hyperlink{class_advect_diffuse_scalar_b_c_a5733082dd61f2021d755cfebda84481d}{m\+\_\+custom\+Hi\+B\+C\+Val}
+\begin{DoxyCompactList}\small\item\em BC value on the hi side. First index refers to direction, second to component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Boundary condition function for fields which are advected and diffused. 
+
+All these fields have the same type of conditions at each boundary, but just different values. This boundary condition can also handle a plume inflow, if required. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/\+B\+Cutil/Phys\+B\+C\+Util.\+cpp\end{DoxyCompactItemize}

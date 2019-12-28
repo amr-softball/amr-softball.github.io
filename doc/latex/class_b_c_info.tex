@@ -1,0 +1,56 @@
+\hypertarget{class_b_c_info}{}\section{B\+C\+Info Class Reference}
+\label{class_b_c_info}\index{B\+C\+Info@{B\+C\+Info}}
+
+
+General class to contian some boundary condition information.  
+
+
+
+
+{\ttfamily \#include $<$B\+C\+Info.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_b_c_info_ae54656180d04287c737404cb21cd3c3f}\label{class_b_c_info_ae54656180d04287c737404cb21cd3c3f}} 
+virtual \hyperlink{class_b_c_info_ae54656180d04287c737404cb21cd3c3f}{$\sim$ B\+C\+Info} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_b_c_info_a773e9547fd2b267e42c178f6d647a771}\label{class_b_c_info_a773e9547fd2b267e42c178f6d647a771}} 
+\hyperlink{class_b_c_info_a773e9547fd2b267e42c178f6d647a771}{B\+C\+Info} (const string a\+\_\+name, const bool a\+\_\+required=false, const \textbf{ Real} a\+\_\+default\+\_\+value=0.\+0)
+\begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_b_c_info_ae0d713e910efa1d53cdab3e11220071b}\label{class_b_c_info_ae0d713e910efa1d53cdab3e11220071b}} 
+\textbf{ Real} {\bfseries get\+BC} (int a\+\_\+dir, \textbf{ Side\+::\+Lo\+Hi\+Side} a\+\_\+side)
+\item 
+\mbox{\Hypertarget{class_b_c_info_a089241a0e169503c2a2cc22c564f8a47}\label{class_b_c_info_a089241a0e169503c2a2cc22c564f8a47}} 
+\textbf{ Real} {\bfseries get\+BC} (int a\+\_\+dir, int a\+\_\+side)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_b_c_info_ae177e9e11b0a02eb989c593bfa05fd00}\label{class_b_c_info_ae177e9e11b0a02eb989c593bfa05fd00}} 
+string {\bfseries m\+\_\+name}
+\item 
+\mbox{\Hypertarget{class_b_c_info_ab4e772635bf1be6a439be33c3f7512c4}\label{class_b_c_info_ab4e772635bf1be6a439be33c3f7512c4}} 
+\textbf{ Vector}$<$ \textbf{ Vector}$<$ \textbf{ Real} $>$ $>$ {\bfseries m\+\_\+val}
+\item 
+\mbox{\Hypertarget{class_b_c_info_aec00288afb5aff5982878db5b71522e4}\label{class_b_c_info_aec00288afb5aff5982878db5b71522e4}} 
+bool {\bfseries m\+\_\+required}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+General class to contian some boundary condition information. 
+
+Hold information for some particular variable for each direction/side/component Provides methods for easy access to each component
+
+Loads values from the inputs file of the expected format\+:
+
+bc.\href{Lo/Hi}{\tt name} = x-\/dir y-\/dir (z-\/dir, if applicable)
+
+e.\+g.
+
+bc.\+fixed\+Flux\+Lo = 0.\+0 -\/1.\+0 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/\+B\+Cutil/B\+C\+Info.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{class_a_m_r_non_linear_multi_comp_op_factory}{}\section{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory Class Reference}
+\label{class_a_m_r_non_linear_multi_comp_op_factory}\index{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory}}
+
+
+Factory for nonlinear variable coefficient operator.  
+
+
+
+
+{\ttfamily \#include $<$A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op.\+H$>$}
+
+Inheritance diagram for A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.736156cm]{class_a_m_r_non_linear_multi_comp_op_factory}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_factory_a6a110ce702bf42fe873594f1e2a812a4}{define} (const \textbf{ Problem\+Domain} \&a\+\_\+coarse\+Domain, const \textbf{ Vector}$<$ \textbf{ Disjoint\+Box\+Layout} $>$ \&a\+\_\+grids, const \textbf{ Vector}$<$ int $>$ \&a\+\_\+ref\+Ratios, const \textbf{ Real} \&a\+\_\+coarsedx, \textbf{ B\+C\+Holder} a\+\_\+bc, const \textbf{ Real} \&a\+\_\+alpha, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+a\+Coef, const \textbf{ Real} \&a\+\_\+beta, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&a\+\_\+b\+Coef, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+enthalpy\+Solidus, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+enthalpy\+Liquidus, \textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+enthalpy\+Eutectic, \hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params} $\ast$a\+\_\+params, \textbf{ B\+C\+Holder} a\+\_\+derived\+Var\+BC, int a\+\_\+relax\+Mode, \hyperlink{class_edge_vel_b_c_holder}{Edge\+Vel\+B\+C\+Holder} a\+\_\+porosity\+Edge\+BC, bool a\+\_\+apply\+\_\+bcs\+\_\+to\+\_\+diagnostic\+\_\+var=true)
+\begin{DoxyCompactList}\small\item\em Define object. \end{DoxyCompactList}\item 
+virtual \textbf{ M\+G\+Level\+Op}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $\ast$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_factory_a4a0bf3a8d0337e5a42ce03648779bc73}{M\+Gnew\+Op} (const \textbf{ Problem\+Domain} \&a\+\_\+\+Fineindex\+Space, int a\+\_\+depth, bool a\+\_\+homo\+Only=true)
+\begin{DoxyCompactList}\small\item\em New \textbf{ M\+G\+Level\+Op}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_factory_aa9a0f8df336179fba6a0ccb390914c55}\label{class_a_m_r_non_linear_multi_comp_op_factory_aa9a0f8df336179fba6a0ccb390914c55}} 
+virtual \textbf{ A\+M\+R\+Level\+Op}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $\ast$ \hyperlink{class_a_m_r_non_linear_multi_comp_op_factory_aa9a0f8df336179fba6a0ccb390914c55}{A\+M\+Rnew\+Op} (const \textbf{ Problem\+Domain} \&a\+\_\+index\+Space)
+\begin{DoxyCompactList}\small\item\em New \textbf{ A\+M\+R\+Level\+Op}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_factory_adc8e5a9cb549809afed4d20cbcbe7aee}\label{class_a_m_r_non_linear_multi_comp_op_factory_adc8e5a9cb549809afed4d20cbcbe7aee}} 
+virtual int \hyperlink{class_a_m_r_non_linear_multi_comp_op_factory_adc8e5a9cb549809afed4d20cbcbe7aee}{ref\+To\+Finer} (const \textbf{ Problem\+Domain} \&a\+\_\+domain) const
+\begin{DoxyCompactList}\small\item\em refinement ratio to finer level \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_factory_a93acce1cf394f1bfcd607379483c3fea}\label{class_a_m_r_non_linear_multi_comp_op_factory_a93acce1cf394f1bfcd607379483c3fea}} 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_factory_a93acce1cf394f1bfcd607379483c3fea}{set\+Primary\+Var\+Ptr} (\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&a\+\_\+primary\+Var\+Ptr)
+\begin{DoxyCompactList}\small\item\em Set primary field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_factory_a26cb81294d2e7f9e9ebe7b8fd65c9a97}\label{class_a_m_r_non_linear_multi_comp_op_factory_a26cb81294d2e7f9e9ebe7b8fd65c9a97}} 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_factory_a26cb81294d2e7f9e9ebe7b8fd65c9a97}{set\+Use\+Primary\+Var} (bool a\+\_\+use\+Primary\+Var)
+\begin{DoxyCompactList}\small\item\em Whether we should use the primary variable for solves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_factory_acff316ce90ff199f95b6858790d30c31}\label{class_a_m_r_non_linear_multi_comp_op_factory_acff316ce90ff199f95b6858790d30c31}} 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_factory_acff316ce90ff199f95b6858790d30c31}{set\+BC} (\textbf{ B\+C\+Holder} \&a\+\_\+bc)
+\begin{DoxyCompactList}\small\item\em Set the boundary conditions m\+\_\+bc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_factory_a6c95e7fb646ac949cf92620473bc0d7f}\label{class_a_m_r_non_linear_multi_comp_op_factory_a6c95e7fb646ac949cf92620473bc0d7f}} 
+void \hyperlink{class_a_m_r_non_linear_multi_comp_op_factory_a6c95e7fb646ac949cf92620473bc0d7f}{set\+Super\+Optimised} (bool a\+\_\+val)
+\begin{DoxyCompactList}\small\item\em Set whether or not to turn on the \textquotesingle{}super optimised\textquotesingle{} flag which does some dodgy stuff to try and speed up calculations (and is turned off by default). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_factory_adbaf572b2b096b6a8ff502b943bd4c2f}\label{class_a_m_r_non_linear_multi_comp_op_factory_adbaf572b2b096b6a8ff502b943bd4c2f}} 
+int \hyperlink{class_a_m_r_non_linear_multi_comp_op_factory_adbaf572b2b096b6a8ff502b943bd4c2f}{m\+\_\+coefficient\+\_\+average\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Type of coefficient averaging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Factory for nonlinear variable coefficient operator. 
+
+Factory to create A\+M\+R\+Non\+Linear\+Multi\+Comp\+Ops 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_factory_a6a110ce702bf42fe873594f1e2a812a4}\label{class_a_m_r_non_linear_multi_comp_op_factory_a6a110ce702bf42fe873594f1e2a812a4}} 
+\index{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory}!define@{define}}
+\index{define@{define}!A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory}}
+\subsubsection{\texorpdfstring{define()}{define()}}
+{\footnotesize\ttfamily void A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory\+::define (\begin{DoxyParamCaption}\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+coarse\+Domain,  }\item[{const \textbf{ Vector}$<$ \textbf{ Disjoint\+Box\+Layout} $>$ \&}]{a\+\_\+grids,  }\item[{const \textbf{ Vector}$<$ int $>$ \&}]{a\+\_\+ref\+Ratios,  }\item[{const \textbf{ Real} \&}]{a\+\_\+coarsedx,  }\item[{\textbf{ B\+C\+Holder}}]{a\+\_\+bc,  }\item[{const \textbf{ Real} \&}]{a\+\_\+alpha,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&}]{a\+\_\+a\+Coef,  }\item[{const \textbf{ Real} \&}]{a\+\_\+beta,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ Flux\+Box} $>$ $>$ $>$ \&}]{a\+\_\+b\+Coef,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&}]{a\+\_\+enthalpy\+Solidus,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&}]{a\+\_\+enthalpy\+Liquidus,  }\item[{\textbf{ Vector}$<$ \textbf{ Ref\+Counted\+Ptr}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $>$ \&}]{a\+\_\+enthalpy\+Eutectic,  }\item[{\hyperlink{class_mushy_layer_params}{Mushy\+Layer\+Params} $\ast$}]{a\+\_\+params,  }\item[{\textbf{ B\+C\+Holder}}]{a\+\_\+derived\+Var\+BC,  }\item[{int}]{a\+\_\+relax\+Mode,  }\item[{\hyperlink{class_edge_vel_b_c_holder}{Edge\+Vel\+B\+C\+Holder}}]{a\+\_\+porosity\+Edge\+BC,  }\item[{bool}]{a\+\_\+apply\+\_\+bcs\+\_\+to\+\_\+diagnostic\+\_\+var = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Define object. 
+
+a\+\_\+coarse\+Domain is the domain at the coarsest level. a\+\_\+grids is the \textbf{ A\+MR} hierarchy. a\+\_\+ref\+Ratios are the refinement ratios between levels. The ratio lives with the coarser level so a\+\_\+ref\+Ratios\mbox{[}ilev\mbox{]} is the ratio between ilev and ilev+1 a\+\_\+coarse\+Dx is the grid spacing at the coarsest level. a\+\_\+bc holds the boundary conditions. a\+\_\+alpha is the identity constant coefficient a\+\_\+beta is the laplacian constant coefficient. a\+\_\+a\+Coef is the identity spatially varying coefficient a\+\_\+b\+Coef is the laplacian spatially varying coefficient. \mbox{\Hypertarget{class_a_m_r_non_linear_multi_comp_op_factory_a4a0bf3a8d0337e5a42ce03648779bc73}\label{class_a_m_r_non_linear_multi_comp_op_factory_a4a0bf3a8d0337e5a42ce03648779bc73}} 
+\index{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory}!M\+Gnew\+Op@{M\+Gnew\+Op}}
+\index{M\+Gnew\+Op@{M\+Gnew\+Op}!A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory@{A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory}}
+\subsubsection{\texorpdfstring{M\+Gnew\+Op()}{MGnewOp()}}
+{\footnotesize\ttfamily \textbf{ M\+G\+Level\+Op}$<$ \textbf{ Level\+Data}$<$ \textbf{ F\+Array\+Box} $>$ $>$ $\ast$ A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op\+Factory\+::\+M\+Gnew\+Op (\begin{DoxyParamCaption}\item[{const \textbf{ Problem\+Domain} \&}]{a\+\_\+\+Fineindex\+Space,  }\item[{int}]{a\+\_\+depth,  }\item[{bool}]{a\+\_\+homo\+Only = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+New \textbf{ M\+G\+Level\+Op}. 
+
+Different number of components for these 
+
+Implements \textbf{ A\+M\+R\+Level\+Op\+Factory$<$ Level\+Data$<$ F\+Array\+Box $>$ $>$}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/parkinsonjl/mushy-\/layer/src/A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op.\+H\item 
+/home/parkinsonjl/mushy-\/layer/src/A\+M\+R\+Non\+Linear\+Multi\+Comp\+Op.\+cpp\end{DoxyCompactItemize}

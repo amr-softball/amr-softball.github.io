@@ -1,0 +1,405 @@
+Reveal the full list of languages...
+
+\href{https://travis-ci.org/highlightjs/highlight.js}{\tt } \href{https://greenkeeper.io/}{\tt }
+
+Highlight.\+js is a syntax highlighter written in Java\+Script. It works in the browser as well as on the server. It works with pretty much any markup, doesn’t depend on any framework, and has automatic language detection.
+
+\subsection*{Getting Started}
+
+The bare minimum for using highlight.\+js on a web page is linking to the library along with one of the styles and calling \href{http://highlightjs.readthedocs.io/en/latest/api.html#inithighlightingonload}{\tt {\ttfamily init\+Highlighting\+On\+Load}}\+:
+
+
+\begin{DoxyCode}
+<link rel="stylesheet" href="/path/to/styles/default.css">
+<script src="/path/to/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+\end{DoxyCode}
+
+
+This will find and highlight code inside of {\ttfamily $<$pre$>$$<$code$>$} tags; it tries to detect the language automatically. If automatic detection doesn’t work for you, you can specify the language in the {\ttfamily class} attribute\+:
+
+```html 
+\begin{DoxyPre}
+\begin{DoxyCode}
+...
+\end{DoxyCode}
+\end{DoxyPre}
+ 
+\begin{DoxyCode}
+Classes may also be prefixed with either `language-` or `lang-`.
+
+```html
+<pre><code class="language-html">...</code></pre>
+\end{DoxyCode}
+
+
+\subsubsection*{Plaintext and Disabling Highlighting}
+
+To style arbitrary text like code, but without any highlighting, use the {\ttfamily plaintext} class\+:
+
+```html 
+\begin{DoxyPre}
+\begin{DoxyCode}
+...
+\end{DoxyCode}
+\end{DoxyPre}
+ 
+\begin{DoxyCode}
+To disable highlighting of a tag completely, use the `nohighlight` class:
+
+```html
+<pre><code class="nohighlight">...</code></pre>
+\end{DoxyCode}
+
+
+\subsubsection*{Supported Languages}
+
+The table below shows the full list of supported languages (and corresponding classes) that are bundled with the library. Note\+: Which languages are available may depend on how you\textquotesingle{}ve built or included the library in your app. See \href{#getting-the-library}{\tt Getting the Library} below.
+
+$<$details$>$
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Language }&\textbf{ Classes }&\textbf{ Package  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Language }&\textbf{ Classes }&\textbf{ Package  }\\\cline{1-3}
+\endhead
+1C &1c &\\\cline{1-3}
+A\+B\+NF &abnf &\\\cline{1-3}
+Access logs &accesslog &\\\cline{1-3}
+Ada &ada &\\\cline{1-3}
+A\+RM assembler &armasm, arm &\\\cline{1-3}
+A\+VR assembler &avrasm &\\\cline{1-3}
+Action\+Script &actionscript, as &\\\cline{1-3}
+Alan &alan, i &\href{https://github.com/highlightjs/highlightjs-alan}{\tt highlightjs-\/alan} \\\cline{1-3}
+Angel\+Script &angelscript, asc &\\\cline{1-3}
+Apache &apache, apacheconf &\\\cline{1-3}
+Apple\+Script &applescript, osascript &\\\cline{1-3}
+Arcade &arcade &\\\cline{1-3}
+Ascii\+Doc &asciidoc, adoc &\\\cline{1-3}
+AspectJ &aspectj &\\\cline{1-3}
+Auto\+Hotkey &autohotkey &\\\cline{1-3}
+Auto\+It &autoit &\\\cline{1-3}
+Awk &awk, mawk, nawk, gawk &\\\cline{1-3}
+Axapta &axapta &\\\cline{1-3}
+Bash &bash, sh, zsh &\\\cline{1-3}
+Basic &basic &\\\cline{1-3}
+B\+NF &bnf &\\\cline{1-3}
+Brainfuck &brainfuck, bf &\\\cline{1-3}
+C\# &cs, csharp &\\\cline{1-3}
+C++ &cpp, c, cc, h, c++, h++, hpp &\\\cline{1-3}
+C/\+AL &cal &\\\cline{1-3}
+Cache Object Script &cos, cls &\\\cline{1-3}
+C\+Make &cmake, cmake.\+in &\\\cline{1-3}
+Coq &coq &\\\cline{1-3}
+C\+SP &csp &\\\cline{1-3}
+C\+SS &css &\\\cline{1-3}
+Cap’n Proto &capnproto, capnp &\\\cline{1-3}
+Clojure &clojure, clj &\\\cline{1-3}
+Coffee\+Script &coffeescript, coffee, cson, iced &\\\cline{1-3}
+Crmsh &crmsh, crm, pcmk &\\\cline{1-3}
+Crystal &crystal, cr &\\\cline{1-3}
+Cypher (Neo4j) &cypher &\href{https://github.com/highlightjs/highlightjs-cypher}{\tt highlightjs-\/cypher} \\\cline{1-3}
+D &d &\\\cline{1-3}
+D\+NS Zone file &dns, zone, bind &\\\cline{1-3}
+D\+OS &dos, bat, cmd &\\\cline{1-3}
+Dart &dart &\\\cline{1-3}
+Delphi &delphi, dpr, dfm, pas, pascal, freepascal, lazarus, lpr, lfm &\\\cline{1-3}
+Diff &diff, patch &\\\cline{1-3}
+Django &django, jinja &\\\cline{1-3}
+Dockerfile &dockerfile, docker &\\\cline{1-3}
+dsconfig &dsconfig &\\\cline{1-3}
+D\+TS (Device Tree) &dts &\\\cline{1-3}
+Dust &dust, dst &\\\cline{1-3}
+Dylan &dylan &\href{https://github.com/highlightjs/highlight-dylan}{\tt highlight-\/dylan} \\\cline{1-3}
+E\+B\+NF &ebnf &\\\cline{1-3}
+Elixir &elixir &\\\cline{1-3}
+Elm &elm &\\\cline{1-3}
+Erlang &erlang, erl &\\\cline{1-3}
+Excel &excel, xls, xlsx &\\\cline{1-3}
+Extempore &extempore, xtlang, xtm &\href{https://github.com/highlightjs/highlightjs-xtlang}{\tt highlightjs-\/xtlang} \\\cline{1-3}
+F\# &fsharp, fs &\\\cline{1-3}
+F\+IX &fix &\\\cline{1-3}
+Fortran &fortran, f90, f95 &\\\cline{1-3}
+G-\/\+Code &gcode, nc &\\\cline{1-3}
+Gams &gams, gms &\\\cline{1-3}
+G\+A\+U\+SS &gauss, gss &\\\cline{1-3}
+G\+D\+Script &godot, gdscript &\href{https://github.com/highlightjs/highlightjs-gdscript}{\tt highlightjs-\/gdscript} \\\cline{1-3}
+Gherkin &gherkin &\\\cline{1-3}
+GN for Ninja &gn, gni &\href{https://github.com/highlightjs/highlightjs-GN/blob/master/gn.js}{\tt highlightjs-\/\+GN} \\\cline{1-3}
+Go &go, golang &\\\cline{1-3}
+Golo &golo, gololang &\\\cline{1-3}
+Gradle &gradle &\\\cline{1-3}
+Groovy &groovy &\\\cline{1-3}
+H\+T\+ML, X\+ML &xml, html, xhtml, rss, atom, xjb, xsd, xsl, plist, svg &\\\cline{1-3}
+H\+T\+TP &http, https &\\\cline{1-3}
+Haml &haml &\\\cline{1-3}
+Handlebars &handlebars, hbs, html.\+hbs, html.\+handlebars &\\\cline{1-3}
+Haskell &haskell, hs &\\\cline{1-3}
+Haxe &haxe, hx &\\\cline{1-3}
+Hy &hy, hylang &\\\cline{1-3}
+Ini, T\+O\+ML &ini, toml &\\\cline{1-3}
+Inform7 &inform7, i7 &\\\cline{1-3}
+I\+R\+P\+F90 &irpf90 &\\\cline{1-3}
+J\+S\+ON &json &\\\cline{1-3}
+Java &java, jsp &\\\cline{1-3}
+Java\+Script &javascript, js, jsx &\\\cline{1-3}
+Kotlin &kotlin, kt &\\\cline{1-3}
+Leaf &leaf &\\\cline{1-3}
+Lasso &lasso, ls, lassoscript &\\\cline{1-3}
+Less &less &\\\cline{1-3}
+L\+D\+IF &ldif &\\\cline{1-3}
+Lisp &lisp &\\\cline{1-3}
+Live\+Code Server &livecodeserver &\\\cline{1-3}
+Live\+Script &livescript, ls &\\\cline{1-3}
+Lua &lua &\\\cline{1-3}
+Makefile &makefile, mk, mak &\\\cline{1-3}
+Markdown &markdown, md, mkdown, mkd &\\\cline{1-3}
+Mathematica &mathematica, mma, wl &\\\cline{1-3}
+Matlab &matlab &\\\cline{1-3}
+Maxima &maxima &\\\cline{1-3}
+Maya Embedded Language &mel &\\\cline{1-3}
+Mercury &mercury &\\\cline{1-3}
+m\+I\+RC Scripting Language &mirc, mrc &\href{https://github.com/highlightjs/highlightjs-mirc}{\tt highlightjs-\/mirc} \\\cline{1-3}
+Mizar &mizar &\\\cline{1-3}
+Mojolicious &mojolicious &\\\cline{1-3}
+Monkey &monkey &\\\cline{1-3}
+Moonscript &moonscript, moon &\\\cline{1-3}
+N1\+QL &n1ql &\\\cline{1-3}
+N\+S\+IS &nsis &\\\cline{1-3}
+Nginx &nginx, nginxconf &\\\cline{1-3}
+Nimrod &nimrod, nim &\\\cline{1-3}
+Nix &nix &\\\cline{1-3}
+O\+Caml &ocaml, ml &\\\cline{1-3}
+Objective C &objectivec, mm, objc, obj-\/c &\\\cline{1-3}
+Open\+GL Shading Language &glsl &\\\cline{1-3}
+Open\+S\+C\+AD &openscad, scad &\\\cline{1-3}
+Oracle Rules Language &ruleslanguage &\\\cline{1-3}
+Oxygene &oxygene &\\\cline{1-3}
+PF &pf, pf.\+conf &\\\cline{1-3}
+P\+HP &php, php3, php4, php5, php6 &\\\cline{1-3}
+Parser3 &parser3 &\\\cline{1-3}
+Perl &perl, pl, pm &\\\cline{1-3}
+Plaintext\+: no highlight &plaintext &\\\cline{1-3}
+Pony &pony &\\\cline{1-3}
+Postgre\+S\+QL \& P\+L/pg\+S\+QL &pgsql, postgres, postgresql &\\\cline{1-3}
+Power\+Shell &powershell, ps, ps1 &\\\cline{1-3}
+Processing &processing &\\\cline{1-3}
+Prolog &prolog &\\\cline{1-3}
+Properties &properties &\\\cline{1-3}
+Protocol Buffers &protobuf &\\\cline{1-3}
+Puppet &puppet, pp &\\\cline{1-3}
+Python &python, py, gyp &\\\cline{1-3}
+Python profiler results &profile &\\\cline{1-3}
+Q &k, kdb &\\\cline{1-3}
+Q\+ML &qml &\\\cline{1-3}
+R &r &\\\cline{1-3}
+Razor C\+S\+H\+T\+ML &cshtml, razor, razor-\/cshtml &\href{https://github.com/highlightjs/highlightjs-cshtml-razor}{\tt highlightjs-\/cshtml-\/razor} \\\cline{1-3}
+Reason\+ML &reasonml, re &\\\cline{1-3}
+Render\+Man R\+IB &rib &\\\cline{1-3}
+Render\+Man R\+SL &rsl &\\\cline{1-3}
+Roboconf &graph, instances &\\\cline{1-3}
+Robot Framework &robot, rf &\href{https://github.com/highlightjs/highlightjs-robot}{\tt highlightjs-\/robot} \\\cline{1-3}
+R\+PM spec files &rpm-\/specfile, rpm, spec, rpm-\/spec, specfile &\href{https://github.com/highlightjs/highlightjs-rpm-specfile}{\tt highlightjs-\/rpm-\/specfile} \\\cline{1-3}
+Ruby &ruby, rb, gemspec, podspec, thor, irb &\\\cline{1-3}
+Rust &rust, rs &\\\cline{1-3}
+S\+AS &S\+AS, sas &\\\cline{1-3}
+S\+C\+SS &scss &\\\cline{1-3}
+S\+QL &sql &\\\cline{1-3}
+S\+T\+EP Part 21 &p21, step, stp &\\\cline{1-3}
+Scala &scala &\\\cline{1-3}
+Scheme &scheme &\\\cline{1-3}
+Scilab &scilab, sci &\\\cline{1-3}
+Shape Expressions &shexc &\href{https://github.com/highlightjs/highlightjs-shexc}{\tt highlightjs-\/shexc} \\\cline{1-3}
+Shell &shell, console &\\\cline{1-3}
+Smali &smali &\\\cline{1-3}
+Smalltalk &smalltalk, st &\\\cline{1-3}
+Solidity &solidity, sol &\href{https://github.com/highlightjs/highlightjs-solidity}{\tt highlightjs-\/solidity} \\\cline{1-3}
+Stan &stan &\\\cline{1-3}
+Stata &stata &\\\cline{1-3}
+Structured Text &iecst, scl, stl, structured-\/text &\href{https://github.com/highlightjs/highlightjs-structured-text}{\tt highlightjs-\/structured-\/text} \\\cline{1-3}
+Stylus &stylus, styl &\\\cline{1-3}
+Sub\+Unit &subunit &\\\cline{1-3}
+Supercollider &supercollider, sc &\href{https://github.com/highlightjs/highlightjs-supercollider}{\tt highlightjs-\/supercollider} \\\cline{1-3}
+Swift &swift &\\\cline{1-3}
+Tcl &tcl, tk &\\\cline{1-3}
+Terraform (H\+CL) &terraform, tf, hcl &\href{https://github.com/highlightjs/highlightjs-terraform}{\tt highlightjs-\/terraform} \\\cline{1-3}
+Test Anything Protocol &tap &\\\cline{1-3}
+TeX &tex &\\\cline{1-3}
+Thrift &thrift &\\\cline{1-3}
+TP &tp &\\\cline{1-3}
+Twig &twig, craftcms &\\\cline{1-3}
+Type\+Script &typescript, ts &\\\cline{1-3}
+V\+B.\+Net &vbnet, vb &\\\cline{1-3}
+V\+B\+Script &vbscript, vbs &\\\cline{1-3}
+V\+H\+DL &vhdl &\\\cline{1-3}
+Vala &vala &\\\cline{1-3}
+Verilog &verilog, v &\\\cline{1-3}
+Vim Script &vim &\\\cline{1-3}
+x86 Assembly &x86asm &\\\cline{1-3}
+XL &xl, tao &\\\cline{1-3}
+X\+Query &xquery, xpath, xq &\\\cline{1-3}
+Y\+A\+ML &yml, yaml &\\\cline{1-3}
+Zephir &zephir, zep &\\\cline{1-3}
+\end{longtabu}
+Languages with the specified package name are defined in separate repositories and not included in {\ttfamily highlight.\+pack.\+js}. $<$/details$>$
+
+\subsection*{Custom Initialization}
+
+When you need a bit more control over the initialization of highlight.\+js, you can use the \href{http://highlightjs.readthedocs.io/en/latest/api.html#highlightblock-block}{\tt {\ttfamily highlight\+Block}} and \href{http://highlightjs.readthedocs.io/en/latest/api.html#configure-options}{\tt {\ttfamily configure}} functions. This allows you to control {\itshape what} to highlight and {\itshape when}.
+
+Here’s an equivalent way to calling \href{http://highlightjs.readthedocs.io/en/latest/api.html#inithighlightingonload}{\tt {\ttfamily init\+Highlighting\+On\+Load}} using vanilla JS\+:
+
+
+\begin{DoxyCode}
+document.addEventListener('DOMContentLoaded', (event) => \{
+  document.querySelectorAll('pre code').forEach((block) => \{
+    hljs.highlightBlock(block);
+  \});
+\});
+\end{DoxyCode}
+
+
+You can use any tags instead of {\ttfamily $<$pre$>$$<$code$>$} to mark up your code. If you don\textquotesingle{}t use a container that preserves line breaks you will need to configure highlight.\+js to use the {\ttfamily $<$br$>$} tag\+:
+
+
+\begin{DoxyCode}
+hljs.configure(\{useBR: true\});
+
+document.querySelectorAll('div.code').forEach((block) => \{
+  hljs.highlightBlock(block);
+\});
+\end{DoxyCode}
+
+
+For other options refer to the documentation for \href{http://highlightjs.readthedocs.io/en/latest/api.html#configure-options}{\tt {\ttfamily configure}}.
+
+\subsection*{Web Workers}
+
+You can run highlighting inside a web worker to avoid freezing the browser window while dealing with very big chunks of code.
+
+In your main script\+:
+
+
+\begin{DoxyCode}
+addEventListener('load', () => \{
+  const code = document.querySelector('#code');
+  const worker = new Worker('worker.js');
+  worker.onmessage = (event) => \{ code.innerHTML = event.data; \}
+  worker.postMessage(code.textContent);
+\});
+\end{DoxyCode}
+
+
+In worker.\+js\+:
+
+
+\begin{DoxyCode}
+onmessage = (event) => \{
+  importScripts('<path>/highlight.pack.js');
+  const result = self.hljs.highlightAuto(event.data);
+  postMessage(result.value);
+\};
+\end{DoxyCode}
+
+
+\subsection*{Node.\+js}
+
+You can use highlight.\+js with node to highlight content before sending it to the browser. Make sure to use the {\ttfamily .value} property to get the formatted html. For more info about the returned object refer to the api docs \href{https://highlightjs.readthedocs.io/en/latest/api.html}{\tt https\+://highlightjs.\+readthedocs.\+io/en/latest/api.\+html}
+
+
+\begin{DoxyCode}
+// require the highlight.js library including all languages
+const hljs = require('./highlight.js');
+const highlightedCode = hljs.highlightAuto('<span>Hello World!</span>').value
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+// require the highlight.js library without languages
+const hljs = require("highlight.js/lib/highlight.js");
+// separately require languages
+hljs.registerLanguage('html', require('highlight.js/lib/languages/html'));
+hljs.registerLanguage('sql', require('highlight.js/lib/languages/sql'));
+// highlight with providing the language
+const highlightedCode = hljs.highlight('html', '<span>Hello World!</span>').value
+\end{DoxyCode}
+
+
+\subsection*{Getting the Library}
+
+You can get highlight.\+js as a hosted, or custom-\/build, browser script or as a server module. Right out of the box the browser script supports both A\+MD and Common\+JS, so if you wish you can use Require\+JS or Browserify without having to build from source. The server module also works perfectly fine with Browserify, but there is the option to use a build specific to browsers rather than something meant for a server. Head over to the \href{https://highlightjs.org/download/}{\tt download page} for all the options.
+
+{\bfseries Don\textquotesingle{}t link to Git\+Hub directly.} The library is not supposed to work straight from the source, it requires building. If none of the pre-\/packaged options work for you refer to the \href{http://highlightjs.readthedocs.io/en/latest/building-testing.html}{\tt building documentation}.
+
+{\bfseries The C\+D\+N-\/hosted package doesn\textquotesingle{}t have all the languages.} Otherwise it\textquotesingle{}d be too big. If you don\textquotesingle{}t see the language you need in the \href{https://highlightjs.org/download/}{\tt \char`\"{}\+Common\char`\"{} section}, it can be added manually\+:
+
+
+\begin{DoxyCode}
+<script
+ charset="UTF-8"
+ src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/languages/go.min.js"></script>
+\end{DoxyCode}
+
+
+{\bfseries On Almond.} You need to use the optimizer to give the module a name. For example\+:
+
+
+\begin{DoxyCode}
+r.js -o name=hljs paths.hljs=/path/to/highlight out=highlight.js
+\end{DoxyCode}
+
+
+\subsubsection*{Common\+JS}
+
+You can import Highlight.\+js as a Common\+J\+S-\/module\+:
+
+
+\begin{DoxyCode}
+npm install highlight.js --save
+\end{DoxyCode}
+
+
+In your application\+:
+
+
+\begin{DoxyCode}
+import hljs from 'highlight.js';
+\end{DoxyCode}
+
+
+The default import imports all languages! Therefore it is likely to be more efficient to import only the library and the languages you need\+:
+
+
+\begin{DoxyCode}
+import hljs from 'highlight.js/lib/highlight';
+import javascript from 'highlight.js/lib/languages/javascript';
+hljs.registerLanguage('javascript', javascript);
+\end{DoxyCode}
+
+
+To set the syntax highlighting style, if your build tool processes C\+SS from your Java\+Script entry point, you can import the stylesheet directly into your Common\+J\+S-\/module\+:
+
+
+\begin{DoxyCode}
+import hljs from 'highlight.js/lib/highlight';
+import 'highlight.js/styles/github.css';
+\end{DoxyCode}
+
+
+\subsection*{License}
+
+Highlight.\+js is released under the B\+SD License. See \href{https://github.com/highlightjs/highlight.js/blob/master/LICENSE}{\tt L\+I\+C\+E\+N\+SE} file for details.
+
+\subsection*{Links}
+
+The official site for the library is at \href{https://highlightjs.org/}{\tt https\+://highlightjs.\+org/}.
+
+Further in-\/depth documentation for the A\+PI and other topics is at \href{http://highlightjs.readthedocs.io/}{\tt http\+://highlightjs.\+readthedocs.\+io/}.
+
+Authors and contributors are listed in the \href{https://github.com/highlightjs/highlight.js/blob/master/AUTHORS.en.txt}{\tt A\+U\+T\+H\+O\+R\+S.\+en.\+txt} file. 

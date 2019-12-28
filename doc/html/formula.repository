@@ -1,0 +1,207 @@
+\form#0:$ a \frac{dT}{dz} - F_0 - b(T - T_{ref}) $
+\form#1:$ r $
+\form#2:$ r = \left[F_0 - b( T_b - T_{ref}) \right] - \frac{T_g - T_i)}{\Delta x} $
+\form#3:$ T_b = (T_g + T_i)/2 $
+\form#4:$ T_g $
+\form#5:$ T_i $
+\form#6:$ \psi $
+\form#7:$ P $
+\form#8:$ \chi $
+\form#9:$\Pi$
+\form#10:$ \mathbf{u}^* $
+\form#11:$ \mathbf{u} $
+\form#12:$ \Pi $
+\form#13:$ \Delta x $
+\form#14:$ \nabla P $
+\form#15:$ \nabla \Pi $
+\form#16:$ \mathbf{n} \cdot \nabla \phi = 0 $
+\form#17:$ \nabla e_\lambda $
+\form#18:$ \Theta_l $
+\form#19:$ \theta $
+\form#20:$ \Theta $
+\form#21:$ \lambda $
+\form#22:$ C_g $
+\form#23:$ H_g $
+\form#24:$ \frac{T_g(H_g,C_g) - T_{interior} }{\Delta x}= F $
+\form#25:$z>0.75$
+\form#26:$ a \frac{d \theta}{dz} - F_0 - b(\theta - \theta_{ref}) = 0 $
+\form#27:$ \theta_g = \left( \frac{a}{\Delta x} - \frac{b}{2} \right)^{-1} \left[ \theta_i \left( \frac{a}{\Delta x} + \frac{b}{2} \right) + F_0 - b \theta_r \right] $
+\form#28:$ \theta_i $
+\form#29:$(\Theta_l)_g = - \theta_g$
+\form#30:$0 < \chi < 1$
+\form#31:$ (\Theta_l)_g = (\Theta_l)_i $
+\form#32:$ \chi \nabla \phi $
+\form#33:$ \phi $
+\form#34:$ - \chi / Le $
+\form#35:$\alpha$
+\form#36:$\beta$
+\form#37:$ D \nabla \cdot \chi \nabla (\xi/\chi) $
+\form#38:$D$
+\form#39:$ \xi$
+\form#40:$ \chi$
+\form#41:$A(\phi) \phi - f(\vec{x}) = 0$
+\form#42:$\phi$
+\form#43:$f(\vec{x})$
+\form#44:\[ (alpha * aCoef(x) * I - beta * (cCoef(x) + Lap) ) phi = rho \]
+\form#45:$ \alpha $
+\form#46:$ \beta $
+\form#47:$ a(\mathbf{x}) $
+\form#48:$ c(\mathbf{x}) $
+\form#49:$ b(\mathbf{x}) $
+\form#50:$ \frac{d \alpha}{d t} $
+\form#51:$ \frac{d^2 \alpha}{dt^2} $
+\form#52:$ \Delta x |\nabla \chi| ( 1 - \textrm{min}(w (\mathscr{C} - \Theta), 0) ) > r $
+\form#53:$ w $
+\form#54:$ \frac{\partial (\mathbf{u}/\chi)}{\partial t} + (u/porosity) \cdot \nabla (u/porosity) = S/porosity (-(u/porosity^2)dporosity/dt) $
+\form#55:$ \chi = 0.1 + 0.9 x $
+\form#56:$ \chi = 0.1 + 0.9 exp(-100 (x-0.5)^2) $
+\form#57:$ \chi = (exp(-(x-0.5)^2))*(0.5 + 0.1 sin(2 \pi y)) $
+\form#58:$ \chi = 0.01 + (y-0.01)^3 $
+\form#59:$ \chi = 0.5 ( (1-tanh(20 y)) + (1-x)) $
+\form#60:$ \mathbf{U} $
+\form#61:$ \mathbf{U}/\chi $
+\form#62:$ \mathbf{U}^* $
+\form#63:$ {Av}^{F \to C} \mathbf{U}_f $
+\form#64:$ {Av}^{F \to C} \mathbf{U}_{AD} $
+\form#65:$ \mathbf{U} \cdot \nabla \left( \mathbf{U} / \chi \right)$
+\form#66:$ H $
+\form#67:$ \Theta_s $
+\form#68:$ \nu $
+\form#69:$ \lambda / \chi $
+\form#70:$ H_S $
+\form#71:$ H_L $
+\form#72:$ H_E $
+\form#73:$ \chi_{analytic} $
+\form#74:$ \theta_{analytic} $
+\form#75:$ - \nabla \cdot \left( \mathbf{U} \Theta_l \right) - V \frac{\partial \Theta}{\partial z} $
+\form#76:$ \theta_{analytic} - \theta $
+\form#77:$ - \nabla \cdot \left( \mathbf{U} \theta \right) - V \frac{\partial H}{\partial z} $
+\form#78:$ \mathbf{U}_{AD} $
+\form#79:$ \frac{\partial H}{\partial t} $
+\form#80:$ \frac{\partial \Theta}{\partial t} $
+\form#81:$ \int_0^L \mathbf{F}_s \cdot \mathbf{z} dx $
+\form#82:$ \mathbf{F}_s \cdot \mathbf{z} $
+\form#83:$ \nabla \cdot \mathbf{U} $
+\form#84:$ \int_0^L \mathbf{F}_H \cdot \mathbf{z} dx $
+\form#85:$ \omega $
+\form#86:$ \pi $
+\form#87:$ \nabla \cdot \mathbf{U}_f $
+\form#88:$\mathbf{U}/\chi$
+\form#89:$ \Delta t = \sqrt{\sigma \Delta x / a} $
+\form#90:$ \sigma $
+\form#91:$ a$
+\form#92:$ \mathbf{U} \cdot \nabla \mathbf{U}/\chi $
+\form#93:$ \mathbf{U} \cdot \nabla T $
+\form#94:$ \nabla \cdot \chi \nabla \phi = \nabla \cdot \mathbf{U}^* $
+\form#95:$ \nabla^2 \phi = \nabla \cdot \mathbf{U}^* $
+\form#96:$ \nabla \cdot \chi \nabla \pi = \nabla \cdot \mathbf{U}^* $
+\form#97:$ \nabla^2 \pi = \nabla \cdot \mathbf{U}^* $
+\form#98:$ \mathbf{U} \cdot \nabla \mathbf{U} $
+\form#99:$\chi < 1 $
+\form#100:$\chi < 1$
+\form#101:$ \eta $
+\form#102:$ = \alpha \sin (2 \pi N x / L) $
+\form#103:$ N $
+\form#104:$ L $
+\form#105:$ dt = dt / dtReductionFactor $
+\form#106:$ \mathbf{U} \cdot \nabla \left( \mathbf{U}/\chi \right) $
+\form#107:$ \chi = \chi_b + \chi_{max} \exp\left[-((x-x_c)^2 + (y-y_c)^2)/(s L) \right]$
+\form#108:$ \chi_b $
+\form#109:$ \chi_{max} $
+\form#110:$ (x_c, y_c)$
+\form#111:$ s $
+\form#112:$ \chi = \chi_b \left\{ 1 - \chi_{max} \exp\left[-((x-x_c)^2 + (y-y_c)^2)/(s L) \right] \right\} $
+\form#113:$ \chi = 1- 0.3 \alpha (y/H)^2 \sin [\pi x / (2 L)] $
+\form#114:$ \alpha = \min(4.0, t / \tau) $
+\form#115:$ \tau $
+\form#116:$ \mu = 1.0 $
+\form#117:$ \mu_{max} $
+\form#118:$ \mu = 1 + (\mu_{max} - 1)(\Theta_l + \mathcal{C})/\mathcal{C} $
+\form#119:$\mu_{max} $
+\form#120:$ \pi = \chi^3 $
+\form#121:$ \Pi = \frac{\chi^3}{(1-\chi)^2} $
+\form#122:$ \Pi = - \chi^2 \log (1-\chi) $
+\form#123:$ \Pi = -exp(-(x-0.5)^2/\alpha) $
+\form#124:$\alpha=0.02$
+\form#125:$ \pi = \chi $
+\form#126:$ k_l $
+\form#127:$ k_s $
+\form#128:$ c_l $
+\form#129:$c_s$
+\form#130:$\mbox{K}^{-1} $
+\form#131:$\mbox{(g/kg)}^{-1}$
+\form#132:$\mbox{ K (g/kg)}^{-1} $
+\form#133:$ p_c $
+\form#134:$ S_s/S_l $
+\form#135:$ D_l $
+\form#136:$ K_0 $
+\form#137:$ g $
+\form#138:$ V $
+\form#139:$ \Delta T = - \Gamma \Delta S $
+\form#140:$ \Delta S = S_e - S_i $
+\form#141:\[ = \frac{L}{c_{p,l} (T_i - T_e)} \]
+\form#142:$ \frac{S_e (p_c - 1)}{S_i -S_e} $
+\form#143:$ \bar{k} = k_s/k_l $
+\form#144:$ \bar{c} = c_s/c_l $
+\form#145:$ Le = \kappa_l/D_l $
+\form#146:$ K_0/h^2 $
+\form#147:$ \Pi_H = d^2/(12 K_0)$
+\form#148:$ \rho_0 \kappa_l / \eta $
+\form#149:$ \eta / \rho_0 \kappa_l $
+\form#150:\[ Ra_T = \frac{\rho_0 g h K_0 \alpha (T_i - T_e)}{\kappa_l \eta} \]
+\form#151:\[ Ra_T = \frac{\rho_0 g h K_0 \beta (S_i - S_e)}{\kappa_l \eta} \]
+\form#152:$ \tau = h^2 / \kappa_l $
+\form#153:$ = \chi (Ra_T \theta - Ra_c*\Theta_l) \mathbf{k} + \mathbf{F}_B $
+\form#154:$ \mathbf{F}_B $
+\form#155:$ \theta_e $
+\form#156:$ \theta_\infty $
+\form#157:$ \Theta_e $
+\form#158:$ \Theta_i $
+\form#159:$ \Theta_\infty $
+\form#160:$ \Theta_{l,i} $
+\form#161:$ \Theta_{s,i} $
+\form#162:$ z(\theta) $
+\form#163:$ \theta, \chi, \Theta_l, \Theta_s$
+\form#164:$H, \Theta$
+\form#165:$\phi_{smooth}$
+\form#166:$ (1-\alpha \nabla^2)\phi_{smooth} = \phi $
+\form#167:$ \partial / \partial t $
+\form#168:$ \Delta t $
+\form#169:$ (\mathbf{U} \cdot \nabla T, \mathbf{U} \cdot \nabla S_l)$
+\form#170:$ (\mathbf{U} T + V H \mathbf{k}, \mathbf{U} S_l + V S \mathbf{k})$
+\form#171:$ \xi $
+\form#172:$ \frac{\partial \xi}{\partial t} + \mathbf{U} \cdot \nabla (\xi/\chi) = S(x,z)$
+\form#173:$ S = \nabla \cdot \chi \nabla (\xi/\chi)$
+\form#174:$ \xi/\chi $
+\form#175:$ \zeta $
+\form#176:$ \frac{\partial \zeta}{\partial t} + \mathbf{U} \cdot \nabla (\zeta/\chi) = S(x,z)$
+\form#177:$ S(x,z) $
+\form#178:$ \nabla^2 \mathbf{U} $
+\form#179:$ \nabla^2 \phi $
+\form#180:$ \nabla^2 (H, S) $
+\form#181:$ \nabla^2 \psi $
+\form#182:$ \left[ 1 - \Delta t^\ell \, \left(Da \, \left(\nabla^\ell\right)^2 - \frac{\chi^{\ell, n+1}}{\Pi^{\ell, n+1}} \right) \right] \mathbf{U}^{\ell, n+1}_* = \mathbf{U}^{\ell, n} + \Delta t^\ell \left\{- \chi^{\ell, n+1/2} \, \nabla^\ell \pi^{\ell, n-1/2} + \chi^{\ell, n+1/2} \left[Pr \, Da^2 \left( Ra_T \theta^{\ell, n+1/2} - Ra_C \Theta^{\ell, n+1/2} \right) \right] - \mathbf{U}_{AD, CC}^{\ell, n+1/2} \cdot \nabla^\ell \left( \frac{\mathbf{U}}{\chi} \right)^{\ell, n+1/2} \right\}$
+\form#183:$\mathbf{U}^* $
+\form#184:$ \mathbf{u} \cdot \nabla \left( \mathbf{U}/\chi \right) $
+\form#185:$ Q = \frac{Q_0}{\sigma \sqrt{2 \pi}} \exp\left[ - 0.5 \left( \frac{x-x_c}{\sigma} \right)^2 \right] 0.5 \left( 1 + \tanh\left[10 (z-(H-h)) \right]) \right) $
+\form#186:$ (\mathbf{U} T, \mathbf{U} S_l) $
+\form#187:$ (V H, V S) $
+\form#188:$ \mathbf{u} \cdot \nabla \left( \mathbf{u}/\chi \right) $
+\form#189:$ \mathbf{U}^* = (\Pi/\nu) * (Ra_T \theta - Ra_C \Theta_l + \mathbf{F}_B) $
+\form#190:$ \mathbf{B} = \chi ( Ra_T \theta - Ra_C \Theta_l + \mathbf{F} \cdot \mathbf{k} ) \mathbf{k} $
+\form#191:$ t $
+\form#192:$ \lambda = 1$
+\form#193:$ \chi > 0 $
+\form#194:$ -1 <= \Theta_l <= 0 $
+\form#195:$ \mathbf{U} \cdot \nabla (\mathbf{U}/\chi) $
+\form#196:$ \lambda-1 $
+\form#197:$ \partial \chi / \partial t $
+\form#198:$ \nabla^2 \mathbf{u} $
+\form#199:$ \chi \nabla P $
+\form#200:$ \Pi \nabla P $
+\form#201:$ \nabla \cdot \mathbf{U}^* $
+\form#202:\[ \mathbf{u}^{edge} - \nabla \phi^{mac} \]
+\form#203:\[ \mathbf{u} = \mathbf{u} - \alpha \nabla \Pi \]
+\form#204:$ \nabla^2 p = \nabla \cdot \mathbf{u} $
+\form#205:$ \nabla \cdot \chi \nabla p = \nabla \cdot \mathbf{u} $
+\form#206:$ \eta_\lambda $
