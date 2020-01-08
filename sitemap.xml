@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://amr-softball.github.io/</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/index.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_a_m_r_level_mushy_layer.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_a_m_r_level_mushy_layer-members.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/struct_mushy_layer_options.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_mushy_layer_params.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/mushy_layer_opt_8h.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_diagnostics.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_phys_b_c_util.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_advection_physics.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_projector.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_level_domain_flux_register.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/struct_mushy_layer_options-members.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/mushy_layer_opt_8h_source.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_mushy_layer_params-members.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_b_c_info.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/dir_fba366f52c813e85c838fbfb7a0d98a0.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/dir_b364e2d315ddc3a850c66f78f2e6b818.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_diagnostics-members.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_phys_b_c_util-members.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_advect_i_b_c.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_advection_physics-members.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_projector-members.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_level_domain_flux_register-members.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_b_c_info-members.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://amr-softball.github.io/doc/html/class_advect_i_b_c-members.html</loc>
+  <lastmod>2020-01-07T15:51:51+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>
