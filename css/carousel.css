@@ -46,6 +46,10 @@ footer p {
   margin-bottom: .25rem;
 }
 
+footer .container {
+  max-width: 80rem;
+}
+
 
 .about-card  tr, td {
   font-size:125%;
